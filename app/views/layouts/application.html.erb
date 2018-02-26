@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Freelance</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%# unless params[:controller]=='home' && params[:action]=='admin' %>
+      <%= render 'layouts/header' %>
+      <% if notice || alert %>
+        <div class="alert alert-info" role="alert">
+          <strong>Info!</strong> <%= notice || alert %>
+        </div>
+      <% end %>
+      <% unless params[:controller]=='home' && params[:action]=='admin' %>
+      <div class="container">
+      <% end %>  
+        <%= yield %>
+    <% unless params[:controller]=='home' && params[:action]=='admin' %>
+      </div>
+    <% end %>
+      <%= render 'layouts/footer' %>
+    
+  </body>
+</html>
