@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DeviseCreateUsers < ActiveRecord::Migration[5.1]
   def change
     create_table :users do |t|
@@ -21,6 +19,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.inet     :current_sign_in_ip
       t.inet     :last_sign_in_ip
 
+      ## Omniauthable
+      t.string   :provider
+      t.string   :uid
+      
       ## Confirmable
       # t.string   :confirmation_token
       # t.datetime :confirmed_at
@@ -33,18 +35,18 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       t.string :name
-      t.string :username
-      t.string :phone_number
-      t.string :identifier
-      t.string :company_name
-      t.string :linkedin_link
-      t.string :githhub_link
-      t.string :website_link
-      t.string :portfolio
-      t.string :other_link1
-      t.string :other_link2
-      t.string :other_link3
-      t.text :experience
+      # t.string :username
+      # t.string :phone_number
+      # t.string :identifier
+      # t.string :company_name
+      # t.string :linkedin_link
+      # t.string :githhub_link
+      # t.string :website_link
+      # t.string :portfolio
+      # t.string :other_link1
+      # t.string :other_link2
+      # t.string :other_link3
+      # t.text :experience
       t.boolean :admin, default: false
 
       t.timestamps null: false

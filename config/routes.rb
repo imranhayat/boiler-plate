@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users,:controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'admin_panel',to: 'admin_panel#index',as: :admin_panel
+  get 'admin_panel/users',as: :admin_users
+
+  devise_for :users,:controllers => { sessions: 'users/sessions',registrations: 'users/registrations' }
   root 'home#home'
   get 'admin', to: 'home#admin', as: :admin
-  # get 'users/profile/edit', to: 'users#edit_profile', as: :edit_profile
   resources :users
   # , path: '/users/profile'
 
