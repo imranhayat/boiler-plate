@@ -1,13 +1,13 @@
-<h2> Edit Profile</h2>
-<br>
-<%= form_for @user do |f| %>
-    <div class="form-group row">
-        <%= f.label :name, :class => "col-2 col-form-label" %> <br />
-        <div class="col-10">
-            <%= f.text_field :name, :class => 'form-control' %><br />
-        </div>
-    </div>
-    
+<div class="container-fluid container-top py-4">
+  <div class="container container-signin container-sign p-4">
+<h4 class="text-center mb-4"> Edit Profile</h4>
 
-    <%= f.submit "Update" %>
+<%= form_for @user do |f| %>
+    <div class="form-group">
+        <%= f.label :name %> 
+        <%= f.text_field :name, class: 'form-control' %>
+    </div>
+    <%= f.submit "Update", class: 'btn btn-primary btn-block' %>
 <% end %>
+</div>
+</div>

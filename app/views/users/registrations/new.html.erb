@@ -1,34 +1,41 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" ,required: true %>
+<div class="container-fluid container-top py-4">
+  <div class="container container-signup container-sign p-4">
+    <div class="modal-login-body">
+      <h4 class="text-center mb-4">Sign up YourAppName</h4>
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <a href="">
+            <div class="loginmodal-fb mb-2">Sign up with Facebook</div>
+          </a>
+          <a href="">
+            <div class="loginmodal-google mb-2"> Sign up with Google</div>
+          </a>
+        </div>
+        <div class="col-md-6 b-left">
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= devise_error_messages! %>
+            <div class="form-group">
+              <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Name', class: 'form-control login-form', required: true %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.email_field :email,required: true, placeholder: 'Email', class: 'form-control login-form', required: true %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Password', class: 'form-control login-form', required: true, minlength: 6 %>
+            </div>
+            
+            <div class="form-group">
+              <%= f.password_field :password_confirmation, autocomplete: "off",required: true, placeholder: 'password Confirmation', class: 'form-control login-form', required: true, minlength: 6 %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
+            </div>
+        <% end %>
+      </div>
+      </div>
+      <center class="mt-4"> Already a member? <%= link_to "Log in", new_session_path(resource_name) %></center>
+    </div>
   </div>
-  
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email,required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off",required: true %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off",required: true %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
-
-<%= render "users/shared/links" %>
+</div>

@@ -10,10 +10,121 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require sweetalert
  *= require_tree .
  *= require_self
  */
  
- body {
-     margin-top: 69px;
- }
+@font-face {
+  font-family: SystemPlusFont;
+  src: url('Gotham.otf') format('opentype'); 
+    
+}
+body,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+button,
+input,
+li,
+ul,
+ol,
+table,
+td,
+tr,
+th,
+fieldset,
+font,
+strong,
+b {
+  font-family: SystemPlusFont !important; }
+
+.container-main{
+  background: #eee !important;
+  min-height: calc(100vh - 300px);
+}
+.card {
+  background-color: #fff !important;
+}
+.footer-bg-image {
+  background-image: url('/footer-bg.jpg');
+}
+.footer-bg-color {
+  background-color: #000000c2;
+  background-repeat: no-repeat;
+    background-size: cover;
+}
+.social-size {
+  font-size: 24px;
+}
+.setting-headig {
+  background: #f1f4f5;
+}
+.setting-links ul a li {
+    border-bottom: 1px solid #dadfe2;
+    line-height: 14px;
+   
+   
+}
+a.active li {
+    border-left: 2px solid #499df3 !important;
+    text-decoration: none !important;
+    color: #2388ed !important;
+}
+.setting-links ul a li  {
+    color: #969ea2;
+    padding: 15px 10px;
+    display: inline-block;
+    width: 100%;
+    
+}
+.setting-profile-image {
+  border-radius: 50%;
+  display: block;
+  backface-visibility: hidden;
+  opacity: 1;
+ 
+}
+.setting-profile-image:hover {
+  opacity: 0.1;
+}
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 50px;
+
+}
+img#blah:hover {
+  cursor: pointer;
+}
+.profile-change-icon {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto !important;
+}
+.profile-change-icon:hover .middle{
+  opacity: 1 !important;
+  
+}
+.profile-show-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto !important;
+}
+.profile-descriptin {
+  border-bottom: 1px solid #dadfe2;
+}
