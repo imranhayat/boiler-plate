@@ -437,3 +437,6 @@ img#blah:hover {
   background: #fff;
   color: #333333;
 }
+.align-middle{
+  vertical-align: middle;
+}

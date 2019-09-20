@@ -1,28 +1,23 @@
-<div class="container mt-4">
-  <div class="card">
-    <div class="card-body">
-      <h3 class="mb-3">All Users</h3>
-      <table class="table table-bordered">
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Phone Number</th>
-          </tr>
-        </thead>
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <td><%= user.name%></td>
-              <td><%= user.email%></td>
-              <td><%= user.phone_number%></td>
-            </tr>
-          <% end%>
-        </tbody>
-      </table>
-    </div>
+<div class="container container-admin">
+  <h5 class="mb-4 pt-2">All Users</h5>
+  <div class="table-responsive table-users">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name%></td>
+          <td><%= user.email%></td>
+          <td><%= user.phone_number%></td>
+        </tr>
+        <% end%>
+      </tbody>
+    </table>
   </div>
 </div>
-
-
-

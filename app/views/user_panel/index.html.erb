@@ -27,10 +27,14 @@
   <div class="row">
     <div class="col-12">
       <div class="p-50 bg-white user-body">
-        <div class="row mb-3 mb-md-0">
-          <div class="col-12">
-            <h3 class="font-weight-bold mb-0">Information
-              <span class="pull-right"> Your Balance: <%= humanized_money_with_symbol(current_user.balance)%></span></h3>
+        <div class="row mb-3 mb-md-0 align-items-center">
+          <div class="col-md-6 text-md-left text-center">
+            <h3 class="font-weight-bold mb-0">Information</h3>
+          </div>
+          <div class="col-md-6 text-md-right text-center">
+              <h3 class="align-middle font-weight-bold mb-0 d-inline-block mr-4"> Your Balance: <span class="text-primary"><%= humanized_money_with_symbol(current_user.balance)%></span></h3>
+              <a href="#" class="btn btn-primary">Top Up</a>
+            
           </div>
         </div>
         <div class="row row-user-fields">
