@@ -51,7 +51,7 @@ html .bg-primary:not(.no-skin) {
   background-color: #79589f !important;
 }
 html .bg-primary-6:not(.no-skin) {
-  background-color: #52a1f1 !important;
+  background-image: linear-gradient(#FF972B,#F92B49) !important;
 }
 html .bg-primary-7:not(.no-skin) {
   background-color: #81bbf5 !important;
@@ -166,14 +166,14 @@ html.sticky-header-active .btn-sticky-primary:hover,
 html .btn-primary:focus,
 html.sticky-header-active .btn-sticky-primary:focus {
   border-color: transparent;
-  background-color: #52a1f1 !important;
+  background-image: linear-gradient(#FF972B,#F92B49) !important;
   color: #ffffff;
 }
-html .btn-primary:focus,
+/*html .btn-primary:focus,
 html.sticky-header-active .btn-sticky-primary:focus {
   -webkit-box-shadow: 0 0 0 3px rgba(35, 136, 237, 0.25);
           box-shadow: 0 0 0 3px rgba(35, 136, 237, 0.25);
-}
+}*/
 html .btn-primary:disabled,
 html.sticky-header-active .btn-sticky-primary:disabled,
 html .btn-primary.disabled,
@@ -202,8 +202,6 @@ html.sticky-header-active .btn-sticky-primary:not([disabled]):not(.disabled):act
   border-color: transparent;
   color: #ffffff;
   background-image: linear-gradient(135deg,#F92B49,#FF972B) !important;
-  -webkit-box-shadow: 0 0 0 0.2rem #52a1f1;
-          box-shadow: 0 0 0 0.2rem #52a1f1;
 }
 html .btn-secondary,
 html.sticky-header-active .btn-sticky-secondary {
@@ -368,11 +366,6 @@ html.sticky-header-active .btn-outline.btn-sticky-primary:focus {
   border-color: transparent;
   background-color: #79589f !important;
   color: #ffffff !important;
-}
-html .btn-outline.btn-primary:focus,
-html.sticky-header-active .btn-outline.btn-sticky-primary:focus {
-  -webkit-box-shadow: 0 0 0 3px rgba(35, 136, 237, 0.25);
-          box-shadow: 0 0 0 3px rgba(35, 136, 237, 0.25);
 }
 html .btn-outline.btn-primary:disabled,
 html.sticky-header-active .btn-outline.btn-sticky-primary:disabled,

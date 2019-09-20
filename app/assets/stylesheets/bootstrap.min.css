@@ -1886,7 +1886,7 @@ pre code {
   background-color: #fff;
   border-color: #80bdff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .form-control::-webkit-input-placeholder {
@@ -2407,7 +2407,7 @@ textarea.form-control {
 
 .btn:focus, .btn.focus {
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .btn.disabled, .btn:disabled {
@@ -2431,9 +2431,9 @@ fieldset:disabled a.btn {
   border-color: #0062cc;
 }
 
-.btn-primary:focus, .btn-primary.focus {
+/*.btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-}
+}*/
 
 .btn-primary.disabled, .btn-primary:disabled {
   color: #fff;
@@ -2444,15 +2444,15 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0062cc;
+  background-image: linear-gradient(#FF972B,#F92B49)
   border-color: #005cbf;
 }
 
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+/*.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
-
+*/
 .btn-secondary {
   color: #fff;
   background-color: #6c757d;
@@ -3240,9 +3240,11 @@ input[type="button"].btn-block {
 }
 
 .dropdown-item:hover, .dropdown-item:focus {
-  color: #16181b;
+  transition: none !important;
+  color: #fff !important;
+  font-weight: bold;
   text-decoration: none;
-  background-color: #f8f9fa;
+  background-image: linear-gradient(135deg,#F92B49,#FF972B) !important;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -3624,7 +3626,7 @@ input[type="button"].btn-block {
 }
 
 .custom-control-input:focus ~ .custom-control-label::before {
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
@@ -3773,7 +3775,7 @@ input[type="button"].btn-block {
 .custom-select:focus {
   border-color: #80bdff;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .custom-select:focus::-ms-value {
@@ -3831,7 +3833,7 @@ input[type="button"].btn-block {
 
 .custom-file-input:focus ~ .custom-file-label {
   border-color: #80bdff;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .custom-file-input:disabled ~ .custom-file-label {
@@ -4864,7 +4866,7 @@ input[type="button"].btn-block {
 .page-link:focus {
   z-index: 2;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  
 }
 
 .page-item:first-child .page-link {
@@ -4970,7 +4972,7 @@ a.badge:hover, a.badge:focus {
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #fff;
-  background-color: #0062cc;
+  background-image: linear-gradient(#FF972B,#F92B49)
 }
 
 a.badge-primary:focus, a.badge-primary.focus {

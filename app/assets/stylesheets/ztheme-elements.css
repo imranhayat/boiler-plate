@@ -4532,7 +4532,7 @@ html.ie .owl-carousel.owl-carousel-vertical .owl-stage-outer {
 /* Modals */
 .modal-open .modal {
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 /* Ajax Container */
