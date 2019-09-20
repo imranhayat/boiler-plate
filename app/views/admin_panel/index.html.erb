@@ -1,86 +1,91 @@
-<div class="container-fluid container-gray py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="text-dark mt-1 text-center"> Admin </h2>
-                        <div class="row">
-                          <div class="col-12">
-                             <a class="btn btn-primary btn-block mt-1" href="<%= admin_users_path%>">Users</a>
-                             <a class="btn btn-primary btn-block mt-1" href="#">Categories</a>
-                             <a class="btn btn-primary btn-block mt-1" href="#">Facilities</a>
-                          </div>
-                        </div>    
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-xl-8">
-                <div class="card mb-3">
-                    <div class="card-body">
-                    <h3 class="mb-3">Statistics</h3>
-                    <div class="row">
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                      <div class="col-md-4 mb-2">
-                        <div class="card p-2 text-center">
-                          <p>Total Users</p>
-                          <h3>40</h3>
-                        </div>
-                      </div>
-                    </div>
-                </div>
-                </div>
-                <div class="card">
-                    <div class="card-body">
-                  <h3 class="mb-3">All Users</h3>
-                  <table class="table table-bordered">
-                    <tbody><tr>
-                      <th>Name</th>
-                       <th>Email</th>
-                       <th>Phone Number</th>
-                    </tr>
-                        <tr>
-                          <td>mauzz</td>
-                          <td>maueezahmed@gmail.com</td>
-                          <td>123445</td>
-                        </tr>
-                       
-                  </tbody></table>
-                </div>
+<div class="container-fluid container-admin">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3">
+        <div class="card card-admin">
+          <div class="card-body">
+            <h3 class="text-primary mb-4 text-center"> Dashboard </h3>
+            <div class="row">
+              <div class="col-12">
+                <a class="dashboard-side-link active" href="<%= admin_users_path%>"><i class="fas fa-users"></i><span>Users</span></a>
+                <a class="dashboard-side-link" href="<%= admin_users_path%>"><i class="fas fa-list"></i><span>Categories</span></a>
+                <a class="dashboard-side-link" href="<%= admin_users_path%>"><i class="fas fa-cogs"></i><span>Facilities</span></a>
+                <a class="dashboard-side-link" href="<%= admin_users_path%>"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
               </div>
             </div>
-        </div>   
-    </div>    
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xl-9">
+        <h5 class="mb-4">Statistics</h5>
+        <div class="row card-stats">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+        </div>
+        <div class="row card-stats">
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card text-center">
+              <h4>TOTAL USERS</h4>
+              <h1>40</h1>
+            </div>
+          </div>
+        </div>
+        <hr class="mb-5"/>
+        <h5 class="mb-4 mt-0">All Users</h5>
+        <div class="table-responsive table-users">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>mauzz</td>
+                <td>maueezahmed@gmail.com</td>
+                <td>123445</td>
+              </tr>
+              <tr>
+                <td>mauzz</td>
+                <td>maueezahmed@gmail.com</td>
+                <td>123445</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </div>
