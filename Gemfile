@@ -37,3 +37,4 @@ gem "paperclip"
 gem 'sweetalert-rails'
 
 gem 'money-rails', '~>1.12' # For money/balance objects
+gem 'stripe'

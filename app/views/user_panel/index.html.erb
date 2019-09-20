@@ -31,6 +31,7 @@
           <div class="col-12">
             <h3 class="font-weight-bold mb-0">Information
               <span class="pull-right"> Your Balance: <%= humanized_money_with_symbol(current_user.balance)%></span></h3>
+              <%= link_to "Top Up",top_up_path%>
           </div>
         </div>
         <div class="row row-user-fields">

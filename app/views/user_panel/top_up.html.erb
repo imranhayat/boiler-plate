@@ -1,0 +1,6 @@
+<div class="container">
+	<%= form_with url: payment_path do |form| %>
+		<%= form.number_field :amount,step: "0.01",min: 0 %>
+		<%= form.submit "Top Up" %>
+	<% end %>
+</div>
