@@ -1,41 +1,38 @@
-<div class="container-fluid container-top py-4">
-  <div class="container container-signup container-sign p-4">
+<div class="container-fluid container-top">
+  <div class="container container-signin container-sign">
     <div class="modal-login-body">
-      <h4 class="text-center mb-4">Sign up YourAppName</h4>
-      <div class="row align-items-center">
-        <div class="col-md-6">
-          <a href="">
-            <div class="loginmodal-fb mb-2">Sign up with Facebook</div>
-          </a>
-          <a href="">
-            <div class="loginmodal-google mb-2"> Sign up with Google</div>
-          </a>
-        </div>
-        <div class="col-md-6 b-left">
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-            <div class="form-group">
-              <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Name', class: 'form-control login-form', required: true %>
-            </div>
-            
-            <div class="form-group">
-              <%= f.email_field :email,required: true, placeholder: 'Email', class: 'form-control login-form', required: true %>
-            </div>
-            
-            <div class="form-group">
-              <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Password', class: 'form-control login-form', required: true, minlength: 6 %>
-            </div>
-            
-            <div class="form-group">
-              <%= f.password_field :password_confirmation, autocomplete: "off",required: true, placeholder: 'password Confirmation', class: 'form-control login-form', required: true, minlength: 6 %>
-            </div>
-            <div class="actions">
-              <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
-            </div>
-        <% end %>
+      <h3 class="text-center">Join YourAppName</h3>
+      <hr/>
+      <a href="">
+        <div class="loginmodal-fb mb-2">Login with Facebook</div>
+      </a>
+      <a href="">
+        <div class="loginmodal-google mb-2"> Login with Google</div>
+      </a>
+      <div class="row">
+        <div class="col-5"><hr class="hr-or"></div>
+        <div class="col-2"><p class="text-center mb-0 lh-35">OR</p></div>
+        <div class="col-5"><hr class="hr-or"></div>
       </div>
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= devise_error_messages! %>
+      <div class="form-group">
+        <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form', required: true %>
       </div>
-      <center class="mt-4"> Already a member? <%= link_to "Log in", new_session_path(resource_name) %></center>
+      <div class="form-group">
+        <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Enter Your Password', class: 'form-control login-form', required: true, minlength: 6 %>
+      </div>
+      <div class="form-group">
+        <%= f.password_field :password_confirmation, autocomplete: "off",required: true, placeholder: 'Enter Your Password Again', class: 'form-control login-form', required: true, minlength: 6 %>
+      </div>
+      <div class="actions mt-3">
+        <%= f.submit "Sign Up", class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>
+      </div>
+      <% end %>
+      <center>Already a member? <%= link_to "Login", new_session_path(resource_name) %></center>
     </div>
   </div>
 </div>

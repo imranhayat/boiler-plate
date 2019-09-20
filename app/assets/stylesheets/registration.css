@@ -1,92 +1,153 @@
 .loginmodal-fb {
-    border: 0;
-    padding: 11px 15px;
-    text-align: left;
-    color: #fff;
-    background-color: #3B5998;
-    font-size: 16px;
+  font-weight: 600;
+  border: 1px solid #ededed;
+  padding: 11.5px 15px;
+  text-align: left;
+  color: #fff;
+  background-color: #48679e;
+  font-size: 14px;
+  line-height: 25px;
+  border-radius: 5px;
 }
-.loginmodal-fb a, .loginmodal-fb a:focus, .loginmodal-fb a:active, .loginmodal-fb a:hover {
-    color: #fff  !important;
-    
+
+.loginmodal-fb a,
+.loginmodal-fb a:focus,
+.loginmodal-fb a:active,
+.loginmodal-fb a:hover {
+  color: #fff !important;
+
 }
-a.nav-link {
-    color: #0062cc !important;
+.btn-submit{
+  padding: 11.5px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 25px;
 }
+.nav-link {
+  font-weight: 600 !important;
+  color: #333333 !important;
+  line-height: 14px !important;
+}
+
 .loginmodal-fb::before {
-    padding-right: 20%;
-    content: "\f09a";
-    font-family: "Font Awesome 5 Brands";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    color: #fff;
-    font-size: 24px;
-    vertical-align: middle;
+  padding-right: 20%;
+  content: "\f39e";
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #fff;
+  font-size: 24px;
+  vertical-align: middle;
 }
+
 .loginmodal-google {
-    padding: 11px 15px;
-    text-align: left;
-    background-color: #fafafa;
-    color: #555555 !important;
-    border: 1px solid #dddddd;
-    font-size: 16px;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 11.5px 15px;
+  text-align: left;
+  background-color: #e34134;
+  color: #ffffff !important;
+  border: 1px solid #ededed;
+  font-size: 14px;
+  line-height: 25px;
 }
-.loginmodal-google a, .loginmodal-google a:focus, .loginmodal-google a:active, .loginmodal-google a:hover {
-    color: #555555 !important;
+
+.loginmodal-google a,
+.loginmodal-google a:focus,
+.loginmodal-google a:active,
+.loginmodal-google a:hover {
+  color: #555555 !important;
 }
+
 .loginmodal-google::before {
-    padding-right: 20%;
-    content: "\f1a0";
-    font-family: "Font Awesome 5 Brands";
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    color: #d62d20;
-    font-size: 24px;
-    vertical-align: middle;
+  padding-right: 20%;
+  content: "\f1a0";
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  color: #ffffff;
+  font-size: 24px;
+  vertical-align: middle;
 }
+
 @media (min-width: 768px) {
-.b-left {
+  .b-left {
     border-left: 1px solid #000 !important;
-} }
+  }
+}
+
 .hr-or {
-    margin-bottom: 18px !important;
-    margin-top: 12px !important;
-    border-color: #dddddd;
+  margin-bottom: 23px !important;
+  margin-top: 17px !important;
+  border-color: #dddddd;
 }
 
 .container-sign {
-    padding: 30px 0;
-    background-color: #fff;
-    margin: 0 auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 2px rgba(0,0,0,.3);
-    overflow: hidden;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 1px 1.732px 7px rgba(136,156,176,0.1);
+  overflow: hidden;
 }
+
 @media (min-width: 800px) {
-.container-signup {
+  .container-signup {
     max-width: 800px;
-}}
+  }
+}
+
+@media (min-width: 400px) {
+  .container-sign {
+  padding: 40px 44px;
+}
+}
+@media (max-width: 400px) {
+  .navbar-brand img{
+    width: 150px;
+  }
+  .container-sign {
+  padding: 40px 20px;
+}
+}
 
 @media (min-width: 576px) {
-.container-signin {
-    max-width: 400px;
-}
-.container-signup {
+  .container-signin {
+    max-width: 450px;
+  }
+
+  .container-signup {
     max-width: 800px;
+  }
+
+  .modal-login {
+    max-width: 400px;
+  }
+
+  .modal-login-body {
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+}
+
+.login-form {
+  padding: 11.5px 20px !important;
+}
+
+.login-form::focus {
+  border: 1px solid #ced4da !important;
+}
+
+.remember_me input{
+  vertical-align: middle;
+}
+.remember_me label{
+  margin-bottom: 0 !important;
+  line-height: 14px;
+  vertical-align: middle;
 }
 .modal-login {
-    max-width: 400px;
-}
-.modal-login-body {
-  padding-left: 36px;
-  padding-right: 36px;
-}
-}
-.login-form {
-    padding: 10px .75rem !important;
-}
-.login-form::focus {
-    border: 1px solid #ced4da !important;
-}
+    margin-top:5px !important;
+    margin-bottom: 0px !important;
+  }

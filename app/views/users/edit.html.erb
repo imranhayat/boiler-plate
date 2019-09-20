@@ -1,13 +1,12 @@
 <div class="container-fluid container-top py-4">
   <div class="container container-signin container-sign p-4">
-<h4 class="text-center mb-4"> Edit Profile</h4>
-
-<%= form_for @user do |f| %>
+    <h4 class="text-center mb-4"> Edit Profile</h4>
+    <%= form_for @user do |f| %>
     <div class="form-group">
-        <%= f.label :name %> 
-        <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
     </div>
     <%= f.submit "Update", class: 'btn btn-primary btn-block' %>
-<% end %>
-</div>
+    <% end %>
+  </div>
 </div>
