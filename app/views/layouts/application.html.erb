@@ -23,7 +23,7 @@
       <script>
           swal({
               title: 'Success',
-              text: "<%= notice %>",
+              text: "<%= notice.html_safe %>",
               type: 'success',
               timer: 3000
           });
@@ -34,7 +34,7 @@
       <script>
         swal({
             title: 'Oops!',
-            text: "<%= alert %>",
+            text: "<%= alert.html_safe %>",
             type: 'error'
         });
       </script>
@@ -43,7 +43,7 @@
       <script>
         swal({
             title: 'Oops!',
-            text: "<%= flash[:warning] %>",
+            text: "<%= flash[:warning].html_safe %>",
             type: 'warning'
         });
       </script>
@@ -53,7 +53,7 @@
       <script>
         swal({
             title: 'Success',
-            text: "<%= flash[:info] %>",
+            text: "<%= flash[:info].html_safe %>",
             type: 'success'
         });
       </script>

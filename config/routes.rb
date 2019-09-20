@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get 'admin_panel/users',as: :admin_users
 
   devise_for :users,:controllers => { sessions: 'users/sessions',registrations: 'users/registrations',passwords: 'users/passwords' }
-  root 'home#home'
-  get 'admin', to: 'home#admin', as: :admin
-  resources :users
+  root 'home#index'
+  # resources :users
 
 end
