@@ -37,22 +37,18 @@
           <li class="nav-item">
             <a href="#" class="dropdown-toggle nav-link btn btn-primary text-white px-1 py-2" data-toggle="dropdown"> <i class="fas fa-user mr-1"></i> <%= current_user.name%><i class="fas fa-chevron-down ml-1 down-arrow"></i></a>
             <div class="dropdown-menu bg-light">
-              <a class="dropdown-item" href="<%= edit_user_path(current_user) %>">Profile</a>
-              <a class="dropdown-item" href="<%= edit_user_registration_path %>">Settings</a>
+              <% if current_user.admin %>
+                <a class="dropdown-item" href="<%= admin_panel_path %>">Dashboard</a>
+              <% else%>
+                <a class="dropdown-item" href="<%= user_panel_path %>">Profile</a>
+                <a class="dropdown-item" href="<%= edit_user_registration_path %>">Settings</a>
+              <% end %>
               <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete">
               Log out</a>
             </div>
           </li>
         </div>
         
-        <% if current_user.admin %>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= admin_panel_path %>">DASHBOARD</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="<%= destroy_user_session_path %>" data-method="delete">SIGN OUT</a>
-        </li>
-        <% end %>
         
         <% end %>
       </ul>
@@ -83,11 +79,11 @@
           <div class="col-5"><hr class="hr-or"></div>
         </div>
         <div class="form-group">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form',id: "login-email", required: true %>
         </div>
         
         <div class="form-group">
-          <%= f.password_field :password, autocomplete: "off", placeholder: 'Enter Your Password', class: 'form-control login-form', required: true, minlength: 6 %>
+          <%= f.password_field :password, autocomplete: "off", placeholder: 'Enter Your Password', class: 'form-control login-form',id: "login-password", required: true, minlength: 6 %>
         </div>
         
         <div class="form-group remember_me">
@@ -131,16 +127,16 @@
           <div class="col-5"><hr class="hr-or"></div>
         </div>
         <div class="form-group">
-          <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form', required: true %>
+          <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form',id: "join-name", required: true %>
         </div>
         <div class="form-group">
-          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form',id: "join-email", required: true %>
         </div>
         <div class="form-group">
-          <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Enter Your Password', class: 'form-control login-form', required: true, minlength: 6 %>
+          <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Enter Your Password', class: 'form-control login-form',id: "join-password", required: true, minlength: 6 %>
         </div>
         <div class="form-group">
-          <%= f.password_field :password_confirmation, autocomplete: "off",required: true, placeholder: 'Enter Your Password Again', class: 'form-control login-form', required: true, minlength: 6 %>
+          <%= f.password_field :password_confirmation, autocomplete: "off",required: true, placeholder: 'Enter Your Password Again',id: "join-password-again", class: 'form-control login-form', required: true, minlength: 6 %>
         </div>
         
         <div class="actions mt-3">

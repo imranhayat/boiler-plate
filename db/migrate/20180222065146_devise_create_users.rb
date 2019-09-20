@@ -35,6 +35,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       t.string :name
+      t.date :dob
       # t.string :username
       t.string :gender
       t.attachment :profile_pic
