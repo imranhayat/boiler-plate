@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="card">
+		<div class="card-body">
+		    <%= form_for(current_user.class.to_s , as: current_user, url: registration_path(current_user), html: {id: "email_form", method: :put }) do |f| %>
+		        <%#= devise_error_messages! %>
+			    <h3 class="text-center">Profile</h3>
+				<div class="profile-change-icon">
+					<label for="file-input">
+					  <img id="blah" src="<%= current_user.profile_pic%>" alt="your image", class="img-fluid setting-profile-image" />
+					  
+					  <%= f.file_field :profile_pic,id: "file-input",class: 'imgInp d-none' %>
+					  <span class="middle text-center"><i class="fas fa-camera"></i></span>
+					</label>
+				</div>
+				<div class="form-group">
+					<label>Name</label>
+					<%= f.text_field :name, autofocus: true, autocomplete: "name", class: 'form-control', required: true %>
+				</div>
+				<div class="form-group">
+					<label>Phone Number</label>
+					<%= f.text_field :phone_number, class: 'form-control' %>
+				</div>
+
+				<div class="form-group">
+					<label>Date of Birth</label>
+					<input type="date" class="form-control" name="user[dob]" value="<%= current_user.dob%>">
+				</div>
+				<div class="form-group">
+					<label>Gender</label>
+					<%= f.select :gender,options_for_select([["Male","Male"],["Female","Female"],["Other","Other"]]),{},{class: "form-control"} %>
+				</div>
+
+		        
+		        <div class="actions">
+		          <%= f.submit "Update", class: 'btn btn-primary btn-block mb-1' %>
+		        </div>
+		    <% end %>
+			
+		</div>
+	</div>
+</div>
