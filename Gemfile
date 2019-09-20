@@ -35,3 +35,5 @@ gem 'cancancan', '~> 2.0'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem "paperclip"
 gem 'sweetalert-rails'
+
+gem 'money-rails', '~>1.12' # For money/balance objects

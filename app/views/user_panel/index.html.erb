@@ -29,7 +29,8 @@
       <div class="p-50 bg-white user-body">
         <div class="row mb-3 mb-md-0">
           <div class="col-12">
-            <h3 class="font-weight-bold mb-0">Information</h3>
+            <h3 class="font-weight-bold mb-0">Information
+              <span class="pull-right"> Your Balance: <%= humanized_money_with_symbol(current_user.balance)%></span></h3>
           </div>
         </div>
         <div class="row row-user-fields">
