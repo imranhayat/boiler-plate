@@ -2,13 +2,14 @@ class UserPanelController < ApplicationController
 	before_action :authenticate_user
 
 	def payment
-		# @intent = Stripe::PaymentIntent.create({
-	 #        amount: params[:amount],
-	 #        currency: 'usd',
-	 #        payment_method_types: ['card'],
-	 #        description: current_user.email
-	 #    })
-	    
+		@amount = (params[:amount].to_f * 100).to_i
+		@intent = Stripe::PaymentIntent.create({
+	        amount: @amount,
+	        currency: 'usd',
+	        payment_method_types: ['card'],
+	        description: current_user.email
+	    })
+
 	    respond_to do |format|
 	    	format.html {}
 	    	format.js {}

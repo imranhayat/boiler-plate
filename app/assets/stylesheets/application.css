@@ -12,6 +12,7 @@
  *
  *= require sweetalert
  *= require_tree .
+ *= require toastr_rails
  *= require_self
  */
 
@@ -547,4 +548,12 @@ img#blah:hover {
 }
 .navbar-toggler-icon{
   vertical-align: super !important;
+}
+
+.stripe-card {
+  width: 300px;
+  border: 1px solid grey;
+}
+.stripe-card.complete {
+  border-color: green;
 }
