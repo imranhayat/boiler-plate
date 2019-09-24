@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'admin_panel/users',as: :admin_users
 
   devise_for :users,:controllers => { sessions: 'users/sessions',registrations: 'users/registrations',passwords: 'users/passwords' }
-  # resources :users
+  resources :users, only: [:edit,:update]
 
   post 'stripe-webhooks',to: 'home#webhooks'
 

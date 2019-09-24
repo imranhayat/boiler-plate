@@ -10,7 +10,7 @@
                 <a class="dashboard-side-link active" href="<%= admin_users_path%>"><i class="fas fa-users"></i><span>Users</span></a>
                 <a class="dashboard-side-link" href="#"><i class="fas fa-list"></i><span>Categories</span></a>
                 <a class="dashboard-side-link" href="#"><i class="fas fa-cogs"></i><span>Facilities</span></a>
-                <a class="dashboard-side-link" href="#"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
+                <a class="dashboard-side-link" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
               </div>
             </div>
           </div>
