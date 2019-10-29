@@ -1,21 +1,22 @@
-# BOILER PLATE SETTINGS
+# SETTINGS
 
-## Tech Versions
+### Versions
 
-> Ruby version ** 2.6.3 **
-> Rails version ** 5.2.3 **
-> Bootstrap version ** 4.0 **
-> Database ** PostgreSQL **
+> Ruby version  (2.6.3)
+> Rails version (5.2.3)
+> Bootstrap version (4.0)
+> Database (PostgreSQL)
 
 Gem Friendly_ID Settings
 
-	```
+```
 	extend FriendlyId
 	friendly_id :generated_slug, use: :slugged
 	def generated_slug
 		@random_slug ||= persisted? ? friendly_id : ('a'..'z').to_a.shuffle[0,15].join
 	end
-	```
+	
+```
 Other Gems
 
 *	gem 'paperclip'
