@@ -157,7 +157,7 @@ img#blah:hover {
   }
 }
 
-@media (max-width: 1200px) and ((min-width: 992px)) {
+@media (max-width: 1200px) and (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 10px !important;
     padding-left: 10px !important;
