@@ -9,13 +9,12 @@
 
 Gem Friendly_ID Settings
 
-```
-	extend FriendlyId
-	friendly_id :generated_slug, use: :slugged
-	def generated_slug
-		@random_slug ||= persisted? ? friendly_id : ('a'..'z').to_a.shuffle[0,15].join
-	end
-	
+```ruby
+extend FriendlyId
+friendly_id :generated_slug, use: :slugged
+def generated_slug
+	@random_slug ||= persisted? ? friendly_id : ('a'..'z').to_a.shuffle[0,15].join
+end	
 ```
 Other Gems
 
