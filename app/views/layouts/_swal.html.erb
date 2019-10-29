@@ -1,0 +1,40 @@
+<% if notice %>
+  <!--<div class="alert alert-info" role="alert">-->
+  <!--  <strong>Info!</strong> <%#= notice || alert %>-->
+  <!--</div>-->
+  <script>
+    swal({
+      title: 'Success',
+      text: "<%= notice.html_safe %>",
+      type: 'success',
+      timer: 3000
+    });
+  </script>
+<% end %>
+<% if alert.present? %>
+  <script>
+    swal({
+      title: 'Oops!',
+      text: "<%= alert.html_safe %>",
+      type: 'error'
+    });
+  </script>
+<% end %>
+<% if flash[:warning] %>
+  <script>
+    swal({
+      title: 'Oops!',
+      text: "<%= flash[:warning].html_safe %>",
+      type: 'warning'
+    });
+  </script>
+<% end %>
+<% if flash[:info].present? %>
+  <script>
+    swal({
+      title: 'Success',
+      text: "<%= flash[:info].html_safe %>",
+      type: 'success'
+    });
+  </script>
+<% end %>

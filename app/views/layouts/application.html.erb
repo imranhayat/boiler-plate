@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>YourAppName</title>
@@ -10,65 +11,19 @@
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
+    <%= render 'layouts/swal' %>
+    <div class="container-main">
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
     <%# unless params[:controller]=='home' && params[:action]=='admin' %>
-      <%= render 'layouts/header' %>
-    <% if notice %>
-        <!--<div class="alert alert-info" role="alert">-->
-        <!--  <strong>Info!</strong> <%#= notice || alert %>-->
-        <!--</div>-->
-      <script>
-          swal({
-              title: 'Success',
-              text: "<%= notice.html_safe %>",
-              type: 'success',
-              timer: 3000
-          });
-        </script>
-    <% end %>
-    
-    <% if alert.present? %>
-      <script>
-        swal({
-            title: 'Oops!',
-            text: "<%= alert.html_safe %>",
-            type: 'error'
-        });
-      </script>
-    <% end %>
-    <% if flash[:warning] %>
-      <script>
-        swal({
-            title: 'Oops!',
-            text: "<%= flash[:warning].html_safe %>",
-            type: 'warning'
-        });
-      </script>
-    <% end %>
-  
-    <% if flash[:info].present? %>
-      <script>
-        swal({
-            title: 'Success',
-            text: "<%= flash[:info].html_safe %>",
-            type: 'success'
-        });
-      </script>
-    <% end %>
-      <%# unless params[:controller]=='home' && params[:action]=='admin' %>
-      
-      <%# end %>  
-      <div class="container-main">
-        <%= yield %>
-      </div>
-    <%# unless params[:controller]=='home' && params[:action]=='admin' %>
-      
-    <%# end %>
-      <%= render 'layouts/footer' %>
-    
+    <%# end %>  
   </body>
+
 </html>
