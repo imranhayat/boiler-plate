@@ -2444,7 +2444,7 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-image: linear-gradient(#FF972B,#F92B49)
+  background-image: linear-gradient(#ac8ece,#79589f);
   border-color: #005cbf;
 }
 
@@ -4972,7 +4972,7 @@ a.badge:hover, a.badge:focus {
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #fff;
-  background-image: linear-gradient(#FF972B,#F92B49)
+  background-image: linear-gradient(#ac8ece,#79589f);
 }
 
 a.badge-primary:focus, a.badge-primary.focus {
