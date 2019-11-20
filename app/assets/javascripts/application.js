@@ -14,21 +14,29 @@
 //= require jquery
 //= require sweetalert
 //= require turbolinks
+//= require toastr_rails
 //= require_tree .
-$(document).ready(function() {
-  $('.alert').delay(2000).fadeOut();
-function readURL(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-    reader.onload = function(e) {
-      $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
-      $('#imagePreview').hide();
-      $('#imagePreview').fadeIn(650);
-    }
-    reader.readAsDataURL(input.files[0]);
-  }
-}
-$("#imageUpload").change(function() {
-  readURL(this);
+
+toastr.options = Object.assign({},toastr.options,{
+  "progressBar": true
 });
+
+$(document).on("turbolinks:load",function() {
+
+  $('.table-users table').DataTable();
+  $('.alert').delay(2000).fadeOut();
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function(e) {
+        $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+        $('#imagePreview').hide();
+        $('#imagePreview').fadeIn(650);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#imageUpload").change(function() {
+    readURL(this);
+  });
 });

@@ -1,4 +1,5 @@
 class Ability
+  
   include CanCan::Ability
 
   def initialize(user)
@@ -12,4 +13,5 @@ class Ability
         cannot :manage,:all
       end
   end
+
 end

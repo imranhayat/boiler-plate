@@ -58,7 +58,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #333333;
+  color: #1d2b3a;
   text-align: left;
   background-color: #fff;
 }
@@ -518,7 +518,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 87.5%;
   color: #fff;
-  background-color: #333333;
+  background-color: #1d2b3a;
   border-radius: 0.2rem;
 }
 
@@ -531,7 +531,7 @@ kbd kbd {
 pre {
   display: block;
   font-size: 87.5%;
-  color: #333333;
+  color: #1d2b3a;
 }
 
 pre code {
@@ -1514,14 +1514,14 @@ pre code {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #333333;
+  color: #1d2b3a;
 }
 
 .table th,
 .table td {
   padding: 0.75rem;
   vertical-align: top;
-  border-top: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
 }
 
 .table thead th {
@@ -1564,7 +1564,7 @@ pre code {
 }
 
 .table-hover tbody tr:hover {
-  color: #333333;
+  color: #1d2b3a;
   background-color: rgba(0, 0, 0, 0.075);
 }
 
@@ -1959,7 +1959,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.375rem;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #333333;
+  color: #1d2b3a;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2378,7 +2378,7 @@ textarea.form-control {
 .btn {
   display: inline-block;
   font-weight: 400;
-  color: #333333;
+  color: #1d2b3a;
   text-align: center;
   vertical-align: middle;
   -webkit-user-select: none;
@@ -2401,7 +2401,7 @@ textarea.form-control {
 }
 
 .btn:hover {
-  color: #333333;
+  color: #1d2b3a;
   text-decoration: none;
 }
 
@@ -2444,7 +2444,7 @@ fieldset:disabled a.btn {
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
 .show > .btn-primary.dropdown-toggle {
   color: #fff;
-  background-image: linear-gradient(#ac8ece,#79589f);
+  background-image: linear-gradient(#79589f,#ac8ece);
   border-color: #005cbf;
 }
 
@@ -2556,13 +2556,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 
 .btn-warning:hover {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #e0a800;
   border-color: #d39e00;
 }
@@ -2572,14 +2572,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-warning.disabled, .btn-warning:disabled {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #ffc107;
   border-color: #ffc107;
 }
 
 .btn-warning:not(:disabled):not(.disabled):active, .btn-warning:not(:disabled):not(.disabled).active,
 .show > .btn-warning.dropdown-toggle {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #d39e00;
   border-color: #c69500;
 }
@@ -2624,13 +2624,13 @@ fieldset:disabled a.btn {
 }
 
 .btn-light {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 .btn-light:hover {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #e2e6ea;
   border-color: #dae0e5;
 }
@@ -2640,14 +2640,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-light.disabled, .btn-light:disabled {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
 
 .btn-light:not(:disabled):not(.disabled):active, .btn-light:not(:disabled):not(.disabled).active,
 .show > .btn-light.dropdown-toggle {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #dae0e5;
   border-color: #d3d9df;
 }
@@ -2825,7 +2825,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-warning:hover {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #ffc107;
   border-color: #ffc107;
 }
@@ -2841,7 +2841,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-warning:not(:disabled):not(.disabled):active, .btn-outline-warning:not(:disabled):not(.disabled).active,
 .show > .btn-outline-warning.dropdown-toggle {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #ffc107;
   border-color: #ffc107;
 }
@@ -2889,7 +2889,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-light:hover {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -2905,7 +2905,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-light:not(:disabled):not(.disabled):active, .btn-outline-light:not(:disabled):not(.disabled).active,
 .show > .btn-outline-light.dropdown-toggle {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #f8f9fa;
   border-color: #f8f9fa;
 }
@@ -3065,7 +3065,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #333333;
+  color: #1d2b3a;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3232,7 +3232,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #333333;
+  color: #1d2b3a;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3244,7 +3244,7 @@ input[type="button"].btn-block {
   color: #fff !important;
   font-weight: bold;
   text-decoration: none;
-  background-image: linear-gradient(135deg,#ac8ece,#79589f) !important;
+  background-image: linear-gradient(135deg,#79589f,#ac8ece) !important;
 }
 
 .dropdown-item.active, .dropdown-item:active {
@@ -3275,7 +3275,7 @@ input[type="button"].btn-block {
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1.5rem;
-  color: #333333;
+  color: #1d2b3a;
 }
 
 .btn-group,
@@ -4176,7 +4176,7 @@ input[type="button"].btn-block {
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 30px;
   line-height: inherit;
   white-space: nowrap;
 }
@@ -4511,23 +4511,23 @@ input[type="button"].btn-block {
   color: #fff;
 }
 
-.navbar-dark .navbar-nav .nav-link {
-  color: rgba(255, 255, 255, 0.5);
+/*.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
 }
 
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 1);
 }
 
 .navbar-dark .navbar-nav .nav-link.disabled {
-  color: rgba(255, 255, 255, 0.25);
-}
+  color: rgba(255, 255, 255, 1);
+}*/
 
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .active > .nav-link,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .nav-link.active {
-  color: #fff;
+  color: #79589f;
 }
 
 .navbar-dark .navbar-toggler {
@@ -4972,7 +4972,7 @@ a.badge:hover, a.badge:focus {
 
 a.badge-primary:hover, a.badge-primary:focus {
   color: #fff;
-  background-image: linear-gradient(#ac8ece,#79589f);
+  background-image: linear-gradient(#79589f,#ac8ece)
 }
 
 a.badge-primary:focus, a.badge-primary.focus {
@@ -5026,12 +5026,12 @@ a.badge-info:focus, a.badge-info.focus {
 }
 
 .badge-warning {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #ffc107;
 }
 
 a.badge-warning:hover, a.badge-warning:focus {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #d39e00;
 }
 
@@ -5056,12 +5056,12 @@ a.badge-danger:focus, a.badge-danger.focus {
 }
 
 .badge-light {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #f8f9fa;
 }
 
 a.badge-light:hover, a.badge-light:focus {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #dae0e5;
 }
 
@@ -5344,7 +5344,7 @@ a.badge-dark:focus, a.badge-dark.focus {
 }
 
 .list-group-item-action:active {
-  color: #333333;
+  color: #1d2b3a;
   background-color: #e9ecef;
 }
 
@@ -5948,7 +5948,6 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6061,7 +6060,6 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6212,7 +6210,7 @@ a.close.disabled {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #333333;
+  color: #1d2b3a;
 }
 
 .carousel {
@@ -9915,7 +9913,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: #333333 !important;
+  color: #1d2b3a !important;
 }
 
 .text-muted {

@@ -1,4 +1,5 @@
 class AdminPanelController < ApplicationController
+  
   before_action :authenticate_user!
   load_and_authorize_resource class: false
   
@@ -9,4 +10,5 @@ class AdminPanelController < ApplicationController
   def users
     @users = User.where.not(id: current_user.id)
   end
+
 end
