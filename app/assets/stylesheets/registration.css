@@ -25,12 +25,13 @@
 }
 .nav-link {
   font-weight: 600 !important;
-  color: #333333 !important;
+  color: #1d2b3a;
   line-height: 14px !important;
+  letter-spacing: 1px;
 }
 
 .loginmodal-fb::before {
-  padding-right: 20%;
+  padding-right: 24%;
   content: "\f39e";
   font-family: "Font Awesome 5 Brands";
   font-style: normal;

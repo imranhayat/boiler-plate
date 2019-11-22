@@ -22,6 +22,8 @@ toastr.options = Object.assign({},toastr.options,{
 });
 
 $(document).on("turbolinks:load",function() {
+
+  $('.table-users table').DataTable();
   $('.alert').delay(2000).fadeOut();
   function readURL(input) {
     if (input.files && input.files[0]) {
