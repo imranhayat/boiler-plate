@@ -22,6 +22,10 @@ toastr.options = Object.assign({}, toastr.options, {
 });
 
 $(document).on("turbolinks:load", function() {
+  $(document).on('click','.icon-dashboard-mobile', function(){
+    $('.dashboard-row').toggleClass('d-none');
+    $('.center-row').toggleClass('mb-4');
+  });
   var table = $('.table-users table').DataTable({
     
     "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']

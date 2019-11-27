@@ -14427,7 +14427,7 @@
   
     /* Features */
     "sWrapper": "dataTables_wrapper",
-    "sFilter": "dataTables_filter d-inline ml-3",
+    "sFilter": "dataTables_filter d-inline ml-md-3",
     "sInfo": "dataTables_info",
     "sPaging": "dataTables_paginate paging_", /* Note that the type is postfixed */
     "sLength": "dataTables_length",

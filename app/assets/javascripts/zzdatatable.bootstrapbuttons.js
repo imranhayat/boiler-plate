@@ -41,7 +41,7 @@ $.extend( true, DataTable.Buttons.defaults, {
       className: 'dt-buttons btn-group flex-wrap'
     },
     button: {
-      className: 'btn btn-light border'
+      className: 'btn btn-light px-2 mb-2 mb-xl-0 px-md-2 border'
     },
     collection: {
       tag: 'div',
