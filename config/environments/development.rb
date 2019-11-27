@@ -22,15 +22,19 @@ Rails.application.configure do
   config.assets.debug = true
   config.assets.quiet = true
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
-  config.action_mailer.default_url_options = { host: 'https://freelance-a17100262.c9users.io' }
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { host: 'http://localhost:3000' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
+  ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings = {
-    :address => 'smtpout.secureserver.net',
-    :domain  => 'www.guidistan.com',
-    :port      => 80,
-    :user_name => Rails.application.secrets['mailer_username'],
-    :password => Rails.application.secrets['mailer_password'],
-    :authentication => :plain
+    :domain  => ENV['MAILER_DOMAIN'],
+    :user_name => ENV['MAILER_USERNAME'],
+    :password => ENV['MAILER_PASSWORD'],
+    :address => 'smtp.mailgun.org',
+    :port      => '587',
+    :authentication => :plain,
+    enable_starttls_auto: true
     }  
 end
