@@ -1,84 +1,63 @@
-<div class="container-fluid container-admin">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-3">
-        <div class="card card-admin">
-          <div class="card-body">
-            <h3 class="text-primary mb-4 text-center"> Dashboard </h3>
-            <div class="row">
-              <div class="col-12">
-                <a class="dashboard-side-link active" href="<%= admin_users_path%>"><i class="fas fa-users"></i><span>Users</span></a>
-                <a class="dashboard-side-link" href="#"><i class="fas fa-list"></i><span>Categories</span></a>
-                <a class="dashboard-side-link" href="#"><i class="fas fa-cogs"></i><span>Facilities</span></a>
-                <a class="dashboard-side-link" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-9 mt-4 mt-lg-0">
-        <h5 class="mb-4">Statistics</h5>
-        <div class="row card-stats">
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="card text-center">
-              <h4>TOTAL USERS</h4>
-              <h1>40</h1>
-            </div>
-          </div>
-        </div>
-        <hr class="mb-4"/>
-        <h5 class="mb-4 pt-2">All Users</h5>
-        <div class="table-responsive table-users">
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-              </tr>
-            </thead>
-            <tbody>
-              <% @users.each do |user| %>
-              <tr>
-                <td><%= user.name%></td>
-                <td><%= user.email%></td>
-                <td><%= user.phone_number%></td>
-              </tr>
-              <% end%>
-            </tbody>
-          </table>
-        </div>
+<div class="container-admin">
+  <h5 class="mb-4">Statistics</h5>
+  <div class="row card-stats">
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
       </div>
     </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
+      </div>
+    </div>
+    <div class="col-lg-4 col-sm-6">
+      <div class="card text-center">
+        <h4>TOTAL USERS</h4>
+        <h1>40</h1>
+      </div>
+    </div>
+  </div>
+  <hr class="mb-4"/>
+  <h5 class="mb-4 pt-2">All Users</h5>
+  <div class="table-responsive table-users">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+        <tr>
+          <td><%= user.name%></td>
+          <td><%= user.email%></td>
+          <td><%= user.phone_number%></td>
+        </tr>
+        <% end%>
+      </tbody>
+    </table>
   </div>
 </div>

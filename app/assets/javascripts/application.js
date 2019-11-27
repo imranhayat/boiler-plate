@@ -17,14 +17,22 @@
 //= require toastr_rails
 //= require_tree .
 
-toastr.options = Object.assign({},toastr.options,{
+toastr.options = Object.assign({}, toastr.options, {
   "progressBar": true
 });
 
-$(document).on("turbolinks:load",function() {
+$(document).on("turbolinks:load", function() {
+  var table = $('.table-users table').DataTable( {
+    buttons: [
+        'copy', 'excel', 'pdf'
+    ]
+} );
+  
+table.buttons().container()
+    .appendTo( $('.col-sm-6:eq(0)', table.table().container() ) );
 
-  $('.table-users table').DataTable();
   $('.alert').delay(2000).fadeOut();
+
   function readURL(input) {
     if (input.files && input.files[0]) {
       var reader = new FileReader();
