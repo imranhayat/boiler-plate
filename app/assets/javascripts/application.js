@@ -22,14 +22,11 @@ toastr.options = Object.assign({}, toastr.options, {
 });
 
 $(document).on("turbolinks:load", function() {
-  var table = $('.table-users table').DataTable( {
-    buttons: [
-        'copy', 'excel', 'pdf'
-    ]
-} );
-  
-table.buttons().container()
-    .appendTo( $('.col-sm-6:eq(0)', table.table().container() ) );
+  var table = $('.table-users table').DataTable({
+    
+    "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']
+  });
+  table.buttons().container().prependTo('.table-users .col-md-8:eq(0)');
 
   $('.alert').delay(2000).fadeOut();
 
