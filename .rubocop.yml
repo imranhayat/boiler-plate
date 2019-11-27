@@ -1,0 +1,14 @@
+AllCops:
+  Exclude:
+    - 'public/**/*'
+    - 'db/**/*'
+    - 'test/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'log/**/*'
+    - 'lib/**/*'
+    - 'bin/**/*'
+    - 'bin/{rails,rake}'
+    - 'config/spring.rb'
+    - 'config/puma.rb'
+    - !ruby/regexp /old_and_unused\.rb$/
