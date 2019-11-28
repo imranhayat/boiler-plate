@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  get '/change_access/#{parameter}', to: 'admin_panel#change_access', as: :change_access
   get '/dashboard', to: 'user_panel#index', as: :user_panel
   get 'profile', to: 'user_panel#profile', as: :profile
   get 'top_up', to: 'user_panel#top_up', as: :top_up
