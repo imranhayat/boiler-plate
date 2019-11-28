@@ -59,6 +59,7 @@
           <th>Name</th>
           <th>Email</th>
           <th>Phone Number</th>
+          <th>Revoke Access</th>
         </tr>
       </thead>
       <tbody>
@@ -67,6 +68,13 @@
           <td><%= user.name%></td>
           <td><%= user.email%></td>
           <td><%= user.phone_number%></td>
+          <td>
+            <% if user.revoke_access == false %>
+              <center><%= link_to 'Revoke Access', change_access_path(disable: user.id) %></center>
+            <% else %>
+              <center><%= link_to 'Enable Access', change_access_path(enable: user.id) %></center>
+            <% end %>
+          </td>
         </tr>
         <% end%>
       </tbody>
