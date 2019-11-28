@@ -1504,7 +1504,7 @@ html.sticky-header-active .btn-sticky-light {
 html.sticky-header-active .btn-sticky-light:hover,
 html.sticky-header-active .btn-sticky-light:focus {
   border-color: white;
-  background-color: white;
+  background-color: #f9f9f9;
   color: #1d2b3a;
 }
 

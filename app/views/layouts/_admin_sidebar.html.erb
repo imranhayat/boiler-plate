@@ -1,11 +1,12 @@
 <div class="card card-admin">
   <div class="card-body">
-    <div class="text-center px-3">
-      <img class="img-fluid mb-4" src="/logo.png">
+    <div class="text-md-center px-3 mb-md-4 center-row">
+      <img class="img-fluid" src="/logo.png">
+      <i class="fas fa-bars icon-dashboard-mobile d-inline d-md-none"></i>
     </div>
-    <div class="row">
+    <div class="row d-none d-md-flex dashboard-row">
       <div class="col-12">
-        <a class="dashboard-side-link active" href="<%= admin_panel_path%>"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+        <a class="dashboard-side-link active" href="<%= admin_panel_path%>"><i class="fas fa-tachometer-alt"></i><span>Admin Panel</span></a>
         <a class="dashboard-side-link" href="<%= admin_users_path%>"><i class="fas fa-users"></i><span>Users</span></a>
         <a class="dashboard-side-link" href="#"><i class="fas fa-list"></i><span>Categories</span></a>
         <a class="dashboard-side-link" href="#"><i class="fas fa-cogs"></i><span>Facilities</span></a>
