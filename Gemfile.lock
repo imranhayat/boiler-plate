@@ -72,6 +72,9 @@ GEM
       railties (>= 4.1.0)
       responders
       warden (~> 1.2.3)
+    devise_invitable (2.0.1)
+      actionmailer (>= 5.0)
+      devise (>= 4.6)
     erubi (1.8.0)
     execjs (2.7.0)
     faraday (0.15.4)
@@ -212,6 +215,7 @@ GEM
     responders (3.0.0)
       actionpack (>= 5.0)
       railties (>= 5.0)
+    rolify (5.2.0)
     rubocop (0.76.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -285,6 +289,7 @@ DEPENDENCIES
   cancancan (~> 2.0)
   coffee-rails (~> 4.2)
   devise
+  devise_invitable (~> 2.0.0)
   figaro
   friendly_id (~> 5.2, >= 5.2.4)
   jquery-rails
@@ -300,6 +305,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.7)
   rails (~> 5.2, >= 5.2.3)
+  rolify
   rubocop
   sass-rails (~> 5.0)
   spring

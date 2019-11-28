@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post 'payment', to: 'user_panel#payment', as: :payment
   get 'admin_panel', to: 'admin_panel#index', as: :admin_panel
   get 'admin_panel/users', as: :admin_users
-  devise_for :users, :controllers => { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords' }
+  devise_for :users, :controllers => { sessions: 'users/sessions', registrations: 'users/registrations', passwords: 'users/passwords', invitations: 'users/invitations' }
   resources :users, only: [:edit, :update]
   post 'stripe-webhooks', to: 'home#webhooks'
 end
