@@ -1,20 +1,22 @@
-<h2><%= t "devise.invitations.new.header" %></h2>
-
-<%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <% resource.class.invite_key_fields.each do |field| -%>
-    <div class="field">
-      <%= f.label field %><br />
-      <%= f.text_field field %>
+<div class="container-fluid container-top">
+  <div class="container container-signin container-sign">
+    <div class="modal-login-body">
+      <h3 class="text-center"><%= t "devise.invitations.new.header" %></h3>
+      <hr/>
+      <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <% resource.class.invite_key_fields.each do |field| -%>
+        <div class="form-group">
+          <%= f.email_field field, autofocus: true,placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
+        </div>
+        <% end %>
+        <div class="form-group">
+          <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name, r.id] }), { prompt: 'Select Role' } %>
+        </div>
+        <div class="actions mt-3">
+          <%= f.submit t("devise.invitations.new.submit_button"), class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>
+        </div>
+      <% end %>
     </div>
-  <% end -%>
-  
-  <div class="field">
-    <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name, r.id] }), { prompt: 'Select Role' } %>
   </div>
-
-  <div class="actions">
-    <%= f.submit t("devise.invitations.new.submit_button") %>
-  </div>
-<% end %>
+</div>

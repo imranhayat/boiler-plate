@@ -17,26 +17,27 @@
   </head>
   <body>
     <% if user_signed_in? and current_user.admin? %>
-    <div class="container-fluid pl-0 pr-0 pr-md-15 container-main-admin">
-      <div class="row">
-        <div class="col-xl-2 col-md-3 pr-md-0">
-          <%= render 'layouts/admin_sidebar' %>
-        </div>
-        <div class="col-xl-10 col-md-9 px-md-0">
-          <div class="container-main-footer px-md-4 px-2">
-            <%= yield %>
+      <%= render 'layouts/swal' %>
+      <div class="container-fluid pl-0 pr-0 pr-md-15 container-main-admin">
+        <div class="row">
+          <div class="col-xl-2 col-md-3 pr-md-0">
+            <%= render 'layouts/admin_sidebar' %>
           </div>
-          <%= render 'layouts/admin_footer' %>
+          <div class="col-xl-10 col-md-9 px-md-0">
+            <div class="container-main-footer">
+              <%= yield %>
+            </div>
+            <%= render 'layouts/admin_footer' %>
+          </div>
         </div>
       </div>
-    </div>
     <% else %>
-    <%= render 'layouts/header' %>
-    <%= render 'layouts/swal' %>
-    <div class="container-main">
-      <%= yield %>
-    </div>
-    <%= render 'layouts/footer' %>
+      <%= render 'layouts/header' %>
+      <%= render 'layouts/swal' %>
+      <div class="container-main">
+        <%= yield %>
+      </div>
+      <%= render 'layouts/footer' %>
     <% end %>
   </body>
 </html>

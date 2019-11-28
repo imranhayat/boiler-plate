@@ -39,14 +39,14 @@ ActiveRecord::Schema.define(version: 2019_11_28_055007) do
     t.string "provider"
     t.string "uid"
     t.string "name"
-    t.string "gender"
-    t.string "phone_number"
     t.date "dob"
-    t.boolean "admin", default: false
+    t.string "gender"
     t.string "profile_pic_file_name"
     t.string "profile_pic_content_type"
     t.bigint "profile_pic_file_size"
     t.datetime "profile_pic_updated_at"
+    t.string "phone_number"
+    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "balance_cents", default: 0, null: false
