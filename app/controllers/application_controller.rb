@@ -18,10 +18,4 @@ class ApplicationController < ActionController::Base
     end
   end
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:invite_params) do |u|
-      u.permit(role_ids: [])
-    end
-  end
-
 end

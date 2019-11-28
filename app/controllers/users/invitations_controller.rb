@@ -3,6 +3,7 @@ class Users::InvitationsController < Devise::InvitationsController
   prepend_before_action :has_invitations_left?, only: [:create]
   prepend_before_action :require_no_authentication, only: [:edit, :update, :destroy]
   prepend_before_action :resource_from_invitation_token, only: [:edit, :destroy]
+  before_action :configure_permitted_parameters, only: [:invite_params, :create]
 
   if respond_to? :helper_method
     helper_method :after_sign_in_path_for
@@ -18,8 +19,8 @@ class Users::InvitationsController < Devise::InvitationsController
   def create
     self.resource = invite_resource
     resource_invited = resource.errors.empty?
-    role = Role.find(params[:user][:role_ids])
-    resource.add_role role.name
+    # role = Role.find(params[:user][:role_ids])
+    # resource.add_role role.name
     yield resource if block_given?
 
     if resource_invited
@@ -114,6 +115,10 @@ class Users::InvitationsController < Devise::InvitationsController
 
     def translation_scope
       'devise.invitations'
+    end
+
+    def configure_permitted_parameters
+      devise_parameter_sanitizer.permit(:invite, keys: [:role_ids])
     end
 
 end
