@@ -10,7 +10,6 @@ class UserPanelController < ApplicationController
 			payment_method_types: ['card'],
 			description: current_user.email
 		})
-
 		respond_to do |format|
 			format.html {}
 			format.js {}
@@ -19,8 +18,8 @@ class UserPanelController < ApplicationController
 
 	private
 		def authenticate_user
-			if !(user_signed_in? and current_user.admin == false)
-				redirect_back(fallback_location: root_url, alert: "You don't have permissions to access this page.")
+			if user_signed_in? and current_user.has_role? :admin
+				redirect_back(fallback_location: admin_panel_path, alert: "You don't have permissions to access this page.")
 			end
 		end
 
