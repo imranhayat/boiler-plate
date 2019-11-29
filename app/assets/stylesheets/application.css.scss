@@ -211,11 +211,11 @@ img#blah:hover {
 }
 
 .footer-large a:hover,
-.nav-link:hover {
+.nav-link:hover, .nav-link:focus {
   color: #79589f !important;
 }
 
-.nav-link.btn:hover {
+.nav-link.btn:hover, .nav-link.btn:focus {
   color: #fff !important;
 }
 
@@ -401,14 +401,14 @@ width: 8px;
 }
 
 .card-admin .card-body {
-  padding: 21px 0 20px 0 !important;
+  padding: 0 !important;
 }
 .card-admin{
   background: #fdfdfd !important;
   height: 100%;
   border-radius: 0;
   box-shadow: none !important;
-  border-right: 1px solid #dbdbdb;
+  border-right: 1px solid #dee2e6;
 }
 .container-admin {
   padding-top: 30px;
@@ -659,4 +659,17 @@ html{
   border: 1px solid;
   float: right;
   font-size: 20px;
+}
+.table-bordered{
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+}
+.banner-header{
+  border-bottom: 1px solid #dee2e6;
+}
+.center-row{
+  padding: 22px 15px;
+}
+.lh-34{
+  line-height: 34px;
 }
