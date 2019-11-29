@@ -1,6 +1,6 @@
 class UserPanelController < ApplicationController
 	
-	before_action :authenticate_user
+	load_and_authorize_resource class: false
 
 	def payment
 		@amount = (params[:amount].to_f * 100).to_i
@@ -15,12 +15,5 @@ class UserPanelController < ApplicationController
 			format.js {}
 		end
 	end
-
-	private
-		def authenticate_user
-			if user_signed_in? and current_user.has_role? :admin
-				redirect_back(fallback_location: admin_panel_path, alert: "You don't have permissions to access this page.")
-			end
-		end
 
 end
