@@ -1,4 +1,11 @@
-<div class="container-admin">
+<div class="banner-header bg-white p-3">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center text-md-left">
+      <h5 class="my-1">Admin Dashboard</h5>
+    </div>
+  </div>
+</div>
+<div class="container container-admin px-md-4 px-2">
   <h5 class="mb-4">Statistics</h5>
   <div class="row card-stats">
     <div class="col-lg-3 col-sm-6">
@@ -51,7 +58,14 @@
     </div>
   </div>
   <hr class="mb-4"/>
-  <h5 class="mb-4 pt-2">All Users</h5>
+  <div class="row align-items-center mb-4">
+    <div class="col-md-6 text-center text-md-left">
+      <h5 class="mb-3 mb-md-0">All Users</h5>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <a href="/users/invitation/new" class="btn btn-primary">Invite Users</a>
+    </div>
+  </div>
   <div class="table-responsive table-users">
     <table class="table table-bordered">
       <thead>

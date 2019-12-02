@@ -25,9 +25,9 @@
         <% else %>
           <div class="dropdown">
             <li class="nav-item">
-              <a data-target="#navbarDropdown" href="#" class="dropdown-toggle nav-link btn btn-primary px-1 py-2" data-toggle="dropdown"> <i class="fas fa-user mr-1"></i> <%= current_user.name%><i class="fas fa-chevron-down ml-1 down-arrow"></i></a>
+              <a data-target="#navbarDropdown" href="#" class="dropdown-toggle nav-link btn btn-primary px-1 py-2" data-toggle="dropdown"> <i class="fas fa-user mr-1"></i> <%= current_user.name %><i class="fas fa-chevron-down ml-1 down-arrow"></i></a>
               <div class="dropdown-menu bg-white p-0" id="navbarDropdown">
-                <% if current_user.admin %>
+                <% if current_user.has_role? :admin %>
                   <a class="dropdown-item" href="<%= admin_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
                 <% else %>
                   <a class="dropdown-item" href="<%= user_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
