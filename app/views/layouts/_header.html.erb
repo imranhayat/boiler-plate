@@ -33,7 +33,7 @@
                 <% end %>
                 <i class="fas fa-chevron-down ml-1 down-arrow"></i></a>
               <div class="dropdown-menu bg-white p-0" id="navbarDropdown">
-                <% if current_user.admin %>
+                <% if current_user.has_role? :admin %>
                   <a class="dropdown-item" href="<%= admin_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
                 <% else %>
                   <a class="dropdown-item" href="<%= user_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>

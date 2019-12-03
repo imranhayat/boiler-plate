@@ -16,7 +16,7 @@
     <script src="https://js.stripe.com/v3/"></script>
   </head>
   <body>
-    <% if user_signed_in? and current_user.admin? %>
+    <% if user_signed_in? and current_user.has_role? :admin %>
       <%= render 'layouts/swal' %>
       <div class="container-fluid pl-0 pr-0 pr-md-15 container-main-admin">
         <div class="row">

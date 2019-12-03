@@ -16,6 +16,10 @@ def generated_slug
   @random_slug ||= persisted? ? friendly_id : ('a'..'z').to_a.shuffle[0,15].join
 end	
 ```
+Gem Rolify Settings
+
+> If you want to add more roles add them manually or using seeds file.
+ 
 Other Gems
 
 *	gem 'paperclip'

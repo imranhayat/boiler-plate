@@ -39,14 +39,14 @@ ActiveRecord::Schema.define(version: 2019_11_28_055007) do
     t.string "provider"
     t.string "uid"
     t.string "name"
-    t.date "dob"
     t.string "gender"
+    t.string "phone_number"
+    t.date "dob"
+    t.boolean "revoke_access", default: false
     t.string "profile_pic_file_name"
     t.string "profile_pic_content_type"
     t.bigint "profile_pic_file_size"
     t.datetime "profile_pic_updated_at"
-    t.string "phone_number"
-    t.boolean "admin", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "balance_cents", default: 0, null: false
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 2019_11_28_055007) do
     t.index ["invited_by_id"], name: "index_users_on_invited_by_id"
     t.index ["invited_by_type", "invited_by_id"], name: "index_users_on_invited_by_type_and_invited_by_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["revoke_access"], name: "index_users_on_revoke_access"
   end
 
   create_table "users_roles", id: false, force: :cascade do |t|

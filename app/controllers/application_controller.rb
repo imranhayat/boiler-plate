@@ -9,18 +9,12 @@ class ApplicationController < ActionController::Base
   
   def after_sign_in_path_for(resource)
     stored_location_for(resource) ||
-    if resource.is_a?(User) and resource.admin == true
+    if resource.is_a?(User) and resource.has_role? :admin
       admin_panel_path
     elsif resource.is_a?(User)
       user_panel_path
     else
       super
-    end
-  end
-
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:invite_params) do |u|
-      u.permit(role_ids: [])
     end
   end
 

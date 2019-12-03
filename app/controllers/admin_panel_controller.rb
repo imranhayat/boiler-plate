@@ -10,5 +10,15 @@ class AdminPanelController < ApplicationController
   def users
     @users = User.where.not(id: current_user.id)
   end
+  
+  def change_access
+    @user = User.find(params[:enable] || params[:disable])
+    if params[:enable].present?
+      @user.update(revoke_access: false)
+    else
+      @user.update(revoke_access: true)
+    end
+    redirect_to admin_panel_path
+  end
 
 end
