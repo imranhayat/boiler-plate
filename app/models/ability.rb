@@ -1,7 +1,10 @@
+# frozen_string_literal: true
+
+# :Ability class to handle Application authorization:
 class Ability
   include CanCan::Ability
   def initialize(user)
-    user = user || User.new
+    user ||= User.new
     if user.has_role? :admin
       can :read, :all
       cannot :update, :all
