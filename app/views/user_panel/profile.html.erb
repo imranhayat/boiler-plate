@@ -1,36 +1,70 @@
-<div class="container-fluid container-top">
-	<div class="container container-signin container-sign">
-		<div class="modal-login-body">
-			<h3 class="text-center">Update Profile</h3>
-			<hr/>
-			<%= form_for(current_user) do |f| %>
-				<div class="avatar-upload">
-					<div class="avatar-edit">
-						<%= f.file_field :profile_pic,id: "imageUpload", accept:"image/*" %>
-						<label for="imageUpload"></label>
-					</div>
-					<div class="avatar-preview">
-						<div id="imagePreview" style="background-image: url(<%= current_user.profile_pic %>);">
-						</div>
-					</div>
-				</div>
-				<div class="form-group mt-3">
-					<%= f.text_field :name, autofocus: true,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form', required: true %>
-				</div>
-				<div class="form-group">
-					<%= f.number_field :phone_number, placeholder: 'Enter Your Phone Number', class: 'form-control login-form', required: true %>
-				</div>
-				<div class="form-group">
-					<input type="date" class="form-control login-form" name="user[dob]" value="<%= current_user.dob%>">
-				</div>
-				<div class="form-group">
-					<%= f.select :gender,options_for_select([["Male","Male"],["Female","Female"],["Other","Other"]]),{},{class: "form-control login-form"} %>
-				</div>
-				<div class="actions mt-3">
-					<%= f.submit "Update", class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>
-					<%= link_to "Dashboard",user_panel_path,class: "btn btn-secondary btn-lg btn-block btn-submit mb-3 "%>
-				</div>
-			<% end %>
-		</div>
-	</div>
+<div class="container container-dashboard">
+  <div class="row">
+    <div class="col-12">
+      <div class="user-header-bg">
+        <div class="user-header">
+          <div class="row align-items-center">
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-5">
+              <img src="<%= current_user.profile_pic %>" width="155" class="avatar-img">
+            </div>
+            <div class="col-xl-10 col-lg-9 col-md-8 col-sm-6 col-7">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="text-primary mb-3"> <%= current_user.name %> </h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a href="<%= edit_profile_path %>" class="btn btn-primary btn-lg mt-2 px-4">Edit Profile</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="p-50 bg-white user-body">
+        <div class="row mb-3 mb-md-0 align-items-center">
+          <div class="col-md-6 text-md-left text-center">
+            <h3 class="font-weight-bold mb-0">Information</h3>
+          </div>
+          <div class="col-md-6 text-md-right text-center">
+            <h3 class="align-middle font-weight-bold mb-0 d-inline-block mr-4"> Your Balance: <span class="text-primary"><%= humanized_money_with_symbol(current_user.balance) %></span></h3>
+            <a href="<%= top_up_path %>" class="btn btn-primary">Top Up</a>
+          </div>
+        </div>
+        <div class="row row-user-fields">
+          <div class="col-md-6">
+            <div class="user-fields mb-3 mb-md-0">
+              <span class="font-weight-bold">Name:</span>
+              <span class="float-right"><%= current_user.name %></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="user-fields mb-3 mb-md-0">
+              <span class="font-weight-bold">Email:</span>
+              <span class="float-right"><%= current_user.email %></span>
+            </div>
+          </div>
+        </div>
+        <div class="row row-user-fields">
+          <div class="col-md-6">
+            <div class="user-fields mb-3 mb-md-0">
+              <span class="font-weight-bold">Gender:</span>
+              <span class="float-right"><%= current_user.gender || "Not Provided" %></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="user-fields mb-3 mb-md-0">
+              <span class="font-weight-bold">Date Of Birth:</span>
+              <span class="float-right"><%= current_user.date_of_birth || "Not Provided" %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

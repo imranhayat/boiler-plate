@@ -41,7 +41,8 @@ ActiveRecord::Schema.define(version: 2019_11_28_055007) do
     t.string "name"
     t.string "gender"
     t.string "phone_number"
-    t.date "dob"
+    t.date "date_of_birth"
+    t.string "color_scheme"
     t.boolean "revoke_access", default: false
     t.string "profile_pic_file_name"
     t.string "profile_pic_content_type"
