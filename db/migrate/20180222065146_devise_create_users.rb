@@ -38,7 +38,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :gender
       t.string :phone_number
-      t.date :dob
+      t.date :date_of_birth
+      t.string :color_scheme
       t.boolean :revoke_access, default: false
       t.attachment :profile_pic
 
