@@ -1,4 +1,5 @@
 <div class="footer-bg-color">
+	<% if !user_signed_in? %>
 	<div class="container footer-large">
 		<div class="row">
 			<div class="col-md-4 footer-des">
@@ -47,6 +48,7 @@
 		</div>
 	</div>
 	<hr class="my-0">
+	<% end %>
 	<div class="footer-small">
 		<p class="mb-0 text-center">YourAppName © 2020 - All rights reserved | Developed By<a href="https://systemplus.com.pk" > System Plus</a> </p>
 	</div>

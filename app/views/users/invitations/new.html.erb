@@ -1,8 +1,13 @@
-<div class="container-fluid container-top">
+<div class="banner-header bg-white p-3">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center text-md-left">
+      <h5 class="lh-34 mb-0">Send Invitation</h5>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-5">
   <div class="container container-signin container-sign">
     <div class="modal-login-body">
-      <h3 class="text-center"><%= t "devise.invitations.new.header" %></h3>
-      <hr/>
       <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <% resource.class.invite_key_fields.each do |field| -%>
@@ -11,7 +16,7 @@
         </div>
         <% end %>
         <div class="form-group">
-          <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name, r.id] }), { prompt: 'Select Role' } %>
+          <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name.humanize(), r.id] }), { prompt: 'Select Role' } %>
         </div>
         <div class="actions mt-3">
           <%= f.submit t("devise.invitations.new.submit_button"), class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>

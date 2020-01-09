@@ -7,34 +7,37 @@
       <a href="/users/invitation/new" class="btn btn-primary">Invite Users</a>
     </div>
   </div>
+  <%= render "layouts/breadcrumbs" %>
 </div>
-<div class="container container-admin px-md-4 px-2">
-  <div class="table-responsive table-users">
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Email</th>
-          <th>Phone Number</th>
-          <th>Revoke Access</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @users.each do |user| %>
+<div class="container container-admin px-md-4 px-2 container-s">
+  <div class="card p-4 rounded-0">
+    <div class="table-responsive table-users">
+      <table class="table table-bordered">
+        <thead>
           <tr>
-            <td><%= user.name.present? ? user.name : 'Not Provided' %></td>
-            <td><%= user.email %></td>
-            <td><%= user.phone_number.present? ? user.phone_number : 'Not Provided' %></td>
-            <td>
-              <% if user.revoke_access == false %>
-                <center><%= link_to 'Revoke Access', change_access_path(disable: user.id) %></center>
-              <% else %>
-                <center><%= link_to 'Enable Access', change_access_path(enable: user.id) %></center>
-              <% end %>
-            </td>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Revoke Access</th>
           </tr>
-        <% end%>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.name.present? ? user.name : 'Not Provided' %></td>
+              <td><%= user.email %></td>
+              <td><%= user.phone_number.present? ? user.phone_number : 'Not Provided' %></td>
+              <td>
+                <% if user.revoke_access == false %>
+                  <center><%= link_to 'Revoke Access', change_access_path(disable: user.id) %></center>
+                <% else %>
+                  <center><%= link_to 'Enable Access', change_access_path(enable: user.id) %></center>
+                <% end %>
+              </td>
+            </tr>
+          <% end%>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

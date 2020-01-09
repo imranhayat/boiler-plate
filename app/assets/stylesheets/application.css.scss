@@ -53,6 +53,11 @@ b {
   min-height: calc(100vh - 454px);
 }
 
+.container-main-sign {
+  background: #f2f2f2 !important;
+  min-height: calc(100vh - 164px);
+}
+
 .container-main-admin {
   background: #f2f2f2 !important;
   min-height: calc(100vh);
@@ -227,6 +232,13 @@ img#blah:hover {
   .user-header {
     padding: 50px;
   }
+  
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .container-s{
+    max-width: 100% !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -250,7 +262,11 @@ img#blah:hover {
 }
 @media (max-width: 370px) {
 div.dataTables_wrapper div.dataTables_filter input {
-    width: calc(100vw - 85px) !important;
+    display: block !important;
+    width: 100% !important;
+}
+div.dataTables_wrapper div.dataTables_filter input {
+  margin-left: 0em;
 }
 }
 @media (max-width: 992px) {
@@ -416,7 +432,7 @@ width: 8px;
 }
 
 .dashboard-side-link {
-  border-left: 5px solid transparent;
+  border-bottom: 1px solid #dee2e6;
   color: #fff;
   font-weight: bold;
   font-size: 14px;
@@ -424,24 +440,25 @@ width: 8px;
   padding: 11.5px 20px;
   display: block;
 }
+.dashboard-side-link span, .dashboard-side-link i {
+  transition: 0.1s;
+}
 
 .dashboard-side-link span {
-  color: #79589f;
+  color: #1d2b3a;
 }
 
-.dashboard-side-link:hover,
+.dashboard-side-link:hover i {
+  margin-left: 5px;
+}
+.dashboard-side-link.active span, .dashboard-side-link.active i{
+  margin-left: 0px !important;
+}
+
 .dashboard-side-link.active {
-  border-left: 5px solid #34506e;
-  background-color: #79589f !important;
-  color: #fff !important;
+  border-left: 5px solid #79589f;
 }
 
-.dashboard-side-link:hover span,
-.dashboard-side-link:hover i,
-.dashboard-side-link.active i,
-.dashboard-side-link.active span {
-  color: #fff !important;
-}
 
 .dashboard-side-link i {
   color: #79589f;
@@ -585,7 +602,7 @@ width: 8px;
 }
 
 .fa-bars {
-  border: 2px solid #34506e;
+  border: 2px solid #79589f;
   box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
   color: #79589f;
   padding: 5px;
@@ -668,8 +685,19 @@ html{
   border-bottom: 1px solid #dee2e6;
 }
 .center-row{
-  padding: 22px 15px;
+  padding: 15px 15px;
 }
 .lh-34{
   line-height: 34px;
+}
+
+.lh-36{
+  line-height: 36px;
+}
+.font-20{
+  font-size: 20px !important;
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
