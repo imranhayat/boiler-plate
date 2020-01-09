@@ -22,9 +22,9 @@
       <tbody>
         <% @users.each do |user| %>
           <tr>
-            <td><%= user.name%></td>
-            <td><%= user.email%></td>
-            <td><%= user.phone_number%></td>
+            <td><%= user.name.present? ? user.name : 'Not Provided' %></td>
+            <td><%= user.email %></td>
+            <td><%= user.phone_number.present? ? user.phone_number : 'Not Provided' %></td>
             <td>
               <% if user.revoke_access == false %>
                 <center><%= link_to 'Revoke Access', change_access_path(disable: user.id) %></center>

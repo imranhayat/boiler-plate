@@ -18,7 +18,7 @@ end
 ```
 Gem Rolify Settings
 
-> If you want to add more roles add them manually or using seeds file.
+> If you want to add more roles add them manually or using seeds file or you can create a CRUD for youself.
 
 Omniauth Settings
 
@@ -42,12 +42,12 @@ Omniauth Settings
  
 Other Gems
 
-*	gem 'paperclip'
-*	gem 'omniauth-facebook'
-*	gem 'omniauth-linkedin-oauth2'
-*	gem 'omniauth-google-oauth2'
-*	gem 'omniauth-twitter'
-*	gem 'cancancan', '~> 2.0'
-*	gem 'bullet' to log N+1 queries
-*	gem "meta_request" for a browser extension for rails metrics
 *	gem 'awesome_print'
+*	gem 'bullet' to log N+1 queries
+*	gem 'cancancan', '~> 2.0'
+*	gem 'meta_request' for a browser extension for rails metrics
+*	gem 'omniauth-facebook'
+*	gem 'omniauth-google-oauth2'
+*	gem 'omniauth-linkedin-oauth2'
+*	gem 'omniauth-twitter'
+*	gem 'paperclip'
