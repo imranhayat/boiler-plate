@@ -8,10 +8,10 @@
       </div>
       <div class="modal-body modal-login-body">
         <%= form_for(:user, :url => session_path(:user)) do |f| %>
-          <a href="">
+          <a href="<%= user_facebook_omniauth_authorize_path %>">
             <div class="loginmodal-fb mb-2">Login with Facebook</div>
           </a>
-          <a href="">
+          <a href="<%= user_google_oauth2_omniauth_authorize_path %>">
             <div class="loginmodal-google mb-2"> Login with Google</div>
           </a>
           <div class="row">

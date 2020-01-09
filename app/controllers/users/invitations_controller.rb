@@ -4,7 +4,8 @@ class Users::InvitationsController < Devise::InvitationsController
   prepend_before_action :require_no_authentication, only: [:edit, :update, :destroy]
   prepend_before_action :resource_from_invitation_token, only: [:edit, :destroy]
   before_action :configure_permitted_parameters, only: [:invite_params, :create]
-
+  before_action :update_permitted_parameters, only: [:accept_invitation, :update]
+  
   if respond_to? :helper_method
     helper_method :after_sign_in_path_for
   end
@@ -119,6 +120,10 @@ class Users::InvitationsController < Devise::InvitationsController
 
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:invite, keys: [:role_ids])
+    end
+
+    def update_permitted_parameters
+      devise_parameter_sanitizer.permit(:accept_invitation, keys: [:name])
     end
 
 end

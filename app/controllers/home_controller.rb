@@ -4,8 +4,6 @@
 class HomeController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :webhooks
 
-  def index; end
-
   def webhooks
     # To Ensure the Security that the events are coming from a trusted source
     payload = request.body.read
