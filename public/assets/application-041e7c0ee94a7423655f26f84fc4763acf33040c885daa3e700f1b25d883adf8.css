@@ -11123,11 +11123,6 @@ a.text-dark:hover, a.text-dark:focus {
     margin-top:5px !important;
     margin-bottom: 0px !important;
   }
-/*
-Name: 			theme.css
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	1.1.0
-*/
 
 html {
 	direction: ltr;
@@ -16407,11 +16402,7 @@ html.gap-outside #header .header-container:after {
 		max-width: 80%;
 	}
 }
-/*
-Name: 			theme-elements.css
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	1.1.0
-*/
+
 /* Headings */
 
 h1, h2, h3, h4, h5, h6 {
