@@ -3,7 +3,7 @@ a:not(.no-skin):not(.btn):not(.badge):not(.nav-link){
 }
 a:not(.no-skin):not(.btn):not(.badge):not(.nav-link):hover,
 a:not(.no-skin):not(.btn):not(.badge):not(.nav-link):focus {
-  color: #ac8ece;
+  color: #79589fcc;
 }
 a:not(.no-skin):not(.btn):not(.badge):not(.nav-link):hover.link-underline,
 a:not(.no-skin):not(.btn):not(.badge):not(.nav-link):focus.link-underline {
@@ -162,6 +162,9 @@ html.sticky-header-active .btn-sticky-primary {
   border-color: transparent;
   color: #ffffff;
   background-image: linear-gradient(135deg,#79589f,#ac8ece) !important;
+}
+.btn:focus, .page-link:focus {
+  box-shadow: none !important;
 }
 html .btn-primary:hover,
 html.sticky-header-active .btn-sticky-primary:hover,
@@ -620,6 +623,7 @@ html .badge-quaternary:not(.no-skin) {
 }
 .pagination .page-item + .page-item.active .page-link {
   background-image: linear-gradient(135deg,#79589f,#ac8ece) !important;
+  border: 1px solid #79589f;
 }
 .pagination .page-link:hover:not(.next):not(.prev) {
   color: #79589f;
@@ -1484,4 +1488,12 @@ html #footer.footer-quaternary li {
 }
 footer a {
     color: inherit !important;
+}
+
+nav .dropdown-item:hover, .dropdown-item:focus, .dropdown-item.active, .dropdown-item:active{
+  background: #79589f !important;
+  color: #fff !important;
+}
+nav .dropdown-item{
+  transition: none !important;
 }
