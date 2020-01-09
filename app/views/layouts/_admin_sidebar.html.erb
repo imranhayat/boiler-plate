@@ -1,17 +1,15 @@
 <div class="card card-admin">
   <div class="card-body">
     <div class="text-md-center center-row border-bottom">
-      <a href="/">
+      <a href="<%= user_signed_in? ? admin_panel_path : root_path %>">
         <img class="img-fluid" src="/logo.png">
       </a>
       <i class="fas fa-bars icon-dashboard-mobile d-inline d-md-none"></i>
     </div>
     <div class="row d-none d-md-flex dashboard-row">
       <div class="col-12">
-        <a class="dashboard-side-link" href="<%= admin_panel_path%>"><i class="fas fa-tachometer-alt"></i><span>Admin Panel</span></a>
-        <a class="dashboard-side-link" href="<%= admin_users_path%>"><i class="fas fa-users"></i><span>Users</span></a>
-        <a class="dashboard-side-link" href="#"><i class="fas fa-list"></i><span>Categories</span></a>
-        <a class="dashboard-side-link" href="#"><i class="fas fa-cogs"></i><span>Facilities</span></a>
+        <a class="dashboard-side-link <%= active?('admin_panel', 'index') %>" href="<%= admin_panel_path %>"><i class="fas fa-tachometer-alt"></i><span>Admin Panel</span></a>
+        <a class="dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users"></i><span>Users</span></a>
         <a class="dashboard-side-link" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
       </div>
     </div>

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark">
   <div class="container">
-    <a class="navbar-brand py-0" href="<%= root_path %>"><img src="/logo.png" width="220"></a>
+    <a class="navbar-brand py-0" href="<%= user_signed_in? ? user_panel_path : root_path %>"><img src="/logo.png" width="220"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
     </button>

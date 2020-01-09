@@ -25,6 +25,11 @@ $(document).on('click','.icon-dashboard-mobile', function(){
   $('.dashboard-row').toggleClass('d-none');
 });
 $(document).on("turbolinks:load", function() {
+  $('#color-button').bcPicker();
+  $(document).on('click','#color-button .bcPicker-color',function(){
+    var color = $(this).css('background-color');
+      $('.primary-middle-hex').val($.fn.bcPicker.toHex(color));
+  })
   $('select').addClass('form-control');
   var table = $('.table-users table').DataTable({
     
