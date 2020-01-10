@@ -34,7 +34,7 @@ class User < ApplicationRecord
     end
   end
 
-  def self.normal_users
+  def self.with_role_normal_count
     Role.find_by_name('normal').users.count
   end
 end
