@@ -33,4 +33,8 @@ class User < ApplicationRecord
       user.password = SecureRandom.hex(8)
     end
   end
+
+  def self.normal_users
+    Role.find_by_name('normal').users.count
+  end
 end

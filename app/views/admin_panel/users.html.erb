@@ -16,7 +16,8 @@
           <th>Name</th>
           <th>Email</th>
           <th>Phone Number</th>
-          <th>Revoke Access</th>
+          <th>Account Created On</th>
+          <th>Access</th>
         </tr>
       </thead>
       <tbody>
@@ -25,11 +26,12 @@
             <td><%= user.name.present? ? user.name : 'Not Provided' %></td>
             <td><%= user.email %></td>
             <td><%= user.phone_number.present? ? user.phone_number : 'Not Provided' %></td>
+            <td><%= user.created_at.strftime('%d/%B/%Y at %I:%M %p') %></td>
             <td>
               <% if user.revoke_access == false %>
-                <center><%= link_to 'Revoke Access', change_access_path(disable: user.id) %></center>
+                <center><%= link_to 'Disable', change_access_path(disable: user.id) %></center>
               <% else %>
-                <center><%= link_to 'Enable Access', change_access_path(enable: user.id) %></center>
+                <center><%= link_to 'Enable', change_access_path(enable: user.id) %></center>
               <% end %>
             </td>
           </tr>
