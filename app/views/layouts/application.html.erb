@@ -25,6 +25,7 @@
           </div>
           <div class="col-xl-10 col-md-9 px-md-0">
             <div class="container-main-footer">
+              <%= render 'layouts/header-dashboard' %>
               <%= yield %>
             </div>
             <%= render 'layouts/admin_footer' %>
@@ -34,7 +35,7 @@
     <% else %>
       <%= render 'layouts/header' %>
       <%= render 'layouts/swal' %>
-      <div class="container-main">
+      <div class="<%= user_signed_in? ? 'container-main-sign':'container-main' %>" >
         <%= yield %>
       </div>
       <%= render 'layouts/footer' %>

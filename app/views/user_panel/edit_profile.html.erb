@@ -30,12 +30,6 @@
 					<label for="gender">Gender</label>
 					<%= f.select :gender,options_for_select([["Male","Male"],["Female","Female"],["Other","Other"]]),{},{class: "form-control login-form"} %>
 				</div>
-				<div class="color-main-plt">
-					<label for="color_scheme">Color Scheme</label>
-					<div id="color-button" class="color-picker">
-						<%= f.text_field :color_scheme, class: 'primary-middle-hex form-control login-form', placeholder:"Select or Enter Color HEX Value i.e. #000000"%>
-					</div>
-				</div>
 				<div class="actions mt-3">
 					<%= f.submit "Update", class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>
 					<%= link_to "Dashboard",user_panel_path,class: "btn btn-secondary btn-lg btn-block btn-submit mb-3 "%>

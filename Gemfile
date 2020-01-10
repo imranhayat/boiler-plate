@@ -38,6 +38,7 @@ end
 
 # Used Gems for Ease
 gem 'awesome_print', require: 'ap' # for rails console
+gem 'breadcrumbs_on_rails'
 gem 'cancancan', '~> 2.0'
 gem 'devise'
 gem 'devise_invitable', '~> 2.0.0'

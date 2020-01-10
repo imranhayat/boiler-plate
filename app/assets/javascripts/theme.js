@@ -1,10 +1,3 @@
-/*
-Name: 			Theme Base
-Written by: 	Okler Themes - (http://www.okler.net)
-Theme Version:	1.1.0
-*/
-
-// Theme
 (function( $ ) {
 
 	'use strict';
