@@ -49,22 +49,22 @@ b {
 }
 
 .container-main {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 454px);
 }
 
 .container-main-sign {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 164px);
 }
 
 .container-main-admin {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh);
 }
 
 .container-main-footer {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 67px);
 }
 
@@ -391,14 +391,14 @@ table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, tab
 
 ::-webkit-scrollbar-track {
 width: 8px;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
   border-radius: 8px;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
 
 ::-webkit-scrollbar-thumb {
