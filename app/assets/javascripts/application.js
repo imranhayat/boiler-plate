@@ -24,7 +24,14 @@ toastr.options = Object.assign({}, toastr.options, {
 $(document).on('click','.icon-dashboard-mobile', function(){
   $('.dashboard-row').toggleClass('d-none');
 });
+$(document).on('click','.submenu-link .menu', function(){
+  $(this).closest('.submenu-link').find('.sub-menu').slideToggle(300);
+  $(this).closest('.submenu-link').toggleClass('open');
+});
 $(document).on("turbolinks:load", function() {
+  $('.submenu-link .sub-menu').hide();
+  $('.sub-menu a.active').closest('.submenu-link').addClass('open');
+  $('.submenu-link.open .sub-menu').show();
   $('#color-button').bcPicker();
   $(document).on('click','#color-button .bcPicker-color',function(){
     var color = $(this).css('background-color');

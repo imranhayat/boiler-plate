@@ -30350,25 +30350,25 @@ b {
 
 /* line 52, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-main {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 454px);
 }
 
 /* line 57, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-main-sign {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 164px);
 }
 
 /* line 62, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-main-admin {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh);
 }
 
 /* line 67, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-main-footer {
-  background: #f2f2f2 !important;
+  background: #f9f9f9 !important;
   min-height: calc(100vh - 67px);
 }
 
@@ -30382,35 +30382,35 @@ b {
   background-color: #ffffff;
 }
 
-/* line 79, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 80, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-bg-color-admin {
   background-color: #f9f9f9;
 }
 
-/* line 83, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 84, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .social-size {
   font-size: 24px;
 }
 
-/* line 87, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 88, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .setting-headig {
   background: #f1f4f5;
 }
 
-/* line 91, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 92, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .setting-links ul a li {
   border-bottom: 1px solid #dadfe2;
   line-height: 14px;
 }
 
-/* line 98, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 99, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 a.active li {
   border-left: 2px solid #499df3 !important;
   text-decoration: none !important;
   color: #79589f !important;
 }
 
-/* line 104, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 105, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .setting-links ul a li {
   color: #969ea2;
   padding: 15px 10px;
@@ -30418,7 +30418,7 @@ a.active li {
   width: 100%;
 }
 
-/* line 112, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 113, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .setting-profile-image {
   border-radius: 50%;
   display: block;
@@ -30426,12 +30426,12 @@ a.active li {
   opacity: 1;
 }
 
-/* line 120, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 121, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .setting-profile-image:hover {
   opacity: 0.1;
 }
 
-/* line 124, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 125, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .middle {
   transition: .5s ease;
   opacity: 0;
@@ -30444,12 +30444,12 @@ a.active li {
   font-size: 50px;
 }
 
-/* line 137, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 138, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 img#blah:hover {
   cursor: pointer;
 }
 
-/* line 141, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 142, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .profile-change-icon {
   width: 200px;
   height: 200px;
@@ -30457,12 +30457,12 @@ img#blah:hover {
   margin: 0 auto !important;
 }
 
-/* line 148, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 149, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .profile-change-icon:hover .middle {
   opacity: 1 !important;
 }
 
-/* line 153, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 154, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .profile-show-image {
   width: 150px;
   height: 150px;
@@ -30470,12 +30470,12 @@ img#blah:hover {
   margin: 0 auto !important;
 }
 
-/* line 160, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 161, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .profile-descriptin {
   border-bottom: 1px solid #dadfe2;
 }
 
-/* line 164, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 165, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .navbar {
   padding-top: 30px !important;
   padding-bottom: 30px !important;
@@ -30485,207 +30485,237 @@ img#blah:hover {
 }
 
 @media (min-width: 1200px) {
-  /* line 173, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 174, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 20px !important;
     padding-left: 20px !important;
   }
 }
 @media (max-width: 1200px) and (min-width: 992px) {
-  /* line 180, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 181, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 10px !important;
     padding-left: 10px !important;
   }
 }
-/* line 186, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 187, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .text-white {
   color: #fff !important;
 }
 
-/* line 191, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 192, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .lh-35 {
   line-height: 35px;
 }
 
-/* line 195, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 196, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .form-group {
   margin-bottom: 10px !important;
 }
 
-/* line 199, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 200, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-large {
   padding-top: 58px;
   padding-bottom: 48px;
 }
 
-/* line 204, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 205, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-small {
   padding-top: 23px;
   padding-bottom: 23px;
 }
 
-/* line 209, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 210, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-large h4 {
   letter-spacing: 1px;
   font-weight: 600;
 }
 
-/* line 214, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 215, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-large a {
   color: #1d2b3a !important;
   line-height: 34px;
 }
 
-/* line 219, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 220, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-large a:hover,
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   color: #79589f !important;
 }
 
-/* line 224, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.nav-link.btn:hover, .nav-link.btn:focus {
+/* line 226, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.nav-link.btn:hover,
+.nav-link.btn:focus {
   color: #fff !important;
 }
 
-/* line 228, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 231, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .btn-primary:hover {
   background-image: linear-gradient(#FF972B, #F92B49) !important;
 }
 
-@media (min-width: 576px) {
-  /* line 233, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-  .user-header {
-    padding: 50px;
+@media (min-width: 768px) {
+  /* line 236, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .submenu-link::after {
+    z-index: -1 !important;
   }
 }
 @media (min-width: 576px) and (max-width: 768px) {
-  /* line 240, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 242, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .container-s {
     max-width: 100% !important;
   }
 }
 @media (max-width: 576px) {
-  /* line 246, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 248, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .user-header {
+    padding: 20px;
+  }
+}
+@media (max-width: 576px) {
+  /* line 254, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .user-header {
     padding: 20px;
   }
 
-  /* line 250, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 258, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .user-header img {
     width: 100px;
   }
 
-  /* line 254, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 262, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .navbar {
     padding-top: 10px !important;
     padding-bottom: 10px !important;
   }
 
-  /* line 259, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 267, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .container-top {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
 }
 @media (max-width: 370px) {
-  /* line 265, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 274, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   div.dataTables_wrapper div.dataTables_filter input {
     display: block !important;
     width: 100% !important;
   }
 
-  /* line 269, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 279, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0em;
   }
 }
 @media (max-width: 992px) {
-  /* line 274, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-  table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {
+  /* line 286, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  table.dataTable thead .sorting:after,
+  table.dataTable thead .sorting_asc:after,
+  table.dataTable thead .sorting_desc:after,
+  table.dataTable thead .sorting_asc_disabled:after,
+  table.dataTable thead .sorting_desc_disabled:after {
     right: 5px !important;
   }
 
-  /* line 277, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-  table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {
+  /* line 294, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  table.dataTable thead .sorting:before,
+  table.dataTable thead .sorting_asc:before,
+  table.dataTable thead .sorting_desc:before,
+  table.dataTable thead .sorting_asc_disabled:before,
+  table.dataTable thead .sorting_desc_disabled:before {
     right: 20px !important;
   }
 
-  /* line 281, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-  table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after {
+  /* line 302, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  table.dataTable thead .sorting:before,
+  table.dataTable thead .sorting:after,
+  table.dataTable thead .sorting_asc:before,
+  table.dataTable thead .sorting_asc:after,
+  table.dataTable thead .sorting_desc:before,
+  table.dataTable thead .sorting_desc:after,
+  table.dataTable thead .sorting_asc_disabled:before,
+  table.dataTable thead .sorting_asc_disabled:after,
+  table.dataTable thead .sorting_desc_disabled:before,
+  table.dataTable thead .sorting_desc_disabled:after {
     font-size: 25px !important;
     bottom: 10px !important;
   }
 
-  /* line 285, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 316, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .table-users td {
     padding: 10px 5px;
   }
 
-  /* line 288, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 320, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .table-users thead th {
     padding: 10px 5px;
   }
 
-  /* line 291, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 324, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .user-body {
     padding: 20px 15px !important;
   }
 
-  /* line 295, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 328, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .container-top {
     padding-top: 50px !important;
     padding-bottom: 50px !important;
   }
 }
-@media (min-width: 768px) {
-  /* line 302, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+@media (max-width: 768px) {
+  /* line 335, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .submenu-link::after {
+    z-index: 0 !important;
+  }
+
+  /* line 339, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .row-user-fields {
     margin-top: 30px;
   }
 
-  /* line 305, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 343, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .pr-md-15 {
     padding-right: 15px !important;
   }
 }
 @media (min-width: 992px) {
-  /* line 311, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 349, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .user-body {
     padding: 50px !important;
   }
 
-  /* line 314, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 353, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .table-users td {
     padding: 19px 17px;
   }
 
-  /* line 317, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 357, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .table-users thead th {
     border-bottom: 0 !important;
     border-top: 0 !important;
     padding: 19px 17px;
   }
 
-  /* line 322, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 363, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .container-top {
     padding-top: 110px !important;
     padding-bottom: 110px !important;
   }
 }
-/* line 328, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 369, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .down-arrow {
   font-size: 12px;
   line-height: 14px;
 }
 
-/* line 333, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 374, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-dashboard {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-/* line 338, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 379, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-header {
   box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
   background: url("/user_background.png") center center;
@@ -30693,29 +30723,29 @@ img#blah:hover {
   background-size: cover;
 }
 
-/* line 345, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 386, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-header-bg {
   background-color: #fafafa !important;
 }
 
-/* line 353, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 394, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .btn {
   font-weight: bold !important;
 }
 
-/* line 357, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 398, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .bg-white {
   background: #fff !important;
 }
 
-/* line 361, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 402, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-body {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
 }
 
-/* line 367, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 408, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-fields {
   padding: 11.5px 20px !important;
   border-radius: 5px;
@@ -30723,61 +30753,61 @@ img#blah:hover {
   border: 1px solid #ededed;
 }
 
-/* line 374, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 415, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-fields span {
   font-size: 14px;
   line-height: 25px;
 }
 
-/* line 379, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 420, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .user-fields span.float-right {
   color: #5d5d5d;
 }
 
-/* line 383, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 424, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-des a i {
   font-size: 16px;
   letter-spacing: -1px;
   color: #1d2b3a;
 }
 
-/* line 389, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 430, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .footer-des a:hover i {
   color: #79589f !important;
 }
 
-/* line 393, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 434, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 ::-webkit-scrollbar-track {
   width: 8px;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
   border-radius: 8px;
 }
 
-/* line 399, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 440, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
 
-/* line 405, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 446, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 ::-webkit-scrollbar-thumb {
   width: 8px;
   border-radius: 8px;
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.44, #79589f), color-stop(0.72, #79589f), color-stop(0.86, #79589f));
 }
 
-/* line 416, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 457, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .sweet-alert button {
   background-color: #79589f !important;
 }
 
-/* line 420, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 461, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .card-admin .card-body {
   padding: 0 !important;
 }
 
-/* line 423, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 465, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .card-admin {
   background: #fdfdfd !important;
   height: 100%;
@@ -30786,14 +30816,16 @@ img#blah:hover {
   border-right: 1px solid #dee2e6;
 }
 
-/* line 430, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 473, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .container-admin {
   padding-top: 30px;
   padding-bottom: 30px;
 }
 
-/* line 435, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.dashboard-side-link {
+/* line 478, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.dashboard-side-link,
+.submenu-link .menu,
+.sub-menu a {
   border-bottom: 1px solid #dee2e6;
   color: #fff;
   font-weight: bold;
@@ -30803,98 +30835,103 @@ img#blah:hover {
   display: block;
 }
 
-/* line 444, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.dashboard-side-link span, .dashboard-side-link i {
+/* line 490, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.dashboard-side-link span,
+.dashboard-side-link i {
   transition: 0.1s;
 }
 
-/* line 448, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.dashboard-side-link span {
+/* line 495, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.dashboard-side-link span,
+.submenu-link .menu span,
+.sub-menu a span {
   color: #1d2b3a;
 }
 
-/* line 452, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 501, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .dashboard-side-link:hover i {
   margin-left: 5px;
 }
 
-/* line 455, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.dashboard-side-link.active span, .dashboard-side-link.active i {
-  margin-left: 0px !important;
+/* line 505, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.dashboard-side-link.active span,
+.dashboard-side-link.active i {
+  margin-left: 0px;
 }
 
-/* line 459, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 510, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .dashboard-side-link.active {
   border-left: 5px solid #79589f;
 }
 
-/* line 464, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.dashboard-side-link i {
+/* line 515, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.dashboard-side-link i,
+.submenu-link .menu i {
   color: #79589f;
   margin-right: 15px;
   font-size: 18px !important;
 }
 
-/* line 470, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 523, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .card-stats .card {
   padding: 32px 0 27px 0;
 }
 
-/* line 474, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 527, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .card-stats h1 {
   line-height: 36px;
   margin-bottom: 0 !important;
   font-weight: bold;
 }
 
-/* line 480, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 533, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .card-stats .col-lg-3 {
   margin-bottom: 30px;
 }
 
-/* line 486, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 539, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users thead th:first-child {
   border-top-left-radius: 5px;
 }
 
-/* line 490, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 543, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users thead th:last-child {
   border-top-right-radius: 5px;
 }
 
-/* line 494, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 547, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users thead tr {
   border-radius: 5px;
   background: #fff;
   color: #79589f;
 }
 
-/* line 500, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 553, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr td:first-child {
   border-left: 0 !important;
 }
 
-/* line 504, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 557, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr:last-child td {
   border-bottom: 0 !important;
 }
 
-/* line 508, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 561, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr td:last-child {
   border-right: 0 !important;
 }
 
-/* line 512, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 565, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr:last-child td:first-child {
   border-bottom-left-radius: 5px;
 }
 
-/* line 516, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 569, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
 
-/* line 521, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 574, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-users tbody tr {
   border: 0 !important;
   box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
@@ -30902,19 +30939,19 @@ img#blah:hover {
   color: #1d2b3a;
 }
 
-/* line 529, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 582, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .align-middle {
   vertical-align: middle;
 }
 
-/* line 533, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 586, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload {
   position: relative;
   max-width: 205px;
   margin: 20px auto;
 }
 
-/* line 539, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 592, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 12px;
@@ -30922,12 +30959,12 @@ img#blah:hover {
   top: 10px;
 }
 
-/* line 546, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 599, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit input {
   display: none;
 }
 
-/* line 550, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 603, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit input + label {
   display: inline-block;
   width: 34px;
@@ -30942,18 +30979,18 @@ img#blah:hover {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 564, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 617, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #79589f;
   border-color: #d6d6d6;
 }
 
-/* line 569, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 622, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit input + label:hover:after {
   color: #fff;
 }
 
-/* line 573, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 626, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-edit input + label:after {
   content: "\f030";
   font-family: 'Font Awesome 5 Free';
@@ -30968,7 +31005,7 @@ img#blah:hover {
   font-weight: 600;
 }
 
-/* line 587, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 640, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -30978,7 +31015,7 @@ img#blah:hover {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 596, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 649, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .avatar-upload .avatar-preview > div {
   width: 100%;
   height: 100%;
@@ -30988,7 +31025,7 @@ img#blah:hover {
   background-position: center;
 }
 
-/* line 605, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 658, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .fa-bars {
   border: 2px solid #79589f;
   box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
@@ -30997,85 +31034,86 @@ img#blah:hover {
   border-radius: 5px;
 }
 
-/* line 613, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 666, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .navbar-toggler {
   padding: 0 !important;
 }
 
-/* line 617, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 670, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .navbar-toggler-icon {
   vertical-align: super !important;
 }
 
-/* line 621, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 674, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .stripe-card {
   width: 300px;
   border: 1px solid grey;
 }
 
-/* line 626, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 679, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .stripe-card.complete {
   border-color: green;
 }
 
-/* line 630, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 683, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .action-links i {
   font-size: 20px;
 }
 
-/* line 634, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 687, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .action-links {
   text-align: center;
   padding: 19px 10px !important;
 }
 
-/* line 639, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 692, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .date_select select:nth-child(2) {
   padding-left: 5px !important;
   padding-right: 0px !important;
 }
 
-/* line 644, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 697, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .date_select select {
   width: 32.5% !important;
   display: inline !important;
 }
 
-/* line 649, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 702, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .new-form .edit-label {
   display: none;
 }
 
 @media print {
-  /* line 655, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 708, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .no-print,
   .no-print * {
     display: none !important;
   }
 
-  /* line 660, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  /* line 713, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
   .page-break {
     page-break-after: always;
   }
 }
-/* line 664, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
-.table-tasks td, .table-tasks th {
+/* line 718, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.table-tasks td,
+.table-tasks th {
   padding-left: 8px !important;
   padding-right: 5px !important;
   font-size: 13px !important;
 }
 
-/* line 669, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 725, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-tasks .action-links i {
   padding: 4px;
 }
 
-/* line 672, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 729, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 html {
   overflow-x: hidden !important;
 }
 
-/* line 675, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 733, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .icon-dashboard-mobile {
   margin-top: -5px;
   border: 1px solid;
@@ -31083,38 +31121,136 @@ html {
   font-size: 20px;
 }
 
-/* line 681, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 740, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .table-bordered {
   border: 1px solid #dee2e6;
   border-radius: 5px;
 }
 
-/* line 685, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 745, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .banner-header {
   border-bottom: 1px solid #dee2e6;
 }
 
-/* line 688, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 749, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .center-row {
   padding: 15px 15px;
 }
 
-/* line 691, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 753, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .lh-34 {
   line-height: 34px;
 }
 
-/* line 695, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 757, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .lh-36 {
   line-height: 36px;
 }
 
-/* line 698, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 761, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .font-20 {
   font-size: 20px !important;
 }
 
-/* line 702, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+/* line 765, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
 .cursor-pointer {
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  /* line 770, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .fixed-side {
+    width: 23.6%;
+    position: fixed;
+  }
+
+  /* line 775, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .sidebar-admin {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: calc(100vh - 54px) !important;
+  }
+}
+@media (min-width: 1200px) {
+  /* line 783, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+  .fixed-side {
+    width: 15.7%;
+    position: fixed;
+  }
+}
+/* line 789, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.sidebar-admin::-webkit-scrollbar-track {
+  background-color: #fff !important;
+}
+
+/* line 793, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.sidebar-admin::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* line 797, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link.open .menu {
+  padding-bottom: 0;
+}
+
+/* line 801, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.sub-menu a {
+  border: none;
+  padding: 3px 0;
+}
+
+/* line 806, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link {
+  cursor: pointer;
+  position: relative;
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* line 812, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link,
+.submenu-link .menu,
+.submenu-link .sub-menu a {
+  transition: 0.3s;
+}
+
+/* line 818, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link::after {
+  font-weight: 900;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  content: "\f078";
+  font-family: "Font Awesome 5 Free";
+}
+
+/* line 827, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link.open::after {
+  content: "\f077";
+}
+
+/* line 831, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link {
+  border-left: 5px solid transparent;
+}
+
+/* line 835, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link.open {
+  border-left: 5px solid #79589f;
+}
+
+/* line 839, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link .menu {
+  z-index: 1;
+  border-bottom: 0;
+}
+
+/* line 844, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.submenu-link .sub-menu span {
+  font-size: 90%;
+  padding-left: 58px !important;
+}
+
+/* line 849, /home/imran/SPL/boiler-plate/app/assets/stylesheets/application.css.scss */
+.sub-menu a:hover {
+  background: #f5f5f5;
 }

@@ -1,4 +1,4 @@
-<div class="card card-admin">
+<div class="card card-admin fixed-side">
   <div class="card-body">
     <div class="text-md-center center-row border-bottom">
       <a href="<%= user_signed_in? ? admin_panel_path : root_path %>">
@@ -6,10 +6,17 @@
       </a>
       <i class="fas fa-bars icon-dashboard-mobile d-inline d-md-none"></i>
     </div>
-    <div class="row d-none d-md-flex dashboard-row">
-      <div class="col-12">
+    <div class="row d-none d-md-flex dashboard-row mr-0">
+      <div class="col-12 sidebar-admin pr-0">
         <a class="dashboard-side-link <%= active?('admin_panel', 'index') %>" href="<%= admin_panel_path %>"><i class="fas fa-tachometer-alt"></i><span>Admin Panel</span></a>
-        <a class="dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users"></i><span>Users</span></a>
+        <a class="menu dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users"></i><span>Users</span></a>
+        <div class="submenu-link">
+          <div class="menu"><i class="fas fa-users"></i><span>Main Menu</span></div>
+          <div class="sub-menu">
+            <a class="" href="#"><span>Submenu 1</span></a>
+            <a class="" href="#"><span>Submenu 2</span></a>
+          </div>
+        </div>
         <a class="dashboard-side-link d-block d-md-none" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
       </div>
     </div>
