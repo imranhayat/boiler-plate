@@ -11,6 +11,7 @@ class Ability
       cannot :destroy, :all
       can :manage, :admin_panel
       cannot :manage, :user_panel
+      can :manage, Product
     elsif user.has_role? :normal
       cannot :manage, :all
       can :manage, :user_panel

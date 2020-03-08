@@ -32,7 +32,7 @@ $(document).on("turbolinks:load", function() {
   })
   $('select').addClass('form-control');
   var table = $('.table-users table').DataTable({
-    
+
     "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']
   });
   table.buttons().container().prependTo('.table-users .col-md-8:eq(0)');
