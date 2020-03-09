@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :plans
   devise_scope :user do
     root to: 'users/sessions#new'
   end

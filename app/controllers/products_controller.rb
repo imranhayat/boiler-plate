@@ -15,8 +15,7 @@ class ProductsController < ApplicationController
 
   # POST /products
   def create
-    response = Products::CreateProduct.call(product_params: product_params,
-                                            user: current_user)
+    response = Products::CreateProduct.call(product_params: product_params)
     if response.success?
       redirect_to response.product, notice: 'Product was successfully created.'
     else

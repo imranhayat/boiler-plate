@@ -12,6 +12,7 @@ class Ability
       can :manage, :admin_panel
       cannot :manage, :user_panel
       can :manage, Product
+      can :manage, Plan
     elsif user.has_role? :normal
       cannot :manage, :all
       can :manage, :user_panel

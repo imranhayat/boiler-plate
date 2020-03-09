@@ -37,7 +37,4 @@ class User < ApplicationRecord
   def self.with_role_normal_count
     Role.find_by_name('normal').users.count
   end
-
-  # Subscription Module
-  has_one :product
 end
