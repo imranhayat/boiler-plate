@@ -7,7 +7,7 @@ module Plans
       if check_product_exists?
         make_plan_on_stripe
       else
-        context.fail!
+        context.fail! message: 'Atleast one product must exists!'
       end
     end
 
@@ -18,10 +18,10 @@ module Plans
     def make_plan_on_stripe
       plan = Product.first.plans.new(context.plan_params)
       response = StripeAdapter.new(plan).call
-      if response == true
+      if response[:success] == true
         make_plan_in_app(plan)
       else
-        context.fail!
+        context.fail! message: response[:error]
       end
     end
 
@@ -29,7 +29,7 @@ module Plans
       if plan.save!
         context.plan = plan
       else
-        context.fail!
+        context.fail message: 'Something went wrong!'
       end
     end
   end

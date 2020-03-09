@@ -10,8 +10,8 @@ class StripePlanAdapter
     create_plan
   rescue Stripe::InvalidRequestError, Stripe::StripeError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
-         Stripe::AuthenticationError
-    false
+         Stripe::AuthenticationError => e
+    { success: false, error: e.message }
   end
 
   def create_plan
@@ -24,6 +24,6 @@ class StripePlanAdapter
       amount: @object.amount
     )
     @object.update!(stripe_id: plan.id)
-    true
+    { success: true }
   end
 end

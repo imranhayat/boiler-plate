@@ -15,7 +15,7 @@ class ProductsController < ApplicationController
     if response.success?
       redirect_to response.product, notice: 'Product was successfully created.'
     else
-      redirect_to new_product_path, alert: 'Product Error, Something went wrong'
+      redirect_to new_product_path, alert: "Product Error: #{response.message}"
     end
   end
 

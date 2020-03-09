@@ -5,7 +5,7 @@ module Products
   class CreateProduct < BaseInteractor
     def call
       if check_product_exists?
-        context.fail!
+        context.fail! message: 'Product Already Present!'
       else
         make_product_on_stripe
       end
@@ -18,10 +18,10 @@ module Products
     def make_product_on_stripe
       product = Product.new(context.product_params)
       response = StripeAdapter.new(product).call
-      if response == true
+      if response[:success] == true
         make_product_in_app(product)
       else
-        context.fail!
+        context.fail! message: response[:error]
       end
     end
 
@@ -29,7 +29,7 @@ module Products
       if product.save!
         context.product = product
       else
-        context.fail!
+        context.fail! message: 'Something went wrong!'
       end
     end
   end

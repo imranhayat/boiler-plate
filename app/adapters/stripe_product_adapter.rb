@@ -12,10 +12,10 @@ class StripeProductAdapter
       type: 'service'
     )
     @object.update!(stripe_id: product.id)
-    true
+    { success: true }
   rescue Stripe::InvalidRequestError, Stripe::StripeError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
-         Stripe::AuthenticationError
-    false
+         Stripe::AuthenticationError => e
+    { success: false, error: e.message }
   end
 end
