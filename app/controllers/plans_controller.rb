@@ -13,11 +13,7 @@ class PlansController < ApplicationController
 
   # GET /plans/new
   def new
-    if Product.count < 1
-      redirect_to new_product_path, alert: 'You have to first create the Product'
-    else
-      @plan = Plan.new
-    end
+    @plan = Plan.new
   end
 
   # POST /plans
@@ -26,7 +22,7 @@ class PlansController < ApplicationController
     if response.success?
       redirect_to plans_path, notice: 'Plan was successfully created.'
     else
-      render :new
+      redirect_to new_plan_path, alert: 'Plan Error, Something went wrong'
     end
   end
 

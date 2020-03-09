@@ -37,4 +37,7 @@ class User < ApplicationRecord
   def self.with_role_normal_count
     Role.find_by_name('normal').users.count
   end
+
+  # Subscriptions
+  has_one :subscription, dependent: :destroy
 end
