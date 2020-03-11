@@ -15,7 +15,7 @@ class StripePlanAdapter
   end
 
   def create_plan
-    plan = Stripe::Plan.create(
+    Stripe::Plan.create(
       currency: @object.currency,
       interval: @object.interval,
       interval_count: @object.interval_count,
@@ -23,7 +23,6 @@ class StripePlanAdapter
       nickname: @object.nickname,
       amount: @object.amount
     )
-    @object.update!(stripe_id: plan.id)
     { success: true }
   end
 end

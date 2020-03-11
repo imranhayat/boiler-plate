@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :plans
   devise_scope :user do
     root to: 'users/sessions#new'
   end
@@ -23,4 +22,6 @@ Rails.application.routes.draw do
   post 'stripe-webhooks', to: 'home#webhooks'
   # Subscription Module
   resources :products, only: %i[new create show]
+  resources :plans, only: %i[new create index]
+  post '/create_subscription', to: 'subscriptions#create'
 end

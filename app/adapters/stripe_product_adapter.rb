@@ -7,15 +7,18 @@ class StripeProductAdapter
   end
 
   def call
-    product = Stripe::Product.create(
-      name: @object.name,
-      type: 'service'
-    )
-    @object.update!(stripe_id: product.id)
-    { success: true }
+    make_product
   rescue Stripe::InvalidRequestError, Stripe::StripeError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError => e
     { success: false, error: e.message }
+  end
+
+  def make_product
+    Stripe::Product.create(
+      name: @object.name,
+      type: 'service'
+    )
+    { success: true }
   end
 end
