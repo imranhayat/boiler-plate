@@ -67,6 +67,7 @@
     request = $.ajax({
       url: '/create_subscription',
       type: 'POST',
+      dataType : 'script',
       beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
       data: { 
         payment_gateway: 'Stripe',
@@ -75,10 +76,8 @@
         app_plan_id: app_plan_id
       }
     });
-    console.log(request);
     request.done(function (response, textStatus, jqXHR){
-      // Log a message to the console
-      console.log('Success');
+      $('#payment_modal_for_<%= plan_id %>').modal('hide');
     });
   }
 </script>

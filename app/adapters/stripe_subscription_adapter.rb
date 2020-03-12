@@ -42,7 +42,6 @@ class StripeSubscriptionAdapter
   def update_customer_in_app(stripe_customer)
     @current_user.update!(stripe_customer_id: stripe_customer.id,
                           stripe_payment_method_id: @payment_method_id)
-    { success: true }
   end
 
   def create_subscription
@@ -63,7 +62,13 @@ class StripeSubscriptionAdapter
       ],
       expand: ['latest_invoice.payment_intent']
     )
+    perform_several_actions(subscription)
+  end
+
+  def perform_several_actions(subscription)
     update_subscription_in_app(subscription)
+    payment_intent = subscription.latest_invoice.payment_intent
+    setup_payment_attrs(payment_intent, subscription)
   end
 
   def update_subscription_in_app(subscription)
@@ -74,5 +79,13 @@ class StripeSubscriptionAdapter
                           subscription.current_period_end,
                           cancel_at_period_end:
                           subscription.cancel_at_period_end)
+  end
+
+  def setup_payment_attrs(payment_intent, subscription)
+    {
+      payment_intent_status: payment_intent&.status,
+      payment_intent_client_secret: payment_intent&.client_secret,
+      stripe_subscription_status: subscription&.status
+    }
   end
 end

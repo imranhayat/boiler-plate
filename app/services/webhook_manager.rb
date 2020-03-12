@@ -39,6 +39,10 @@ class WebhookManager
       run_the_job
     when 'payment_intent.succeeded'
       update_user
+    when 'customer.subscription.updated'
+      update_subscription
+    when 'customer.subscription.deleted'
+      delete_app_subscription
     else
       handle_bad_requests
     end
@@ -71,7 +75,21 @@ class WebhookManager
     user.update!(payment_status: true) if user.present?
   end
 
+  def update_subscription
+    fetch_subscription.update!(cancel_at_period_end:
+                               @params[:data][:object][:cancel_at_period_end])
+  end
+
+  def delete_app_subscription
+    fetch_subscription.user.update!(payment_status: false)
+    fetch_subscription.destroy!
+  end
+
+  def fetch_subscription
+    Subscription.find_by_stripe_id(@params[:data][:object][:id])
+  end
+
   def handle_bad_requests
-    retrun body: nil, status: :bad_request
+    { body: nil, status: :bad_request }
   end
 end

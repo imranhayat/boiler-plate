@@ -1,5 +1,7 @@
 <% if current_user.subscription.present? %>
   <%= current_user.subscription.plan.nickname %>
+  <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path %>
+  <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path %>
 <% else %>
   <h1>Plans</h1>
   <table>

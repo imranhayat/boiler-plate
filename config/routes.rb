@@ -24,4 +24,7 @@ Rails.application.routes.draw do
   resources :products, only: %i[new create show]
   resources :plans, only: %i[new create index]
   post '/create_subscription', to: 'subscriptions#create'
+  get '/cancel_subscription_now', to: 'subscriptions#cancel_subscription_now'
+  get '/setup_renewal_of_subscription',
+      to: 'subscriptions#setup_renewal_of_subscription'
 end
