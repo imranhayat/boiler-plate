@@ -14,7 +14,6 @@ console.log(JSON.parse('<%= raw @payment_attrs.to_json %>'));
             window.location.href = "<%== request.referer %>"
           });
         } else {
-
           swal({
               title: "Success",
               text: "Subscription created!",

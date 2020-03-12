@@ -8,6 +8,8 @@ class SubscriptionsController < ApplicationController
       current_user: current_user
     )
     respond_to do |format|
+      p @response.payment_attrs
+      p @response.payment_attrs[:stripe_subscription_status]
       @payment_attrs = @response.payment_attrs
       if @response.success?
         format.html do
@@ -41,6 +43,18 @@ class SubscriptionsController < ApplicationController
     )
     if response.success?
       redirect_to plans_path, notice: 'Subscription Update Successfully'
+    else
+      redirect_to plans_path, alert: "Error: #{e.message}"
+    end
+  end
+
+  def update_card_details
+    response = Users::UpdateStripeCardDetails.call(
+      current_user: current_user,
+      params: params
+    )
+    if response.success?
+      redirect_to plans_path, notice: 'Card Details Updated Successfully'
     else
       redirect_to plans_path, alert: "Error: #{e.message}"
     end
