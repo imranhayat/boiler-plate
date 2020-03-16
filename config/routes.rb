@@ -27,5 +27,6 @@ Rails.application.routes.draw do
   get '/cancel_subscription_now', to: 'subscriptions#cancel_subscription_now'
   get '/setup_renewal_of_subscription',
       to: 'subscriptions#setup_renewal_of_subscription'
-  post '/update_card_details', to: 'subscriptions#update_card_details'
+  get '/update_card_details', to: 'user_panel#update_card_details'
+  get :user_settings, controller: :user_panel
 end

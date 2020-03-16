@@ -2,19 +2,7 @@
   <%= current_user.subscription.plan.nickname %>
   <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path %>
   <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path %>
-  <%= form_tag(:controller => "subscriptions", :action => "update_card_details") do %>
-    <script src="https://checkout.stripe.com/checkout.js" 
-      class="stripe-button" 
-      data-key="<%= Rails.configuration.stripe[:publishable_key] %>" 
-      data-name="Boiler-Plate" 
-      data-panel-label="Update Card Details" 
-      data-label="Update Card Details" 
-      data-allow-remember-me=false 
-      data-locale="auto"
-      data-description="Form for Updating Card Details"
-      data-email="<%= current_user.email %>">
-    </script>
-  <% end %>
+  <%= link_to 'Add or Update Card', update_card_details_path, remote: true, class: 'text-primary' %>
 <% else %>
   <h1>Plans</h1>
   <table>

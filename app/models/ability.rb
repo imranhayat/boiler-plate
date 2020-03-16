@@ -16,6 +16,7 @@ class Ability
     elsif user.has_role? :normal
       cannot :manage, :all
       can :manage, :user_panel
+      can :index, Plan
     else
       cannot :manage, :all
     end

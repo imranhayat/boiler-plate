@@ -12,15 +12,23 @@ module Users
            Stripe::CardError,
            Stripe::RateLimitError,
            Stripe::AuthenticationError => e
-      context.fail! message:
-                    "Stripe error while updating card info: #{e.message}"
+      context.fail! message: e.message
     end
 
     def update_card_details
-      p Stripe::Customer.update(
-        context.current_user.stripe_customer_id,
-        source: context.params[:stripeToken]
+      session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        mode: 'setup',
+        setup_intent_data: {
+          metadata: {
+
+          }
+        },
+        expand: ['setup_intent'],
+        success_url: 'http://localhost:3000/user_settings?success=yes',
+        cancel_url: 'http://localhost:3000/user_settings?success=no'
       )
+      context.session = session
     end
   end
 end

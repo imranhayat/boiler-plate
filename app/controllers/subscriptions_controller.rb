@@ -47,16 +47,4 @@ class SubscriptionsController < ApplicationController
       redirect_to plans_path, alert: "Error: #{e.message}"
     end
   end
-
-  def update_card_details
-    response = Users::UpdateStripeCardDetails.call(
-      current_user: current_user,
-      params: params
-    )
-    if response.success?
-      redirect_to plans_path, notice: 'Card Details Updated Successfully'
-    else
-      redirect_to plans_path, alert: "Error: #{e.message}"
-    end
-  end
 end

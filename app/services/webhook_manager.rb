@@ -43,6 +43,8 @@ class WebhookManager
       update_subscription
     when 'customer.subscription.deleted'
       delete_app_subscription
+    when 'customer.updated'
+      update_customer
     else
       handle_bad_requests
     end
@@ -83,6 +85,14 @@ class WebhookManager
   def delete_app_subscription
     fetch_subscription.user.update!(payment_status: false)
     fetch_subscription.destroy!
+  end
+
+  def update_customer
+    customer = User.find_by_stripe_customer_id(@params[:data][:object][:id])
+    customer.update!(
+      stripe_payment_method_id:
+      @params[:data][:object][:invoice_settings][:default_payment_method]
+    )
   end
 
   def fetch_subscription
