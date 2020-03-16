@@ -13,7 +13,7 @@ class ProductsController < ApplicationController
   def create
     response = Products::CreateProduct.call(product_params: product_params)
     if response.success?
-      redirect_to response.product, notice: 'Product was successfully created.'
+      redirect_to new_plan_path, notice: 'Product was successfully created.'
     else
       redirect_to new_product_path, alert: "Product Error: #{response.message}"
     end
@@ -23,6 +23,6 @@ class ProductsController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def product_params
-    params.require(:product).permit(:name)
+    params.require(:product).permit(:name, :payment_gateway)
   end
 end

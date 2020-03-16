@@ -3,13 +3,8 @@
 # :Subscriptions Controller for Handling Subscription Actions:
 class SubscriptionsController < ApplicationController
   def create
-    @response = Subscriptions::ChoosePaymentGateway.call(
-      params: params,
-      current_user: current_user
-    )
+    @response = call_interactor
     respond_to do |format|
-      p @response.payment_attrs
-      p @response.payment_attrs[:stripe_subscription_status]
       @payment_attrs = @response.payment_attrs
       if @response.success?
         format.html do
@@ -23,6 +18,13 @@ class SubscriptionsController < ApplicationController
       end
       format.js
     end
+  end
+
+  def call_interactor
+    Subscriptions::CreateSubscription.call(
+      params: params,
+      current_user: current_user
+    )
   end
 
   def cancel_subscription_now

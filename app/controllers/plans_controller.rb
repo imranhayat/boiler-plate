@@ -19,7 +19,6 @@ class PlansController < ApplicationController
   # POST /plans
   def create
     response = Plans::CreatePlan.call(plan_params: plan_params)
-    p response
     if response.success?
       redirect_to plans_path, notice: 'Plan was successfully created.'
     else
