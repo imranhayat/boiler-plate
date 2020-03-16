@@ -1,0 +1,50 @@
+var stripe = Stripe("<%= ENV["PUBLISHABLE_KEY"] %>");
+
+console.log(JSON.parse('<%= raw @payment_attrs.to_json %>'));
+<% if @response.success? %>
+  <% if @payment_attrs[:payment_intent_status].present? and @payment_attrs[:payment_intent_status] == "requires_action" %>
+    stripe.handleCardPayment("<%= @payment_attrs[:payment_intent_client_secret] %>" ).then(function(result) {
+        if (result.error) {
+          swal({
+              title: "Payment Failure",
+              text: result.error.message,
+              type: 'error',
+              html: true
+          },function() {
+            window.location.href = "<%== request.referer %>"
+          });
+        } else {
+          swal({
+              title: "Success",
+              text: "Subscription created!",
+              type: 'success',
+              html: true
+          },function() {
+            window.location.href = "<%== plans_url %>"
+          });
+        }
+    });
+  <% elsif @payment_attrs[:payment_intent_status].present? and @payment_attrs[:payment_intent_status] == "requires_payment_method" %>
+    swal({
+        title: "Payment Failure",
+        text: "We are unable to charge your card. Please try again with different payment method",
+        type: 'error',
+        html: true
+    },function() {
+      window.location.href = "<%== request.referer %>"
+    });
+  <% elsif @payment_attrs[:stripe_subscription_status] == 'active' %>
+      swal({
+            title: "Success",
+            text: "Subscription created!",
+            type: 'success',
+            html: true
+        },function() {
+          window.location.href = "<%== plans_url %>"
+      });
+  <% else %>
+    alert('<%= @payment_attrs[:stripe_subscription_status] %>');
+  <% end %>
+<% else %>
+  alert("<%= raw @response.message.to_s %>");
+<% end %>

@@ -2,5 +2,6 @@
 
 # :Product Model:
 class Product < ApplicationRecord
-  belongs_to :user
+  validates :name, uniqueness: true
+  has_many :plans, dependent: :destroy
 end

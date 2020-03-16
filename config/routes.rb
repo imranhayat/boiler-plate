@@ -22,4 +22,11 @@ Rails.application.routes.draw do
   post 'stripe-webhooks', to: 'home#webhooks'
   # Subscription Module
   resources :products, only: %i[new create show]
+  resources :plans, only: %i[new create index]
+  post '/create_subscription', to: 'subscriptions#create'
+  get '/cancel_subscription_now', to: 'subscriptions#cancel_subscription_now'
+  get '/setup_renewal_of_subscription',
+      to: 'subscriptions#setup_renewal_of_subscription'
+  get '/update_card_details', to: 'user_panel#update_card_details'
+  get :user_settings, controller: :user_panel
 end

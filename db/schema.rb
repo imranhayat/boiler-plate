@@ -10,18 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_07_121029) do
+ActiveRecord::Schema.define(version: 2020_03_10_112625) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "plans", force: :cascade do |t|
+    t.bigint "product_id"
+    t.string "nickname"
+    t.integer "amount"
+    t.string "currency"
+    t.string "interval"
+    t.integer "interval_count"
+    t.string "stripe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["product_id"], name: "index_plans_on_product_id"
+  end
+
   create_table "products", force: :cascade do |t|
-    t.bigint "user_id"
     t.string "name"
     t.string "stripe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_products_on_user_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -32,6 +43,19 @@ ActiveRecord::Schema.define(version: 2020_03_07_121029) do
     t.datetime "updated_at", null: false
     t.index ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
     t.index ["resource_type", "resource_id"], name: "index_roles_on_resource_type_and_resource_id"
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "plan_id"
+    t.string "stripe_id"
+    t.bigint "current_period_start"
+    t.bigint "current_period_end"
+    t.boolean "cancel_at_period_end"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["plan_id"], name: "index_subscriptions_on_plan_id"
+    t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -67,6 +91,9 @@ ActiveRecord::Schema.define(version: 2020_03_07_121029) do
     t.string "invited_by_type"
     t.bigint "invited_by_id"
     t.integer "invitations_count", default: 0
+    t.string "stripe_customer_id"
+    t.string "stripe_payment_method_id"
+    t.boolean "payment_status", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["invitation_token"], name: "index_users_on_invitation_token", unique: true
     t.index ["invitations_count"], name: "index_users_on_invitations_count"
@@ -84,5 +111,7 @@ ActiveRecord::Schema.define(version: 2020_03_07_121029) do
     t.index ["user_id"], name: "index_users_roles_on_user_id"
   end
 
-  add_foreign_key "products", "users"
+  add_foreign_key "plans", "products"
+  add_foreign_key "subscriptions", "plans"
+  add_foreign_key "subscriptions", "users"
 end

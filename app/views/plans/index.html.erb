@@ -1,0 +1,36 @@
+<% if current_user.subscription.present? %>
+  <%= current_user.subscription.plan.nickname %>
+  <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path %>
+  <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path %>
+  <%= link_to 'Add or Update Card', update_card_details_path, remote: true, class: 'text-primary' %>
+<% else %>
+  <h1>Plans</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nickname</th>
+        <th>Amount</th>
+        <th>Currency</th>
+        <th>Interval</th>
+        <th>Interval count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @plans.each do |plan| %>
+        <tr>
+          <td><%= plan.nickname %></td>
+          <td><%= plan.amount %></td>
+          <td><%= plan.currency %></td>
+          <td><%= plan.interval %></td>
+          <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
+          <td type="button" class="btn btn-primary" data-toggle="modal" data-target="#payment_modal_for_<%= plan.stripe_id %>">Select</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Plan', new_plan_path %>
+  <% @plans.each do |plan| %>
+    <%= render partial: 'plans/payment_modal', locals: { plan_id: plan.stripe_id, app_plan_id: plan.id } %>
+  <% end %>
+<% end %>

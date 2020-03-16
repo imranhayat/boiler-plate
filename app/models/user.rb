@@ -38,6 +38,6 @@ class User < ApplicationRecord
     Role.find_by_name('normal').users.count
   end
 
-  # Subscription Module
-  has_one :product
+  # Subscriptions
+  has_one :subscription, dependent: :destroy
 end

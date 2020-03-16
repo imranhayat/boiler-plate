@@ -4,12 +4,32 @@ module Products
   # :Interactor for Product Creation:
   class CreateProduct < BaseInteractor
     def call
-      product = context.user.build_product(context.product_params)
+      if check_product_exists?
+        context.fail! message: 'Product Already Present!'
+      else
+        make_product_on_stripe
+      end
+    end
+
+    def check_product_exists?
+      return true if Product.count >= 1
+    end
+
+    def make_product_on_stripe
+      product = Product.new(context.product_params)
+      response = StripeAdapter.new(product).call
+      if response[:success] == true
+        make_product_in_app(product)
+      else
+        context.fail! message: response[:error]
+      end
+    end
+
+    def make_product_in_app(product)
       if product.save!
         context.product = product
-        StripeAdapter.new('Product', product)
       else
-        context.fail!(message: product.errors.full_messages.to_sentence)
+        context.fail! message: 'Something went wrong!'
       end
     end
   end

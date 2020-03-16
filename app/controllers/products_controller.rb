@@ -6,21 +6,16 @@ class ProductsController < ApplicationController
   def show; end
 
   def new
-    if Product.count < 1
-      @product = Product.new
-    else
-      redirect_to product_path(Product.first), alert: 'Product was already present.'
-    end
+    @product = Product.new
   end
 
   # POST /products
   def create
-    response = Products::CreateProduct.call(product_params: product_params,
-                                            user: current_user)
+    response = Products::CreateProduct.call(product_params: product_params)
     if response.success?
       redirect_to response.product, notice: 'Product was successfully created.'
     else
-      render :new
+      redirect_to new_product_path, alert: "Product Error: #{response.message}"
     end
   end
 
