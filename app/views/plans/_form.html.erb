@@ -13,12 +13,12 @@
 
   <div class="field">
     <%= form.label :nickname %>
-    <%= form.text_field :nickname %>
+    <%= form.text_field :nickname, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= form.label :amount %>
-    <%= form.text_field :amount %>
+    <%= form.text_field :amount, class: 'form-control' %>
   </div>
 
   <div class="field">
@@ -37,6 +37,6 @@
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: 'btn btn-primary btn-sm mt-2' %>
   </div>
 <% end %>

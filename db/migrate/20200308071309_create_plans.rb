@@ -8,6 +8,7 @@ class CreatePlans < ActiveRecord::Migration[5.2]
       t.string :interval
       t.integer :interval_count
       t.string :stripe_id
+      t.string :paypal_id
 
       t.timestamps
     end

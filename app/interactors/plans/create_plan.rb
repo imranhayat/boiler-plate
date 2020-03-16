@@ -17,7 +17,10 @@ module Plans
 
     def make_plan_on_stripe
       plan = Product.first.plans.new(context.plan_params)
-      response = StripeAdapter.new(plan).call
+      response = PaymentGatewayAdapter.new(
+        payment_gateway: payment_gateway,
+        object: plan
+      ).call
       if response[:success] == true
         make_plan_in_app(plan)
       else
@@ -31,6 +34,10 @@ module Plans
       else
         context.fail message: 'Something went wrong!'
       end
+    end
+
+    def payment_gateway
+      Product.first.payment_gateway
     end
   end
 end

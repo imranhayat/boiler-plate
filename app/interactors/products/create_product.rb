@@ -17,7 +17,10 @@ module Products
 
     def make_product_on_stripe
       product = Product.new(context.product_params)
-      response = StripeAdapter.new(product).call
+      response = PaymentGatewayAdapter.new(
+        payment_gateway: context.product_params[:payment_gateway],
+        object: product
+      ).call
       if response[:success] == true
         make_product_in_app(product)
       else

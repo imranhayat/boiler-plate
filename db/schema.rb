@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_112625) do
     t.string "interval"
     t.integer "interval_count"
     t.string "stripe_id"
+    t.string "paypal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_plans_on_product_id"
@@ -31,6 +32,8 @@ ActiveRecord::Schema.define(version: 2020_03_10_112625) do
   create_table "products", force: :cascade do |t|
     t.string "name"
     t.string "stripe_id"
+    t.string "paypal_id"
+    t.integer "payment_gateway", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
