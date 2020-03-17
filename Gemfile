@@ -8,7 +8,7 @@ ruby '2.6.3'
 # Major Gems
 gem 'coffee-rails', '~> 4.2'
 gem 'pg', '>= 0.18', '< 2.0'
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2', '>= 5.2.3'
 gem 'sass-rails', '~> 5.0'
 gem 'turbolinks', '~> 5'
