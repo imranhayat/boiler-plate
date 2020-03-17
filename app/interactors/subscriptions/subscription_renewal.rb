@@ -3,7 +3,7 @@
 # :Subscription Module:
 module Subscriptions
   # :Interactor for allowing or cancelling the renewal of subscription:
-  class SetupSubscriptionRenewal < BaseInteractor
+  class SubscriptionRenewal < BaseInteractor
     def call
       update_stripe_subscription_renewal
     rescue Stripe::InvalidRequestError,
@@ -12,8 +12,7 @@ module Subscriptions
            Stripe::CardError,
            Stripe::RateLimitError,
            Stripe::AuthenticationError => e
-      context.fail! message:
-                    "Stripe error while updating subscription: #{e.message}"
+      context.fail! message: e.message
     end
 
     def update_stripe_subscription_renewal

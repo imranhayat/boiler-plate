@@ -12,16 +12,20 @@ module Subscriptions
     end
 
     def delete_stripe_subscription
-      stripe_subscription = Stripe::Subscription.retrieve(
-        current_user.subscription.stripe_id
-      )
-      stripe_subscription.delete
+      delete_subscription
     rescue Stripe::InvalidRequestError,
            Stripe::StripeError,
            Stripe::APIConnectionError,
            Stripe::RateLimitError,
            Stripe::AuthenticationError => e
       context.fail! message: e.message
+    end
+
+    def delete_subscription
+      stripe_subscription = Stripe::Subscription.retrieve(
+        current_user.subscription.stripe_id
+      )
+      stripe_subscription.delete
     end
   end
 end

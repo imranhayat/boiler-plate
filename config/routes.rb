@@ -19,7 +19,7 @@ Rails.application.routes.draw do
                             invitations: 'users/invitations',
                             omniauth_callbacks: 'users/omniauth_callbacks' }
   resources :users, only: %i[edit update]
-  post 'stripe-webhooks', to: 'home#webhooks'
+  post 'stripe_webhooks', to: 'home#stripe_webhooks'
   # Subscription Module
   resources :products, only: %i[new create show]
   resources :plans, only: %i[new create index]

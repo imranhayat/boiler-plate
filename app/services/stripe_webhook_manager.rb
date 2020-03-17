@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # :Stripe Manager for handling webhooks for Stripe Events:
-class WebhookManager
+class StripeWebhookManager
   def initialize(read_body_request, request, params)
     @read_body_request = read_body_request
     @request = request
@@ -45,6 +45,8 @@ class WebhookManager
       delete_app_subscription
     when 'customer.updated'
       update_customer
+    when 'checkout.session.completed'
+      update_user_payment_method
     else
       handle_bad_requests
     end
@@ -97,6 +99,29 @@ class WebhookManager
 
   def fetch_subscription
     Subscription.find_by_stripe_id(@params[:data][:object][:id])
+  end
+
+  def update_user_payment_method
+    user_id = @params[:data][:object][:client_reference_id]
+    user = User.find_by_id(user_id)
+    return unless user
+
+    setup_intent =
+      Stripe::SetupIntent.retrieve(@params[:data][:object][:setup_intent])
+    payment_method_id = setup_intent.payment_method
+    user.update!(stripe_payment_method_id: payment_method_id)
+    Stripe::PaymentMethod.attach(payment_method_id,
+                                 customer: user.create_stripe_customer)
+    update_default_payment_method(user.stripe_customer_id, payment_method_id)
+  end
+
+  def update_default_payment_method(customer_id, payment_method_id)
+    Stripe::Customer.update(
+      customer_id,
+      invoice_settings: {
+        default_payment_method: payment_method_id
+      }
+    )
   end
 
   def handle_bad_requests

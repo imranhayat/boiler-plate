@@ -3,16 +3,14 @@
 # :Subscriptions Controller for Handling Subscription Actions:
 class SubscriptionsController < ApplicationController
   def create
-    @response = call_interactor
+    @response = create_subscription
+    @payment_attrs = @response.payment_attrs
     respond_to do |format|
-      @payment_attrs = @response.payment_attrs
-      if @response.success?
-        format.html do
+      format.html do
+        if @response.success?
           redirect_to plans_path,
                       notice: 'You have subscribed our services successfully'
-        end
-      else
-        format.html do
+        else
           redirect_to plans_path, alert: "Error: #{response.message}"
         end
       end
@@ -20,7 +18,7 @@ class SubscriptionsController < ApplicationController
     end
   end
 
-  def call_interactor
+  def create_subscription
     Subscriptions::CreateSubscription.call(
       params: params,
       current_user: current_user
@@ -35,18 +33,21 @@ class SubscriptionsController < ApplicationController
       redirect_to plans_path,
                   notice: 'Your Subscription has been cancelled successfully.'
     else
-      redirect_to plans_path, alert: "Error: #{response.message}"
+      redirect_to plans_path,
+                  alert: "Stripe Error: #{response.message}"
     end
   end
 
   def setup_renewal_of_subscription
-    response = Subscriptions::SetupSubscriptionRenewal.call(
+    response = Subscriptions::SubscriptionRenewal.call(
       current_user: current_user
     )
     if response.success?
       redirect_to plans_path, notice: 'Subscription Update Successfully'
     else
-      redirect_to plans_path, alert: "Error: #{e.message}"
+      redirect_to plans_path,
+                  alert:
+          "Stripe error while updating subscription: #{response.message}"
     end
   end
 end
