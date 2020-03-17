@@ -70,4 +70,8 @@ class User < ApplicationRecord
       name: name
     )
   end
+
+  def stripe_invoices
+    Stripe::Invoice.list(customer: stripe_customer_id) if stripe_customer_id
+  end
 end
