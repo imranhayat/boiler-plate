@@ -40,4 +40,34 @@ class User < ApplicationRecord
 
   # Subscriptions
   has_one :subscription, dependent: :destroy
+
+  def card_details
+    payment_method = stripe_customer_payment_method
+    {
+      brand: payment_method.card.brand.capitalize,
+      last4: payment_method.card.last4,
+      exp_month: payment_method.card.exp_month,
+      exp_year: payment_method.card.exp_year
+    }
+  end
+
+  def stripe_customer_payment_method
+    Stripe::PaymentMethod.retrieve(stripe_payment_method_id)
+  end
+
+  def create_stripe_customer
+    if stripe_customer_id.present?
+    else
+      customer = make_customer_on_stripe
+      update!(stripe_customer_id: customer.id)
+    end
+    stripe_customer_id
+  end
+
+  def make_customer_on_stripe
+    Stripe::Customer.create(
+      email: email,
+      name: name
+    )
+  end
 end

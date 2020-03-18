@@ -7,10 +7,13 @@ class UserPanelController < ApplicationController
   def dashboard; end
 
   def user_settings
-    if params[:success] == 'yes'
-      p 'Card Details Updated'
-    else
-      p 'Error, Card Details Not Updated'
+    if current_user.subscription.present?
+      @subscription = current_user.subscription
+      @plan = @subscription.plan
+    end
+    if current_user.stripe_customer_id? && current_user
+       .stripe_payment_method_id?
+      @card_details = current_user.card_details
     end
   end
 
@@ -24,6 +27,14 @@ class UserPanelController < ApplicationController
   end
 
   def payment
+    create_intent
+    respond_to do |format|
+      format.html {}
+      format.js {}
+    end
+  end
+
+  def create_intent
     @amount = (params[:amount].to_f * 100).to_i
     @intent = Stripe::PaymentIntent.create(
       amount: @amount,
@@ -31,9 +42,5 @@ class UserPanelController < ApplicationController
       payment_method_types: ['card'],
       description: current_user.email
     )
-    respond_to do |format|
-      format.html {}
-      format.js {}
-    end
   end
 end

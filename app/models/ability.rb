@@ -10,9 +10,10 @@ class Ability
       cannot :update, :all
       cannot :destroy, :all
       can :manage, :admin_panel
-      cannot :manage, :user_panel
+      # cannot :manage, :user_panel
       can :manage, Product
       can :manage, Plan
+      can :manage, :user_panel
     elsif user.has_role? :normal
       cannot :manage, :all
       can :manage, :user_panel

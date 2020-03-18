@@ -18,15 +18,11 @@ module Users
     def update_card_details
       session = Stripe::Checkout::Session.create(
         payment_method_types: ['card'],
+        client_reference_id: context.current_user.id,
         mode: 'setup',
-        setup_intent_data: {
-          metadata: {
-
-          }
-        },
         expand: ['setup_intent'],
-        success_url: 'http://localhost:3000/user_settings?success=yes',
-        cancel_url: 'http://localhost:3000/user_settings?success=no'
+        success_url: 'http://localhost:3000/user_settings?response=Success',
+        cancel_url: 'http://localhost:3000/user_settings?response=Failure'
       )
       context.session = session
     end
