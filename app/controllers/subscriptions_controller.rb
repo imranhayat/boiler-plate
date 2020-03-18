@@ -8,10 +8,10 @@ class SubscriptionsController < ApplicationController
     respond_to do |format|
       format.html do
         if @response.success?
-          redirect_to plans_path,
+          redirect_to user_settings_path,
                       notice: 'You have subscribed our services successfully'
         else
-          redirect_to plans_path, alert: "Error: #{response.message}"
+          redirect_to user_settings_path, alert: "Error: #{response.message}"
         end
       end
       format.js
@@ -30,10 +30,10 @@ class SubscriptionsController < ApplicationController
       current_user: current_user
     )
     if response.success?
-      redirect_to plans_path,
+      redirect_to user_settings_path,
                   notice: 'Your Subscription has been cancelled successfully.'
     else
-      redirect_to plans_path,
+      redirect_to user_settings_path,
                   alert: "Stripe Error: #{response.message}"
     end
   end
@@ -43,11 +43,48 @@ class SubscriptionsController < ApplicationController
       current_user: current_user
     )
     if response.success?
-      redirect_to plans_path, notice: 'Subscription Update Successfully'
+      redirect_to user_settings_path, notice: 'Subscription Update Successfully'
     else
-      redirect_to plans_path,
+      redirect_to user_settings_path,
                   alert:
           "Stripe error while updating subscription: #{response.message}"
+    end
+  end
+
+  def validate_coupon
+    @response = Subscriptions::ValidateCoupon.call(coupon: params[:coupon])
+    respond_to do |format|
+      if @response.success?
+        apply_discount(@response)
+        format.html { redirect_to request.referer, notice: 'Coupon Verified' }
+      else
+        format.html { redirect_to request.referer, alert: @response.message }
+      end
+      format.js
+    end
+  end
+
+  def apply_discount(response)
+    @plan = Plan.find_by_stripe_id(params[:stripe_plan_id])
+    @discounted_amount = discounted_amount(response.coupon, @plan.amount)
+  end
+
+  def collect_payment_details
+    @plan = Plan.find(params[:app_plan_id])
+    @app_plan_id = params[:app_plan_id]
+    @stripe_plan_id = params[:stripe_plan_id]
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  private
+
+  def discounted_amount(coupon, original_amount)
+    if coupon.percent_off.present?
+      original_amount - ((original_amount * coupon.percent_off) / 100)
+    elsif coupon.amount_off.present?
+      original_amount - (coupon.amount_off / 100)
     end
   end
 end

@@ -3,7 +3,7 @@
 # :Stripe Adapter for making API calls to Stripe:
 class StripeAdapter
   def initialize(options = {})
-    @object = options[:object]
+    @object = options[:object] || nil
     @params = options[:params] || nil
   end
 
@@ -16,14 +16,16 @@ class StripeAdapter
       call_product_api
     elsif @object.class.to_s == 'Plan'
       call_plan_api
-    else
+    elsif @object.class.to_s == 'Subscription'
       call_subscription_api
+    else
+      call_coupon_api
     end
   end
 
   def call_product_api
     create_product
-  rescue Stripe::InvalidRequestError, Stripe::StripeError,
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
     { success: false, error: e.message }
@@ -39,7 +41,7 @@ class StripeAdapter
 
   def call_plan_api
     create_plan
-  rescue Stripe::InvalidRequestError, Stripe::StripeError,
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
     { success: false, error: e.message }
@@ -69,7 +71,7 @@ class StripeAdapter
 
   def create_customer
     make_customer
-  rescue Stripe::InvalidRequestError, Stripe::StripeError,
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
     { success: false, error: e.message }
@@ -98,7 +100,7 @@ class StripeAdapter
 
   def create_subscription
     make_subscription
-  rescue Stripe::InvalidRequestError, Stripe::StripeError,
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
     { success: false, error: e.message }
@@ -107,6 +109,7 @@ class StripeAdapter
   def make_subscription
     subscription = Stripe::Subscription.create(
       customer: current_user.stripe_customer_id,
+      coupon: @params[:coupon_id],
       items: [
         {
           plan: @params[:stripe_plan_id]
@@ -140,5 +143,18 @@ class StripeAdapter
       payment_intent_client_secret: payment_intent&.client_secret,
       stripe_subscription_status: subscription&.status
     }
+  end
+
+  def call_coupon_api
+    p verify_coupon
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
+         Stripe::APIConnectionError, Stripe::RateLimitError,
+         Stripe::AuthenticationError, Stripe::StripeError => e
+    { success: false, message: e.message }
+  end
+
+  def verify_coupon
+    coupon = Stripe::Coupon.retrieve(@object)
+    { success: true, coupon: coupon }
   end
 end
