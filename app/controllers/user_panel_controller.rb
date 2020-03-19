@@ -3,6 +3,7 @@
 # :User Panel Controller:
 class UserPanelController < ApplicationController
   load_and_authorize_resource class: false
+  before_action :trial_expired?
 
   def dashboard; end
 
@@ -19,6 +20,8 @@ class UserPanelController < ApplicationController
   end
 
   def stripe_invoices
+    return if current_user.stripe_invoices.nil?
+
     current_user.stripe_invoices
                 .select { |i| (i.status == 'paid' || i.status == 'open') }
   end

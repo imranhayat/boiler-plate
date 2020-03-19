@@ -146,7 +146,7 @@ class StripeAdapter
   end
 
   def call_coupon_api
-    p verify_coupon
+    verify_coupon
   rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
@@ -156,5 +156,39 @@ class StripeAdapter
   def verify_coupon
     coupon = Stripe::Coupon.retrieve(@object)
     { success: true, coupon: coupon }
+  end
+
+  def change_plan(current_user, plan)
+    stripe_subscription = retrieve_subscription(current_user)
+    call_subscription_update_api(stripe_subscription, plan)
+  end
+
+  def retrieve_subscription(current_user)
+    Stripe::Subscription.retrieve(
+      current_user.subscription.stripe_id
+    )
+  end
+
+  def call_subscription_update_api(stripe_subscription, plan)
+    update_stripe_subscription(stripe_subscription, plan)
+  rescue Stripe::InvalidRequestError, Stripe::CardError,
+         Stripe::APIConnectionError, Stripe::RateLimitError,
+         Stripe::AuthenticationError, Stripe::StripeError => e
+    { success: false, message: e.message }
+  end
+
+  def update_stripe_subscription(stripe_subscription, plan)
+    Stripe::Subscription.update(
+      stripe_subscription.id,
+      cancel_at_period_end: false,
+      metadata: { plan_id: plan.id },
+      items: [
+        {
+          id: stripe_subscription.items.data[0].id,
+          plan: plan.stripe_id
+        }
+      ]
+    )
+    { success: true }
   end
 end

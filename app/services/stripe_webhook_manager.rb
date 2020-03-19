@@ -80,8 +80,17 @@ class StripeWebhookManager
   end
 
   def update_subscription
-    fetch_subscription.update!(cancel_at_period_end:
-                               @params[:data][:object][:cancel_at_period_end])
+    metadata = @params[:data][:object][:metadata]
+    if metadata[:plan_id].present?
+      fetch_subscription.update!(
+        cancel_at_period_end: @params[:data][:object][:cancel_at_period_end],
+        plan_id: metadata[:plan_id]
+      )
+    else
+      fetch_subscription.update!(
+        cancel_at_period_end: @params[:data][:object][:cancel_at_period_end]
+      )
+    end
   end
 
   def delete_app_subscription
