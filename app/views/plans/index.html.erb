@@ -1,33 +1,37 @@
 <div class="container mt-2">
-
-  <% if current_user.subscription.present? %>
-  <% else %>
-    <h1>Plans</h1>
-    <table>
-      <thead>
+  <h1>Plans</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Nickname</th>
+        <th>Amount</th>
+        <th>Currency</th>
+        <th>Interval</th>
+        <th>Interval count</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @plans.each do |plan| %>
         <tr>
-          <th>Nickname</th>
-          <th>Amount</th>
-          <th>Currency</th>
-          <th>Interval</th>
-          <th>Interval count</th>
+          <td><%= plan.nickname %></td>
+          <td><%= plan.amount %></td>
+          <td><%= plan.currency %></td>
+          <td><%= plan.interval %></td>
+          <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
+          <% if current_user.subscription.present? %>
+            <% if current_user.subscription.plan.id == plan.id %>
+              <td>Your Current Plan</td>
+            <% else %>
+              <td><%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), class: "btn btn-rounded style-#{ plan.id }"  %></td>
+            <% end %>
+          <% else %>
+            <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
+          <% end %>
         </tr>
-      </thead>
-      <tbody>
-        <% @plans.each do |plan| %>
-          <tr>
-            <td><%= plan.nickname %></td>
-            <td><%= plan.amount %></td>
-            <td><%= plan.currency %></td>
-            <td><%= plan.interval %></td>
-            <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
-            <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id: plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
-    <br>
-    <%= link_to 'New Plan', new_plan_path %>
-  <% end %>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <%= link_to 'New Plan', new_plan_path %>
 </div>
 <div id="modal_div"></div>

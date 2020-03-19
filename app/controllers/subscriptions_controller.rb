@@ -78,6 +78,25 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def upgrade_or_downgrade_stripe_plan
+    @plan = Plan.find(params[:plan])
+    @response = up_or_down_stripe_plan(@plan)
+    if @response.success?
+      redirect_to user_settings_path,
+                  notice: 'Your Subscription plan is changed successfully.'
+    else
+      redirect_to user_settings_path,
+                  alert: "Error: #{@response.message}"
+    end
+  end
+
+  def up_or_down_stripe_plan(plan)
+    Subscriptions::UpOrDownStripePlan.call(
+      current_user: current_user,
+      plan: plan
+    )
+  end
+
   private
 
   def discounted_amount(coupon, original_amount)

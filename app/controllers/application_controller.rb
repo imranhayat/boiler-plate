@@ -19,4 +19,17 @@ class ApplicationController < ActionController::Base
         super
       end
   end
+
+  def trial_expired?
+    return unless user_signed_in?
+
+    return if current_user.has_role?(:admin)
+
+    return unless helpers.remaining_days <= 0
+
+    return if current_user.subscription.present?
+
+    redirect_to plans_path,
+                alert: 'Your trial period has ended, please select a plan to continue using Project'
+  end
 end
