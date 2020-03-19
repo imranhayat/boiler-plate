@@ -1,0 +1,10 @@
+<% if @response.success? and @response.coupon['valid'] == true %>
+	$( "#coupon" ).prop( "disabled", true );
+	$('#couponSubmit').hide();
+  toastr.success('Coupon Applied Successfully');
+	$('#cardSubmit').html("Pay <%= number_to_currency(@discounted_amount) %>");
+<% elsif @response.coupon['valid'] == false %>
+  toastr.error("Coupon is not Valid anymore!");
+<% else %>
+	toastr.error('<%= @response.message %>');
+<% end %>

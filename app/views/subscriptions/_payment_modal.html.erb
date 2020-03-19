@@ -1,0 +1,103 @@
+<div class="modal fade" id="payment_modal_for_<%= stripe_plan_id %>" tabindex="-1" role="dialog" aria-labelledby="#payment_modal_<%= stripe_plan_id %>Label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="#payment_modal_<%= stripe_plan_id %>Label">Enter your Card Details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div id="subscription-for-<%= stripe_plan_id %>">
+          <div id="card-element" class="MyCardElement">
+            <!-- Elements will create input elements here -->
+          </div>
+          <!-- We'll put the error messages in this element -->
+          <div id="card-errors-<%= stripe_plan_id %>" role="alert"></div>
+          <label>Have a Coupon?</label>
+          <br>
+          <%= form_tag validate_coupon_path ,remote: true do %>
+            <%= hidden_field_tag 'stripe_plan_id', stripe_plan_id %>
+            <div class="input-group mb-3">
+              <%= text_field_tag 'coupon', '' , class: 'form-control', placeholder: 'Enter Coupon code' %>
+              <div class="input-group-append">
+                <%= submit_tag 'Apply Coupon', class: 'btn btn-primary btn-flat', id: 'couponSubmit', data: { 'disable-with': 'Checking...' } %>
+              </div>
+            </div>
+          <% end %>
+          <center class="my-4">
+            <img src="/BadgeSecure.png" class="img-fluid" width="250px">
+          </center>
+          <div class="modal-footer p-0">
+            <center>
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              <button type="button" id="cardSubmit" class="btn btn-primary">Pay <%= number_to_currency(plan.amount)%></button>
+              <input type="hidden" id='stripe_plan_id_<%= stripe_plan_id %>', value='<%= stripe_plan_id %>' />
+              <input type="hidden" id='app_plan_id_<%= app_plan_id %>', value='<%= app_plan_id %>' />
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  var stripe_plan_id = document.getElementById('stripe_plan_id_<%= stripe_plan_id %>').value
+  var app_plan_id = document.getElementById('app_plan_id_<%= app_plan_id %>').value
+
+  var stripe = Stripe('<%= ENV['PUBLISHABLE_KEY'] %>');
+  var elements = stripe.elements();
+  var cardElement = elements.create('card', { hidePostalCode: true });
+  
+  cardElement.mount('#card-element');
+  cardElement.addEventListener('change', ({error}) => {
+    const displayError = document.getElementById('card-errors-<%= stripe_plan_id %>');
+    if (error) {
+      displayError.textContent = error.message;
+    } else {
+      displayError.textContent = '';
+    }
+  });
+  
+  var form = document.getElementById("subscription-for-<%= stripe_plan_id %>");
+  var cardSubmit = document.getElementById('cardSubmit');
+  cardSubmit.addEventListener('click', function(event) {
+    var coupon_id = document.getElementById('coupon').value;
+    // We don't want to let default form submission happen here,
+    // which would refresh the page.
+    event.preventDefault();
+    stripe.createPaymentMethod({
+      type: 'card',
+      card: cardElement
+    })
+    .then(function(result) {
+      if (result.error){
+        console.log(result.error.message);
+      } 
+      else {
+        createSubscription(result.paymentMethod, coupon_id)
+      }
+    });
+  });
+
+  function createSubscription(payment_method, coupon_id) {
+    // Send paymentMethod.id to your server
+    request = $.ajax({
+      url: '/create_subscription',
+      type: 'POST',
+      dataType : 'script',
+      beforeSend: function(xhr) { xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content')) },
+      data: { 
+        payment_gateway: 'Stripe',
+        payment_method: payment_method.id, 
+        stripe_plan_id: stripe_plan_id,
+        app_plan_id: app_plan_id,
+        coupon_id: coupon_id
+      }
+    });
+    request.done(function (response, textStatus, jqXHR){
+      $('#payment_modal_for_<%= stripe_plan_id %>').modal('hide');
+    });
+  }
+</script>

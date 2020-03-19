@@ -1,15 +1,23 @@
-<div class="card card-admin">
+<div class="card card-admin fixed-side bar-admin">
   <div class="card-body">
     <div class="text-md-center center-row border-bottom">
-      <a href="<%= user_signed_in? ? admin_panel_path : root_path %>">
+      <i class="fas fa-bars icon-sidebar left font-20 rounded-1 lh-34"></i>
+      <a class="img-logo" href="<%= user_signed_in? ? admin_panel_path : root_path %>">
         <img class="img-fluid" src="/logo.png">
       </a>
       <i class="fas fa-bars icon-dashboard-mobile d-inline d-md-none"></i>
     </div>
-    <div class="row d-none d-md-flex dashboard-row">
-      <div class="col-12">
-        <a class="dashboard-side-link <%= active?('admin_panel', 'index') %>" href="<%= admin_panel_path %>"><i class="fas fa-tachometer-alt"></i><span>Admin Panel</span></a>
-        <a class="dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users"></i><span>Users</span></a>
+    <div class="row d-md-flex dashboard-row mr-0">
+      <div class="col-12 sidebar-admin pr-0">
+        <a class="dashboard-side-link <%= active?('admin_panel', 'index') %>" href="<%= admin_panel_path %>"><i class="fas fa-tachometer-alt" title="Admin Panel"></i><span>Admin Panel</span></a>
+        <a class="menu dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users" title="Users"></i><span>Users</span></a>
+        <div class="submenu-link after">
+          <div class="menu"><i class="fas fa-users" title="Main Menu"></i><span>Stripe</span></div>
+          <div class="sub-menu">
+            <a class="dashboard-side-link <%= active?('product', 'show') %>" href="<%= product_path(Product.first) %>"><span>Product</span></a>
+            <a class="dashboard-side-link <%= active?('plan', 'index') %>" href="<%= plans_path %>"><span>Plans</span></a>
+          </div>
+        </div>
         <a class="dashboard-side-link d-block d-md-none" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i><span>Log Out</span></a>
       </div>
     </div>

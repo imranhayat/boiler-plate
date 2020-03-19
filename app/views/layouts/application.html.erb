@@ -20,13 +20,15 @@
       <%= render 'layouts/swal' %>
       <div class="container-fluid pl-0 pr-0 pr-md-15 container-main-admin">
         <div class="row">
-          <div class="col-xl-2 col-md-3 pr-md-0">
+          <div class="col-xl-2 col-md-3 pr-0 admincol-1">
             <%= render 'layouts/admin_sidebar' %>
           </div>
-          <div class="col-xl-10 col-md-9 px-md-0">
-            <div class="container-main-footer">
-              <%= render 'layouts/header-dashboard' %>
-              <%= yield %>
+          <div class="col-xl-10 col-md-9 px-0 admincol-2">
+            <div class="container-fluid pl-3 pl-sm-0 pr-0 pr-md-3">
+              <div class="container-main-footer">
+                <%= render 'layouts/header-dashboard' %>
+                <%= yield %>
+              </div>
             </div>
             <%= render 'layouts/admin_footer' %>
           </div>

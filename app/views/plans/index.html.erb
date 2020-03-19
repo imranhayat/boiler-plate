@@ -21,15 +21,13 @@
             <td><%= plan.currency %></td>
             <td><%= plan.interval %></td>
             <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
-            <td type="button" class="btn btn-primary" data-toggle="modal" data-target="#payment_modal_for_<%= plan.stripe_id %>">Select</td>
+            <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id: plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
     <br>
     <%= link_to 'New Plan', new_plan_path %>
-    <% @plans.each do |plan| %>
-      <%= render partial: 'plans/payment_modal', locals: { plan_id: plan.stripe_id, app_plan_id: plan.id } %>
-    <% end %>
   <% end %>
 </div>
+<div id="modal_div"></div>

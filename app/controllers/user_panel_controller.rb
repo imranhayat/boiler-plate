@@ -7,6 +7,7 @@ class UserPanelController < ApplicationController
   def dashboard; end
 
   def user_settings
+    @invoices = stripe_invoices
     if current_user.subscription.present?
       @subscription = current_user.subscription
       @plan = @subscription.plan
@@ -15,6 +16,11 @@ class UserPanelController < ApplicationController
        .stripe_payment_method_id?
       @card_details = current_user.card_details
     end
+  end
+
+  def stripe_invoices
+    current_user.stripe_invoices
+                .select { |i| (i.status == 'paid' || i.status == 'open') }
   end
 
   def update_card_details

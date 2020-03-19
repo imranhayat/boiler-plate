@@ -29,4 +29,6 @@ Rails.application.routes.draw do
       to: 'subscriptions#setup_renewal_of_subscription'
   get '/update_card_details', to: 'user_panel#update_card_details'
   get :user_settings, controller: :user_panel
+  post :validate_coupon, controller: :subscriptions
+  get :collect_payment_details, controller: :subscriptions
 end
