@@ -44,15 +44,23 @@ end
 
 > This module contains the whole stripe subscription with, stripe product, plans coupons and etc. This Module follows the Single Repository Principle and Adapter Patterns, so if you don't know these, It is recommended, to first grasp these concepts. Let's dive into the thing.
 
-* Stripe:
+* General Overview:
 
   This module talks about how the stripe is working here! When the request (you can say forexample click on a button) is sent from view to controller, we invoke the model here, but this is the simple MVC thing, What is different here is that when there is a request from the view to a controller, we invoke a specific interactor in the controller to perform the certian job, that interactor deals with the calls, if there is some API needed, that interactor invoke the specific adapter to finilize the request, and when there is a response of success, the success response is sent back, otherwise, failure response is returned. This is very general overview about how this whole module is working, If you don't have any idea about interators and adapters, as recommended before, It's necessary for you to grasp these concepts first, otherwise, this documentation will not give proper sense to you.
+  
+  * Interactor
+    * An interactor is a simple, single-purpose object. Interactors are used to encapsulate your application's business logic. Each interactor represents one thing that your application does.
+    
+  * Adapter
+    * An adapter can provide an interface for different classes to work together. In the Object Adapter Pattern, the adapter contains an instance of the class it wraps. In this situation, the adapter makes calls to the instance of the wrapped object. The main purpose of the Adapter is to call several APIs and perform certain tasks.
   
   * Helpful Links (Interactors and Adapters)
   
     * https://github.com/collectiveidea/interactor
     * https://www.sitepoint.com/using-and-testing-the-adapter-design-pattern/
     * https://www.thegreatcodeadventure.com/rails-refactoring-part-i-the-adapter-pattern/
+    
+* Stripe
 
   * Stripe Product:
 
