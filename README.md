@@ -1,4 +1,4 @@
-# Boiler Plater Starter Settings
+# Boiler-Plate Starter Things
 
 ### Versions
 
