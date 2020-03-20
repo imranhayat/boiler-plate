@@ -22,7 +22,9 @@
             <th>Currency</th>
             <th>Interval</th>
             <th>Interval count</th>
-            <th>Actions</th>
+            <% if current_user.has_role?(:normal) %>
+              <th>Actions</th>
+            <% end %>
           </tr>
         </thead>
         <tbody>
@@ -33,8 +35,8 @@
             <td><%= plan.currency %></td>
             <td><%= plan.interval %></td>
             <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
-            <td>
-              <% if current_user.has_role?(:normal) %>
+            <% if current_user.has_role?(:normal) %>
+              <td>
                 <% if current_user.subscription.present? %>
                   <% if current_user.subscription.plan.id == plan.id %>
                     Your Current Plan
@@ -44,8 +46,8 @@
                 <% else %>
                   <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-primary"  %>
                 <% end %>
-              <% end %>
-            </td>
+              </td>
+            <% end %>
           </tr>
           <% end %>
         </tbody>
