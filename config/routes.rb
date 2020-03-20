@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  authenticated :user, ->(user) { user.has_role? :admin } do
+    root 'admin_panel#index'
+  end
+  authenticated :user, ->(user) { user.has_role? :normal } do
+    root 'user_panel#index'
+  end
   devise_scope :user do
     root to: 'users/sessions#new'
   end
