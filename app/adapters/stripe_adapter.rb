@@ -2,6 +2,8 @@
 
 # :Stripe Adapter for making API calls to Stripe:
 class StripeAdapter
+  # This functions takes the object and the params, the object should be
+  # product, plan, subscription or coupon and the params should be anything.
   def initialize(options = {})
     @object = options[:object] || nil
     @params = options[:params] || nil

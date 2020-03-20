@@ -2,6 +2,8 @@
 
 # :Subscriptions Controller for Handling Subscription Actions:
 class SubscriptionsController < ApplicationController
+  load_and_authorize_resource
+
   def create
     @response = create_subscription
     @payment_attrs = @response.payment_attrs

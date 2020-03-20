@@ -18,20 +18,24 @@
           <td><%= plan.currency %></td>
           <td><%= plan.interval %></td>
           <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
-          <% if current_user.subscription.present? %>
-            <% if current_user.subscription.plan.id == plan.id %>
-              <td>Your Current Plan</td>
+          <% if current_user.has_role?(:normal) %>
+            <% if current_user.subscription.present? %>
+              <% if current_user.subscription.plan.id == plan.id %>
+                <td>Your Current Plan</td>
+              <% else %>
+                <td><%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), class: "btn btn-rounded style-#{ plan.id }", method: :put  %></td>
+              <% end %>
             <% else %>
-              <td><%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), class: "btn btn-rounded style-#{ plan.id }", method: :put  %></td>
+              <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
             <% end %>
-          <% else %>
-            <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
           <% end %>
         </tr>
       <% end %>
     </tbody>
   </table>
   <br>
-  <%= link_to 'New Plan', new_plan_path %>
+  <% if can? :new, Plan %>
+    <%= link_to 'New Plan', new_plan_path %>
+  <% end %>
 </div>
 <div id="modal_div"></div>
