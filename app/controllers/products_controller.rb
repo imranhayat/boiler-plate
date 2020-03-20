@@ -3,10 +3,17 @@
 # :Product Controller for handling products actions:
 class ProductsController < ApplicationController
   load_and_authorize_resource
-  def show; end
+  def show; 
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'Product'
+  end
 
   def new
     @product = Product.new
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'Add New Product'
   end
 
   # POST /products

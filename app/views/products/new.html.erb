@@ -1,3 +1,15 @@
-<h1>New Product</h1>
-
-<%= render 'form', product: @product %>
+<div class="banner-header bg-white p-3">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center text-md-left">
+      <h5 class="lh-34 mb-0">Add New Product</h5>
+      <%= render_breadcrumbs %>
+    </div>
+  </div>
+</div>
+<div class="container-fluid py-5">
+  <div class="container container-signin container-sign">
+    <div class="modal-login-body">
+      <%= render 'form', product: @product %>
+    </div>
+  </div>
+</div>

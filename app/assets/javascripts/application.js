@@ -55,6 +55,17 @@ $(document).on('click', '.icon-sidebar.left', function() {
   $('.admincol-2').removeClass('col-xl-11').removeClass('col-md-11');
 });
 $(document).on("turbolinks:load", function() {
+  $('[name="plan[interval]"]').on('change',function
+    (){
+      var t = $(this);
+      var i_count = $('.i_count')
+      if(t.val() == "year"){
+        i_count.addClass("d-none");
+      }
+      else{
+        i_count.removeClass("d-none");
+      }
+    })
   $('.submenu-link .sub-menu').hide();
   $('.sub-menu a.active').closest('.submenu-link').addClass('open');
   $('.submenu-link.open .sub-menu').show();
@@ -64,6 +75,7 @@ $(document).on("turbolinks:load", function() {
     $('.primary-middle-hex').val($.fn.bcPicker.toHex(color));
   })
   $('select').addClass('form-control');
+  $('select').addClass('login-form');
   var table = $('.table-users table').DataTable({
 
     "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']

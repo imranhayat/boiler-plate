@@ -1,8 +1,22 @@
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
-<p>
-  <strong>Stripe_ID:</strong>
-  <%= @product.stripe_id %>
-</p>
+<div class="banner-header bg-white p-3">
+  <div class="row align-items-center">
+    <div class="col-md-12 text-center text-md-left">
+      <h5 class="lh-34 mb-0">Product</h5>
+      <%= render_breadcrumbs %>
+    </div>
+  </div>
+</div>
+<div class="container container-admin px-md-4 px-2">
+  <div class="table-responsive bg-white">
+    <table class="table table-bordered mb-0">
+      <tr>
+        <th>Name</th>
+        <td><%= @product.name %></td>
+      </tr>
+      <tr>
+        <th>Stripe_ID</th>
+        <td><%= @product.stripe_id %></td>
+      </tr>
+    </table>
+  </div>
+</div>
