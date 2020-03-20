@@ -42,11 +42,17 @@ end
  
 #### Stripe Subscription Module
 
-> This module contains the whole stripe subscription with, stripe product, plans coupons and etc. This Module follows the Single Repository Principle and Adapter Patterns, so if you don't know these, I should recommend you to first grasp these concepts. Let's dive into the thing.
+> This module contains the whole stripe subscription with, stripe product, plans coupons and etc. This Module follows the Single Repository Principle and Adapter Patterns, so if you don't know these, It is recommended, to first grasp these concepts. Let's dive into the thing.
 
 * Stripe:
 
-  First of all, I want to give you some general overview regading this module about how the stripe is working here! As we all know MVC, so I just enhanced the concepts little bit so that we are in accordance with the community standards. Now when the request (you can say forexample click on a button) is sent from view to controller, we invoke the model here, but this is the simple MVC thing, What is different here is that when there is a request from the view to a controller, we invoke a specific interactor in the controller to perform the certian job, that interactor deals with the calls, if there is some API needed, that interactor invoke the specific adapter to finilize the request, and when there is a response of success, the success response is sent back, otherwise, failure response is returned. This is very general overview about how this whole module is working, If you don't have any idea about interators and adapters, as I recommended before, It's necessary for you to grasp these concepts first, otherwise, this documentation will not give proper sense to you.
+  This module talks about how the stripe is working here! When the request (you can say forexample click on a button) is sent from view to controller, we invoke the model here, but this is the simple MVC thing, What is different here is that when there is a request from the view to a controller, we invoke a specific interactor in the controller to perform the certian job, that interactor deals with the calls, if there is some API needed, that interactor invoke the specific adapter to finilize the request, and when there is a response of success, the success response is sent back, otherwise, failure response is returned. This is very general overview about how this whole module is working, If you don't have any idea about interators and adapters, as recommended before, It's necessary for you to grasp these concepts first, otherwise, this documentation will not give proper sense to you.
+  
+  * Helpful Links (Interactors and Adapters)
+  
+    * https://github.com/collectiveidea/interactor
+    * https://www.sitepoint.com/using-and-testing-the-adapter-design-pattern/
+    * https://www.thegreatcodeadventure.com/rails-refactoring-part-i-the-adapter-pattern/
 
   * Stripe Product:
 
@@ -76,7 +82,7 @@ end
     
   * Stripe Subscriptions:
 
-    * This feature create the stripe customer and subscriptions, first of all we first create the stripe customer and then subscribe that customer to a specfic plan, the plans we just created above. We also handled the coupons so if you want to give your customer a specfic discount you can do so, but coupons should be created from the stripe dashboard, we don't deal with them in the application, as they are much more flexible there. Upgrading and Downgrading Plans have also been implemented, So If you want that, that is there too. Customer can aslo add or update card details and customer invoices are also displayed, As this is the full fledge module so, I am just giving you basic code examples where these functions have implemented. To understand this process you can go over the Subscriptions controller and can see all the functions there. I am just giving few examples here.
+    * This feature create the stripe customer and subscriptions, first of all we first create the stripe customer and then subscribe that customer to a specfic plan, the plans we just created above. We also handled the coupons so if you want to give your customer a specfic discount you can do so, but coupons should be created from the stripe dashboard, we don't deal with them in the application, as they are much more flexible there. Upgrading and Downgrading Plans have also been implemented, So If you want that, that is there too. Customer can aslo add or update card details and customer invoices are also displayed, As this is the full fledge module so, just giving you basic code examples where these functions have implemented. To understand this process you can go over the Subscriptions controller and can see all the functions there. here are few examples.
 
     ```ruby
     def create
