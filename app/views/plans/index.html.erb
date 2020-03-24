@@ -1,41 +1,64 @@
-<div class="container mt-2">
-  <h1>Plans</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Nickname</th>
-        <th>Amount</th>
-        <th>Currency</th>
-        <th>Interval</th>
-        <th>Interval count</th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @plans.each do |plan| %>
-        <tr>
-          <td><%= plan.nickname %></td>
-          <td><%= plan.amount %></td>
-          <td><%= plan.currency %></td>
-          <td><%= plan.interval %></td>
-          <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
-          <% if current_user.has_role?(:normal) %>
-            <% if current_user.subscription.present? %>
-              <% if current_user.subscription.plan.id == plan.id %>
-                <td>Your Current Plan</td>
-              <% else %>
-                <td><%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), class: "btn btn-rounded style-#{ plan.id }", method: :put  %></td>
-              <% end %>
-            <% else %>
-              <td><%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-rounded style-#{ plan.id }"  %></td>
-            <% end %>
-          <% end %>
-        </tr>
+<div class="banner-header bg-white p-3">
+  <div class="row align-items-center">
+    <div class="col-md-6 text-center text-md-left">
+      <h5 class="lh-34 mb-0">All Plans</h5>
+      <%= render_breadcrumbs %>
+    </div>
+    <div class="col-md-6 text-center text-md-right">
+      <% if can? :new, Plan %>
+        <%= link_to 'Add New Plan', new_plan_path, class:"btn btn-primary" %>
       <% end %>
-    </tbody>
-  </table>
-  <br>
-  <% if can? :new, Plan %>
-    <%= link_to 'New Plan', new_plan_path %>
+    </div>
+  </div>
+</div>
+<div class="container container-admin px-md-4 px-2">
+  <% if @plans.present? %>
+    <div class="table-responsive table-users">
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nickname</th>
+            <th>Amount</th>
+            <th>Currency</th>
+            <th>Interval</th>
+            <th>Interval count</th>
+            <% if current_user.has_role?(:normal) %>
+              <th>Actions</th>
+            <% end %>
+          </tr>
+        </thead>
+        <tbody>
+          <% @plans.each do |plan| %>
+          <tr>
+            <td><%= plan.nickname %></td>
+            <td><%= plan.amount %></td>
+            <td><%= plan.currency %></td>
+            <td><%= plan.interval %></td>
+            <td><%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %></td>
+            <% if current_user.has_role?(:normal) %>
+              <td>
+                <% if current_user.subscription.present? %>
+                  <% if current_user.subscription.plan.id == plan.id %>
+                    Your Current Plan
+                  <% else %>
+                  <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), class: "btn btn-primary", method: :put  %>
+                  <% end %>
+                <% else %>
+                  <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class: "btn btn-primary"  %>
+                <% end %>
+              </td>
+            <% end %>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% else %>
+    <div class="text-center">
+      No Plans currently present.
+      <br>
+      <%= link_to 'Add New Plan', new_plan_path, class:"btn btn-primary" %>
+    </div>
   <% end %>
 </div>
 <div id="modal_div"></div>

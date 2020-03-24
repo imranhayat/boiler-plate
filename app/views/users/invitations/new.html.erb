@@ -2,6 +2,7 @@
   <div class="row align-items-center">
     <div class="col-md-12 text-center text-md-left">
       <h5 class="lh-34 mb-0">Send Invitation</h5>
+      <%= render_breadcrumbs %>
     </div>
   </div>
 </div>
@@ -11,9 +12,9 @@
       <%= form_for(resource, as: resource_name, url: invitation_path(resource_name), html: { method: :post }) do |f| %>
         <%= render "devise/shared/error_messages", resource: resource %>
         <% resource.class.invite_key_fields.each do |field| -%>
-        <div class="form-group">
-          <%= f.email_field field, autofocus: true,placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
-        </div>
+          <div class="form-group">
+            <%= f.email_field field, autofocus: true,placeholder: 'Enter Your Email', class: 'form-control login-form', required: true %>
+          </div>
         <% end %>
         <div class="form-group">
           <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name.humanize(), r.id] }), { prompt: 'Select Role' } %>

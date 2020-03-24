@@ -7,6 +7,9 @@ class PlansController < ApplicationController
 
   def index
     @plans = Plan.all
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'All Plans'
   end
 
   def show; end
@@ -14,6 +17,11 @@ class PlansController < ApplicationController
   # GET /plans/new
   def new
     @plan = Plan.new
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'All Plans', plans_path,
+                   title: 'Back to the All Plans'
+    add_breadcrumb 'Add New Plan'
   end
 
   # POST /plans

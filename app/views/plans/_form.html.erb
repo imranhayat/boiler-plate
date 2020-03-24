@@ -1,42 +1,46 @@
 <%= form_with(model: plan, local: true) do |form| %>
   <% if plan.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
-
+    <!-- <div id="error_explanation">
       <ul>
       <% plan.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
+    </div> -->
   <% end %>
-
-  <div class="field">
+  <div class="form-group">
     <%= form.label :nickname %>
-    <%= form.text_field :nickname, class: 'form-control' %>
+    <%= form.text_field :nickname, class: 'form-control', required: true, placeholder:"Enter Nickname" %>
   </div>
-
-  <div class="field">
-    <%= form.label :amount %>
-    <%= form.text_field :amount, class: 'form-control' %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :amount %>
+        <%= form.number_field :amount, class: 'form-control  login-form', required: true, min: 0, placeholder:"Enter Amount"  %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :currency %>
+        <%= form.select :currency, ['USD','GBP'], {include_blank:"Select Currency"}, required: true %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :currency %>
-    <%= form.select :currency, ['USD','GBP'], {},  class:'form-control', required: true %>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <%= form.label :interval %>
+        <%= form.select :interval, ['year','month', 'day'], {include_blank:"Select Interval"}, required: true %>
+      </div>
+    </div>
+    <div class="col-md-6 i_count d-none">
+      <div class="form-group">
+        <%= form.label :interval_count %>
+        <%= form.number_field :interval_count, min: 3, max: 5, class:'form-control login-form', required: true, placeholder:"Enter Interval Count" %>
+      </div>
+    </div>
   </div>
-
-  <div class="field">
-    <%= form.label :interval %>
-    <%= form.select :interval, ['year','month', 'day'], {},  class:'form-control', required: true %>
-  </div>
-
-  <div class="field">
-    <%= form.label :interval_count %>
-    <%= form.number_field :interval_count, min: 3, max: 5, class:'form-control' %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit class: 'btn btn-primary btn-sm mt-2' %>
+  <div class="actions mt-3 text-center">
+    <%= form.submit class: 'btn btn-primary px-4 btn-submit' %>
   </div>
 <% end %>

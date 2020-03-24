@@ -12,9 +12,11 @@
         <a class="dashboard-side-link <%= active?('admin_panel', 'index') %>" href="<%= admin_panel_path %>"><i class="fas fa-tachometer-alt" title="Admin Panel"></i><span>Admin Panel</span></a>
         <a class="menu dashboard-side-link <%= active?('admin_panel', 'users') %>" href="<%= admin_users_path %>"><i class="fas fa-users" title="Users"></i><span>Users</span></a>
         <div class="submenu-link after">
-          <div class="menu"><i class="fas fa-users" title="Main Menu"></i><span>Stripe</span></div>
+          <div class="menu"><i class="fab fa-cc-stripe" title="Main Menu"></i><span>Stripe</span></div>
           <div class="sub-menu">
-            <a class="dashboard-side-link <%= active?('product', 'show') %>" href="<%= product_path(Product.first) %>"><span>Product</span></a>
+            <% if Product.first.present? %>
+              <a class="dashboard-side-link <%= active?('product', 'show') %>" href="<%= product_path(Product.first) %>"><span>Product</span></a>
+            <% end %>
             <a class="dashboard-side-link <%= active?('plan', 'index') %>" href="<%= plans_path %>"><span>Plans</span></a>
           </div>
         </div>
