@@ -19,12 +19,12 @@
 }
 .btn-submit{
   padding: 11.5px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 25px;
 }
 .nav-link {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   color: #1d2b3a;
   line-height: 14px !important;
   letter-spacing: 1px;
@@ -47,7 +47,7 @@
 
 
 .loginmodal-google {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
   padding: 11.5px 15px;
   text-align: left;

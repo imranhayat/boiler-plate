@@ -129,7 +129,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: 500;
 }
 
 small {
@@ -10019,7 +10019,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-bold {
-  font-weight: 700 !important;
+  font-weight: 500 !important;
 }
 
 .font-weight-bolder {
