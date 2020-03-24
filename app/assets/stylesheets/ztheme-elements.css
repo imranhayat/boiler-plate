@@ -1,7 +1,7 @@
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   color: #1d2b3a;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   margin: 0 0 6.4px 0;
   margin: 0 0 0.4rem 0;
@@ -117,7 +117,7 @@ p.drop-caps:first-letter {
   padding: 4px;
   margin-right: 5px;
   margin-top: 5px;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 p.drop-caps.drop-caps-style-2:first-letter {
@@ -1210,7 +1210,7 @@ html.ie .nav-secondary.nav-secondary-style-2 {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 14px;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   cursor: pointer;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
@@ -2411,7 +2411,7 @@ label.error#captcha-error {
   padding: 10px 20px;
   text-align: center;
   display: block;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 .image-frame .image-frame-wrapper .image-frame-info-box-style-2 {
@@ -3442,7 +3442,7 @@ html.ie .accordion .accordion-body {
   font-size: 1.1em;
   position: relative;
   overflow: hidden;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   border-radius: 0;
 }
 
@@ -4564,7 +4564,7 @@ html.ie .owl-carousel.owl-carousel-vertical .owl-stage-outer {
 /* Close */
 .mfp-close,
 .mfp-close-btn-in .mfp-close {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-weight: 600;
   font-size: 22px;
   color: #838383;
@@ -4802,7 +4802,7 @@ html.full-screen-no-scroll .main {
 }
 /* Top Sub Title */
 .top-sub-title {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-size: 0.9em;
 }
 
@@ -6291,7 +6291,7 @@ hr.divider-size-5 {
 .sort-source > li > a {
   font-size: 12px;
   font-size: 0.75rem;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-weight: 500;
 }
 
@@ -6384,7 +6384,7 @@ hr.divider-size-5 {
 }
 
 .pricing-table .plan-title em {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-size: 1em;
   color: #a3a3a3;
   margin: 0;
@@ -6409,7 +6409,7 @@ hr.divider-size-5 {
 }
 
 .pricing-table .plan-price p {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-size: 1.2307692308em;
   color: #a3a3a3;
   margin: 0;
@@ -6512,7 +6512,7 @@ hr.divider-size-5 {
 }
 
 .icon-box .icon-box-sub-title {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   font-size: 0.9em;
 }
 
@@ -7271,7 +7271,7 @@ html.ie .card-img-top {
 }
 
 .blockquote.blockquote-style-1:before {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   display: block;
   font-style: italic;
   content: "\201C";
@@ -7861,7 +7861,7 @@ html.sticky-header-active #header.header-transparent .header-social-icons li:hov
 
 .counters strong,
 .counters label {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 .counters i {
@@ -9980,7 +9980,7 @@ html.ie .double-carousel .owl-carousel .owl-item .card.card-logo .card-body img 
   .double-carousel .nav .title-left span {
     color: #1d2b3a;
     font-size: 1.2307692308em;
-    font-family: SystemPlusFont !important;
+    font-family: Poppins !important;
     font-weight: 600;
   }
 
@@ -10001,7 +10001,7 @@ html.ie .double-carousel .owl-carousel .owl-item .card.card-logo .card-body img 
   .double-carousel .nav .title-right span {
     color: #1d2b3a;
     font-size: 1.2307692308em;
-    font-family: SystemPlusFont !important;
+    font-family: Poppins !important;
     font-weight: 600;
   }
 
@@ -10274,7 +10274,7 @@ html.ie .double-carousel .owl-carousel .owl-item .card.card-logo .card-body img 
   padding: 19.2px 0;
   padding: 1.2rem 0;
   color: #1d2b3a;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 .shop-cart .shop-cart-table thead tr > th strong {
@@ -10303,7 +10303,7 @@ html.ie .double-carousel .owl-carousel .owl-item .card.card-logo .card-body img 
   color: #1d2b3a;
   font-size: 14.4px;
   font-size: 0.9rem;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 .shop-cart .shop-cart-table .product-remove {
@@ -10351,7 +10351,7 @@ html.ie .double-carousel .owl-carousel .owl-item .card.card-logo .card-body img 
   font-weight: 700;
   font-size: 14.4px;
   font-size: 0.9rem;
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
   color: #1d2b3a;
 }
 

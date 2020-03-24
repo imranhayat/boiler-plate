@@ -1,5 +1,5 @@
 .loginmodal-fb {
-  font-weight: 600;
+  font-weight: 500;
   border: 1px solid #ededed;
   padding: 11.5px 15px;
   text-align: left;
@@ -17,14 +17,16 @@
   color: #fff !important;
 
 }
-.btn-submit{
+
+.btn-submit {
   padding: 11.5px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 25px;
 }
+
 .nav-link {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   color: #1d2b3a;
   line-height: 14px !important;
   letter-spacing: 1px;
@@ -41,13 +43,14 @@
   font-size: 24px;
   vertical-align: middle;
 }
-.loginmodal-fb:hover::before{
+
+.loginmodal-fb:hover::before {
   content: "\f09a";
 }
 
 
 .loginmodal-google {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
   padding: 11.5px 15px;
   text-align: left;
@@ -76,9 +79,11 @@
   font-size: 24px;
   vertical-align: middle;
 }
-.loginmodal-google:hover::before{
+
+.loginmodal-google:hover::before {
   content: "\f0d5";
 }
+
 @media (min-width: 768px) {
   .b-left {
     border-left: 1px solid #000 !important;
@@ -95,7 +100,7 @@
   background-color: #fff;
   margin: 0 auto;
   border-radius: 5px;
-  box-shadow: 1px 1.732px 7px rgba(136,156,176,0.1);
+  box-shadow: 1px 1.732px 7px rgba(136, 156, 176, 0.1);
   overflow: hidden;
 }
 
@@ -107,16 +112,18 @@
 
 @media (min-width: 400px) {
   .container-sign {
-  padding: 40px 44px;
+    padding: 40px 44px;
+  }
 }
-}
+
 @media (max-width: 400px) {
-  .navbar-brand img{
+  .navbar-brand img {
     width: 150px;
   }
+
   .container-sign {
-  padding: 40px 20px;
-}
+    padding: 40px 20px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -146,15 +153,17 @@
   border: 1px solid #ced4da !important;
 }
 
-.remember_me input{
+.remember_me input {
   vertical-align: middle;
 }
-.remember_me label{
+
+.remember_me label {
   margin-bottom: 0 !important;
   line-height: 14px;
   vertical-align: middle;
 }
+
 .modal-login {
-    margin-top:5px !important;
-    margin-bottom: 0px !important;
-  }
+  margin-top: 5px !important;
+  margin-bottom: 0px !important;
+}

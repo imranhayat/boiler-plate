@@ -13,6 +13,11 @@ class Users::InvitationsController < Devise::InvitationsController
   # GET /resource/invitation/new
   def new
     self.resource = resource_class.new
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'All Users', admin_users_path,
+                   title: 'Back to the All Users'
+    add_breadcrumb 'Invite Users'
     render :new
   end
 
