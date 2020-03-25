@@ -7,9 +7,6 @@ class PlansController < ApplicationController
 
   def index
     @plans = Plan.all
-    add_breadcrumb 'Admin Panel', admin_panel_path,
-                   title: 'Back to the Admin Panel'
-    add_breadcrumb 'All Plans'
   end
 
   def show; end
