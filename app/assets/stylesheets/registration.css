@@ -101,7 +101,7 @@
 
 @media (min-width: 800px) {
   .container-signup {
-    max-width: 800px;
+    max-width: 800px !important;
   }
 }
 
@@ -121,15 +121,15 @@
 
 @media (min-width: 576px) {
   .container-signin {
-    max-width: 450px;
+    max-width: 450px !important;;
   }
 
   .container-signup {
-    max-width: 800px;
+    max-width: 800px !important;;
   }
 
   .modal-login {
-    max-width: 400px;
+    max-width: 400px !important;;
   }
 
   .modal-login-body {
