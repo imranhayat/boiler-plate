@@ -84,6 +84,8 @@ class StripeWebhookManager
     if metadata[:plan_id].present?
       fetch_subscription.update!(
         cancel_at_period_end: @params[:data][:object][:cancel_at_period_end],
+        current_period_start: @params[:data][:object][:current_period_start],
+        current_period_end: @params[:data][:object][:current_period_end],
         plan_id: metadata[:plan_id]
       )
     else

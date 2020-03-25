@@ -3,7 +3,7 @@
 # :User Panel Controller:
 class UserPanelController < ApplicationController
   load_and_authorize_resource class: false
-  before_action :trial_expired?
+  # before_action :trial_expired?, except: %i[user_settings]
 
   def dashboard; end
 

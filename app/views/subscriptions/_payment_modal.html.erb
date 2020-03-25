@@ -41,8 +41,9 @@
     </div>
   </div>
 </div>
-
+<div id="spinner"><img src="/spinner.gif"></div>
 <script>
+  $('#spinner').hide();
   $('.MyCardElement').addClass('card');
   $('.MyCardElement').addClass('border');
   $('.MyCardElement').addClass('p-3');
@@ -75,6 +76,8 @@
       card: cardElement
     })
     .then(function(result) {
+      $('#payment_modal_for_<%= stripe_plan_id %>').modal('hide');
+      $('#spinner').modal('show');
       if (result.error){
         console.log(result.error.message);
       } 
@@ -100,7 +103,7 @@
       }
     });
     request.done(function (response, textStatus, jqXHR){
-      $('#payment_modal_for_<%= stripe_plan_id %>').modal('hide');
+      $('#spinner').hide();
     });
   }
 </script>

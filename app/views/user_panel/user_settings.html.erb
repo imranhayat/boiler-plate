@@ -20,7 +20,7 @@
                     <strong class="ml-2">Ends on:</strong> <%= Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
                   <% end %>
                   <% if @subscription.cancel_at_period_end.present? %>
-                    <strong class="ml-2">Cancel at Period End:</strong> <%= @subscription.cancel_at_period_end.to_s.capitalize %>
+                    <strong class='mark'>Cancel at Period End:</strong> <%= @subscription.cancel_at_period_end.to_s.capitalize %>
                   <% end %>
                 </span>
                 <br/>
@@ -42,7 +42,7 @@
           </div>
         </div>
         <div class="border-top p-c-footer font-weight-500">
-          <a href="/plans">Manage Subscriptions</a>
+          <a href="">Manage Subscriptions</a>
         </div>
       </div>
     </div>
@@ -77,7 +77,7 @@
           </div>
         </div>
         <div class="border-top p-c-footer font-weight-500">
-          <a href="/">+ Add Payment Method</a>
+          <a href="">+ Add Payment Method</a>
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@
           </div>
         </div>
         <div class="border-top p-c-footer font-weight-500">
-          <a href="/">Manage Invoices</a>
+          <a href="">Manage Invoices</a>
         </div>
       </div>
     </div>
