@@ -16,12 +16,6 @@
  *= require_self
  */
 
-@font-face {
-  font-family: SystemPlusFont;
-  src: font-url('Poppins-Regular.otf') format('opentype');
-
-}
-
 body,
 p,
 span,
@@ -45,7 +39,7 @@ fieldset,
 font,
 strong,
 b {
-  font-family: SystemPlusFont !important;
+  font-family: Poppins !important;
 }
 
 .container-main {
@@ -208,7 +202,7 @@ img#blah:hover {
 
 .footer-large h4 {
   letter-spacing: 1px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .footer-large a {
@@ -399,7 +393,7 @@ img#blah:hover {
 }
 
 .btn {
-  font-weight: bold !important;
+  font-weight: 500 !important;
 }
 
 .bg-white {
@@ -487,7 +481,7 @@ img#blah:hover {
 .sub-menu a {
   border-bottom: 1px solid #dee2e6;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   font-size: 14px;
   line-height: 27px;
   padding: 11.5px 20px;
@@ -540,7 +534,7 @@ img#blah:hover {
 .card-stats h1 {
   line-height: 36px;
   margin-bottom: 0 !important;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .card-stats .col-lg-3 {
@@ -647,7 +641,7 @@ img#blah:hover {
   text-align: center;
   margin: auto;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .avatar-upload .avatar-preview {
@@ -901,7 +895,64 @@ html {
   margin-right: 0 !important;
 }
 
-.MyCardElement {
-  padding: 10px;
-  border: 1px solid #79589f;
+.card-header:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.card.r-1 {
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.card.r-2 {
+  border-radius: 5px;
+  box-shadow: none;
+}
+
+.card-footer:last-child {
+  border-radius: 0 0 10px 10px;
+  line-height: 17px;
+}
+
+.font-weight-500,
+.font-weight-500 a {
+  font-weight: 500 !important;
+}
+
+.img-card {
+  width: 40px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.p-30 {
+  padding: 29px !important;
+}
+
+.p-c-footer {
+  padding: 18px 29px;
+}
+
+strong {
+  font-weight: 500 !important;
+}
+
+.vl-m {
+  vertical-align: middle;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+  .container,
+  .container-sm {
+    max-width: 100%;
+  }
+}
+
+.ml-sm-n15 {
+  margin-left: -15px !important;
 }
