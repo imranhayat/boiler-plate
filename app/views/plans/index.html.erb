@@ -19,8 +19,8 @@
   <% if @plans.present? %>
     <div class="row">
       <% @plans.each do |plan| %>
-        <div class="col-lg-4 mb-5">
-          <div class="card border">
+        <div class="col-lg-4 col-sm-6 mb-5">
+          <div class="card r-1 border">
             <h3 class="font-weight-500 card-header bg-primary text-center text-white mb-0"><%= plan.nickname %></h3>
             <h5 class="price pt-3 pb-2 mb-0 border-bottom text-primary text-center"><%= plan.currency == 'USD' ? '$' : "£"  %> <%= plan.amount %></h5>
             <div class="card-body p-4">
@@ -39,8 +39,8 @@
                 </li>
               </ul>
             </div>
-            <span class="font-weight-500 card-footer bg-white text-center mb-0 py-3">
-              <% if current_user.has_role?(:normal) %>
+            <% if current_user.has_role?(:normal) %>
+              <div class="font-weight-500 card-footer bg-white text-center mb-0 py-3">
                 <% if current_user.subscription.present? %>
                   <% if current_user.subscription.plan.id == plan.id %>
                     Your Current Plan
@@ -50,8 +50,8 @@
                 <% else %>
                   <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true  %>
                 <% end %>
-              <% end %>
-            </span>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>

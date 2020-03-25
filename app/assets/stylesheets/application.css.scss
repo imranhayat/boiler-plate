@@ -901,18 +901,63 @@ html {
 }
 
 .card-header:first-child {
-  border-radius: 8px 8px 0 0;
+  border-radius: 10px 10px 0 0;
 }
 
-.card {
-  border-radius: 8px;
+.card.r-1 {
+  border-radius: 10px;
+  box-shadow: none;
+}
+
+.card.r-2 {
+  border-radius: 5px;
+  box-shadow: none;
 }
 
 .card-footer:last-child {
-  border-radius: 0 0 8px 8px;
+  border-radius: 0 0 10px 10px;
+  line-height: 17px;
 }
 
 .font-weight-500,
 .font-weight-500 a {
   font-weight: 500 !important;
+}
+
+.img-card {
+  width: 40px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+.p-30 {
+  padding: 29px !important;
+}
+
+.p-c-footer {
+  padding: 18px 29px;
+}
+
+strong {
+  font-weight: 500 !important;
+}
+
+.vl-m {
+  vertical-align: middle;
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+
+  .container,
+  .container-sm {
+    max-width: 100%;
+  }
+}
+
+.ml-sm-n15 {
+  margin-left: -15px !important;
 }
