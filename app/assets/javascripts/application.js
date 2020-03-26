@@ -64,6 +64,7 @@ $(document).on("turbolinks:load", function() {
     $('.primary-middle-hex').val($.fn.bcPicker.toHex(color));
   })
   $('select').addClass('form-control');
+  $('select').addClass('login-form');
   var table = $('.table-users table').DataTable({
 
     "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']

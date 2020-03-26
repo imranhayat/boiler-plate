@@ -1,5 +1,5 @@
 .loginmodal-fb {
-  font-weight: 600;
+  font-weight: 500;
   border: 1px solid #ededed;
   padding: 11.5px 15px;
   text-align: left;
@@ -19,12 +19,12 @@
 }
 .btn-submit{
   padding: 11.5px;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 14px;
   line-height: 25px;
 }
 .nav-link {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   color: #1d2b3a;
   line-height: 14px !important;
   letter-spacing: 1px;
@@ -47,7 +47,7 @@
 
 
 .loginmodal-google {
-  font-weight: 600;
+  font-weight: 500;
   border-radius: 5px;
   padding: 11.5px 15px;
   text-align: left;
@@ -101,7 +101,7 @@
 
 @media (min-width: 800px) {
   .container-signup {
-    max-width: 800px;
+    max-width: 800px !important;
   }
 }
 
@@ -121,15 +121,15 @@
 
 @media (min-width: 576px) {
   .container-signin {
-    max-width: 450px;
+    max-width: 450px !important;;
   }
 
   .container-signup {
-    max-width: 800px;
+    max-width: 800px !important;;
   }
 
   .modal-login {
-    max-width: 400px;
+    max-width: 400px !important;;
   }
 
   .modal-login-body {
