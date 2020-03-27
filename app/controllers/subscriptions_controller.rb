@@ -68,7 +68,7 @@ class SubscriptionsController < ApplicationController
 
   def apply_discount(response)
     @plan = Plan.find_by_stripe_id(params[:stripe_plan_id])
-    @discounted_amount = discounted_amount(response.coupon, @plan.amount)
+    @discounted_amount = discounted_amount(response.coupon, @plan.amount_decimal)
   end
 
   def collect_payment_details

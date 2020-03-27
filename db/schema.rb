@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_112625) do
   create_table "plans", force: :cascade do |t|
     t.bigint "product_id"
     t.string "nickname"
-    t.integer "amount"
+    t.decimal "amount_decimal", precision: 20, scale: 12
     t.string "currency"
     t.string "interval"
     t.integer "interval_count"
