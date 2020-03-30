@@ -33,12 +33,17 @@ class StripeWebhookManager
     when 'payment_intent.payment_failed'
       cancel_payment_intent
       change_user_status
+      change_app_subscription_status
     when 'payment_intent.succeeded'
       update_user
-    when 'customer.subscription.updated'
+    when 'invoice.payment_failed'
+      change_app_subscription_status
+    when 'invoice.payment_succeeded'
       set_up_subscription
+    when 'customer.subscription.updated'
+      update_subscription
     when 'customer.subscription.deleted'
-      delete_app_subscription
+      change_app_subscription_status
     when 'customer.updated'
       update_customer
     when 'checkout.session.completed'
@@ -78,56 +83,92 @@ class StripeWebhookManager
   end
 
   def set_up_subscription
-    if fetch_subscription.present?
+    if @params[:data][:object][:billing_reason] == 'subscription_create'
+      create_subscription_in_app
+    else
       update_subscription
-    else
-      create_subscription
     end
   end
 
-  def update_subscription
-    metadata = @params[:data][:object][:metadata]
-    if metadata[:plan_id].present?
-      fetch_subscription.update!(
-        cancel_at_period_end: @params[:data][:object][:cancel_at_period_end],
-        current_period_start: @params[:data][:object][:current_period_start],
-        current_period_end: @params[:data][:object][:current_period_end],
-        plan_id: metadata[:plan_id]
-      )
-    else
-      fetch_subscription.update!(
-        cancel_at_period_end: @params[:data][:object][:cancel_at_period_end]
-      )
-    end
-  end
+  def create_subscription_in_app
+    user_id = @params[:data][:object][:lines][:data][0][:metadata][:user]
+    return unless user_id.present?
 
-  def create_subscription
-    user_id = @params[:data][:object][:metadata][:user]
     user = User.find(user_id)
     return unless user.present?
 
-    return unless @params[:data][:object][:status] == 'active'
+    return unless @params[:data][:object][:status] == 'paid'
 
-    subscription = user.build_subscription(subscription_params)
-    subscription.update!(
-      stripe_id: @params[:data][:object][:id],
-      cancel_at_period_end: @params[:data][:object][:cancel_at_period_end],
-      current_period_start: @params[:data][:object][:current_period_start],
-      current_period_end: @params[:data][:object][:current_period_end]
-    )
+    subscribe_user_to_app(user)
+  end
+
+  def subscribe_user_to_app(user)
+    if user.subscription.present?
+      manage_subscription_accordingly(user.subscription)
+    else
+      subscription = user.build_subscription(subscription_params)
+      manage_subscription_accordingly(subscription)
+    end
   end
 
   def subscription_params
     {
-      plan_id: @params[:data][:object][:metadata][:plan_id]
+      plan_id: @params[:data][:object][:lines][:data][0][:metadata][:plan_id]
     }
   end
 
-  def delete_app_subscription
+  def manage_subscription_accordingly(subscription)
+    stripe_subscription = fetch_subscription_from_stripe
+    subscription.update!(
+      active: true,
+      stripe_id: stripe_subscription.id,
+      cancel_at_period_end: stripe_subscription.cancel_at_period_end,
+      current_period_start: stripe_subscription.current_period_start,
+      current_period_end: stripe_subscription.current_period_end
+    )
+  end
+
+  def fetch_subscription_from_stripe
+    Stripe::Subscription.retrieve(
+      @params[:data][:object][:lines][:data][0][:subscription]
+    )
+  end
+
+  def update_subscription
+    return unless fetch_subscription.present?
+
+    fetch_subscription.update!(
+      cancel_at_period_end: @params[:data][:object][:cancel_at_period_end],
+      current_period_start: @params[:data][:object][:current_period_start],
+      current_period_end: @params[:data][:object][:current_period_end]
+    )
+    check_plan_change
+    check_subscription_status
+  end
+
+  def fetch_subscription
+    Subscription.find_by_stripe_id(@params[:data][:object][:id])
+  end
+
+  def check_plan_change
+    return unless @params[:data][:object][:metadata][:plan_id].present?
+
+    fetch_subscription.update!(
+      plan_id: @params[:data][:object][:metadata][:plan_id]
+    )
+  end
+
+  def check_subscription_status
+    return if @params[:data][:object][:status] == 'active'
+
+    fetch_subscription.update!(active: false)
+  end
+
+  def change_app_subscription_status
     return unless fetch_subscription.present?
 
     fetch_subscription.user.update!(payment_status: false)
-    fetch_subscription.destroy!
+    fetch_subscription.update!(active: false)
   end
 
   def update_customer
@@ -140,22 +181,21 @@ class StripeWebhookManager
     )
   end
 
-  def fetch_subscription
-    Subscription.find_by_stripe_id(@params[:data][:object][:id])
-  end
-
   def update_user_payment_method
     user_id = @params[:data][:object][:client_reference_id]
     user = User.find_by_id(user_id)
     return unless user.present?
 
-    setup_intent =
-      Stripe::SetupIntent.retrieve(@params[:data][:object][:setup_intent])
-    payment_method_id = setup_intent.payment_method
+    intent = setup_intent
+    payment_method_id = intent.payment_method
     user.update!(stripe_payment_method_id: payment_method_id)
     Stripe::PaymentMethod.attach(payment_method_id,
                                  customer: user.create_stripe_customer)
     update_default_payment_method(user.stripe_customer_id, payment_method_id)
+  end
+
+  def setup_intent
+    Stripe::SetupIntent.retrieve(@params[:data][:object][:setup_intent])
   end
 
   def update_default_payment_method(customer_id, payment_method_id)

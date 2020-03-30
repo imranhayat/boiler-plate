@@ -25,8 +25,6 @@ class Users::InvitationsController < Devise::InvitationsController
   def create
     self.resource = invite_resource
     resource_invited = resource.errors.empty?
-    # role = Role.find(params[:user][:role_ids])
-    # resource.add_role role.name
     yield resource if block_given?
 
     if resource_invited

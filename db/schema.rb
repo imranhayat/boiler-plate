@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 2020_03_10_112625) do
     t.bigint "current_period_start"
     t.bigint "current_period_end"
     t.boolean "cancel_at_period_end"
+    t.boolean "active", default: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["plan_id"], name: "index_subscriptions_on_plan_id"
