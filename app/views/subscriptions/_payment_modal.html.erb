@@ -9,6 +9,9 @@
       </div>
       <div class="modal-body">
         <div id="subscription-for-<%= stripe_plan_id %>">
+          <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
+            <p class="mark">You entered your credit card details before (for making payments). If you want to use another card, Kindly go to your payment sections and update your card details. Stripe doesn't allow to prefill the card details form. So, entering a differnt card here doesn't affect. It will still use your previous card. You have to go to the payment section for updating as told before.However, the card details fields must be filled.</p>
+          <% end %>
           <div id="card-element" class="MyCardElement">
             <!-- Elements will create input elements here -->
           </div>
@@ -47,13 +50,12 @@
   $('.MyCardElement').addClass('card');
   $('.MyCardElement').addClass('border');
   $('.MyCardElement').addClass('p-3');
+
   var stripe_plan_id = document.getElementById('stripe_plan_id_<%= stripe_plan_id %>').value
   var app_plan_id = document.getElementById('app_plan_id_<%= app_plan_id %>').value
-
   var stripe = Stripe('<%= ENV['PUBLISHABLE_KEY'] %>');
   var elements = stripe.elements();
   var cardElement = elements.create('card', { hidePostalCode: true });
-  
   cardElement.mount('#card-element');
   cardElement.addEventListener('change', ({error}) => {
     const displayError = document.getElementById('card-errors-<%= stripe_plan_id %>');
@@ -63,7 +65,7 @@
       displayError.textContent = '';
     }
   });
-  
+
   var form = document.getElementById("subscription-for-<%= stripe_plan_id %>");
   var cardSubmit = document.getElementById('cardSubmit');
   cardSubmit.addEventListener('click', function(event) {
