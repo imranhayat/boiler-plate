@@ -41,10 +41,10 @@
             <% if current_user.has_role?(:normal) %>
               <div class="font-weight-500 card-footer bg-white text-center mb-0 py-3">
                 <% if current_user.subscription.present? && current_user.subscription.active? %>
-                  <% if current_user.subscription.plan.id == plan.id %>
+                  <% if @current_user_plan.id == plan.id %>
                     Your Current Plan
                   <% else %>
-                    <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), method: :put  %>
+                    <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put  %>
                   <% end %>
                 <% else %>
                   <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true  %>

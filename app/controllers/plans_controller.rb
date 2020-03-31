@@ -7,6 +7,7 @@ class PlansController < ApplicationController
 
   def index
     @plans = Plan.all
+    @current_user_plan = current_user&.subscription&.plan
   end
 
   def show; end

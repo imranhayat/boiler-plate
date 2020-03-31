@@ -36,7 +36,7 @@
           <div class="modal-footer">
             <center>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-              <button type="button" id="cardSubmit" class="btn btn-primary">Pay <%= number_to_currency(plan.amount_decimal)%></button>
+              <button data-confirm="(<%= number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$' : '£' )%>) would be deducted from your saved card. Do you want to proceed?" type="button" id="cardSubmit" class="btn btn-primary">Pay <%= number_to_currency(plan.amount_decimal) %></button>
               <input type="hidden" id='stripe_plan_id_<%= stripe_plan_id %>', value='<%= stripe_plan_id %>' />
               <input type="hidden" id='app_plan_id_<%= app_plan_id %>', value='<%= app_plan_id %>' />
             </center>
