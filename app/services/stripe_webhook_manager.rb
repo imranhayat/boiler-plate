@@ -118,19 +118,13 @@ class StripeWebhookManager
   end
 
   def manage_subscription_accordingly(subscription)
-    stripe_subscription = fetch_subscription_from_stripe
+    params = @params[:data][:object][:lines][:data][0]
     subscription.update!(
       active: true,
-      stripe_id: stripe_subscription.id,
-      cancel_at_period_end: stripe_subscription.cancel_at_period_end,
-      current_period_start: stripe_subscription.current_period_start,
-      current_period_end: stripe_subscription.current_period_end
-    )
-  end
-
-  def fetch_subscription_from_stripe
-    Stripe::Subscription.retrieve(
-      @params[:data][:object][:lines][:data][0][:subscription]
+      stripe_id: params[:subscription],
+      cancel_at_period_end: false,
+      current_period_start: params[:period][:start],
+      current_period_end: params[:period][:end]
     )
   end
 
