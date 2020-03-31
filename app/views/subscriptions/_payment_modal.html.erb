@@ -10,7 +10,7 @@
       <div class="modal-body">
         <div id="subscription-for-<%= stripe_plan_id %>">
           <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
-            <p class="mark">You entered your credit card details before (for making payments). If you want to use another card, Kindly go to your payment sections and update your card details. Stripe doesn't allow to prefill the card details form. So, entering a differnt card here doesn't affect. It will still use your previous card. You have to go to the payment section for updating as told before.However, the card details fields must be filled.</p>
+            <p class="mark">You entered your credit card details before (for making payments). If you want to use another card, Kindly go to your payment sections and update your card details. Stripe doesn't allow to prefill the card details form. So, entering a different card here doesn't affect. It will still use your previous card. You have to go to the payment section for updating as told before. However, the card details fields must be filled.</p>
           <% end %>
           <div id="card-element" class="MyCardElement">
             <!-- Elements will create input elements here -->
