@@ -47,7 +47,11 @@
                     <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put  %>
                   <% end %>
                 <% else %>
-                  <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true  %>
+                  <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
+                    <%= link_to "Choose Plan", fetch_payment_details_path(plan: plan), remote: true %>
+                  <% else %>
+                    <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true  %>
+                  <% end %>
                 <% end %>
               </div>
             <% end %>

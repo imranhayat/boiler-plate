@@ -80,6 +80,16 @@ class SubscriptionsController < ApplicationController
     end
   end
 
+  def fetch_payment_details
+    @plan = Plan.find(params[:plan])
+    @app_plan_id = @plan.id
+    @stripe_plan_id = @plan.stripe_id
+    @card_last_4 = current_user.card_details[:last4]
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def upgrade_or_downgrade_stripe_plan
     @plan = Plan.find(params[:plan])
     @response = up_or_down_stripe_plan(@plan)
