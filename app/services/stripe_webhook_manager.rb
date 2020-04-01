@@ -30,16 +30,15 @@ class StripeWebhookManager
   # Different Events Handling
   def handle_events
     case @params[:type]
+    when 'payment_intent.succeeded'
+      update_user
     when 'payment_intent.payment_failed'
       cancel_payment_intent
       change_user_status
-      change_app_subscription_status
-    when 'payment_intent.succeeded'
-      update_user
-    when 'invoice.payment_failed'
-      change_app_subscription_status
     when 'invoice.payment_succeeded'
       set_up_subscription
+    when 'invoice.payment_failed'
+      change_app_subscription_status
     when 'customer.subscription.updated'
       update_subscription
     when 'customer.subscription.deleted'
@@ -124,7 +123,8 @@ class StripeWebhookManager
       stripe_id: params[:subscription],
       cancel_at_period_end: false,
       current_period_start: params[:period][:start],
-      current_period_end: params[:period][:end]
+      current_period_end: params[:period][:end],
+      plan_id: params[:metadata][:plan_id]
     )
   end
 
@@ -138,10 +138,6 @@ class StripeWebhookManager
     )
     check_plan_change
     check_subscription_status
-  end
-
-  def fetch_subscription
-    Subscription.find_by_stripe_id(@params[:data][:object][:id])
   end
 
   def check_plan_change
@@ -163,6 +159,10 @@ class StripeWebhookManager
 
     fetch_subscription.user.update!(payment_status: false)
     fetch_subscription.update!(active: false)
+  end
+
+  def fetch_subscription
+    Subscription.find_by_stripe_id(@params[:data][:object][:id])
   end
 
   def update_customer
