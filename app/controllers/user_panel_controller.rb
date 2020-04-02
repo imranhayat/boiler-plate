@@ -24,6 +24,17 @@ class UserPanelController < ApplicationController
 
     current_user.stripe_invoices
                 .select { |i| (i.status == 'paid' || i.status == 'open') }
+                .first(3)
+  end
+
+  def invoices
+    @user = User.find_by_id(params[:user])
+    return if @user.nil?
+
+    return if @user.stripe_invoices.nil?
+
+    @invoices = @user.stripe_invoices
+                     .select { |i| (i.status == 'paid' || i.status == 'open') }
   end
 
   def update_card_details

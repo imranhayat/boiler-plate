@@ -12,6 +12,7 @@ class AdminPanelController < ApplicationController
 
   def users
     @users = User.where.not(id: current_user.id).order('created_at DESC')
+                 .includes(subscription: :plan)
     add_breadcrumb 'Admin Panel', admin_panel_path,
                    title: 'Back to the Admin Panel'
     add_breadcrumb 'All Users'

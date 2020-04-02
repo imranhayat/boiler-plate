@@ -19,7 +19,9 @@
             <th>Email</th>
             <th>Phone Number</th>
             <th>Account Created On</th>
+            <th>Subscription Plan</th>
             <th>Access</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -30,12 +32,20 @@
               <td><%= user.phone_number.present? ? user.phone_number : 'Not Provided' %></td>
               <td><%= user.created_at.strftime('%d/%B/%Y at %I:%M %p') %></td>
               <td>
+                <% if user.subscription.present? && user.subscription.active? %>
+                  <%= user.subscription.plan.nickname + ' (' + number_to_currency(user.subscription.plan.amount_decimal, unit: user.subscription.plan.currency == 'USD' ? '$ ' : ' £ ') + ')' %>
+                <% else %>
+                  No Subscription
+                <% end %>
+              </td>
+              <td>
                 <% if user.revoke_access == false %>
                   <center><%= link_to 'Disable', change_access_path(disable: user.id) %></center>
                 <% else %>
                   <center><%= link_to 'Enable', change_access_path(enable: user.id) %></center>
                 <% end %>
               </td>
+              <td><%= link_to 'show invoices', invoices_path(user: user.id) %></td>
             </tr>
           <% end %>
         </tbody>
