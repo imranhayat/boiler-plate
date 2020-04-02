@@ -18,6 +18,10 @@ class AdminPanelController < ApplicationController
     add_breadcrumb 'All Users'
   end
 
+  def all_invoices
+    @invoices = User.all_invoices
+  end
+
   def change_access
     @user = User.find(params[:enable] || params[:disable])
     if params[:enable].present?

@@ -40,4 +40,5 @@ Rails.application.routes.draw do
   put :upgrade_or_downgrade_stripe_plan, controller: :subscriptions
   get :fetch_payment_details, controller: :subscriptions
   get :invoices, controller: :user_panel
+  get :all_invoices, controller: :admin_panel
 end

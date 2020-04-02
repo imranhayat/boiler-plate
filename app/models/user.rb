@@ -90,4 +90,20 @@ class User < ApplicationRecord
     end
     sum
   end
+
+  def self.all_invoices
+    invoices = []
+    @user = Role.find_by_name('normal').users
+    @user.each do |user|
+      if user.stripe_customer_id.present?
+        invoices << Stripe::Invoice.list(customer: user.stripe_customer_id)
+      end
+    end
+    invoices.flatten
+  end
+
+  def self.find_invoice_user(customer_id)
+    @user = User.find_by_stripe_customer_id(customer_id)
+    { name: @user.name, email: @user.email }
+  end
 end
