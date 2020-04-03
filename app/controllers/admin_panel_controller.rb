@@ -20,6 +20,9 @@ class AdminPanelController < ApplicationController
 
   def all_invoices
     @invoices = User.all_invoices
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'All Invoices'
   end
 
   def change_access
