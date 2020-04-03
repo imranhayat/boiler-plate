@@ -17,6 +17,7 @@
             <% if Product.first.present? %>
               <a class="dashboard-side-link <%= active?('product', 'show') %>" href="<%= product_path(Product.first) %>"><span>Product</span></a>
               <a class="dashboard-side-link <%= active?('plan', 'index') %>" href="<%= plans_path %>"><span>Plans</span></a>
+              <a class="dashboard-side-link <%= active?('admin_panel', 'all_invoices') %>" href="<%= all_invoices_path %>"><span>All Invoices</span></a>
             <% else %>
               <a class="dashboard-side-link <%= active?('product', 'new') %>" href="<%= new_product_path %>"><span>Create a Product</span></a>
             <% end %>

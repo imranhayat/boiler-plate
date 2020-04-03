@@ -34,7 +34,7 @@ class User < ApplicationRecord
     end
   end
 
-  def self.with_role_normal_count
+  def self.total_normal_users
     Role.find_by_name('normal').users.count
   end
 
@@ -73,5 +73,37 @@ class User < ApplicationRecord
 
   def stripe_invoices
     Stripe::Invoice.list(customer: stripe_customer_id) if stripe_customer_id
+  end
+
+  def self.total_subscribed_users
+    User.where(payment_status: true).count
+  end
+
+  def self.all_stripe_invoices_amount_count
+    sum = 0
+    @user = Role.find_by_name('normal').users
+    @user.each do |user|
+      if user.stripe_customer_id.present?
+        sum += Stripe::Invoice.list(customer: user.stripe_customer_id)
+                              .map(&:amount_paid).sum
+      end
+    end
+    sum
+  end
+
+  def self.all_invoices
+    invoices = []
+    @user = Role.find_by_name('normal').users
+    @user.each do |user|
+      if user.stripe_customer_id.present?
+        invoices << Stripe::Invoice.list(customer: user.stripe_customer_id)
+      end
+    end
+    invoices.flatten
+  end
+
+  def self.find_invoice_user(customer_id)
+    @user = User.find_by_stripe_customer_id(customer_id)
+    { name: @user.name, email: @user.email }
   end
 end

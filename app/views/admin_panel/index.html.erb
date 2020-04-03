@@ -11,26 +11,22 @@
   <div class="row card-stats">
     <div class="col-lg-3 col-sm-6">
       <div class="card text-center">
-        <h4>TOTAL USERS</h4>
-        <h1><%= User.with_role_normal_count %></h1>
+        <%= link_to admin_users_path do %>
+          <h4>TOTAL USERS</h4>
+          <h1><%= User.total_normal_users %></h1>
+        <% end %>
       </div>
     </div>
     <div class="col-lg-3 col-sm-6">
       <div class="card text-center">
-        <h4>TOTAL USERS</h4>
-        <h1>40</h1>
+        <h4>SUBSCRIBED USERS</h4>
+        <h1><%= User.total_subscribed_users %></h1>
       </div>
     </div>
     <div class="col-lg-3 col-sm-6">
       <div class="card text-center">
-        <h4>TOTAL USERS</h4>
-        <h1>40</h1>
-      </div>
-    </div>
-    <div class="col-lg-3 col-sm-6">
-      <div class="card text-center">
-        <h4>TOTAL USERS</h4>
-        <h1>40</h1>
+        <h4>TOTAL PAYMENTS RECEIVED</h4>
+        <h1><%= User.all_stripe_invoices_amount_count %></h1>
       </div>
     </div>
   </div>
