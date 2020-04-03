@@ -143,7 +143,8 @@ class StripeAdapter
       payment_intent_status: payment_intent&.status,
       payment_intent_client_secret: payment_intent&.client_secret,
       stripe_subscription_status: subscription&.status,
-      subscription: subscription
+      subscription: subscription,
+      success: true
     }
   end
 
