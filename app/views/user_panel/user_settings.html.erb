@@ -55,14 +55,14 @@
       <div class="card r-1 border border">
         <div class="card-body p-30">
           <div class="row align-items-center">
-            <div class="col-lg-7 col-sm-8 pr-xl-0">
+            <div class="col-lg-9 col-sm-8 pr-xl-0">
               <h6 class="card-title mb-3 pb-1 mt-2">Card Details</h6>
               <% if current_user.stripe_customer_id? && current_user.stripe_payment_method_id? %>
                 <div class="row">
                   <div class="col-xl-4 col-md-6 pr-xl-0 mb-3">
-                    <div class="card r-2 border p-4 text-center text-lg-left">
+                    <div class="card r-2 px-1 py-3 border p-lg-4 text-center text-lg-left">
                       <div class="mb-3">
-                        <img src="<%= @card_details[:brand] %>.png" class="img-card mr-2"> <span class="vl-m"><%= @card_details[:brand] %> **** <%= @card_details[:last4] %></span>
+                        <img src="<%= @card_details[:brand] %>.png" class="img-card mr-2 d-none d-lg-inline"> <span class="vl-m"><%= @card_details[:brand] %> **** <%= @card_details[:last4] %></span>
                       </div>
                       <%= link_to 'Add or Update Card', update_card_details_path, :data => {:confirm => "Are you sure you want to update your credit card details, this will re-direct you to stripe and you will update your card details there."}, remote: true, class:"font-weight-500" %>
                     </div>
@@ -72,7 +72,7 @@
                 No Card currently added.
               <% end %>
             </div>
-            <div class="col-lg-5 col-sm-4 text-sm-right text-center mt-3 mt-sm-0">
+            <div class="col-lg-3 col-sm-4 text-sm-right text-center mt-3 mt-sm-0">
               <img src="/card.png" class="img-fluid">
             </div>
           </div>

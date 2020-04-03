@@ -7,8 +7,8 @@
   </div>
 </div>
 <div class="container container-admin px-md-4 px-2 container-s">
-  <div class="card p-4 rounded-0">
-    <% if @invoices.present? %>
+  <% if @invoices.present? %>
+    <div class="card p-4 rounded-0">
       <div class="table-responsive table-users">
         <table class="table table-bordered">
           <thead>
@@ -38,44 +38,42 @@
               <% invoices.each do |invoice| %>
                 <tr>
                   <% if invoice.status == 'paid' or invoice.status == 'open' %>
-                  <td>
-                    <% invoice.lines.data.each do |d| %>
-                      <div>
-                        <%= d.description %>
+                    <td>
+                      <% invoice.lines.data.each do |d| %>
+                        <div>
+                          <%= d.description %>
+                        </div>
+                      <% end %>
+                      <div class="text-muted">
+                        <%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
                       </div>
-                    <% end %>
-                    <div class="text-muted">
-                      <%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
-                    </div>
-                  </td>
-                  <td>
-                    <%= User.find_invoice_user(invoice.customer)[:name] %>
-                  </td>
-                  <td>
-                    <%= User.find_invoice_user(invoice.customer)[:email] %>
-                  </td>
-                  <td>
-                    <%= invoice.status.capitalize %>
-                  </td>
-                  <td>
-                    <%= number_to_currency((invoice.amount_paid)/100.00) %>
-                  </td>
-                  <td>
-                    <a target="_blank" href="<%= invoice.hosted_invoice_url %>">
-                      <i class="fas fa-download">
-                    </i> Download</a>
-                  </td>
+                    </td>
+                    <td>
+                      <%= User.find_invoice_user(invoice.customer)[:name] %>
+                    </td>
+                    <td>
+                      <%= User.find_invoice_user(invoice.customer)[:email] %>
+                    </td>
+                    <td>
+                      <%= invoice.status.capitalize %>
+                    </td>
+                    <td>
+                      <%= number_to_currency((invoice.amount_paid)/100.00) %>
+                    </td>
+                    <td>
+                      <a target="_blank" href="<%= invoice.hosted_invoice_url %>">
+                        <i class="fas fa-download">
+                      </i> Download</a>
+                    </td>
+                  <% end %>
                 </tr>
-              <% end %>
             <% end %>
           </tbody>
         </table>
       </div>
-    <% end %>
-<% else %>
-<div>
-  No Invoices currently present.
-</div>
-<% end %>
-</div>
+      <% end %>
+    </div>
+  <% else %>
+    No Invoices currently present.
+  <% end %>
 </div>
