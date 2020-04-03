@@ -3,6 +3,7 @@
 	$('#couponSubmit').hide();
   toastr.success('Coupon Applied Successfully');
 	$('#cardSubmit').html("Pay <%= number_to_currency(@discounted_amount) %>");
+	$('#if_discount_applied').html("Your discounted amount is:  <%= number_to_currency(@discounted_amount) %>")
 <% elsif @response.coupon['valid'] == false %>
   toastr.error("Coupon is not Valid anymore!");
 <% else %>

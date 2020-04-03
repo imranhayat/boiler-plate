@@ -7,6 +7,7 @@ class PlansController < ApplicationController
 
   def index
     @plans = Plan.all
+    @current_user_plan = current_user&.subscription&.plan
   end
 
   def show; end
@@ -40,7 +41,7 @@ class PlansController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def plan_params
-    params.require(:plan).permit(:nickname, :amount, :currency,
+    params.require(:plan).permit(:nickname, :amount_decimal, :currency,
                                  :interval, :interval_count)
   end
 end

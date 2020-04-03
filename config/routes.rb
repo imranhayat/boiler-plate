@@ -38,4 +38,5 @@ Rails.application.routes.draw do
   post :validate_coupon, controller: :subscriptions
   get :collect_payment_details, controller: :subscriptions
   put :upgrade_or_downgrade_stripe_plan, controller: :subscriptions
+  get :fetch_payment_details, controller: :subscriptions
 end

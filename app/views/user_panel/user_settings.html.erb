@@ -9,9 +9,9 @@
           <div class="row align-items-center">
             <div class="col-lg-9 col-sm-8">
               <h6 class="card-title mb-3 pb-1 mt-2">Subscriptions</h6>
-              <% if @subscription.present? %>
+              <% if @subscription.present? && @subscription.active? %>
                 <span class="text-muted mb-2 d-inline-block">
-                  <strong><%= @plan.nickname %>  <%= @plan.currency == 'USD' ? '$' : "£"  %><%= @plan.amount %>
+                  <strong><%= @plan.nickname %>  <%= @plan.currency == 'USD' ? '$' : "£"  %><%= @plan.amount_decimal %>
                   </strong>
                   <% if @subscription.current_period_start.present? %>
                     <strong class="ml-2">Started at:</strong> <%= Time.at(@subscription.current_period_start).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
@@ -20,16 +20,17 @@
                     <strong class="ml-2">Ends on:</strong> <%= Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
                   <% end %>
                   <% if @subscription.cancel_at_period_end.present? %>
+                    <br>
                     <strong class='mark'>Cancel at Period End:</strong> <%= @subscription.cancel_at_period_end.to_s.capitalize %>
                   <% end %>
                 </span>
                 <br/>
                 <span class="font-weight-500">
-                  <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path %>
+                  <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path, :data => {:confirm => 'Are you sure you want to cancel your subscription, this will cancel your subscription right now.'} %>
                   <% if @subscription.cancel_at_period_end? %>
-                    <%= link_to 'Allow Renewal of Subscription', setup_renewal_of_subscription_path, class: 'ml-2' %>
+                    <%= link_to 'Allow Renewal of Subscription', setup_renewal_of_subscription_path, :data => {:confirm => "Are you sure you want to allow the renewal of your subscription? After current period ends, your renewal of subscription will again start on #{Time.at(@subscription.current_period_start).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P')}"}, class: 'ml-2' %>
                   <% else %>
-                    <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path, class: 'ml-2' %>
+                    <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path, :data => {:confirm => "Are you sure you want to cancel the renewal of your subscription? Your subscription will not be renewed and will end on #{Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P')}"}, class: 'ml-2' %>
                   <% end %>
                 </span>
               <% else %>
@@ -63,7 +64,7 @@
                       <div class="mb-3">
                         <img src="<%= @card_details[:brand] %>.png" class="img-card mr-2"> <span class="vl-m"><%= @card_details[:brand] %> **** <%= @card_details[:last4] %></span>
                       </div>
-                      <%= link_to 'Add or Update Card', update_card_details_path, remote: true, class:"font-weight-500" %>
+                      <%= link_to 'Add or Update Card', update_card_details_path, :data => {:confirm => "Are you sure you want to update your credit card details, this will re-direct you to stripe and you will update your card details there."}, remote: true, class:"font-weight-500" %>
                     </div>
                   </div>
                 </div>
@@ -96,7 +97,7 @@
                   <div class="col-xl-8 col-lg-7 col-md-5 col-sm-7 col-12 mb-2 mb-sm-0">
                     Description
                   </div>
-                  <div class="col-lg-2 col-md-3 col-sm-2 col-6">
+                  <div class="col-lg-2 col-md-3 col-sm-2 col-6 px-sm-0 px-md-2">
                     Amount
                   </div>
                   <div class="col-xl-2 col-lg-3 col-sm-3 col-md-4 col-6">
@@ -113,10 +114,10 @@
                           <% end %>
                           <div class="text-muted"><%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %></div>
                         </div>
-                        <div class="col-lg-2 col-md-3 col-sm-2 col-6">
+                        <div class="col-lg-2 col-md-3 col-sm-2 col-6 px-sm-0 px-md-2">
                           <%= number_to_currency((invoice.amount_paid)/100.00) %>
                         </div>
-                        <div class="col-xl-2 col-lg-3 col-sm-3 col-md-4 col-6">
+                        <div class="col-xl-2 col-lg-3 col-sm-3 col-md-4 col-6 text-right text-sm-left">
                           <a target="_blank" href="<%= invoice.hosted_invoice_url %>"><i class="fas fa-download"></i> Download</a>
                         </div>
                       </div>

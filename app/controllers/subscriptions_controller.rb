@@ -68,13 +68,23 @@ class SubscriptionsController < ApplicationController
 
   def apply_discount(response)
     @plan = Plan.find_by_stripe_id(params[:stripe_plan_id])
-    @discounted_amount = discounted_amount(response.coupon, @plan.amount)
+    @discounted_amount = discounted_amount(response.coupon, @plan.amount_decimal)
   end
 
   def collect_payment_details
     @plan = Plan.find(params[:app_plan_id])
     @app_plan_id = params[:app_plan_id]
     @stripe_plan_id = params[:stripe_plan_id]
+    respond_to do |format|
+      format.js
+    end
+  end
+
+  def fetch_payment_details
+    @plan = Plan.find(params[:plan])
+    @app_plan_id = @plan.id
+    @stripe_plan_id = @plan.stripe_id
+    @card_last_4 = current_user.card_details[:last4]
     respond_to do |format|
       format.js
     end

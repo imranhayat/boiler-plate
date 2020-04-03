@@ -34,11 +34,16 @@ class StripeAdapter
   end
 
   def create_product
-    Stripe::Product.create(
+    stripe_product = Stripe::Product.create(
       name: @object.name,
       type: 'service'
     )
+    update_product(stripe_product)
     { success: true }
+  end
+
+  def update_product(stripe_product)
+    @object.update!(stripe_id: stripe_product.id)
   end
 
   def call_plan_api
@@ -50,15 +55,20 @@ class StripeAdapter
   end
 
   def create_plan
-    Stripe::Plan.create(
+    stripe_plan = Stripe::Plan.create(
       currency: @object.currency,
       interval: @object.interval,
       interval_count: @object.interval_count,
       product: @object.product.stripe_id,
       nickname: @object.nickname,
-      amount: @object.amount
+      amount_decimal: @object.amount_decimal * 100
     )
+    update_plan(stripe_plan)
     { success: true }
+  end
+
+  def update_plan(stripe_plan)
+    @object.update!(stripe_id: stripe_plan.id)
   end
 
   def call_subscription_api
@@ -101,7 +111,8 @@ class StripeAdapter
   end
 
   def create_subscription
-    make_subscription
+    subscription = make_subscription
+    perform_several_actions(subscription)
   rescue Stripe::InvalidRequestError, Stripe::CardError,
          Stripe::APIConnectionError, Stripe::RateLimitError,
          Stripe::AuthenticationError, Stripe::StripeError => e
@@ -109,9 +120,10 @@ class StripeAdapter
   end
 
   def make_subscription
-    subscription = Stripe::Subscription.create(
+    Stripe::Subscription.create(
       customer: current_user.stripe_customer_id,
       coupon: @params[:coupon_id],
+      metadata: { user: current_user.id, plan_id: @object.plan_id },
       items: [
         {
           plan: @params[:stripe_plan_id]
@@ -119,31 +131,19 @@ class StripeAdapter
       ],
       expand: ['latest_invoice.payment_intent']
     )
-    perform_several_actions(subscription)
   end
 
   def perform_several_actions(subscription)
-    update_subscription_in_app(subscription)
     payment_intent = subscription.latest_invoice.payment_intent
     setup_payment_attrs(payment_intent, subscription)
   end
 
-  def update_subscription_in_app(subscription)
-    @object.update!(stripe_id: subscription.id,
-                    current_period_start:
-                    subscription.current_period_start,
-                    current_period_end:
-                    subscription.current_period_end,
-                    cancel_at_period_end:
-                    subscription.cancel_at_period_end)
-  end
-
   def setup_payment_attrs(payment_intent, subscription)
     {
-      success: true,
       payment_intent_status: payment_intent&.status,
       payment_intent_client_secret: payment_intent&.client_secret,
-      stripe_subscription_status: subscription&.status
+      stripe_subscription_status: subscription&.status,
+      subscription: subscription
     }
   end
 

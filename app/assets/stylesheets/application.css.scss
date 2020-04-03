@@ -958,7 +958,8 @@ strong {
 }
 
 #spinner {
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  position: absolute;
+  top: calc(50vh - 32px);
+  left: calc(50vw - 32px);
+  z-index: 9999;
 }

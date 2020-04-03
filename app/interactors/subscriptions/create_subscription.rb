@@ -12,12 +12,7 @@ module Subscriptions
         object: subscription,
         params: context.params
       ).call
-      if response[:success] == true
-        make_subscription_in_app(subscription)
-        check_response(response)
-      else
-        context.fail! message: response[:error]
-      end
+      check_response(response)
     end
 
     def current_user
@@ -29,14 +24,6 @@ module Subscriptions
         plan_id: context.params[:app_plan_id],
         user: current_user
       }
-    end
-
-    def make_subscription_in_app(subscription)
-      if subscription.save!
-        context.subscription = subscription
-      else
-        context.fail! message: 'Something went wrong!'
-      end
     end
 
     def check_response(response)
