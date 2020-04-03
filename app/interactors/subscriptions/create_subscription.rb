@@ -12,7 +12,11 @@ module Subscriptions
         object: subscription,
         params: context.params
       ).call
-      check_response(response)
+      if response[:success] == true
+        check_response(response)
+      else
+        context.fail! message: response[:error]
+      end
     end
 
     def current_user
