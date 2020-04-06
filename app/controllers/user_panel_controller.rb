@@ -35,6 +35,12 @@ class UserPanelController < ApplicationController
 
     @invoices = @user.stripe_invoices
                      .select { |i| (i.status == 'paid' || i.status == 'open') }
+    
+    add_breadcrumb 'Admin Panel', admin_panel_path,
+                   title: 'Back to the Admin Panel'
+    add_breadcrumb 'All Invoices', all_invoices_path,
+                    title: 'Back to All Invoices'
+    add_breadcrumb @user.name + ' Invoices'
   end
 
   def update_card_details

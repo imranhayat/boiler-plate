@@ -1,58 +1,68 @@
-<div class="container pb-5">
   <% if current_user.has_role? :admin %>
-    <h5 class="text-center text-primary pt-5 pb-4"><%= @user.name.capitalize %> Invoices</h5>
-  <% else %>
-    <h5 class="text-center text-primary pt-5 pb-4">Your Invoices</h5>
-  <% end %>
-  <div class="row mt-4">
-    <div class="col-lg-12">
-      <div class="card r-1 border border">
-        <div class="card-body p-30">
-          <% if @invoices.present? %>
-            <div class="row mb-2 d-none d-sm-flex">
-              <div class="col-lg-6 col-sm-5 col-12 mb-2 mb-sm-0">
-                Description
-              </div>
-              <div class="col-lg-2 col-sm-2 col-6">
-                Status
-              </div>
-              <div class="col-lg-2 col-sm-2 col-6  px-sm-0 px-md-2">
-                Amount
-              </div>
-              <div class="col-lg-2 col-sm-3 col-6">
-                Invoice
-              </div>
-            </div>
-            <div class="row">
-              <% @invoices.each do |invoice| %>
-                <div class="col-12 card r-2 border p-3 mb-3">
-                  <div class="row">
-                    <div class="col-lg-6 col-sm-5 col-12">
-                      <% invoice.lines.data.each do |d| %>
-                        <div><%= d.description %></div>
-                      <% end %>
-                      <div class="text-muted"><%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %></div>
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-3">
-                      <%= invoice.status.capitalize %>
-                    </div>
-                    <div class="col-lg-2 col-sm-2 col-3 px-0 px-md-2">
-                      <%= number_to_currency((invoice.amount_paid)/100.00) %>
-                    </div>
-                    <div class="col-lg-2 col-sm-3 col-6 text-right text-sm-left">
-                      <a target="_blank" href="<%= invoice.hosted_invoice_url %>"><i class="fas fa-download"></i> Download</a>
-                    </div>
-                  </div>
-                </div>
-              <% end %>
-            </div>
-          <% else %>
-            <div class="ml-sm-n15">
-              No Invoices currently present.
-            </div>
+    <div class="banner-header bg-white p-3">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
+          <h5><%= @user.name.capitalize %> Invoices</h5>
+          <%= render_breadcrumbs %>
+        </div>
+        <div class="col-md-6 text-center text-md-right">
+          <% if can? :new, Plan %>
+            <%= link_to 'Back to all invoices', all_invoices_path, class:"btn btn-primary" %>
           <% end %>
         </div>
       </div>
     </div>
-  </div>
+  <% else %>
+    <h5 class="text-center text-primary pt-5 pb-4">Your Invoices</h5>
+  <% end %>
+<div class="container <%= current_user.has_role?(:normal) ? '' : 'container-admin px-md-4 px-2' %>">
+  <% if @invoices.present? %>
+    <div class="row mt-4">
+      <div class="col-lg-12">
+        <div class="card r-1 border border">
+          <div class="card-body p-30">
+              <div class="row mb-2 d-none d-sm-flex">
+                <div class="col-lg-6 col-sm-5 col-12 mb-2 mb-sm-0">
+                  Description
+                </div>
+                <div class="col-lg-2 col-sm-2 col-6">
+                  Status
+                </div>
+                <div class="col-lg-2 col-sm-2 col-6  px-sm-0 px-md-2">
+                  Amount
+                </div>
+                <div class="col-lg-2 col-sm-3 col-6">
+                  Invoice
+                </div>
+              </div>
+              <div class="row">
+                <% @invoices.each do |invoice| %>
+                  <div class="col-12 card r-2 border p-3 mb-3">
+                    <div class="row">
+                      <div class="col-lg-6 col-sm-5 col-12">
+                        <% invoice.lines.data.each do |d| %>
+                          <div><%= d.description %></div>
+                        <% end %>
+                        <div class="text-muted"><%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %></div>
+                      </div>
+                      <div class="col-lg-2 col-sm-2 col-3">
+                        <%= invoice.status.capitalize %>
+                      </div>
+                      <div class="col-lg-2 col-sm-2 col-3 px-0 px-md-2">
+                        <%= number_to_currency((invoice.amount_paid)/100.00) %>
+                      </div>
+                      <div class="col-lg-2 col-sm-3 col-6 text-right text-sm-left">
+                        <a target="_blank" href="<%= invoice.hosted_invoice_url %>"><i class="fas fa-download"></i> Download</a>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% else %>
+    No Invoices currently present.
+  <% end %>
 </div>

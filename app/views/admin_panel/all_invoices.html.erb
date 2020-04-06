@@ -49,7 +49,7 @@
                       </div>
                     </td>
                     <td>
-                      <%= User.find_invoice_user(invoice.customer)[:name] %>
+                      <a href="#"><%= User.find_invoice_user(invoice.customer)[:name] %></a>
                     </td>
                     <td>
                       <%= User.find_invoice_user(invoice.customer)[:email] %>
