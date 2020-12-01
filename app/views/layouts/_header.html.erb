@@ -1,49 +1,51 @@
-<nav class="navbar navbar-icon-top navbar-expand-lg">
+<nav class="navbar navbar-expand-lg navbar-light bg-white">
   <div class="container">
-    <a class="navbar-brand py-0" href="<%= user_signed_in? ? user_panel_path : root_path %>"><img src="/logo.png" width="220"></a>
+    <a class="navbar-brand mr-0" href="<%= user_signed_in? ? user_panel_path : root_path %>">
+      <img src="/logo.png" width="205" alt="Logo" loading="lazy">
+    </a>  
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+      <span class="navbar-toggler-icon"></span>
     </button>
+  
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="<%= plans_path %>">PLANS</a>
+          <a class="nav-link" href="<%= plans_path %>">Plans</a>
         </li>
         <% unless user_signed_in? %>
           <li class="nav-item">
-            <a class="nav-link" href="#" data-toggle="modal" data-target="#loginModal"><i class="fas fa-sign-in-alt mr-1"></i> SIGN IN</a>
+            <a class="nav-link" href="<%= new_user_session_path %>"><i class="fas fa-sign-in-alt mr-1"></i> Login</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link btn btn-primary text-white px-1 py-2" href="<%= new_user_registration_path %>" data-toggle="modal" data-target="#signupModal"><i class="fas fa-user mr-1"></i> SIGN UP</a>
+          <li class="d-flex align-items-center">
+            <a class="btn btn-primary" href="<%= new_user_registration_path %>"><i class="fas fa-user mr-1"></i> Sign Up</a>
           </li>
         <% else %>
-          <div class="dropdown">
-            <li class="nav-item">
-              <a data-target="#navbarDropdown" href="#" class="dropdown-toggle nav-link btn btn-primary px-1 py-2" data-toggle="dropdown"> <i class="fas fa-user mr-1"></i> 
-                <% if current_user.name.present? %>
-                  <%= current_user.name %>
-                <% else %>
-                  <%= current_user.email %>
-                <% end %>
-                <i class="fas fa-chevron-down ml-1 down-arrow"></i></a>
-              <div class="dropdown-menu bg-white p-0" id="navbarDropdown">
-                <% if current_user.has_role? :admin %>
-                  <a class="dropdown-item" href="<%= admin_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
-                <% else %>
-                  <a class="dropdown-item" href="<%= user_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
-                  <a class="dropdown-item" href="<%= profile_path %>"><i class="fas fa-user-cog"></i> Profile</a>
-                  <a class="dropdown-item" href="<%= edit_user_registration_path %>"><i class="fas fa-cogs"></i> Settings</a>
-                  <a class="dropdown-item" href="<%= user_settings_path %>"><i class="fas fa-money-check"></i> Payments</a>
-                <% end %>
-                <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i> 
-                Log out</a>
-              </div>
-            </li>
-          </div>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <% if current_user.name.present? %>
+                <%= current_user.name %>
+              <% else %>
+                <%= current_user.email %>
+              <% end %>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+              <% if current_user.has_role? :admin %>
+                <a class="dropdown-item" href="<%= admin_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
+              <% else %>
+                <a class="dropdown-item" href="<%= user_panel_path %>"><i class="fas fa-home"></i> Dashboard</a>
+                <a class="dropdown-item" href="<%= profile_path %>"><i class="fas fa-user-cog"></i> Profile</a>
+                <a class="dropdown-item" href="<%= edit_user_registration_path %>"><i class="fas fa-cogs"></i> Settings</a>
+                <a class="dropdown-item" href="<%= user_settings_path %>"><i class="fas fa-money-check"></i> Payments</a>
+              <% end %>
+              <a class="dropdown-item" href="<%= destroy_user_session_path %>" data-method="delete"><i class="fas fa-sign-out-alt"></i> 
+              Log out</a>
+            </div>
+          </li>
         <% end %>
       </ul>
     </div>
   </div>
 </nav>
-<%= render 'layouts/login_modal' %>
-<%= render 'layouts/signup_modal' %>
+
+<%#= render 'layouts/login_modal' %>
+<%#= render 'layouts/signup_modal' %>

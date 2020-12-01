@@ -1,14 +1,14 @@
-<div class="banner-header bg-white p-3">
-  <div class="row align-items-center">
-    <div class="col-md-12 text-center text-md-left">
-      <h5 class="lh-34 mb-0">Add New Plan</h5>
+<div class="banner-header">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h2>Add New Plan</h2>
       <%= render_breadcrumbs %>
     </div>
   </div>
 </div>
-<div class="container-fluid py-5">
-  <div class="container container-signup container-sign">
-    <div class="modal-login-body">
+<div class="admin-center-cards">
+  <div class="card">
+    <div class="card-body">
       <%= render 'form', plan: @plan %>
     </div>
   </div>

@@ -1,0 +1,27 @@
+<div class="card mb-5 mb-xl-0">
+  <div class="card-body">
+    <h5 class="card-title text-uppercase text-center"><%= plan.nickname %></h5>
+    <h6 class="card-price text-center"><%= number_to_currency(plan.amount_decimal, precision: 0, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %><span class="period">/<%= plan.interval %></span></h6>
+    <hr>
+    <ul class="fa-ul">
+      <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
+      <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
+      <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+    </ul>
+    <% if current_user.has_role?(:normal) %>
+      <% if current_user.subscription.present? && current_user.subscription.active? %>
+        <% if @current_user_plan.id == plan.id %>
+          Your Current Plan
+        <% else %>
+          <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn btn-block btn-primary btn-lg text-uppercase"  %>
+        <% end %>
+      <% else %>
+        <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
+          <%= link_to "Choose Plan", fetch_payment_details_path(plan: plan), remote: true, class:"btn btn-block btn-primary btn-lg text-uppercase" %>
+        <% else %>
+          <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class:"btn btn-block btn-primary btn-lg text-uppercase"  %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

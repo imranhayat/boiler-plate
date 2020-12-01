@@ -1,40 +1,38 @@
-<div class="container-fluid container-top">
-	<div class="container container-signin container-sign">
-		<div class="modal-login-body">
-			<h3 class="text-center">Update Profile</h3>
-			<hr/>
-			<%= form_for(current_user) do |f| %>
-				<div class="avatar-upload">
-					<div class="avatar-edit">
-						<%= f.file_field :profile_pic,id: "imageUpload", accept:"image/*" %>
-						<label for="imageUpload"></label>
-					</div>
-					<div class="avatar-preview">
-						<div id="imagePreview" style="background-image: url(<%= current_user.profile_pic %>);">
-						</div>
-					</div>
-				</div>
-				<div class="form-group mt-3">
-					<label for="name">Name</label>
-					<%= f.text_field :name, autofocus: true,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form', required: true %>
-				</div>
-				<div class="form-group">
-					<label for="phone_number">Phone Number</label>
-					<%= f.number_field :phone_number, placeholder: 'Enter Your Phone Number', class: 'form-control login-form', required: true %>
-				</div>
-				<div class="form-group">
-					<label for="date_of_birth">Date of Birth</label>
-					<input type="date" class="form-control login-form" name="user[date_of_birth]" value="<%= current_user.date_of_birth %>">
-				</div>
-				<div class="form-group">
-					<label for="gender">Gender</label>
-					<%= f.select :gender,options_for_select([["Male","Male"],["Female","Female"],["Other","Other"]]),{},{class: "form-control login-form"} %>
-				</div>
-				<div class="actions mt-3">
-					<%= f.submit "Update", class: 'btn btn-primary btn-lg btn-block mb-3 btn-submit' %>
-					<%= link_to "Dashboard",user_panel_path,class: "btn btn-secondary btn-lg btn-block btn-submit mb-3 "%>
-				</div>
+<div class="devise-container">
+  <div class="card">
+    <div class="card-body">
+      <h3 class="text-center">Update Profile</h3>
+      <hr/>
+      <%= form_for(current_user) do |f| %>
+        <div class="form-group avatar-group">
+          <div class="avatar-upload">
+            <div class="avatar-edit">
+							<%= f.file_field :profile_pic, id: "imageUpload", accept:"image/*" %>
+              <label for="imageUpload"><i class="fas fa-pencil-alt"></i></label>
+            </div>
+            <div class="avatar-preview">
+              <img id="imagePreview" src="<%= current_user.profile_pic %>" alt="Profile Picture">
+            </div>
+          </div>
+        </div>
+        <div class="form-group form-floating">
+          <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Enter Your Name' %>
+          <label for="user_name">Enter Your Name</label>
+        </div>
+        <div class="form-group form-floating">
+          <%= f.number_field :phone_number, placeholder: 'Enter Your Phone Number', required: true %>
+          <label for="user_phone_number">Enter Your Phone Number</label>
+        </div>
+        <div class="form-group form-floating">
+          <input type="date" name="user[date_of_birth]" value="<%= current_user.date_of_birth %>" id="user_date_of_birth">
+          <label for="user_date_of_birth">Enter Your Date of Birth</label>
+        </div>
+        <div class="form-group form-floating">
+          <%= f.select :gender,options_for_select([["Male","Male"],["Female","Female"],["Other","Other"]]),{},{} %>
+          <label for="user_gender">Select Gender</label>
+        </div>
+        <%= f.submit "Update", class: 'btn-submit' %>
 			<% end %>
-		</div>
-	</div>
+    </div>
+  </div>
 </div>

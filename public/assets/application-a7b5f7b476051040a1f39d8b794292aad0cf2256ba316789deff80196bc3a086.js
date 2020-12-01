@@ -43744,11 +43744,11 @@ $(document).on("turbolinks:load", function() {
     $('.primary-middle-hex').val($.fn.bcPicker.toHex(color));
   })
   $('select').addClass('form-control');
-  var table = $('.table-users table').DataTable({
+  var table = $('.datatable table').DataTable({
 
     "buttons": ['copy', 'csv', 'excel', 'pdf', 'print']
   });
-  table.buttons().container().prependTo('.table-users .col-md-8:eq(0)');
+  table.buttons().container().prependTo('.datatable .col-md-8:eq(0)');
   document.addEventListener("turbolinks:before-cache", function() {
     if (table !== null) {
       table.destroy();

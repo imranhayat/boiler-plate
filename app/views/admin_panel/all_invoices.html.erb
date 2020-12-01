@@ -1,16 +1,16 @@
-<div class="banner-header bg-white p-3">
-  <div class="row align-items-center">
-    <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
-      <h5>All Invoices</h5>
+<div class="banner-header">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h2>All Invoices</h2>
       <%= render_breadcrumbs %>
     </div>
   </div>
 </div>
-<div class="container container-admin px-md-4 px-2 container-s">
-  <% if @invoices.present? %>
-    <div class="card p-4 rounded-0">
-      <div class="table-responsive table-users">
-        <table class="table table-bordered">
+<div class="container-fluid py-3 py-md-4 px-0 px-sm-3">
+  <div class="card">
+    <div class="card-body">
+      <div class="table-responsive datatable bg-white">
+        <table class="table table-bordered mb-0">
           <thead>
             <tr>
               <th>
@@ -73,7 +73,5 @@
         </table>
       </div>
     </div>
-  <% else %>
-    No Invoices currently present.
-  <% end %>
+  </div>
 </div>

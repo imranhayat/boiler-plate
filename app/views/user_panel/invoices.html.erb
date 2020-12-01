@@ -1,11 +1,11 @@
   <% if current_user.has_role? :admin %>
-    <div class="banner-header bg-white p-3">
-      <div class="row align-items-center">
-        <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
-          <h5><%= @user.name.capitalize %> Invoices</h5>
+    <div class="banner-header">
+      <div class="d-flex align-items-center">
+        <div class="flex-grow-1">
+          <h2><%= @user.name.capitalize %> Invoices</h2>
           <%= render_breadcrumbs %>
         </div>
-        <div class="col-md-6 text-center text-md-right">
+        <div class="flex-shrink-0 pl-2">
           <% if can? :new, Plan %>
             <%= link_to 'Back to all invoices', all_invoices_path, class:"btn btn-primary" %>
           <% end %>

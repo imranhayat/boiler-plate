@@ -1,13 +1,11 @@
-<% if current_user.has_role?(:normal) %>
-  <h5 class="text-center text-primary pt-5 pb-4">Pricing Plans</h5>
-<% else %>
-  <div class="banner-header bg-white p-3">
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center text-md-left mb-2 mb-md-0">
-        <h5>Pricing Plans</h5>
-        <%= render_breadcrumbs %>
+<% if current_user.has_role? :admin %>
+  <div class="banner-header">
+    <div class="d-flex align-items-center">
+      <div class="flex-grow-1">
+        <h2>Pricing Plans</h2>
+      <%= render_breadcrumbs %>
       </div>
-      <div class="col-md-6 text-center text-md-right">
+      <div class="flex-shrink-0 pl-2">
         <% if can? :new, Plan %>
           <%= link_to 'Add New Plan', new_plan_path, class:"btn btn-primary" %>
         <% end %>
@@ -15,59 +13,50 @@
     </div>
   </div>
 <% end %>
-<div class="container <%= current_user.has_role?(:normal) ? '' : 'container-admin px-md-4 px-2' %>">
-  <% if @plans.present? %>
-    <div class="row">
-      <% @plans.each do |plan| %>
-        <div class="col-lg-4 col-sm-6 mb-5">
-          <div class="card r-1 border">
-            <h3 class="font-weight-500 card-header bg-primary text-center text-white mb-0"><%= plan.nickname %></h3>
-            <h5 class="price pt-3 pb-2 mb-0 border-bottom text-primary text-center"><%= number_to_currency(plan.amount_decimal, unit: "#{plan.currency == 'USD' ? ' $ ' : ' £ '}") %></h5>
-            <div class="card-body p-4">
-              <ul class="fa-ul mb-0">
-                <li class="mb-2">
-                  <span class="fa-li">
-                    <i class="fas fa-check-circle text-primary"></i>
-                  </span>
-                  Interval: <%= plan.interval.humanize %>
-                </li>
-                <li>
-                  <span class="fa-li">
-                    <i class="fas fa-check-circle text-primary"></i>
-                  </span>
-                  Interval Count: <%= plan.interval_count.present? ? plan.interval_count : 'Not Available' %>
-                </li>
-              </ul>
-            </div>
-            <% if current_user.has_role?(:normal) %>
-              <div class="font-weight-500 card-footer bg-white text-center mb-0 py-3">
-                <% if current_user.subscription.present? && current_user.subscription.active? %>
-                  <% if @current_user_plan.id == plan.id %>
-                    Your Current Plan
-                  <% else %>
-                    <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put  %>
-                  <% end %>
-                <% else %>
-                  <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
-                    <%= link_to "Choose Plan", fetch_payment_details_path(plan: plan), remote: true %>
-                  <% else %>
-                    <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true  %>
-                  <% end %>
-                <% end %>
-              </div>
-            <% end %>
-          </div>
+<section class="pricing py-5">
+  <div class="container">
+    <% if !current_user.has_role? :admin %>
+      <h1 class="text-center mb-4">Pricing Plans</h1>
+    <% end %>
+    <% if @plans.present? %>
+      <div class="text-center pricing-tabs">
+        <div class="btn-group rounded bg-white nav d-inline-flex" role="tablist" id="myTab" aria-label="Pricing Plans">
+          <a class="btn active" id="month-tab" data-toggle="tab" href="#month" role="tab" aria-controls="month" aria-selected="true">Monthly Billing</a>
+          <a class="btn" id="year-tab" data-toggle="tab" href="#year" role="tab" aria-controls="year" aria-selected="false">Annually Billing</a>
         </div>
-      <% end %>
-    </div>
-  <% else %>
-    <div class="text-center">
-      No Plans currently present.
-      <br>
-      <% if can? :new, Plan %>
-        <%= link_to 'Add New Plan', new_plan_path, class:"btn btn-primary mt-3" %>
-      <% end %>
-    </div>
-  <% end %>
-</div>
+      </div>
+      <div class="tab-content mt-4" id="myTabContent">
+        <% @plans.each do |plan| %>
+          <div class="row justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
+            <div class="col-xl-4 col-md-6">
+              <% if Plan.any_monthly_plan_present? %>
+                <%= render 'plan', plan: plan %>
+              <% else  %>
+                <div class="text-center">
+                  No Monthly Plan present yet.
+                </div>
+              <% end %>
+            </div>
+          </div>
+          <div class="row justify-content-center tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
+            <div class="col-xl-4 col-md-6">
+              <% if Plan.any_yearly_plan_present? %>
+                <%= render 'plan', plan: plan %>
+              <% else  %>
+              <div class="text-center">
+                No Annual Plan present yet.
+              </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <div class="text-center mt-4">
+        No Plans currently present.
+      </div>
+    <% end %>
+  </div>
+</section>
+
 <div id="modal_div"></div>

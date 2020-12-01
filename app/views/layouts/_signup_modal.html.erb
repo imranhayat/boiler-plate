@@ -1,43 +1,44 @@
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-login" role="document">
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header d-block">
+      <div class="modal-header">
+        <h3 class="modal-title" id="signupModalLabel">Join YourAppName</h3>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        <span aria-hidden="true">&times;</span></button>
-        <h3 class="modal-title text-center" id="exampleModalLabel">Join YourAppName</h3>
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
-      <div class="modal-body modal-login-body">
+      <div class="modal-body px-2 px-sm-4 pt-2">
         <%= form_for(:user, :url => registration_path(:user)) do |f| %>
-          <a href="<%= user_facebook_omniauth_authorize_path %>">
-            <div class="loginmodal-fb mb-2">Login with Facebook</div>
-          </a>
-          <a href="<%= user_google_oauth2_omniauth_authorize_path %>">
-            <div class="loginmodal-google mb-2"> Login with Google</div>
-          </a>
-          <div class="row">
-            <div class="col-5"><hr class="hr-or"></div>
-            <div class="col-2"><p class="text-center mb-0 lh-35">OR</p></div>
-            <div class="col-5"><hr class="hr-or"></div>
+          <a href="<%= user_facebook_omniauth_authorize_path %>" class="btn-facebook"><i class="fab fa-facebook-f mr-2"></i> Join with Facebook</a>
+          <a href="<%= user_google_oauth2_omniauth_authorize_path %>" class="btn-google"><i class="fab fa-google mr-2"></i> Join with Google</a>
+          <div class="row align-items-center no-gutters my-2">
+            <div class="col-5">
+              <hr/>
+            </div>
+            <div class="col-2 text-center">
+              OR
+            </div>
+            <div class="col-5">
+              <hr/>
+            </div>
           </div>
           <div class="form-group">
-            <%= f.text_field :name, autofocus: true, autocomplete: 'off' ,required: true, placeholder: 'Enter Your Name', class: 'form-control login-form',id: "join-name" %>
+            <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Enter Your Name' %>
           </div>
           <div class="form-group">
-            <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: 'Enter Your Email', class: 'form-control login-form',id: "join-email", required: true %>
+            <%= f.email_field :email, placeholder: 'Enter Your Email', required: true %>
           </div>
           <div class="form-group">
-            <%= f.password_field :password, autocomplete: "off",required: true, placeholder: 'Enter Your Password', class: 'form-control login-form',id: "join-password", minlength: 6 %>
+            <%= f.password_field :password,required: true, placeholder: 'Enter Your Password', minlength: 6 %>
           </div>
           <div class="form-group">
-            <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: 'Enter Your Password Again',id: "join-password-again", class: 'form-control login-form', required: true, minlength: 6 %>
+            <%= f.password_field :password_confirmation, placeholder: 'Enter Your Password Again',  required: true, minlength: 6 %>
           </div>
-          <div class="actions mt-3">
-            <%= f.submit "Sign Up", class: 'btn btn-primary btn-lg btn-block mb-1 btn-submit' %>
-          </div>
+          <%= f.submit "Sign Up", class: 'btn-submit' %>
         <% end %>
-      </div>
-      <div class="modal-footer d-block">
-        <center>Already a member? <a href="#" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login</a></center>
+        <div class="text-center mt-3">
+          <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>
+        </div>
       </div>
     </div>
   </div>

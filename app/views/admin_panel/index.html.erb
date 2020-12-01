@@ -1,32 +1,38 @@
-<div class="banner-header bg-white p-3">
-  <div class="row align-items-center">
-    <div class="col-md-12 text-center text-md-left">
-      <h5 class="lh-34 mb-0">Admin Dashboard</h5>
+<div class="banner-header">
+  <div class="d-flex align-items-center">
+    <div class="flex-grow-1">
+      <h2>Admin Dashboard</h2>
       <%= render_breadcrumbs %>
     </div>
   </div>
 </div>
-<div class="container container-admin px-md-4 px-2">
-  <h5 class="mb-4">Statistics</h5>
-  <div class="row card-stats">
-    <div class="col-lg-3 col-sm-6">
-      <div class="card text-center">
-        <%= link_to admin_users_path do %>
-          <h4>TOTAL USERS</h4>
-          <h1><%= User.total_normal_users %></h1>
-        <% end %>
+<div class="container-fluid py-4 statistics">
+  <h2 class="mb-4 text-center">Statistics</h2>
+  <div class="form-row text-center justify-content-center">
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+      <%= link_to admin_users_path do %>
+        <div class="card">
+          <div class="card-body">
+            <h4>TOTAL USERS</h4>
+            <h1><%= User.total_normal_users %></h1>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>SUBSCRIBED USERS</h4>
+          <h1><%= User.total_subscribed_users %></h1>
+        </div>
       </div>
     </div>
-    <div class="col-lg-3 col-sm-6">
-      <div class="card text-center">
-        <h4>SUBSCRIBED USERS</h4>
-        <h1><%= User.total_subscribed_users %></h1>
-      </div>
-    </div>
-    <div class="col-lg-3 col-sm-6">
-      <div class="card text-center">
-        <h4>TOTAL PAYMENTS RECEIVED</h4>
-        <h1><%= User.all_stripe_invoices_amount_count %></h1>
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
+      <div class="card">
+        <div class="card-body">
+          <h4>TOTAL PAYMENTS RECEIVED</h4>
+          <h1><%= User.all_stripe_invoices_amount_count %></h1>
+        </div>
       </div>
     </div>
   </div>
