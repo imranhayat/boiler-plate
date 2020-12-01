@@ -19,6 +19,10 @@
 //= require popper
 //= require_tree .
 
+toastr.options = Object.assign({}, toastr.options, {
+  "progressBar": true
+});
+
 $(document).on('turbolinks:load',function(){
   "use strict";
 
@@ -27,8 +31,8 @@ $(document).on('turbolinks:load',function(){
   $("a.nav-link").each(function() {
     if (this.href === path) {
       $(this).addClass("active");
-      $(this).closest('.collapse').addClass("show");
-      $(this).closest('.collapse').prev().removeClass("collapsed");
+      $(this).closest('.sidebar-collapse').addClass("show");
+      $(this).closest('.sidebar-collapse').prev('.nav-link').removeClass("collapsed");
     }
   });
 

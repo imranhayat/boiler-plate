@@ -802,6 +802,21 @@ textarea{
     }
   }
 }
+
+@media (max-width: 359.98px) {
+  .input-group input {
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+  }
+}
+
+#spinner {
+  position: absolute;
+  top: calc(50vh - 32px);
+  left: calc(50vw - 32px);
+  z-index: 9999;
+}
 // Pricing End
 
 // Image Preview
@@ -904,7 +919,7 @@ textarea{
 
 // Rails Errors Design
 #error_explanation ul{
-  @extend .list-unstyled, .mb-1, .text-danger;
+  @extend .pl-4, .mb-3, .text-danger;
 }
 // Rails Errors Design End
 

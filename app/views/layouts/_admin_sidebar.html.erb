@@ -15,7 +15,7 @@
           <span>Stripe</span>
           <div class="sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
         </a>
-        <div class="collapse" id="collapseStripe" data-parent="#sidenavAccordion">
+        <div class="collapse sidebar-collapse" id="collapseStripe" data-parent="#sidenavAccordion">
           <nav class="sidenav-menu-nested nav" id="sidenavAccordionPages">
             <% if Product.first.present? %>
               <a class="nav-link collapsed" href="<%= product_path(Product.first) %>">
