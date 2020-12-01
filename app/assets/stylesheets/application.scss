@@ -133,8 +133,10 @@ $min-height-mobile-screen: 568.98px;
 // Body Responsive Font Size End
 
 // Datatable
-table{
-  width: 100%;
+.table{
+  margin-bottom: 0;
+  background-color: #fff;
+  width: 100% !important;
 }
 
 table.dataTable>tbody>tr.child ul.dtr-details>li{
@@ -180,7 +182,7 @@ table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control:before,
   box-shadow: none;
   background-color: $primary;
   font-weight: 600;
-  line-height: 18px;
+  line-height: 18.5px;
   margin-top: -11px;
 }
 
@@ -192,7 +194,11 @@ table.dataTable>tbody>tr.child ul.dtr-details {
   content: ":";
 }
 
-@media(max-width: 1199.98px){
+@media(max-width: 991.98px){
+  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control:before {
+    line-height: 17px;
+  }
+
   table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
     line-height: 15px;
   }
@@ -208,6 +214,11 @@ table.dataTable>tbody>tr.child ul.dtr-details {
     margin-top: -12px;
   }
 
+  .dt-buttons .btn{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
     line-height: 19px;
   }
@@ -216,6 +227,10 @@ table.dataTable>tbody>tr.child ul.dtr-details {
 table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
   font-family: $font-family-base;
 }
+
+// .wide{
+//   min-width: 245px;
+// }
 
 .table-bordered thead th, .table-bordered thead td {
   border-bottom-width: 0px;
@@ -930,18 +945,26 @@ textarea{
   color: transparent;
 }
 
+$floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
+
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label {
-  transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
+  transform: $floating-transform;
+  color: $primary;
+  font-weight: $font-weight-bold;
 }
 
 .form-floating > .form-control:focus ~ label,
 .form-floating > .form-control:not(:placeholder-shown) ~ label,
 .form-floating > .form-select ~ label {
-  transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
+  transform: $floating-transform;
+  color: $primary;
+  font-weight: $font-weight-bold;
 }
 
 .form-floating > .form-control:-webkit-autofill ~ label {
-  transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
+  transform: $floating-transform;
+  color: $primary;
+  font-weight: $font-weight-bold;
 }
 // Floating Labels End
 

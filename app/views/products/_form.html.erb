@@ -9,18 +9,15 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, class: 'form-control login-form', placeholder:"Enter Product Name" %>
+  <div class="form-group form-floating">
+    <%= form.text_field :name, placeholder:"Enter Product Name", id: "product_name" %>
+    <label for="product_name">Enter Product Name</label>
   </div>
 
-  <div class="form-group">
-    <%= form.label :payment_gateway %>
-    <%= form.select :payment_gateway, Product.payment_gateways.keys %>
+  <div class="form-group form-floating">
+    <%= form.select :payment_gateway, Product.payment_gateways.keys,{}, {id:'product_payment_gateway'} %>
+    <label for="product_payment_gateway">Select Payment Gateway</label>
   </div>
   
-  
-  <div class="actions mt-3">
-    <%= form.submit class: 'btn btn-primary px-4 btn-submit btn-block' %>
-  </div>
+    <%= form.submit class: 'btn-submit' %>
 <% end %>

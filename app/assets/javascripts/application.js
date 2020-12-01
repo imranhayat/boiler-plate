@@ -26,7 +26,9 @@ $(document).on('turbolinks:load',function(){
   var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
   $("a.nav-link").each(function() {
     if (this.href === path) {
-        $(this).addClass("active");
+      $(this).addClass("active");
+      $(this).closest('.collapse').addClass("show");
+      $(this).closest('.collapse').prev().removeClass("collapsed");
     }
   });
 
@@ -70,12 +72,12 @@ $(document).on('turbolinks:load',function(){
       searchPlaceholder: "Search"
     },
     dom:
-		"<'row align-items-center mb-2'<'col-12 col-xl-4 text-center text-xl-left mb-2 mb-xl-0'l><'col-12 col-xl-8 text-center text-xl-right'f>>" +
+		"<'row align-items-center mb-2'<'col-12 col-xl-3 text-center text-xl-left mb-2 mb-xl-0'l><'col-12 col-xl-9 text-center text-xl-right'f>>" +
 		"<'row'<'col-sm-12'tr>>" +
 		"<'row align-items-center mt-2'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
     responsive: true,
       buttons: {
-        buttons: [ 'copy', 'csv', 'pdf', 'print' ],
+        buttons: [ 'copy', 'csv', 'excel', 'pdf', 'print' ],
         dom: {
           button: {
                className: 'btn btn-outline-primary'
@@ -85,7 +87,16 @@ $(document).on('turbolinks:load',function(){
   });
 
   table.buttons().container()
-      .prependTo( '.dataTables_wrapper .col-xl-8:eq(0)' );
+      .prependTo( '.dataTables_wrapper .col-xl-9:eq(0)' );
+
+  $('.no-datatable table').DataTable({
+    dom:
+    "<'row'<'col-12'><'col-12'>>" +
+    "<'row'<'col-12'tr>>" +
+    "<'row'<'col-12'><'col-12'>>",
+    responsive: true,
+    bSort: false
+  });
 });
 
 pdfMake.fonts = {

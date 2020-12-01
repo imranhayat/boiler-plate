@@ -62,6 +62,13 @@
 
 </head>
 
+<% if !(user_signed_in?) %>
+  <div id="g_id_onload"
+    data-client_id="<%= ENV["Google_client_id"]%>"
+    data-login_uri="<%=root_url%>users/auth/google_oauth2"
+    data-auto_select="true"
+    data-model_type="User"></div>
+<% end %>
 
 <% if user_signed_in? and current_user.has_role? :admin %>
 <body class="nav-fixed h-100">
