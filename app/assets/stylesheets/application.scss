@@ -621,9 +621,12 @@ textarea{
         justify-content: center;
       }
 
-
       .nav-link-icon{
         margin-right: 0;
+      }
+
+      .sidenav-menu-nested {
+        margin-left: 0;
       }
     }
 
@@ -734,6 +737,7 @@ textarea{
       }
 
       .sidenav-menu-nested {
+        margin-left: 15px;
         margin-top: 0;
         flex-direction: column;
       }
