@@ -32,7 +32,7 @@ $(document).on('turbolinks:load',function(){
     if (this.href === path) {
       $(this).addClass("active");
       $(this).closest('.sidebar-collapse').addClass("show");
-      $(this).closest('.sidebar-collapse').prev('.nav-link').removeClass("collapsed");
+      $(this).closest('.sidebar-collapse').prev('.nav-link').addClass('active').removeClass("collapsed");
     }
   });
 

@@ -24,6 +24,9 @@
 $body-bg: #f2f2f2;
 $body-color: #1d2b3a;
 $primary: #79589f;
+$link-hover-color: darken($primary, 15%);
+$secondary: #6c757d;
+$hover-background: #000;
 $navbar-light-color: #1d2b3a;
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
@@ -46,7 +49,7 @@ $input-btn-font-size-lg: 16px;
 $input-btn-font-size: 14px;
 $input-font-size: 14px;
 $h1-font-size: 28px;
-$h2-font-size: 24px;
+$h2-font-size: 26px;
 $h3-font-size: 20px;
 $h4-font-size: 18px;
 $h5-font-size: 16px;
@@ -85,6 +88,7 @@ $hr-opacity: 1;
 $spacer: 20px;
 $spacers: (
   3: $spacer - 5,
+  7: 7px,
   8: 8px,
   50: 50px,
   30: 30px
@@ -111,10 +115,13 @@ $sidebar-width: 270px;
 $sidebar-width-collapsed: 100px;
 $sidebar-width-mobile: 200px;
 $min-height: calc(100vh - 120px);
-$admin-min-height: calc(100vh - 203px);
+$admin-min-height: calc(100vh - 206px);
 $min-height-mobile: calc(100vh - 144px);
-$admin-min-height-mobile: calc(100vh - 224px);
-$min-height-mobile-screen: 568.98px;
+$admin-min-height-mobile: calc(100vh - 220px);
+$min-height-mobile-screen: 566.98px;
+$min-height-small-mobile: calc(100vh - 163px);
+$admin-min-height-small-mobile: calc(100vh - 242px);
+$min-height-small-mobile-screen: 310.98px;
 
 @import "bootstrap";
 
@@ -266,7 +273,13 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, tabl
     border: $border-1;
   }
   .card-body{
-    padding: 30px 5px;
+    padding: 30px 5px 25px 5px;
+  }
+  .number{
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35px;
+    margin-top: 5px;
   }
 }
 // Admin Panel Index End
@@ -290,7 +303,7 @@ footer{
 }
 
 .footer{
-  @extend .mt-auto, .py-3, .px-8, .bg-white, .border-top, .text-center;
+  @extend .mt-auto, .py-3, .px-7, .bg-white, .border-top, .text-center;
 }
 // Footer End
 
@@ -457,6 +470,12 @@ textarea{
   }
 }
 
+@media(max-width: $min-height-small-mobile-screen){
+  .devise-container {
+    min-height: $min-height-small-mobile;
+  }
+}
+
 .admin-center-cards {
   min-height: $admin-min-height;
   @extend .d-flex, .align-items-center, .justify-content-center, .py-30;
@@ -474,6 +493,12 @@ textarea{
 @media(max-width: $min-height-mobile-screen){
   .admin-center-cards {
     min-height: $admin-min-height-mobile;
+  }
+}
+
+@media(max-width: $min-height-small-mobile-screen){
+  .admin-center-cards {
+    min-height: $admin-min-height-small-mobile;
   }
 }
 
@@ -724,7 +749,7 @@ textarea{
       background: $dropdown-link-hover-bg;
     }
     
-    .nav-link:hover, .nav-link.active, .nav-link.active .nav-link-icon, .nav-link:hover .nav-link-icon {
+    .nav-link:hover, .nav-link.active, .nav-link.active .nav-link-icon, .nav-link:hover .nav-link-icon, .nav-link:hover .sidenav-collapse-arrow .fas, .nav-link.active .sidenav-collapse-arrow .fas {
       color: $primary;
     }
   }
@@ -988,3 +1013,20 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   align-items: center;
 }
 // Modals End
+
+// Payment Settings
+.payment {
+  .card{
+    border: $border-1;
+    border-radius: 0;
+
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+
+  .card-footer{
+    background-color: #fff;
+    border-top: $border-1;
+  }
+}

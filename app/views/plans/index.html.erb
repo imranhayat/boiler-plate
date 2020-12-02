@@ -16,7 +16,7 @@
 <section class="pricing py-5">
   <div class="container">
     <% if !current_user.has_role? :admin %>
-      <h1 class="text-center mb-4">Pricing Plans</h1>
+      <h2 class="text-center mb-4">Pricing Plans</h2>
     <% end %>
     <% if @plans.present? %>
       <div class="text-center pricing-tabs">

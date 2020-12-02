@@ -43,7 +43,7 @@
                     </div>
                   <% end %>
                   <div class="text-muted">
-                    <%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
+                    <%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) at %H:%M %P') %>
                   </div>
                 </td>
                 <td>
@@ -59,7 +59,7 @@
                   <%= number_to_currency((invoice.amount_paid)/100.00) %>
                 </td>
                 <td>
-                  <a target="_blank" href="<%= invoice.hosted_invoice_url %>">
+                  <a target="_blank" href="<%= invoice.hosted_invoice_url %>" rel="noopener">
                     <i class="fas fa-download">
                   </i> Download</a>
                 </td>

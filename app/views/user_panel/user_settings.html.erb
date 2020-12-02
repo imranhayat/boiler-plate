@@ -1,144 +1,144 @@
-<div class="container pb-5">
-  <h5 class="text-center text-primary pt-5 pb-4">Payment and Subscription Settings</h5>
-  
-  <!-- Subscriptions -->
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="card r-1 border border">
-        <div class="card-body p-30">
-          <div class="row align-items-center">
-            <div class="col-lg-9 col-sm-8">
-              <h6 class="card-title mb-3 pb-1 mt-2">Subscriptions</h6>
+<section class="payment py-4 py-md-5">
+  <div class="container px-0 px-md-3">
+    <h2 class="text-center mb-4">Payment & Subscription Settings</h2>
+
+    <!-- Subscriptions -->
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1">
+            <h3 class="card-title">Subscriptions</h3>
               <% if @subscription.present? && @subscription.active? %>
-                <span class="text-muted mb-2 d-inline-block">
-                  <strong><%= @plan.nickname %>  <%= @plan.currency == 'USD' ? '$' : "£"  %><%= @plan.amount_decimal %>
-                  </strong>
+                <div>
+                  <span class="font-weight-bold"><%= @plan.nickname %>  <%= @plan.currency == 'USD' ? '$' : "£"  %><%= @plan.amount_decimal %>
+                  </span>
                   <% if @subscription.current_period_start.present? %>
-                    <strong class="ml-2">Started at:</strong> <%= Time.at(@subscription.current_period_start).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
+                    <span class="font-weight-bold pl-2">Started at:</span> <%= Time.at(@subscription.current_period_start).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
                   <% end %>
                   <% if @subscription.current_period_end.present? %>
-                    <strong class="ml-2">Ends on:</strong> <%= Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
+                    <span class="font-weight-bold pl-2">Ends on:</span> <%= Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %>
                   <% end %>
-                  <% if @subscription.cancel_at_period_end.present? %>
-                    <br>
-                    <strong class='mark'>Cancel at Period End:</strong> <%= @subscription.cancel_at_period_end.to_s.capitalize %>
-                  <% end %>
-                </span>
-                <br/>
-                <span class="font-weight-500">
+                </div>
+                <% if @subscription.cancel_at_period_end.present? %>
+                  <div>
+                    <span class="font-weight-bold">Cancel at Period End:</span> <%= @subscription.cancel_at_period_end.to_s.capitalize %>
+                  </div>
+                <% end %>
+                <div class="mt-2">
                   <%= link_to 'Cancel Subscription Now', cancel_subscription_now_path, :data => {:confirm => 'Are you sure you want to cancel your subscription, this will cancel your subscription right now.'} %>
                   <% if @subscription.cancel_at_period_end? %>
                     <%= link_to 'Allow Renewal of Subscription', setup_renewal_of_subscription_path, :data => {:confirm => "Are you sure you want to allow the renewal of your subscription? After current period ends, your renewal of subscription will again start on #{Time.at(@subscription.current_period_start).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P')}"}, class: 'ml-2' %>
                   <% else %>
                     <%= link_to 'Cancel Renewal of Subscription', setup_renewal_of_subscription_path, :data => {:confirm => "Are you sure you want to cancel the renewal of your subscription? Your subscription will not be renewed and will end on #{Time.at(@subscription.current_period_end).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P')}"}, class: 'ml-2' %>
                   <% end %>
-                </span>
+                </div>
               <% else %>
-                You are not subscribed to any plan yet.
+                <p class="card-text">You are not subscribed to any plan yet.</p>
               <% end %>
-            </div>
-            <div class="col-lg-3 col-sm-4 text-sm-right text-center mt-3 mt-sm-0">
-              <img src="/subs.png" class="img-fluid">
-            </div>
+          </div>
+          <div class="d-none d-md-block flex-shrink-0">
+            <img src="/subs.png" class="img-fluid" alt="Subscriptions">
           </div>
         </div>
-        <div class="border-top p-c-footer font-weight-500">
-          <a href="">Manage Subscriptions</a>
-        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#">Manage Subscriptions</a>
       </div>
     </div>
-  </div>
 
-  <!-- Card Details -->
-  <div class="row mt-4">
-    <div class="col-lg-12">
-      <div class="card r-1 border border">
-        <div class="card-body p-30">
-          <div class="row align-items-center">
-            <div class="col-lg-9 col-sm-8 pr-xl-0">
-              <h6 class="card-title mb-3 pb-1 mt-2">Card Details</h6>
-              <% if current_user.stripe_customer_id? && current_user.stripe_payment_method_id? %>
-                <div class="row justify-content-center justify-content-sm-start">
-                  <div class="col-auto mb-3">
-                    <div class="card border r-2 p-3 p-sm-4 text-center text-lg-left">
-                      <div class="mb-3">
-                        <img src="<%= @card_details[:brand] %>.png" class="img-card mr-2"> <span class="vl-m"><%= @card_details[:brand] %> **** <%= @card_details[:last4] %></span>
-                      </div>
-                      <%= link_to 'Add or Update Card', update_card_details_path, :data => {:confirm => "Are you sure you want to update your credit card details, this will re-direct you to stripe and you will update your card details there."}, remote: true, class:"font-weight-500" %>
+    <!-- Card Details -->
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1">
+            <h3 class="card-title">Card Details</h3>
+            <% if current_user.stripe_customer_id? && current_user.stripe_payment_method_id? %>
+              <div class="form-row">
+                <div class="col-auto mb-2">
+                  <div class="border px-3 pt-3 pb-2 rounded-sm">
+                    <div class="d-flex align-items-center mb-2">
+                      <img src="<%= @card_details[:brand] %>.png" alt="<%= @card_details[:brand] %>" width="40">
+                      <div class="pl-8"><%= @card_details[:brand] %> **** <%= @card_details[:last4] %></div>
                     </div>
+                    <%= link_to 'Add or Update Card', update_card_details_path, :data => {:confirm => "Are you sure you want to update your credit card details, this will re-direct you to stripe and you will update your card details there."}, remote: true %>
                   </div>
                 </div>
-              <% else %>
-                No Card currently added.
-              <% end %>
-            </div>
-            <div class="col-lg-3 col-sm-4 text-sm-right text-center mt-3 mt-sm-0">
-              <img src="/card.png" class="img-fluid">
-            </div>
+              </div>
+            <% else %>
+              <p class="card-text">No Card currently added.</p>
+            <% end %>
+          </div>
+          <div class="d-none d-md-block flex-shrink-0">
+            <img src="/card.png" class="img-fluid" alt="Card Details">
           </div>
         </div>
-        <div class="border-top p-c-footer font-weight-500">
-          <a href="">+ Add Payment Method</a>
-        </div>
+      </div>
+      <div class="card-footer">
+        <a href="#">Add Payment Method</a>
       </div>
     </div>
-  </div>
 
-  <!-- Invoices -->
-  <div class="row mt-4">
-    <div class="col-lg-12">
-      <div class="card r-1 border border">
-        <div class="card-body p-30">
-          <div class="row align-items-center ml-sm-0">
-            <div class="col-lg-9 col-md-8">
-              <h6 class="card-title mb-2 pb-1 mt-2 ml-sm-n15">Invoices</h6>
-              <% if @invoices.present? %>
-                <div class="row mb-2 d-none d-sm-flex">
-                  <div class="col-xl-8 col-lg-7 col-md-5 col-sm-7 col-12 mb-2 mb-sm-0">
-                    Description
-                  </div>
-                  <div class="col-lg-2 col-md-3 col-sm-2 col-6 px-sm-0 px-md-2">
-                    Amount
-                  </div>
-                  <div class="col-xl-2 col-lg-3 col-sm-3 col-md-4 col-6">
-                    Invoice
-                  </div>
-                </div>
-                <div class="row">
-                  <% @invoices.each do |invoice| %>
-                    <div class="col-12 card r-2 border p-3 mb-3">
-                      <div class="row">
-                        <div class="col-xl-8 col-lg-7 col-md-5 col-sm-7 col-12">
+    <!-- Invoices -->
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1">
+            <h3 class="card-title">Invoices</h3>
+            <% if @invoices.present? %>
+              <div class="table-responsive no-datatable">
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>
+                        Description
+                      </th>
+                      <th>
+                        Amount
+                      </th>
+                      <th>
+                        Invoice
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% @invoices.each do |invoice| %>
+                      <tr>
+                        <td>
                           <% invoice.lines.data.each do |d| %>
-                            <div><%= d.description %></div>
+                            <div>
+                              <%= d.description %>
+                            </div>
                           <% end %>
-                          <div class="text-muted"><%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) on %H:%M %P') %></div>
-                        </div>
-                        <div class="col-lg-2 col-md-3 col-sm-2 col-6 px-sm-0 px-md-2">
+                          <div class="text-muted">
+                            <%= Time.at(invoice.created).to_datetime.strftime('%d %B %Y (%A) at %H:%M %P') %>
+                          </div>
+                        </td>
+                        <td>
                           <%= number_to_currency((invoice.amount_paid)/100.00) %>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-sm-3 col-md-4 col-6 text-right text-sm-left">
-                          <a target="_blank" href="<%= invoice.hosted_invoice_url %>"><i class="fas fa-download"></i> Download</a>
-                        </div>
-                      </div>
-                    </div>
-                  <% end %>
-                </div>
-              <% else %>
-                <div class="ml-sm-n15">
-                  No Invoices currently present.
-                </div>
-              <% end %>
-            </div>
-            <div class="col-lg-3 col-md-4 text-md-right text-center mt-3 mt-md-0">
-              <img src="/invoice.png" class="img-fluid">
-            </div>
+                        </td>
+                        <td>
+                          <a target="_blank" href="<%= invoice.hosted_invoice_url %>" rel="noopener">
+                            <i class="fas fa-download">
+                          </i> Download</a>
+                        </td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              </div>
+            <% else %>
+              <p class="card-text">No Invoices currently present.</p>
+            <% end %>
+          </div>
+          <div class="d-none d-md-block flex-shrink-0">
+            <img src="/invoice.png" class="img-fluid" alt="Invoices">
           </div>
         </div>
-        <div class="border-top p-c-footer font-weight-500">
-          <a href="<%= invoices_path(user: current_user.id) %>">Manage All Invoices</a>
-        </div>
+      </div>
+      <div class="card-footer">
+        <a href="<%= invoices_path(user: current_user.id) %>">Manage All Invoices</a>
       </div>
     </div>
+
   </div>
-</div>
+</section>

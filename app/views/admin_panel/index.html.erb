@@ -13,8 +13,8 @@
       <%= link_to admin_users_path do %>
         <div class="card">
           <div class="card-body">
-            <h4>TOTAL USERS</h4>
-            <h1><%= User.total_normal_users %></h1>
+            <h3>TOTAL USERS</h3>
+            <div class="number"><%= User.total_normal_users %></div>
           </div>
         </div>
       <% end %>
@@ -22,16 +22,16 @@
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
       <div class="card">
         <div class="card-body">
-          <h4>SUBSCRIBED USERS</h4>
-          <h1><%= User.total_subscribed_users %></h1>
+          <h3>SUBSCRIBED USERS</h3>
+          <div class="number"><%= User.total_subscribed_users %></div>
         </div>
       </div>
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-3">
       <div class="card">
         <div class="card-body">
-          <h4>TOTAL PAYMENTS RECEIVED</h4>
-          <h1><%= User.all_stripe_invoices_amount_count %></h1>
+          <h3>PAYMENT RECEIVED</h3>
+          <div class="number"><%= number_to_currency((User.all_stripe_invoices_amount_count)/100.00) %></div>
         </div>
       </div>
     </div>
