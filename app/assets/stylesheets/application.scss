@@ -344,6 +344,10 @@ textarea{
   @extend .form-check, .custom-control, .custom-radio;
 }
 
+.custom-control-label {
+  line-height: 25px;
+}
+
 .custom-checkbox {
   .custom-control-label::before {
     border-radius: 2px;
@@ -938,6 +942,12 @@ textarea{
 @media(max-width: $min-height-mobile-screen){
   .page-center {
     min-height: $min-height-mobile;
+  }
+}
+
+@media(max-width: $min-height-small-mobile-screen){
+  .page-center {
+    min-height: $min-height-small-mobile;
   }
 }
 // Horizontal Center Pages
