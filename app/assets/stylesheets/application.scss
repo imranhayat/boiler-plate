@@ -157,8 +157,10 @@ table.dataTable>tbody>tr.child ul.dtr-details>li{
 
 div.dataTables_wrapper div.dataTables_filter{
   display: inline-block;
+
   label{
     margin-bottom: 0;
+    position: relative;
   }
 } 
 
@@ -193,11 +195,15 @@ div.dt-buttons{
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>th.dtr-control:before {
+  content: '\f055';
+  font-family: "Font Awesome 5 Free";
   box-shadow: none;
-  background-color: $primary;
+  color: $primary;
   font-weight: 600;
-  line-height: 18.5px;
-  margin-top: -11px;
+  top: calc(50% - 0.5em);
+  margin-top: 0;
+  border: 0;
+  background-color: transparent;
 }
 
 table.dataTable>tbody>tr.child ul.dtr-details {
@@ -209,38 +215,14 @@ table.dataTable>tbody>tr.child ul.dtr-details {
 }
 
 @media(max-width: 991.98px){
-  table.dataTable.dtr-inline.collapsed>tbody>tr[role="row"]>td.dtr-control:before {
-    line-height: 17px;
-  }
-
-  table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
-    line-height: 15px;
-  }
-}
-
-@media(max-width: 575.98px){
-  table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th.dtr-control:before {
-    line-height: 14px;
-    font-size: 20px;
-    height: 15px;
-    width: 15px;
-    border-radius: 15px;
-    margin-top: -12px;
-  }
-
   .dt-buttons .btn{
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
-
-  table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
-    line-height: 15px;
-    font-weight: 400;
-  }
 }
 
 table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
-  font-family: $font-family-base;
+  content:'\f056'
 }
 
 .table-bordered thead th, .table-bordered thead td {
@@ -272,6 +254,16 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, tabl
 
 .table.dataTable>tbody>tr.child span.dtr-title{
   font-weight: 500;
+}
+
+.search-label{
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  font-size: 14px;
+  color: $input-placeholder-color;
 }
 // Datatable End
 
@@ -581,7 +573,7 @@ input[type="submit"], button[type="submit"]{
   #layoutSidenav_nav {
   transform: translateX(0);
   }
-
+  
   #layoutSidenav_content:before {
     content: "";
     display: block;
@@ -851,7 +843,7 @@ input[type="submit"], button[type="submit"]{
   }
 }
 
-@media (max-width: 359.98px) {
+@media (max-width: 399.98px) {
   .input-group input {
     padding-left: 10px;
     padding-right: 10px;
