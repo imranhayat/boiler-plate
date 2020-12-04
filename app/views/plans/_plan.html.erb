@@ -4,9 +4,9 @@
     <h6 class="card-price text-center"><%= number_to_currency(plan.amount_decimal, precision: 0, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %><span class="period">/<%= plan.interval %></span></h6>
     <hr>
     <ul class="fa-ul">
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>Single User</li>
-      <li><span class="fa-li"><i class="fas fa-check"></i></span>5GB Storage</li>
-      <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Monthly Status Reports</li>
+      <li><span class="fa-li"><i class="fas fa-check"></i></span>Feature 1</li>
+      <li><span class="fa-li"><i class="fas fa-check"></i></span>Feature 2</li>
+      <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Feature 3</li>
     </ul>
     <% if current_user.has_role?(:normal) %>
       <% if current_user.subscription.present? && current_user.subscription.active? %>
