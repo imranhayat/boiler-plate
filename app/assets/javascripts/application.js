@@ -77,8 +77,8 @@ $(document).on('turbolinks:load',function(){
     },
     dom:
 		"<'row align-items-center mb-2'<'col-12 col-xl-3 text-center text-xl-left mb-2 mb-xl-0'l><'col-12 col-xl-9 text-center text-xl-right'f>>" +
-		"<'row'<'col-sm-12'tr>>" +
-		"<'row align-items-center mt-2'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+		"<'row'<'col-12'tr>>" +
+		"<'row align-items-center mt-2'<'col-12 col-md-7'i><'col-12 col-md-5'p>>",
     responsive: true,
       buttons: {
         buttons: [ 'copy', 'csv', 'excel', 'pdf', 'print' ],

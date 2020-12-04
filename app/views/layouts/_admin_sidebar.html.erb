@@ -38,13 +38,13 @@
             <% end %>
           </nav>
         </div>
-        <a class="nav-link d-flex d-lg-none" href="<%= destroy_user_session_path %>" data-method="delete">
-          <div class="nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
-          <span>Logout</span>
-        </a>
         <a class="nav-link d-flex d-lg-none" href="<%= edit_user_registration_path %>">
           <div class="nav-link-icon"><i class="fas fa-cog"></i></div>
           <span>Settings</span>
+        </a>
+        <a class="nav-link d-flex d-lg-none" href="<%= destroy_user_session_path %>" data-method="delete">
+          <div class="nav-link-icon"><i class="fas fa-sign-out-alt"></i></div>
+          <span>Logout</span>
         </a>
       </div>
     </div>

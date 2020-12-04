@@ -26,12 +26,12 @@
           <label for="user_password">Enter Your Password</label>
         </div>
         <% if devise_mapping.rememberable? -%>
-        <div class="form-group checkbox">
-          <%= f.check_box :remember_me, class:"custom-control-input" %>
-          <label class="custom-control-label" for="user_remember_me">Remember me</label>
-        </div>
-        <%end -%>
-        <%= f.submit "Login", class: 'btn-submit' %>
+          <div class="form-group checkbox">
+            <%= f.check_box :remember_me, class:"custom-control-input" %>
+            <label class="custom-control-label" for="user_remember_me">Remember me</label>
+          </div>
+        <% end -%>
+        <%= f.submit "Login" %>
       <% end %>
       <div class="text-center mt-3">
         <%= link_to "Forgot your password?", new_password_path(resource_name) %>

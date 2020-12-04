@@ -22,17 +22,19 @@
               <hr/>
             </div>
           </div>
-          <div class="form-group">
-            <%= f.email_field :email, autofocus: true, placeholder: 'Enter Your Email', id: "login-email", required: true %>
+          <div class="form-group form-floating">
+            <%= f.email_field :email, autofocus: true, placeholder: 'Enter Your Email', required: true %>
+            <label for="user_email"></label>
           </div>
-          <div class="form-group">
-            <%= f.password_field :password, placeholder: 'Enter Your Password', id: "login-password", required: true, minlength: 6 %>
+          <div class="form-group form-floating">
+            <%= f.password_field :password, placeholder: 'Enter Your Password', required: true, minlength: 6 %>
+            <label for="user_password"></label>
           </div>
           <div class="form-group checkbox remember_me">
             <%= f.check_box :remember_me, id:"remember_me", class:"custom-control-input" %>
             <label class="custom-control-label" for="remember_me">Remember me</label>
           </div>
-          <%= f.submit "Login", class: 'btn-submit' %>
+          <%= f.submit "Login" %>
         <% end %>
         <div class="text-center mt-3">
           <a href="/users/password/new">Forgot your password?</a>

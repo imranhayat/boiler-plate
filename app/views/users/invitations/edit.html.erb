@@ -20,7 +20,7 @@
               <label for="user_password_confirmation">Confirm Your Password</label>
             </div>
           <% end %>
-        <%= f.submit t("devise.invitations.edit.submit_button"), class: 'btn-submit' %>
+        <%= f.submit t("devise.invitations.edit.submit_button") %>
       <% end %>
       <div class="text-center mt-3">
         <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>

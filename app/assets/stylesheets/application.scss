@@ -176,12 +176,19 @@ div.dataTables_wrapper div.dataTables_length select{
 
 div.dt-buttons{
   width: auto;
+  margin-bottom: 0;
 }
 
 @media(max-width: 642.98px){
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0;
     width: 100%;
+  }
+}
+
+@media(max-width: 681.98px){
+  div.dt-buttons{
+    margin-bottom: 10px;
   }
 }
 
@@ -213,11 +220,11 @@ table.dataTable>tbody>tr.child ul.dtr-details {
 
 @media(max-width: 575.98px){
   table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th.dtr-control:before {
-    line-height: 21px;
-    font-size: 16px;
-    height: 1.1em;
-    width: 1.1em;
-    border-radius: 1.1em;
+    line-height: 14px;
+    font-size: 20px;
+    height: 15px;
+    width: 15px;
+    border-radius: 15px;
     margin-top: -12px;
   }
 
@@ -227,7 +234,8 @@ table.dataTable>tbody>tr.child ul.dtr-details {
   }
 
   table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before{
-    line-height: 19px;
+    line-height: 15px;
+    font-weight: 400;
   }
 }
 
@@ -235,26 +243,26 @@ table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, tabl
   font-family: $font-family-base;
 }
 
-// .wide{
-//   min-width: 245px;
-// }
-
 .table-bordered thead th, .table-bordered thead td {
   border-bottom-width: 0px;
   border-top-width: 0px;
 }
 
 .sorting:before, .sorting:after, .sorting_asc:after, .sorting_desc:after, .sorting_asc:before, .sorting_desc:before {
-  font-size: 22px;
+  font-size: 15px;
   line-height: 18px;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
 }
 
 .sorting:after, .sorting_asc:after, .sorting_desc:after {
   right: 0.2em !important;
+  content: '\f30c' !important;
 }
 
 .sorting:before, .sorting_asc:before, .sorting_desc:before {
-  right: 0.6em !important;
+  right: 0.8em !important;
+  content: '\f309' !important;
 }
 
 .table th{
@@ -310,6 +318,8 @@ footer{
 // Form Fields
 input[type="email"], input[type="password"], input[type="text"], input[type="number"], input[type="file"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="url"], input[type="week"], input[type="search"], input[type="tel"], input[type="time"], select, textarea{
   @extend .form-control;
+  box-shadow: none;
+  filter: none;
 }
 
 select{
@@ -357,6 +367,7 @@ textarea{
   .custom-control-input:checked ~ .custom-control-label::after{
     content: "\f00c";
     font-weight: 900;
+    top: -1.01px;
     left: -1.34rem;
     font-size: 11px;
     color: #fff;
@@ -514,6 +525,10 @@ textarea{
 
 .btn-submit {
   @extend .btn, .btn-primary, .btn-lg, .btn-block;
+}
+
+input[type="submit"], button[type="submit"]{
+  @extend .btn-submit;
 }
 
 .btn-google{
@@ -989,14 +1004,17 @@ textarea{
 
 .form-floating > .form-control::-webkit-input-placeholder {
   color: transparent;
+  opacity: 0;
 }
 
 .form-floating > .form-control::-moz-placeholder {
   color: transparent;
+  opacity: 0;
 }
 
 .form-floating > .form-control::placeholder {
   color: transparent;
+  opacity: 0;
 }
 
 $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
