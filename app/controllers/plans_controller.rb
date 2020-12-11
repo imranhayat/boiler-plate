@@ -7,6 +7,8 @@ class PlansController < ApplicationController
 
   def index
     @plans = Plan.all
+    @monthly_plans = Plan.where(interval: 'month')
+    @yearly_plans = Plan.where(interval: 'year')
     add_breadcrumb 'Admin Panel', admin_panel_path,
                    title: 'Back to the Admin Panel'
     add_breadcrumb 'All Plans'
