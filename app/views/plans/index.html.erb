@@ -26,33 +26,31 @@
         </div>
       </div>
       <div class="tab-content mt-4" id="myTabContent">
-        <% @plans.each do |plan| %>
+        <% if @monthly_plans.present? %>
           <div class="row justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
-            <div class="col-xl-4 col-md-6">
-              <% if Plan.any_monthly_plan_present? %>
-                <%= render 'plan', plan: plan %>
-              <% else  %>
-                <div class="text-center">
-                  No Monthly Plan present yet.
-                </div>
-              <% end %>
-            </div>
+            <% @monthly_plans.each do |plan| %>
+              <%= render 'plan', plan: plan %>
+            <% end %>
           </div>
+        <% else  %>
+          <div class="justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
+            No Monthly Plan present yet.
+          </div>
+        <% end %>
+        <% if @yearly_plans.present? %>
           <div class="row justify-content-center tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
-            <div class="col-xl-4 col-md-6">
-              <% if Plan.any_yearly_plan_present? %>
-                <%= render 'plan', plan: plan %>
-              <% else  %>
-              <div class="text-center">
-                No Annual Plan present yet.
-              </div>
-              <% end %>
-            </div>
+            <% @yearly_plans.each do |plan| %>
+              <%= render 'plan', plan: plan %>
+            <% end %>
+          </div>
+        <% else  %>
+          <div class="justify-content-center tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
+            No Annual Plan present yet.
           </div>
         <% end %>
       </div>
     <% else %>
-      <div class="text-center mt-4">
+      <div class="text-center">
         No Plans currently present.
       </div>
     <% end %>
