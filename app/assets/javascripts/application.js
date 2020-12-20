@@ -25,7 +25,7 @@ toastr.options = Object.assign({}, toastr.options, {
 
 $(document).on('turbolinks:load',function(){
   "use strict";
-
+  // $('.page-center').closest('main').removeClass('flex-shrink-0').addClass('h-100');
   // Add active state to sidbar nav links
   var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
   $("a.nav-link").each(function() {
