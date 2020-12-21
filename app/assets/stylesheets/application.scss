@@ -112,14 +112,6 @@ $filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.05));
 $sidebar-width: 270px;
 $sidebar-width-collapsed: 100px;
 $sidebar-width-mobile: 200px;
-$min-height: calc(100vh - 120px);
-$admin-min-height: calc(100vh - 206px);
-$min-height-mobile: calc(100vh - 144px);
-$admin-min-height-mobile: calc(100vh - 220px);
-$min-height-mobile-screen: 566.98px;
-$min-height-small-mobile: calc(100vh - 163px);
-$admin-min-height-small-mobile: calc(100vh - 242px);
-$min-height-small-mobile-screen: 310.98px;
 
 @import "bootstrap";
 
@@ -455,55 +447,36 @@ textarea{
 // Buttons End
 
 // Devise
-.devise-container {
-  min-height: $min-height;
-  @extend .d-flex, .align-items-center, .justify-content-center, .py-30;
 
-  .card {
-    width: 470px;
+.page-center {
+  @extend .h-100, .d-flex, .align-items-center, .justify-content-center, .py-30;
+
+  &> .card{
     filter: $filter;
+  }
+
+  .w-470 {
+    width: 470px;
   }
 
   .card-body {
     @extend .p-lg-50, .py-30, .px-3;
-  }
-}
-
-@media(max-width: $min-height-mobile-screen){
-  .devise-container {
-    min-height: $min-height-mobile;
-  }
-}
-
-@media(max-width: $min-height-small-mobile-screen){
-  .devise-container {
-    min-height: $min-height-small-mobile;
   }
 }
 
 .admin-center-cards {
-  min-height: $admin-min-height;
-  @extend .d-flex, .align-items-center, .justify-content-center, .py-30;
+  @extend .d-flex, .justify-content-center, .py-30;
 
-  .card {
-    width: 470px;
+  &> .card{
     filter: $filter;
+  }
+
+  .w-470 {
+    width: 470px;
   }
 
   .card-body {
     @extend .p-lg-50, .py-30, .px-3;
-  }
-}
-
-@media(max-width: $min-height-mobile-screen){
-  .admin-center-cards {
-    min-height: $admin-min-height-mobile;
-  }
-}
-
-@media(max-width: $min-height-small-mobile-screen){
-  .admin-center-cards {
-    min-height: $admin-min-height-small-mobile;
   }
 }
 
@@ -938,28 +911,6 @@ input[type="submit"], button[type="submit"]{
   }
 }
 // Profile Page End
-
-// Horizontal Center Pages
-.page-center{
-  min-height: $min-height;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
-@media(max-width: $min-height-mobile-screen){
-  .page-center {
-    min-height: $min-height-mobile;
-  }
-}
-
-@media(max-width: $min-height-small-mobile-screen){
-  .page-center {
-    min-height: $min-height-small-mobile;
-  }
-}
-// Horizontal Center Pages
 
 // Rails Errors Design
 #error_explanation ul{

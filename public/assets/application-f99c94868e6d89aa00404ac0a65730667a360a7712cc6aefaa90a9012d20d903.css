@@ -9605,7 +9605,7 @@ button.bg-dark:focus {
 }
 
 /* line 12, ../../.rvm/gems/ruby-2.6.3/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_display.scss */
-.d-flex, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .devise-container {
+.d-flex, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .page-center {
   display: flex !important;
 }
 
@@ -9969,7 +9969,7 @@ button.bg-dark:focus {
 }
 
 /* line 27, ../../.rvm/gems/ruby-2.6.3/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_flex.scss */
-.justify-content-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .devise-container {
+.justify-content-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .page-center {
   justify-content: center !important;
 }
 
@@ -9994,7 +9994,7 @@ button.bg-dark:focus {
 }
 
 /* line 33, ../../.rvm/gems/ruby-2.6.3/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_flex.scss */
-.align-items-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .devise-container {
+.align-items-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .admin-center-cards, .page-center {
   align-items: center !important;
 }
 
@@ -11460,7 +11460,7 @@ button.bg-dark:focus {
 .pr-3,
 .px-3,
 .admin-center-cards .card-body,
-.devise-container .card-body {
+.page-center .card-body {
   padding-right: 15px !important;
 }
 
@@ -11475,7 +11475,7 @@ button.bg-dark:focus {
 .pl-3,
 .px-3,
 .admin-center-cards .card-body,
-.devise-container .card-body {
+.page-center .card-body {
   padding-left: 15px !important;
 }
 
@@ -11636,8 +11636,8 @@ button.bg-dark:focus {
 .py-30,
 .admin-center-cards .card-body,
 .admin-center-cards,
-.devise-container .card-body,
-.devise-container {
+.page-center .card-body,
+.page-center {
   padding-top: 30px !important;
 }
 
@@ -11652,8 +11652,8 @@ button.bg-dark:focus {
 .py-30,
 .admin-center-cards .card-body,
 .admin-center-cards,
-.devise-container .card-body,
-.devise-container {
+.page-center .card-body,
+.page-center {
   padding-bottom: 30px !important;
 }
 
@@ -13833,7 +13833,7 @@ button.bg-dark:focus {
     padding-left: 8px !important;
   }
   /* line 11, ../../.rvm/gems/ruby-2.6.3/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-  .p-lg-50, .admin-center-cards .card-body, .devise-container .card-body {
+  .p-lg-50, .admin-center-cards .card-body, .page-center .card-body {
     padding: 50px !important;
   }
   /* line 12, ../../.rvm/gems/ruby-2.6.3/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
@@ -16321,26 +16321,26 @@ textarea {
 }
 
 /* line 461, app/assets/stylesheets/application.scss */
-.devise-container {
+.page-center {
   min-height: calc(100vh - 120px);
 }
 
 /* line 465, app/assets/stylesheets/application.scss */
-.devise-container .card {
+.page-center .card {
   width: 470px;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
 @media (max-width: 566.98px) {
   /* line 476, app/assets/stylesheets/application.scss */
-  .devise-container {
+  .page-center {
     min-height: calc(100vh - 144px);
   }
 }
 
 @media (max-width: 310.98px) {
   /* line 482, app/assets/stylesheets/application.scss */
-  .devise-container {
+  .page-center {
     min-height: calc(100vh - 163px);
   }
 }
