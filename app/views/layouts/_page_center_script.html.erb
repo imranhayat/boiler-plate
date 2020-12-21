@@ -1,3 +1,7 @@
 <script>
-  $('.page-center').closest('main').removeClass('flex-shrink-0').addClass('h-100');
+  var page_height = $('.page-center').outerHeight() + $('nav').outerHeight() + $('footer').outerHeight();
+  var window_height = $(window).height();
+  if(page_height < window_height){
+    $('.page-center').closest('main').removeClass('flex-shrink-0').addClass('h-100');
+  }
 </script>
