@@ -9,4 +9,8 @@ module ApplicationHelper
   def remaining_days
     ((current_user.created_at + 1.days).to_date - Date.today).round
   end
+
+  def check_role?(user_role)
+    current_user.has_role? user_role
+  end
 end
