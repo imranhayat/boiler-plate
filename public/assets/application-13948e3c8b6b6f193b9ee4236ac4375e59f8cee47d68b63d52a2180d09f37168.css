@@ -16822,10 +16822,10 @@ textarea {
   display: flex;
 }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 1350px) {
   /* line 830, app/assets/stylesheets/application.scss */
   .pricing .card-price {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
   }
 }
 
