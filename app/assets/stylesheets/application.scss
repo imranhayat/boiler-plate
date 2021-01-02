@@ -826,6 +826,12 @@ input[type="submit"], button[type="submit"]{
   }
 }
 
+@media(max-width: 1199.98px){
+  .pricing .card-price {
+    font-size: 2.5rem;
+  }
+}
+
 @media (max-width: 399.98px) {
   .input-group input {
     padding-left: 10px;
