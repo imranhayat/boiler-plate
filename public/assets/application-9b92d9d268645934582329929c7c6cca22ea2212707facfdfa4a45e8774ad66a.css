@@ -4197,7 +4197,7 @@ textarea.form-control {
 }
 
 /* line 7, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
+.btn, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
   display: inline-block;
   font-weight: 600;
   color: #1d2b3a;
@@ -4218,36 +4218,38 @@ textarea.form-control {
 
 @media (prefers-reduced-motion: reduce) {
   /* line 7, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-  .btn, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
+  .btn, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
     transition: none;
   }
 }
 
 /* line 13, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_hover.scss */
-.btn:hover, .btn-submit:hover, input[type="submit"]:hover, button[type="submit"]:hover, .btn-google:hover, .btn-facebook:hover {
+.btn:hover, .pricing .btn-choose-plan:hover, .btn-submit:hover, input[type="submit"]:hover, button[type="submit"]:hover, .btn-google:hover, .btn-facebook:hover {
   color: #1d2b3a;
   text-decoration: none;
 }
 
 /* line 27, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:focus, .btn-submit:focus, input[type="submit"]:focus, button[type="submit"]:focus, .btn-google:focus, .btn-facebook:focus, .btn.focus, .focus.btn-submit, input.focus[type="submit"], button.focus[type="submit"], .focus.btn-google, .focus.btn-facebook {
+.btn:focus, .pricing .btn-choose-plan:focus, .btn-submit:focus, input[type="submit"]:focus, button[type="submit"]:focus, .btn-google:focus, .btn-facebook:focus, .btn.focus, .pricing .focus.btn-choose-plan, .focus.btn-submit, input.focus[type="submit"], button.focus[type="submit"], .focus.btn-google, .focus.btn-facebook {
   outline: 0;
   box-shadow: none;
 }
 
 /* line 34, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn.disabled, .disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], .disabled.btn-google, .disabled.btn-facebook, .btn:disabled, .btn-submit:disabled, input[type="submit"]:disabled, button[type="submit"]:disabled, .btn-google:disabled, .btn-facebook:disabled {
+.btn.disabled, .pricing .disabled.btn-choose-plan, .disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], .disabled.btn-google, .disabled.btn-facebook, .btn:disabled, .pricing .btn-choose-plan:disabled, .btn-submit:disabled, input[type="submit"]:disabled, button[type="submit"]:disabled, .btn-google:disabled, .btn-facebook:disabled {
   opacity: 0.65;
 }
 
 /* line 40, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn:not(:disabled):not(.disabled), .btn-submit:not(:disabled):not(.disabled), input[type="submit"]:not(:disabled):not(.disabled), button[type="submit"]:not(:disabled):not(.disabled), .btn-google:not(:disabled):not(.disabled), .btn-facebook:not(:disabled):not(.disabled) {
+.btn:not(:disabled):not(.disabled), .pricing .btn-choose-plan:not(:disabled):not(.disabled), .btn-submit:not(:disabled):not(.disabled), input[type="submit"]:not(:disabled):not(.disabled), button[type="submit"]:not(:disabled):not(.disabled), .btn-google:not(:disabled):not(.disabled), .btn-facebook:not(:disabled):not(.disabled) {
   cursor: pointer;
 }
 
 /* line 55, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-a.btn.disabled, a.disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], a.disabled.btn-google, a.disabled.btn-facebook,
+a.btn.disabled, .pricing a.disabled.btn-choose-plan, a.disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], a.disabled.btn-google, a.disabled.btn-facebook,
 fieldset:disabled a.btn,
+fieldset:disabled .pricing a.btn-choose-plan,
+.pricing fieldset:disabled a.btn-choose-plan,
 fieldset:disabled a.btn-submit,
 fieldset:disabled a.btn-google,
 fieldset:disabled a.btn-facebook {
@@ -4255,21 +4257,21 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 66, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-primary, .pricing .pricing-tabs .btn.active, .pricing .pricing-tabs .active.btn-google, .pricing .pricing-tabs .active.btn-facebook, .pricing .pricing-tabs .active.btn-submit, .pricing .pricing-tabs input.active[type="submit"], .pricing .pricing-tabs button.active[type="submit"], .btn-submit, input[type="submit"], button[type="submit"] {
+.btn-primary, .pricing .pricing-tabs .btn.active, .pricing .pricing-tabs .active.btn-google, .pricing .pricing-tabs .active.btn-facebook, .pricing .pricing-tabs .active.btn-submit, .pricing .pricing-tabs input.active[type="submit"], .pricing .pricing-tabs button.active[type="submit"], .pricing .pricing-tabs .active.btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"] {
   color: #fff;
   background-color: #79589f;
   border-color: #79589f;
 }
 
 /* line 13, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_hover.scss */
-.btn-primary:hover, .pricing .pricing-tabs .btn.active:hover, .pricing .pricing-tabs .active.btn-google:hover, .pricing .pricing-tabs .active.btn-facebook:hover, .pricing .pricing-tabs .active.btn-submit:hover, .pricing .pricing-tabs input.active[type="submit"]:hover, .pricing .pricing-tabs button.active[type="submit"]:hover, .btn-submit:hover, input[type="submit"]:hover, button[type="submit"]:hover {
+.btn-primary:hover, .pricing .pricing-tabs .btn.active:hover, .pricing .pricing-tabs .active.btn-google:hover, .pricing .pricing-tabs .active.btn-facebook:hover, .pricing .pricing-tabs .active.btn-submit:hover, .pricing .pricing-tabs input.active[type="submit"]:hover, .pricing .pricing-tabs button.active[type="submit"]:hover, .pricing .pricing-tabs .active.btn-choose-plan:hover, .btn-submit:hover, input[type="submit"]:hover, button[type="submit"]:hover {
   color: #fff;
   background-color: #664a86;
   border-color: #60467e;
 }
 
 /* line 18, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:focus, .pricing .pricing-tabs .btn.active:focus, .pricing .pricing-tabs .active.btn-google:focus, .pricing .pricing-tabs .active.btn-facebook:focus, .pricing .pricing-tabs .active.btn-submit:focus, .pricing .pricing-tabs input.active[type="submit"]:focus, .pricing .pricing-tabs button.active[type="submit"]:focus, .btn-submit:focus, input[type="submit"]:focus, button[type="submit"]:focus, .btn-primary.focus, .pricing .pricing-tabs .focus.btn.active, .pricing .pricing-tabs .focus.active.btn-google, .pricing .pricing-tabs .focus.active.btn-facebook, .pricing .pricing-tabs .focus.active.btn-submit, .pricing .pricing-tabs input.focus.active[type="submit"], .pricing .pricing-tabs button.focus.active[type="submit"], .focus.btn-submit, input.focus[type="submit"], button.focus[type="submit"] {
+.btn-primary:focus, .pricing .pricing-tabs .btn.active:focus, .pricing .pricing-tabs .active.btn-google:focus, .pricing .pricing-tabs .active.btn-facebook:focus, .pricing .pricing-tabs .active.btn-submit:focus, .pricing .pricing-tabs input.active[type="submit"]:focus, .pricing .pricing-tabs button.active[type="submit"]:focus, .pricing .pricing-tabs .active.btn-choose-plan:focus, .btn-submit:focus, input[type="submit"]:focus, button[type="submit"]:focus, .btn-primary.focus, .pricing .pricing-tabs .focus.btn.active, .pricing .pricing-tabs .focus.active.btn-google, .pricing .pricing-tabs .focus.active.btn-facebook, .pricing .pricing-tabs .focus.active.btn-submit, .pricing .pricing-tabs input.focus.active[type="submit"], .pricing .pricing-tabs button.focus.active[type="submit"], .pricing .pricing-tabs .focus.active.btn-choose-plan, .focus.btn-submit, input.focus[type="submit"], button.focus[type="submit"] {
   color: #fff;
   background-color: #664a86;
   border-color: #60467e;
@@ -4277,21 +4279,21 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 32, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary.disabled, .pricing .pricing-tabs .disabled.btn.active, .pricing .pricing-tabs .disabled.active.btn-google, .pricing .pricing-tabs .disabled.active.btn-facebook, .pricing .pricing-tabs .disabled.active.btn-submit, .pricing .pricing-tabs input.disabled.active[type="submit"], .pricing .pricing-tabs button.disabled.active[type="submit"], .disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], .btn-primary:disabled, .pricing .pricing-tabs .btn.active:disabled, .pricing .pricing-tabs .active.btn-google:disabled, .pricing .pricing-tabs .active.btn-facebook:disabled, .pricing .pricing-tabs .active.btn-submit:disabled, .pricing .pricing-tabs input.active[type="submit"]:disabled, .pricing .pricing-tabs button.active[type="submit"]:disabled, .btn-submit:disabled, input[type="submit"]:disabled, button[type="submit"]:disabled {
+.btn-primary.disabled, .pricing .pricing-tabs .disabled.btn.active, .pricing .pricing-tabs .disabled.active.btn-google, .pricing .pricing-tabs .disabled.active.btn-facebook, .pricing .pricing-tabs .disabled.active.btn-submit, .pricing .pricing-tabs input.disabled.active[type="submit"], .pricing .pricing-tabs button.disabled.active[type="submit"], .pricing .pricing-tabs .disabled.active.btn-choose-plan, .disabled.btn-submit, input.disabled[type="submit"], button.disabled[type="submit"], .btn-primary:disabled, .pricing .pricing-tabs .btn.active:disabled, .pricing .pricing-tabs .active.btn-google:disabled, .pricing .pricing-tabs .active.btn-facebook:disabled, .pricing .pricing-tabs .active.btn-submit:disabled, .pricing .pricing-tabs input.active[type="submit"]:disabled, .pricing .pricing-tabs button.active[type="submit"]:disabled, .pricing .pricing-tabs .active.btn-choose-plan:disabled, .btn-submit:disabled, input[type="submit"]:disabled, button[type="submit"]:disabled {
   color: #fff;
   background-color: #79589f;
   border-color: #79589f;
 }
 
 /* line 43, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:not(:disabled):not(.disabled):active, .btn-submit:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active, button[type="submit"]:not(:disabled):not(.disabled):active, .btn-primary.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled), .btn-submit.active:not(:disabled):not(.disabled), input.active[type="submit"]:not(:disabled):not(.disabled), button.active[type="submit"]:not(:disabled):not(.disabled), .show > .btn-primary.dropdown-toggle, .pricing .pricing-tabs .show > .dropdown-toggle.btn.active, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-google, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-facebook, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-submit, .pricing .pricing-tabs .show > input.dropdown-toggle.active[type="submit"], .pricing .pricing-tabs .show > button.dropdown-toggle.active[type="submit"], .show > .dropdown-toggle.btn-submit, .show > input.dropdown-toggle[type="submit"], .show > button.dropdown-toggle[type="submit"] {
+.btn-primary:not(:disabled):not(.disabled):active, .btn-submit:not(:disabled):not(.disabled):active, input[type="submit"]:not(:disabled):not(.disabled):active, button[type="submit"]:not(:disabled):not(.disabled):active, .btn-primary.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-choose-plan.active:not(:disabled):not(.disabled), .btn-submit.active:not(:disabled):not(.disabled), input.active[type="submit"]:not(:disabled):not(.disabled), button.active[type="submit"]:not(:disabled):not(.disabled), .show > .btn-primary.dropdown-toggle, .pricing .pricing-tabs .show > .dropdown-toggle.btn.active, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-google, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-facebook, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-submit, .pricing .pricing-tabs .show > input.dropdown-toggle.active[type="submit"], .pricing .pricing-tabs .show > button.dropdown-toggle.active[type="submit"], .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-choose-plan, .show > .dropdown-toggle.btn-submit, .show > input.dropdown-toggle[type="submit"], .show > button.dropdown-toggle[type="submit"] {
   color: #fff;
   background-color: #60467e;
   border-color: #5a4176;
 }
 
 /* line 53, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-submit:not(:disabled):not(.disabled):active:focus, input[type="submit"]:not(:disabled):not(.disabled):active:focus, button[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled):focus, .btn-submit.active:not(:disabled):not(.disabled):focus, input.active[type="submit"]:not(:disabled):not(.disabled):focus, button.active[type="submit"]:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn.active:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-google:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-facebook:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-submit:focus, .pricing .pricing-tabs .show > input.dropdown-toggle.active[type="submit"]:focus, .pricing .pricing-tabs .show > button.dropdown-toggle.active[type="submit"]:focus, .show > .dropdown-toggle.btn-submit:focus, .show > input.dropdown-toggle[type="submit"]:focus, .show > button.dropdown-toggle[type="submit"]:focus {
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-submit:not(:disabled):not(.disabled):active:focus, input[type="submit"]:not(:disabled):not(.disabled):active:focus, button[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-primary.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-choose-plan.active:not(:disabled):not(.disabled):focus, .btn-submit.active:not(:disabled):not(.disabled):focus, input.active[type="submit"]:not(:disabled):not(.disabled):focus, button.active[type="submit"]:not(:disabled):not(.disabled):focus, .show > .btn-primary.dropdown-toggle:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn.active:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-google:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-facebook:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-submit:focus, .pricing .pricing-tabs .show > input.dropdown-toggle.active[type="submit"]:focus, .pricing .pricing-tabs .show > button.dropdown-toggle.active[type="submit"]:focus, .pricing .pricing-tabs .show > .dropdown-toggle.active.btn-choose-plan:focus, .show > .dropdown-toggle.btn-submit:focus, .show > input.dropdown-toggle[type="submit"]:focus, .show > button.dropdown-toggle[type="submit"]:focus {
   box-shadow: 0 0 0 0.2rem rgba(141, 113, 173, 0.5);
 }
 
@@ -4583,38 +4585,38 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 72, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-outline-primary, .pricing .pricing-tabs .btn, .pricing .pricing-tabs .btn-google, .pricing .pricing-tabs .btn-facebook, .pricing .pricing-tabs .btn-submit, .pricing .pricing-tabs input[type="submit"], .pricing .pricing-tabs button[type="submit"] {
+.btn-outline-primary, .pricing .pricing-tabs .btn, .pricing .pricing-tabs .btn-google, .pricing .pricing-tabs .btn-facebook, .pricing .pricing-tabs .btn-submit, .pricing .pricing-tabs input[type="submit"], .pricing .pricing-tabs button[type="submit"], .pricing .pricing-tabs .btn-choose-plan, .pricing .btn-choose-plan {
   color: #79589f;
   border-color: #79589f;
 }
 
 /* line 13, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_hover.scss */
-.btn-outline-primary:hover, .pricing .pricing-tabs .btn:hover, .pricing .pricing-tabs .btn-google:hover, .pricing .pricing-tabs .btn-facebook:hover, .pricing .pricing-tabs .btn-submit:hover, .pricing .pricing-tabs input[type="submit"]:hover, .pricing .pricing-tabs button[type="submit"]:hover {
+.btn-outline-primary:hover, .pricing .pricing-tabs .btn:hover, .pricing .pricing-tabs .btn-google:hover, .pricing .pricing-tabs .btn-facebook:hover, .pricing .pricing-tabs .btn-submit:hover, .pricing .pricing-tabs input[type="submit"]:hover, .pricing .pricing-tabs button[type="submit"]:hover, .pricing .pricing-tabs .btn-choose-plan:hover, .pricing .btn-choose-plan:hover {
   color: #fff;
   background-color: #79589f;
   border-color: #79589f;
 }
 
 /* line 74, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary:focus, .pricing .pricing-tabs .btn:focus, .pricing .pricing-tabs .btn-google:focus, .pricing .pricing-tabs .btn-facebook:focus, .pricing .pricing-tabs .btn-submit:focus, .pricing .pricing-tabs input[type="submit"]:focus, .pricing .pricing-tabs button[type="submit"]:focus, .btn-outline-primary.focus, .pricing .pricing-tabs .focus.btn, .pricing .pricing-tabs .focus.btn-google, .pricing .pricing-tabs .focus.btn-facebook, .pricing .pricing-tabs .focus.btn-submit, .pricing .pricing-tabs input.focus[type="submit"], .pricing .pricing-tabs button.focus[type="submit"] {
+.btn-outline-primary:focus, .pricing .pricing-tabs .btn:focus, .pricing .pricing-tabs .btn-google:focus, .pricing .pricing-tabs .btn-facebook:focus, .pricing .pricing-tabs .btn-submit:focus, .pricing .pricing-tabs input[type="submit"]:focus, .pricing .pricing-tabs button[type="submit"]:focus, .pricing .pricing-tabs .btn-choose-plan:focus, .pricing .btn-choose-plan:focus, .btn-outline-primary.focus, .pricing .pricing-tabs .focus.btn, .pricing .pricing-tabs .focus.btn-google, .pricing .pricing-tabs .focus.btn-facebook, .pricing .pricing-tabs .focus.btn-submit, .pricing .pricing-tabs input.focus[type="submit"], .pricing .pricing-tabs button.focus[type="submit"], .pricing .pricing-tabs .focus.btn-choose-plan, .pricing .focus.btn-choose-plan {
   box-shadow: 0 0 0 0.2rem rgba(121, 88, 159, 0.5);
 }
 
 /* line 79, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary.disabled, .pricing .pricing-tabs .disabled.btn, .pricing .pricing-tabs .disabled.btn-google, .pricing .pricing-tabs .disabled.btn-facebook, .pricing .pricing-tabs .disabled.btn-submit, .pricing .pricing-tabs input.disabled[type="submit"], .pricing .pricing-tabs button.disabled[type="submit"], .btn-outline-primary:disabled, .pricing .pricing-tabs .btn:disabled, .pricing .pricing-tabs .btn-google:disabled, .pricing .pricing-tabs .btn-facebook:disabled, .pricing .pricing-tabs .btn-submit:disabled, .pricing .pricing-tabs input[type="submit"]:disabled, .pricing .pricing-tabs button[type="submit"]:disabled {
+.btn-outline-primary.disabled, .pricing .pricing-tabs .disabled.btn, .pricing .pricing-tabs .disabled.btn-google, .pricing .pricing-tabs .disabled.btn-facebook, .pricing .pricing-tabs .disabled.btn-submit, .pricing .pricing-tabs input.disabled[type="submit"], .pricing .pricing-tabs button.disabled[type="submit"], .pricing .pricing-tabs .disabled.btn-choose-plan, .pricing .disabled.btn-choose-plan, .btn-outline-primary:disabled, .pricing .pricing-tabs .btn:disabled, .pricing .pricing-tabs .btn-google:disabled, .pricing .pricing-tabs .btn-facebook:disabled, .pricing .pricing-tabs .btn-submit:disabled, .pricing .pricing-tabs input[type="submit"]:disabled, .pricing .pricing-tabs button[type="submit"]:disabled, .pricing .pricing-tabs .btn-choose-plan:disabled, .pricing .btn-choose-plan:disabled {
   color: #79589f;
   background-color: transparent;
 }
 
 /* line 85, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-google:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-facebook:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-submit:not(:disabled):not(.disabled):active, .pricing .pricing-tabs input[type="submit"]:not(:disabled):not(.disabled):active, .pricing .pricing-tabs button[type="submit"]:not(:disabled):not(.disabled):active, .btn-outline-primary.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-submit.active:not(:disabled):not(.disabled), .pricing .pricing-tabs input.active[type="submit"]:not(:disabled):not(.disabled), .pricing .pricing-tabs button.active[type="submit"]:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle, .pricing .pricing-tabs .show > .dropdown-toggle.btn, .pricing .pricing-tabs .show > .dropdown-toggle.btn-google, .pricing .pricing-tabs .show > .dropdown-toggle.btn-facebook, .pricing .pricing-tabs .show > .dropdown-toggle.btn-submit, .pricing .pricing-tabs .show > input.dropdown-toggle[type="submit"], .pricing .pricing-tabs .show > button.dropdown-toggle[type="submit"] {
+.btn-outline-primary:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-google:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-facebook:not(:disabled):not(.disabled):active, .pricing .pricing-tabs .btn-submit:not(:disabled):not(.disabled):active, .pricing .pricing-tabs input[type="submit"]:not(:disabled):not(.disabled):active, .pricing .pricing-tabs button[type="submit"]:not(:disabled):not(.disabled):active, .pricing .btn-choose-plan:not(:disabled):not(.disabled):active, .btn-outline-primary.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled), .pricing .pricing-tabs .btn-submit.active:not(:disabled):not(.disabled), .pricing .pricing-tabs input.active[type="submit"]:not(:disabled):not(.disabled), .pricing .pricing-tabs button.active[type="submit"]:not(:disabled):not(.disabled), .pricing .btn-choose-plan.active:not(:disabled):not(.disabled), .show > .btn-outline-primary.dropdown-toggle, .pricing .pricing-tabs .show > .dropdown-toggle.btn, .pricing .pricing-tabs .show > .dropdown-toggle.btn-google, .pricing .pricing-tabs .show > .dropdown-toggle.btn-facebook, .pricing .pricing-tabs .show > .dropdown-toggle.btn-submit, .pricing .pricing-tabs .show > input.dropdown-toggle[type="submit"], .pricing .pricing-tabs .show > button.dropdown-toggle[type="submit"], .pricing .pricing-tabs .show > .dropdown-toggle.btn-choose-plan, .pricing .show > .dropdown-toggle.btn-choose-plan {
   color: #fff;
   background-color: #79589f;
   border-color: #79589f;
 }
 
 /* line 92, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_buttons.scss */
-.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-google:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-facebook:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-submit:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs input[type="submit"]:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs button[type="submit"]:not(:disabled):not(.disabled):active:focus, .btn-outline-primary.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-submit.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs input.active[type="submit"]:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs button.active[type="submit"]:not(:disabled):not(.disabled):focus, .show > .btn-outline-primary.dropdown-toggle:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-google:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-facebook:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-submit:focus, .pricing .pricing-tabs .show > input.dropdown-toggle[type="submit"]:focus, .pricing .pricing-tabs .show > button.dropdown-toggle[type="submit"]:focus {
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-google:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-facebook:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs .btn-submit:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs input[type="submit"]:not(:disabled):not(.disabled):active:focus, .pricing .pricing-tabs button[type="submit"]:not(:disabled):not(.disabled):active:focus, .pricing .btn-choose-plan:not(:disabled):not(.disabled):active:focus, .btn-outline-primary.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-google.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-facebook.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs .btn-submit.active:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs input.active[type="submit"]:not(:disabled):not(.disabled):focus, .pricing .pricing-tabs button.active[type="submit"]:not(:disabled):not(.disabled):focus, .pricing .btn-choose-plan.active:not(:disabled):not(.disabled):focus, .show > .btn-outline-primary.dropdown-toggle:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-google:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-facebook:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-submit:focus, .pricing .pricing-tabs .show > input.dropdown-toggle[type="submit"]:focus, .pricing .pricing-tabs .show > button.dropdown-toggle[type="submit"]:focus, .pricing .pricing-tabs .show > .dropdown-toggle.btn-choose-plan:focus, .pricing .show > .dropdown-toggle.btn-choose-plan:focus {
   box-shadow: 0 0 0 0.2rem rgba(121, 88, 159, 0.5);
 }
 
@@ -4895,7 +4897,7 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 112, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-lg, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook, .btn-group-lg > .btn, .btn-group-lg > .btn-submit, .btn-group-lg > input[type="submit"], .btn-group-lg > button[type="submit"], .btn-group-lg > .btn-google, .btn-group-lg > .btn-facebook {
+.btn-lg, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook, .btn-group-lg > .btn, .pricing .btn-group-lg > .btn-choose-plan, .btn-group-lg > .btn-submit, .btn-group-lg > input[type="submit"], .btn-group-lg > button[type="submit"], .btn-group-lg > .btn-google, .btn-group-lg > .btn-facebook {
   padding: 0.594rem 1rem;
   font-size: 1rem;
   line-height: 1.5;
@@ -4903,7 +4905,7 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 116, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-sm, .btn-group-sm > .btn, .btn-group-sm > .btn-submit, .btn-group-sm > input[type="submit"], .btn-group-sm > button[type="submit"], .btn-group-sm > .btn-google, .btn-group-sm > .btn-facebook {
+.btn-sm, .btn-group-sm > .btn, .pricing .btn-group-sm > .btn-choose-plan, .btn-group-sm > .btn-submit, .btn-group-sm > input[type="submit"], .btn-group-sm > button[type="submit"], .btn-group-sm > .btn-google, .btn-group-sm > .btn-facebook {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -4911,23 +4913,25 @@ fieldset:disabled a.btn-facebook {
 }
 
 /* line 125, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-block, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
+.btn-block, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
   display: block;
   width: 100%;
 }
 
 /* line 130, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-.btn-block + .btn-block, .btn-submit + .btn-block, input[type="submit"] + .btn-block, button[type="submit"] + .btn-block, .btn-block + .btn-submit, .btn-block + input[type="submit"], .btn-block + button[type="submit"], .btn-submit + .btn-submit, input[type="submit"] + .btn-submit, button[type="submit"] + .btn-submit, .btn-submit + input[type="submit"], input[type="submit"] + input[type="submit"], button[type="submit"] + input[type="submit"], .btn-submit + button[type="submit"], input[type="submit"] + button[type="submit"], button[type="submit"] + button[type="submit"], .btn-google + .btn-block, .btn-google + .btn-submit, .btn-google + input[type="submit"], .btn-google + button[type="submit"], .btn-facebook + .btn-block, .btn-facebook + .btn-submit, .btn-facebook + input[type="submit"], .btn-facebook + button[type="submit"], .btn-block + .btn-google, .btn-submit + .btn-google, input[type="submit"] + .btn-google, button[type="submit"] + .btn-google, .btn-google + .btn-google, .btn-facebook + .btn-google, .btn-block + .btn-facebook, .btn-submit + .btn-facebook, input[type="submit"] + .btn-facebook, button[type="submit"] + .btn-facebook, .btn-google + .btn-facebook, .btn-facebook + .btn-facebook {
+.btn-block + .btn-block, .pricing .btn-choose-plan + .btn-block, .pricing .btn-block + .btn-choose-plan, .pricing .btn-choose-plan + .btn-choose-plan, .btn-submit + .btn-block, .pricing .btn-submit + .btn-choose-plan, input[type="submit"] + .btn-block, .pricing input[type="submit"] + .btn-choose-plan, button[type="submit"] + .btn-block, .pricing button[type="submit"] + .btn-choose-plan, .btn-block + .btn-submit, .pricing .btn-choose-plan + .btn-submit, .btn-block + input[type="submit"], .pricing .btn-choose-plan + input[type="submit"], .btn-block + button[type="submit"], .pricing .btn-choose-plan + button[type="submit"], .btn-submit + .btn-submit, input[type="submit"] + .btn-submit, button[type="submit"] + .btn-submit, .btn-submit + input[type="submit"], input[type="submit"] + input[type="submit"], button[type="submit"] + input[type="submit"], .btn-submit + button[type="submit"], input[type="submit"] + button[type="submit"], button[type="submit"] + button[type="submit"], .btn-google + .btn-block, .pricing .btn-google + .btn-choose-plan, .btn-google + .btn-submit, .btn-google + input[type="submit"], .btn-google + button[type="submit"], .btn-facebook + .btn-block, .pricing .btn-facebook + .btn-choose-plan, .btn-facebook + .btn-submit, .btn-facebook + input[type="submit"], .btn-facebook + button[type="submit"], .btn-block + .btn-google, .pricing .btn-choose-plan + .btn-google, .btn-submit + .btn-google, input[type="submit"] + .btn-google, button[type="submit"] + .btn-google, .btn-google + .btn-google, .btn-facebook + .btn-google, .btn-block + .btn-facebook, .pricing .btn-choose-plan + .btn-facebook, .btn-submit + .btn-facebook, input[type="submit"] + .btn-facebook, button[type="submit"] + .btn-facebook, .btn-google + .btn-facebook, .btn-facebook + .btn-facebook {
   margin-top: 0.5rem;
 }
 
 /* line 139, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_buttons.scss */
-input.btn-block[type="submit"], .btn-submit[type="submit"], input[type="submit"], button[type="submit"], .btn-google[type="submit"], .btn-facebook[type="submit"],
+input.btn-block[type="submit"], .pricing .btn-choose-plan[type="submit"], .btn-submit[type="submit"], input[type="submit"], button[type="submit"], .btn-google[type="submit"], .btn-facebook[type="submit"],
 input.btn-block[type="reset"],
+.pricing .btn-choose-plan[type="reset"],
 .btn-submit[type="reset"],
 .btn-google[type="reset"],
 .btn-facebook[type="reset"],
 input.btn-block[type="button"],
+.pricing .btn-choose-plan[type="button"],
 .btn-submit[type="button"],
 .btn-google[type="button"],
 .btn-facebook[type="button"] {
@@ -5278,8 +5282,9 @@ input.btn-block[type="button"],
 }
 
 /* line 10, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group > .btn, .btn-group > .btn-submit, .btn-group > input[type="submit"], .btn-group > button[type="submit"], .btn-group > .btn-google, .btn-group > .btn-facebook,
+.btn-group > .btn, .pricing .btn-group > .btn-choose-plan, .btn-group > .btn-submit, .btn-group > input[type="submit"], .btn-group > button[type="submit"], .btn-group > .btn-google, .btn-group > .btn-facebook,
 .btn-group-vertical > .btn,
+.pricing .btn-group-vertical > .btn-choose-plan,
 .btn-group-vertical > .btn-submit,
 .btn-group-vertical > input[type="submit"],
 .btn-group-vertical > button[type="submit"],
@@ -5290,8 +5295,9 @@ input.btn-block[type="button"],
 }
 
 /* line 13, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_hover.scss */
-.btn-group > .btn:hover, .btn-group > .btn-submit:hover, .btn-group > input[type="submit"]:hover, .btn-group > button[type="submit"]:hover, .btn-group > .btn-google:hover, .btn-group > .btn-facebook:hover,
+.btn-group > .btn:hover, .pricing .btn-group > .btn-choose-plan:hover, .btn-group > .btn-submit:hover, .btn-group > input[type="submit"]:hover, .btn-group > button[type="submit"]:hover, .btn-group > .btn-google:hover, .btn-group > .btn-facebook:hover,
 .btn-group-vertical > .btn:hover,
+.pricing .btn-group-vertical > .btn-choose-plan:hover,
 .btn-group-vertical > .btn-submit:hover,
 .btn-group-vertical > input[type="submit"]:hover,
 .btn-group-vertical > button[type="submit"]:hover,
@@ -5301,20 +5307,23 @@ input.btn-block[type="button"],
 }
 
 /* line 19, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group > .btn:focus, .btn-group > .btn-submit:focus, .btn-group > input[type="submit"]:focus, .btn-group > button[type="submit"]:focus, .btn-group > .btn-google:focus, .btn-group > .btn-facebook:focus, .btn-group > .btn:active, .btn-group > .btn-submit:active, .btn-group > input[type="submit"]:active, .btn-group > button[type="submit"]:active, .btn-group > .btn-google:active, .btn-group > .btn-facebook:active, .btn-group > .btn.active, .btn-group > .active.btn-submit, .btn-group > input.active[type="submit"], .btn-group > button.active[type="submit"], .btn-group > .active.btn-google, .btn-group > .active.btn-facebook,
+.btn-group > .btn:focus, .pricing .btn-group > .btn-choose-plan:focus, .btn-group > .btn-submit:focus, .btn-group > input[type="submit"]:focus, .btn-group > button[type="submit"]:focus, .btn-group > .btn-google:focus, .btn-group > .btn-facebook:focus, .btn-group > .btn:active, .pricing .btn-group > .btn-choose-plan:active, .btn-group > .btn-submit:active, .btn-group > input[type="submit"]:active, .btn-group > button[type="submit"]:active, .btn-group > .btn-google:active, .btn-group > .btn-facebook:active, .btn-group > .btn.active, .pricing .btn-group > .active.btn-choose-plan, .btn-group > .active.btn-submit, .btn-group > input.active[type="submit"], .btn-group > button.active[type="submit"], .btn-group > .active.btn-google, .btn-group > .active.btn-facebook,
 .btn-group-vertical > .btn:focus,
+.pricing .btn-group-vertical > .btn-choose-plan:focus,
 .btn-group-vertical > .btn-submit:focus,
 .btn-group-vertical > input[type="submit"]:focus,
 .btn-group-vertical > button[type="submit"]:focus,
 .btn-group-vertical > .btn-google:focus,
 .btn-group-vertical > .btn-facebook:focus,
 .btn-group-vertical > .btn:active,
+.pricing .btn-group-vertical > .btn-choose-plan:active,
 .btn-group-vertical > .btn-submit:active,
 .btn-group-vertical > input[type="submit"]:active,
 .btn-group-vertical > button[type="submit"]:active,
 .btn-group-vertical > .btn-google:active,
 .btn-group-vertical > .btn-facebook:active,
 .btn-group-vertical > .btn.active,
+.pricing .btn-group-vertical > .active.btn-choose-plan,
 .btn-group-vertical > .active.btn-submit,
 .btn-group-vertical > input.active[type="submit"],
 .btn-group-vertical > button.active[type="submit"],
@@ -5336,14 +5345,15 @@ input.btn-block[type="button"],
 }
 
 /* line 40, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group > .btn:not(:first-child), .btn-group > .btn-submit:not(:first-child), .btn-group > input[type="submit"]:not(:first-child), .btn-group > button[type="submit"]:not(:first-child), .btn-group > .btn-google:not(:first-child), .btn-group > .btn-facebook:not(:first-child),
+.btn-group > .btn:not(:first-child), .pricing .btn-group > .btn-choose-plan:not(:first-child), .btn-group > .btn-submit:not(:first-child), .btn-group > input[type="submit"]:not(:first-child), .btn-group > button[type="submit"]:not(:first-child), .btn-group > .btn-google:not(:first-child), .btn-group > .btn-facebook:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px;
 }
 
 /* line 46, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > button[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-google:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-facebook:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .pricing .btn-group > .btn-choose-plan:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-submit:not(:last-child):not(.dropdown-toggle), .btn-group > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > button[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-google:not(:last-child):not(.dropdown-toggle), .btn-group > .btn-facebook:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
+.pricing .btn-group > .btn-group:not(:last-child) > .btn-choose-plan,
 .btn-group > .btn-group:not(:last-child) > .btn-submit,
 .btn-group > .btn-group:not(:last-child) > input[type="submit"],
 .btn-group > .btn-group:not(:last-child) > button[type="submit"],
@@ -5354,8 +5364,9 @@ input.btn-block[type="button"],
 }
 
 /* line 51, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group > .btn:not(:first-child), .btn-group > .btn-submit:not(:first-child), .btn-group > input[type="submit"]:not(:first-child), .btn-group > button[type="submit"]:not(:first-child), .btn-group > .btn-google:not(:first-child), .btn-group > .btn-facebook:not(:first-child),
+.btn-group > .btn:not(:first-child), .pricing .btn-group > .btn-choose-plan:not(:first-child), .btn-group > .btn-submit:not(:first-child), .btn-group > input[type="submit"]:not(:first-child), .btn-group > button[type="submit"]:not(:first-child), .btn-group > .btn-google:not(:first-child), .btn-group > .btn-facebook:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
+.pricing .btn-group > .btn-group:not(:first-child) > .btn-choose-plan,
 .btn-group > .btn-group:not(:first-child) > .btn-submit,
 .btn-group > .btn-group:not(:first-child) > input[type="submit"],
 .btn-group > .btn-group:not(:first-child) > button[type="submit"],
@@ -5382,13 +5393,13 @@ input.btn-block[type="button"],
 }
 
 /* line 84, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .btn-group-sm > .btn-submit + .dropdown-toggle-split, .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .btn-group-sm > button[type="submit"] + .dropdown-toggle-split, .btn-group-sm > .btn-google + .dropdown-toggle-split, .btn-group-sm > .btn-facebook + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .pricing .btn-group-sm > .btn-choose-plan + .dropdown-toggle-split, .btn-group-sm > .btn-submit + .dropdown-toggle-split, .btn-group-sm > input[type="submit"] + .dropdown-toggle-split, .btn-group-sm > button[type="submit"] + .dropdown-toggle-split, .btn-group-sm > .btn-google + .dropdown-toggle-split, .btn-group-sm > .btn-facebook + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem;
 }
 
 /* line 89, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-lg + .dropdown-toggle-split, .btn-submit + .dropdown-toggle-split, input[type="submit"] + .dropdown-toggle-split, button[type="submit"] + .dropdown-toggle-split, .btn-google + .dropdown-toggle-split, .btn-facebook + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .btn-group-lg > .btn-submit + .dropdown-toggle-split, .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .btn-group-lg > button[type="submit"] + .dropdown-toggle-split, .btn-group-lg > .btn-google + .dropdown-toggle-split, .btn-group-lg > .btn-facebook + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .pricing .btn-choose-plan + .dropdown-toggle-split, .btn-submit + .dropdown-toggle-split, input[type="submit"] + .dropdown-toggle-split, button[type="submit"] + .dropdown-toggle-split, .btn-google + .dropdown-toggle-split, .btn-facebook + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .pricing .btn-group-lg > .btn-choose-plan + .dropdown-toggle-split, .btn-group-lg > .btn-submit + .dropdown-toggle-split, .btn-group-lg > input[type="submit"] + .dropdown-toggle-split, .btn-group-lg > button[type="submit"] + .dropdown-toggle-split, .btn-group-lg > .btn-google + .dropdown-toggle-split, .btn-group-lg > .btn-facebook + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem;
 }
@@ -5401,20 +5412,21 @@ input.btn-block[type="button"],
 }
 
 /* line 116, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-vertical > .btn, .btn-group-vertical > .btn-submit, .btn-group-vertical > input[type="submit"], .btn-group-vertical > button[type="submit"], .btn-group-vertical > .btn-google, .btn-group-vertical > .btn-facebook,
+.btn-group-vertical > .btn, .pricing .btn-group-vertical > .btn-choose-plan, .btn-group-vertical > .btn-submit, .btn-group-vertical > input[type="submit"], .btn-group-vertical > button[type="submit"], .btn-group-vertical > .btn-google, .btn-group-vertical > .btn-facebook,
 .btn-group-vertical > .btn-group {
   width: 100%;
 }
 
 /* line 121, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .btn-submit:not(:first-child), .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > button[type="submit"]:not(:first-child), .btn-group-vertical > .btn-google:not(:first-child), .btn-group-vertical > .btn-facebook:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .pricing .btn-group-vertical > .btn-choose-plan:not(:first-child), .btn-group-vertical > .btn-submit:not(:first-child), .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > button[type="submit"]:not(:first-child), .btn-group-vertical > .btn-google:not(:first-child), .btn-group-vertical > .btn-facebook:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) {
   margin-top: -1px;
 }
 
 /* line 127, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > button[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-google:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-facebook:not(:last-child):not(.dropdown-toggle),
+.btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .pricing .btn-group-vertical > .btn-choose-plan:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-submit:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > input[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > button[type="submit"]:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-google:not(:last-child):not(.dropdown-toggle), .btn-group-vertical > .btn-facebook:not(:last-child):not(.dropdown-toggle),
 .btn-group-vertical > .btn-group:not(:last-child) > .btn,
+.pricing .btn-group-vertical > .btn-group:not(:last-child) > .btn-choose-plan,
 .btn-group-vertical > .btn-group:not(:last-child) > .btn-submit,
 .btn-group-vertical > .btn-group:not(:last-child) > input[type="submit"],
 .btn-group-vertical > .btn-group:not(:last-child) > button[type="submit"],
@@ -5425,8 +5437,9 @@ input.btn-block[type="button"],
 }
 
 /* line 132, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-vertical > .btn:not(:first-child), .btn-group-vertical > .btn-submit:not(:first-child), .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > button[type="submit"]:not(:first-child), .btn-group-vertical > .btn-google:not(:first-child), .btn-group-vertical > .btn-facebook:not(:first-child),
+.btn-group-vertical > .btn:not(:first-child), .pricing .btn-group-vertical > .btn-choose-plan:not(:first-child), .btn-group-vertical > .btn-submit:not(:first-child), .btn-group-vertical > input[type="submit"]:not(:first-child), .btn-group-vertical > button[type="submit"]:not(:first-child), .btn-group-vertical > .btn-google:not(:first-child), .btn-group-vertical > .btn-facebook:not(:first-child),
 .btn-group-vertical > .btn-group:not(:first-child) > .btn,
+.pricing .btn-group-vertical > .btn-group:not(:first-child) > .btn-choose-plan,
 .btn-group-vertical > .btn-group:not(:first-child) > .btn-submit,
 .btn-group-vertical > .btn-group:not(:first-child) > input[type="submit"],
 .btn-group-vertical > .btn-group:not(:first-child) > button[type="submit"],
@@ -5437,8 +5450,9 @@ input.btn-block[type="button"],
 }
 
 /* line 152, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-toggle > .btn, .btn-group-toggle > .btn-submit, .btn-group-toggle > input[type="submit"], .btn-group-toggle > button[type="submit"], .btn-group-toggle > .btn-google, .btn-group-toggle > .btn-facebook,
+.btn-group-toggle > .btn, .pricing .btn-group-toggle > .btn-choose-plan, .btn-group-toggle > .btn-submit, .btn-group-toggle > input[type="submit"], .btn-group-toggle > button[type="submit"], .btn-group-toggle > .btn-google, .btn-group-toggle > .btn-facebook,
 .btn-group-toggle > .btn-group > .btn,
+.pricing .btn-group-toggle > .btn-group > .btn-choose-plan,
 .btn-group-toggle > .btn-group > .btn-submit,
 .btn-group-toggle > .btn-group > input[type="submit"],
 .btn-group-toggle > .btn-group > button[type="submit"],
@@ -5448,8 +5462,9 @@ input.btn-block[type="button"],
 }
 
 /* line 156, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_button-group.scss */
-.btn-group-toggle > .btn input[type="radio"], .btn-group-toggle > .btn-submit input[type="radio"], .btn-group-toggle > input[type="submit"] input[type="radio"], .btn-group-toggle > button[type="submit"] input[type="radio"], .btn-group-toggle > .btn-google input[type="radio"], .btn-group-toggle > .btn-facebook input[type="radio"],
+.btn-group-toggle > .btn input[type="radio"], .pricing .btn-group-toggle > .btn-choose-plan input[type="radio"], .btn-group-toggle > .btn-submit input[type="radio"], .btn-group-toggle > input[type="submit"] input[type="radio"], .btn-group-toggle > button[type="submit"] input[type="radio"], .btn-group-toggle > .btn-google input[type="radio"], .btn-group-toggle > .btn-facebook input[type="radio"],
 .btn-group-toggle > .btn input[type="checkbox"],
+.pricing .btn-group-toggle > .btn-choose-plan input[type="checkbox"],
 .btn-group-toggle > .btn-submit input[type="checkbox"],
 .btn-group-toggle > input[type="submit"] input[type="checkbox"],
 .btn-group-toggle > button[type="submit"] input[type="checkbox"],
@@ -5663,8 +5678,10 @@ input.btn-block[type="button"],
 }
 
 /* line 75, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_input-group.scss */
-.input-group-prepend .btn, .input-group-prepend .btn-submit, .input-group-prepend input[type="submit"], .input-group-prepend button[type="submit"], .input-group-prepend .btn-google, .input-group-prepend .btn-facebook,
+.input-group-prepend .btn, .input-group-prepend .pricing .btn-choose-plan, .pricing .input-group-prepend .btn-choose-plan, .input-group-prepend .btn-submit, .input-group-prepend input[type="submit"], .input-group-prepend button[type="submit"], .input-group-prepend .btn-google, .input-group-prepend .btn-facebook,
 .input-group-append .btn,
+.input-group-append .pricing .btn-choose-plan,
+.pricing .input-group-append .btn-choose-plan,
 .input-group-append .btn-submit,
 .input-group-append input[type="submit"],
 .input-group-append button[type="submit"],
@@ -5675,8 +5692,10 @@ input.btn-block[type="button"],
 }
 
 /* line 79, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_input-group.scss */
-.input-group-prepend .btn:focus, .input-group-prepend .btn-submit:focus, .input-group-prepend input[type="submit"]:focus, .input-group-prepend button[type="submit"]:focus, .input-group-prepend .btn-google:focus, .input-group-prepend .btn-facebook:focus,
+.input-group-prepend .btn:focus, .input-group-prepend .pricing .btn-choose-plan:focus, .pricing .input-group-prepend .btn-choose-plan:focus, .input-group-prepend .btn-submit:focus, .input-group-prepend input[type="submit"]:focus, .input-group-prepend button[type="submit"]:focus, .input-group-prepend .btn-google:focus, .input-group-prepend .btn-facebook:focus,
 .input-group-append .btn:focus,
+.input-group-append .pricing .btn-choose-plan:focus,
+.pricing .input-group-append .btn-choose-plan:focus,
 .input-group-append .btn-submit:focus,
 .input-group-append input[type="submit"]:focus,
 .input-group-append button[type="submit"]:focus,
@@ -5686,8 +5705,10 @@ input.btn-block[type="button"],
 }
 
 /* line 84, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_input-group.scss */
-.input-group-prepend .btn + .btn, .input-group-prepend .btn-submit + .btn, .input-group-prepend input[type="submit"] + .btn, .input-group-prepend button[type="submit"] + .btn, .input-group-prepend .btn + .btn-submit, .input-group-prepend .btn + input[type="submit"], .input-group-prepend .btn + button[type="submit"], .input-group-prepend .btn-submit + .btn-submit, .input-group-prepend input[type="submit"] + .btn-submit, .input-group-prepend button[type="submit"] + .btn-submit, .input-group-prepend .btn-submit + input[type="submit"], .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend button[type="submit"] + input[type="submit"], .input-group-prepend .btn-submit + button[type="submit"], .input-group-prepend input[type="submit"] + button[type="submit"], .input-group-prepend button[type="submit"] + button[type="submit"], .input-group-prepend .btn-google + .btn, .input-group-prepend .btn-google + .btn-submit, .input-group-prepend .btn-google + input[type="submit"], .input-group-prepend .btn-google + button[type="submit"], .input-group-prepend .btn-facebook + .btn, .input-group-prepend .btn-facebook + .btn-submit, .input-group-prepend .btn-facebook + input[type="submit"], .input-group-prepend .btn-facebook + button[type="submit"], .input-group-prepend .btn + .btn-google, .input-group-prepend .btn-submit + .btn-google, .input-group-prepend input[type="submit"] + .btn-google, .input-group-prepend button[type="submit"] + .btn-google, .input-group-prepend .btn-google + .btn-google, .input-group-prepend .btn-facebook + .btn-google, .input-group-prepend .btn + .btn-facebook, .input-group-prepend .btn-submit + .btn-facebook, .input-group-prepend input[type="submit"] + .btn-facebook, .input-group-prepend button[type="submit"] + .btn-facebook, .input-group-prepend .btn-google + .btn-facebook, .input-group-prepend .btn-facebook + .btn-facebook,
+.input-group-prepend .btn + .btn, .input-group-prepend .pricing .btn-choose-plan + .btn, .pricing .input-group-prepend .btn-choose-plan + .btn, .input-group-prepend .pricing .btn + .btn-choose-plan, .pricing .input-group-prepend .btn + .btn-choose-plan, .input-group-prepend .pricing .btn-choose-plan + .btn-choose-plan, .pricing .input-group-prepend .btn-choose-plan + .btn-choose-plan, .input-group-prepend .btn-submit + .btn, .input-group-prepend .pricing .btn-submit + .btn-choose-plan, .pricing .input-group-prepend .btn-submit + .btn-choose-plan, .input-group-prepend input[type="submit"] + .btn, .input-group-prepend .pricing input[type="submit"] + .btn-choose-plan, .pricing .input-group-prepend input[type="submit"] + .btn-choose-plan, .input-group-prepend button[type="submit"] + .btn, .input-group-prepend .pricing button[type="submit"] + .btn-choose-plan, .pricing .input-group-prepend button[type="submit"] + .btn-choose-plan, .input-group-prepend .btn + .btn-submit, .input-group-prepend .pricing .btn-choose-plan + .btn-submit, .pricing .input-group-prepend .btn-choose-plan + .btn-submit, .input-group-prepend .btn + input[type="submit"], .input-group-prepend .pricing .btn-choose-plan + input[type="submit"], .pricing .input-group-prepend .btn-choose-plan + input[type="submit"], .input-group-prepend .btn + button[type="submit"], .input-group-prepend .pricing .btn-choose-plan + button[type="submit"], .pricing .input-group-prepend .btn-choose-plan + button[type="submit"], .input-group-prepend .btn-submit + .btn-submit, .input-group-prepend input[type="submit"] + .btn-submit, .input-group-prepend button[type="submit"] + .btn-submit, .input-group-prepend .btn-submit + input[type="submit"], .input-group-prepend input[type="submit"] + input[type="submit"], .input-group-prepend button[type="submit"] + input[type="submit"], .input-group-prepend .btn-submit + button[type="submit"], .input-group-prepend input[type="submit"] + button[type="submit"], .input-group-prepend button[type="submit"] + button[type="submit"], .input-group-prepend .btn-google + .btn, .input-group-prepend .pricing .btn-google + .btn-choose-plan, .pricing .input-group-prepend .btn-google + .btn-choose-plan, .input-group-prepend .btn-google + .btn-submit, .input-group-prepend .btn-google + input[type="submit"], .input-group-prepend .btn-google + button[type="submit"], .input-group-prepend .btn-facebook + .btn, .input-group-prepend .pricing .btn-facebook + .btn-choose-plan, .pricing .input-group-prepend .btn-facebook + .btn-choose-plan, .input-group-prepend .btn-facebook + .btn-submit, .input-group-prepend .btn-facebook + input[type="submit"], .input-group-prepend .btn-facebook + button[type="submit"], .input-group-prepend .btn + .btn-google, .input-group-prepend .pricing .btn-choose-plan + .btn-google, .pricing .input-group-prepend .btn-choose-plan + .btn-google, .input-group-prepend .btn-submit + .btn-google, .input-group-prepend input[type="submit"] + .btn-google, .input-group-prepend button[type="submit"] + .btn-google, .input-group-prepend .btn-google + .btn-google, .input-group-prepend .btn-facebook + .btn-google, .input-group-prepend .btn + .btn-facebook, .input-group-prepend .pricing .btn-choose-plan + .btn-facebook, .pricing .input-group-prepend .btn-choose-plan + .btn-facebook, .input-group-prepend .btn-submit + .btn-facebook, .input-group-prepend input[type="submit"] + .btn-facebook, .input-group-prepend button[type="submit"] + .btn-facebook, .input-group-prepend .btn-google + .btn-facebook, .input-group-prepend .btn-facebook + .btn-facebook,
 .input-group-prepend .btn + .input-group-text,
+.input-group-prepend .pricing .btn-choose-plan + .input-group-text,
+.pricing .input-group-prepend .btn-choose-plan + .input-group-text,
 .input-group-prepend .btn-submit + .input-group-text,
 .input-group-prepend input[type="submit"] + .input-group-text,
 .input-group-prepend button[type="submit"] + .input-group-text,
@@ -5695,18 +5716,38 @@ input.btn-block[type="button"],
 .input-group-prepend .btn-facebook + .input-group-text,
 .input-group-prepend .input-group-text + .input-group-text,
 .input-group-prepend .input-group-text + .btn,
+.input-group-prepend .pricing .input-group-text + .btn-choose-plan,
+.pricing .input-group-prepend .input-group-text + .btn-choose-plan,
 .input-group-prepend .input-group-text + .btn-submit,
 .input-group-prepend .input-group-text + input[type="submit"],
 .input-group-prepend .input-group-text + button[type="submit"],
 .input-group-prepend .input-group-text + .btn-google,
 .input-group-prepend .input-group-text + .btn-facebook,
 .input-group-append .btn + .btn,
+.input-group-append .pricing .btn-choose-plan + .btn,
+.pricing .input-group-append .btn-choose-plan + .btn,
+.input-group-append .pricing .btn + .btn-choose-plan,
+.pricing .input-group-append .btn + .btn-choose-plan,
+.input-group-append .pricing .btn-choose-plan + .btn-choose-plan,
+.pricing .input-group-append .btn-choose-plan + .btn-choose-plan,
 .input-group-append .btn-submit + .btn,
+.input-group-append .pricing .btn-submit + .btn-choose-plan,
+.pricing .input-group-append .btn-submit + .btn-choose-plan,
 .input-group-append input[type="submit"] + .btn,
+.input-group-append .pricing input[type="submit"] + .btn-choose-plan,
+.pricing .input-group-append input[type="submit"] + .btn-choose-plan,
 .input-group-append button[type="submit"] + .btn,
+.input-group-append .pricing button[type="submit"] + .btn-choose-plan,
+.pricing .input-group-append button[type="submit"] + .btn-choose-plan,
 .input-group-append .btn + .btn-submit,
+.input-group-append .pricing .btn-choose-plan + .btn-submit,
+.pricing .input-group-append .btn-choose-plan + .btn-submit,
 .input-group-append .btn + input[type="submit"],
+.input-group-append .pricing .btn-choose-plan + input[type="submit"],
+.pricing .input-group-append .btn-choose-plan + input[type="submit"],
 .input-group-append .btn + button[type="submit"],
+.input-group-append .pricing .btn-choose-plan + button[type="submit"],
+.pricing .input-group-append .btn-choose-plan + button[type="submit"],
 .input-group-append .btn-submit + .btn-submit,
 .input-group-append input[type="submit"] + .btn-submit,
 .input-group-append button[type="submit"] + .btn-submit,
@@ -5717,26 +5758,36 @@ input.btn-block[type="button"],
 .input-group-append input[type="submit"] + button[type="submit"],
 .input-group-append button[type="submit"] + button[type="submit"],
 .input-group-append .btn-google + .btn,
+.input-group-append .pricing .btn-google + .btn-choose-plan,
+.pricing .input-group-append .btn-google + .btn-choose-plan,
 .input-group-append .btn-google + .btn-submit,
 .input-group-append .btn-google + input[type="submit"],
 .input-group-append .btn-google + button[type="submit"],
 .input-group-append .btn-facebook + .btn,
+.input-group-append .pricing .btn-facebook + .btn-choose-plan,
+.pricing .input-group-append .btn-facebook + .btn-choose-plan,
 .input-group-append .btn-facebook + .btn-submit,
 .input-group-append .btn-facebook + input[type="submit"],
 .input-group-append .btn-facebook + button[type="submit"],
 .input-group-append .btn + .btn-google,
+.input-group-append .pricing .btn-choose-plan + .btn-google,
+.pricing .input-group-append .btn-choose-plan + .btn-google,
 .input-group-append .btn-submit + .btn-google,
 .input-group-append input[type="submit"] + .btn-google,
 .input-group-append button[type="submit"] + .btn-google,
 .input-group-append .btn-google + .btn-google,
 .input-group-append .btn-facebook + .btn-google,
 .input-group-append .btn + .btn-facebook,
+.input-group-append .pricing .btn-choose-plan + .btn-facebook,
+.pricing .input-group-append .btn-choose-plan + .btn-facebook,
 .input-group-append .btn-submit + .btn-facebook,
 .input-group-append input[type="submit"] + .btn-facebook,
 .input-group-append button[type="submit"] + .btn-facebook,
 .input-group-append .btn-google + .btn-facebook,
 .input-group-append .btn-facebook + .btn-facebook,
 .input-group-append .btn + .input-group-text,
+.input-group-append .pricing .btn-choose-plan + .input-group-text,
+.pricing .input-group-append .btn-choose-plan + .input-group-text,
 .input-group-append .btn-submit + .input-group-text,
 .input-group-append input[type="submit"] + .input-group-text,
 .input-group-append button[type="submit"] + .input-group-text,
@@ -5744,6 +5795,8 @@ input.btn-block[type="button"],
 .input-group-append .btn-facebook + .input-group-text,
 .input-group-append .input-group-text + .input-group-text,
 .input-group-append .input-group-text + .btn,
+.input-group-append .pricing .input-group-text + .btn-choose-plan,
+.pricing .input-group-append .input-group-text + .btn-choose-plan,
 .input-group-append .input-group-text + .btn-submit,
 .input-group-append .input-group-text + input[type="submit"],
 .input-group-append .input-group-text + button[type="submit"],
@@ -5797,12 +5850,14 @@ input.btn-block[type="button"],
 .input-group-lg > .input-group-prepend > .input-group-text,
 .input-group-lg > .input-group-append > .input-group-text,
 .input-group-lg > .input-group-prepend > .btn,
+.pricing .input-group-lg > .input-group-prepend > .btn-choose-plan,
 .input-group-lg > .input-group-prepend > .btn-submit,
 .input-group-lg > .input-group-prepend > input[type="submit"],
 .input-group-lg > .input-group-prepend > button[type="submit"],
 .input-group-lg > .input-group-prepend > .btn-google,
 .input-group-lg > .input-group-prepend > .btn-facebook,
 .input-group-lg > .input-group-append > .btn,
+.pricing .input-group-lg > .input-group-append > .btn-choose-plan,
 .input-group-lg > .input-group-append > .btn-submit,
 .input-group-lg > .input-group-append > input[type="submit"],
 .input-group-lg > .input-group-append > button[type="submit"],
@@ -5826,12 +5881,14 @@ input.btn-block[type="button"],
 .input-group-sm > .input-group-prepend > .input-group-text,
 .input-group-sm > .input-group-append > .input-group-text,
 .input-group-sm > .input-group-prepend > .btn,
+.pricing .input-group-sm > .input-group-prepend > .btn-choose-plan,
 .input-group-sm > .input-group-prepend > .btn-submit,
 .input-group-sm > .input-group-prepend > input[type="submit"],
 .input-group-sm > .input-group-prepend > button[type="submit"],
 .input-group-sm > .input-group-prepend > .btn-google,
 .input-group-sm > .input-group-prepend > .btn-facebook,
 .input-group-sm > .input-group-append > .btn,
+.pricing .input-group-sm > .input-group-append > .btn-choose-plan,
 .input-group-sm > .input-group-append > .btn-submit,
 .input-group-sm > .input-group-append > input[type="submit"],
 .input-group-sm > .input-group-append > button[type="submit"],
@@ -5851,9 +5908,10 @@ input.btn-block[type="button"],
 }
 
 /* line 176, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_input-group.scss */
-.input-group > .input-group-prepend > .btn, .input-group > .input-group-prepend > .btn-submit, .input-group > .input-group-prepend > input[type="submit"], .input-group > .input-group-prepend > button[type="submit"], .input-group > .input-group-prepend > .btn-google, .input-group > .input-group-prepend > .btn-facebook,
+.input-group > .input-group-prepend > .btn, .pricing .input-group > .input-group-prepend > .btn-choose-plan, .input-group > .input-group-prepend > .btn-submit, .input-group > .input-group-prepend > input[type="submit"], .input-group > .input-group-prepend > button[type="submit"], .input-group > .input-group-prepend > .btn-google, .input-group > .input-group-prepend > .btn-facebook,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group > .input-group-append:not(:last-child) > .btn,
+.pricing .input-group > .input-group-append:not(:last-child) > .btn-choose-plan,
 .input-group > .input-group-append:not(:last-child) > .btn-submit,
 .input-group > .input-group-append:not(:last-child) > input[type="submit"],
 .input-group > .input-group-append:not(:last-child) > button[type="submit"],
@@ -5861,6 +5919,7 @@ input.btn-block[type="button"],
 .input-group > .input-group-append:not(:last-child) > .btn-facebook,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
+.pricing .input-group > .input-group-append:last-child > .btn-choose-plan:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .btn-submit:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > input[type="submit"]:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > button[type="submit"]:not(:last-child):not(.dropdown-toggle),
@@ -5872,9 +5931,10 @@ input.btn-block[type="button"],
 }
 
 /* line 185, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_input-group.scss */
-.input-group > .input-group-append > .btn, .input-group > .input-group-append > .btn-submit, .input-group > .input-group-append > input[type="submit"], .input-group > .input-group-append > button[type="submit"], .input-group > .input-group-append > .btn-google, .input-group > .input-group-append > .btn-facebook,
+.input-group > .input-group-append > .btn, .pricing .input-group > .input-group-append > .btn-choose-plan, .input-group > .input-group-append > .btn-submit, .input-group > .input-group-append > input[type="submit"], .input-group > .input-group-append > button[type="submit"], .input-group > .input-group-append > .btn-google, .input-group > .input-group-append > .btn-facebook,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
+.pricing .input-group > .input-group-prepend:not(:first-child) > .btn-choose-plan,
 .input-group > .input-group-prepend:not(:first-child) > .btn-submit,
 .input-group > .input-group-prepend:not(:first-child) > input[type="submit"],
 .input-group > .input-group-prepend:not(:first-child) > button[type="submit"],
@@ -5882,6 +5942,7 @@ input.btn-block[type="button"],
 .input-group > .input-group-prepend:not(:first-child) > .btn-facebook,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
+.pricing .input-group > .input-group-prepend:first-child > .btn-choose-plan:not(:first-child),
 .input-group > .input-group-prepend:first-child > .btn-submit:not(:first-child),
 .input-group > .input-group-prepend:first-child > input[type="submit"]:not(:first-child),
 .input-group > .input-group-prepend:first-child > button[type="submit"]:not(:first-child),
@@ -7559,7 +7620,7 @@ a.badge:hover, a.badge:focus {
 }
 
 /* line 31, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_badge.scss */
-.btn .badge, .btn-submit .badge, input[type="submit"] .badge, button[type="submit"] .badge, .btn-google .badge, .btn-facebook .badge {
+.btn .badge, .pricing .btn-choose-plan .badge, .btn-submit .badge, input[type="submit"] .badge, button[type="submit"] .badge, .btn-google .badge, .btn-facebook .badge {
   position: relative;
   top: -1px;
 }
@@ -16168,7 +16229,7 @@ table.dataTable > tbody > tr.child ul.dtr-details {
 
 @media (max-width: 991.98px) {
   /* line 212, app/assets/stylesheets/application.scss */
-  .dt-buttons .btn, .dt-buttons .btn-submit, .dt-buttons input[type="submit"], .dt-buttons button[type="submit"], .dt-buttons .btn-google, .dt-buttons .btn-facebook {
+  .dt-buttons .btn, .dt-buttons .pricing .btn-choose-plan, .pricing .dt-buttons .btn-choose-plan, .dt-buttons .btn-submit, .dt-buttons input[type="submit"], .dt-buttons button[type="submit"], .dt-buttons .btn-google, .dt-buttons .btn-facebook {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
@@ -16382,13 +16443,13 @@ textarea {
 }
 
 /* line 434, app/assets/stylesheets/application.scss */
-.input-group-append .btn, .input-group-append .btn-submit, .input-group-append input[type="submit"], .input-group-append button[type="submit"], .input-group-append .btn-google, .input-group-append .btn-facebook {
+.input-group-append .btn, .input-group-append .pricing .btn-choose-plan, .pricing .input-group-append .btn-choose-plan, .input-group-append .btn-submit, .input-group-append input[type="submit"], .input-group-append button[type="submit"], .input-group-append .btn-google, .input-group-append .btn-facebook {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 
 /* line 439, app/assets/stylesheets/application.scss */
-.btn:focus, .btn:active:focus, .btn:active, .btn-submit:active, input[type="submit"]:active, button[type="submit"]:active, .btn-google:active, .btn-facebook:active, button:focus, :focus {
+.btn:focus, .pricing .btn-choose-plan:focus, .btn:active:focus, .btn:active, .pricing .btn-choose-plan:active, .btn-submit:active, input[type="submit"]:active, button[type="submit"]:active, .btn-google:active, .btn-facebook:active, button:focus, :focus {
   box-shadow: none !important;
   outline: none;
 }
@@ -16399,7 +16460,7 @@ textarea {
 }
 
 /* line 448, app/assets/stylesheets/application.scss */
-.btn-block, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
+.btn-block, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
   border-radius: 50px;
 }
 
@@ -16693,71 +16754,76 @@ textarea {
 
 /* line 751, app/assets/stylesheets/application.scss */
 .pricing .card {
-  border: none;
-  border-radius: 10px;
-  transition: all 0.2s;
-  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #d1d1d1;
+  border-radius: 0;
 }
 
-/* line 758, app/assets/stylesheets/application.scss */
-.pricing hr {
-  margin: 1.5rem 0;
+/* line 761, app/assets/stylesheets/application.scss */
+.pricing .plan-main .card, .pricing .single-plan:nth-child(3) .card {
+  border-color: #79589f;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 762, app/assets/stylesheets/application.scss */
-.pricing .card-title {
-  margin: 0.5rem 0;
-}
-
-/* line 766, app/assets/stylesheets/application.scss */
-.pricing .card-price {
-  font-size: 3rem;
-  margin: 0;
+/* line 765, app/assets/stylesheets/application.scss */
+.pricing .plan-main .card-header, .pricing .single-plan:nth-child(3) .card-header {
+  background-color: #79589f;
+  color: #fff;
 }
 
 /* line 771, app/assets/stylesheets/application.scss */
-.pricing .card-price .period {
-  font-size: 0.8rem;
-}
-
-/* line 775, app/assets/stylesheets/application.scss */
-.pricing ul li {
-  margin-bottom: 15px;
+.pricing .card-header {
+  border-radius: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 /* line 779, app/assets/stylesheets/application.scss */
+.pricing .card-title, .pricing .card-price {
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* line 784, app/assets/stylesheets/application.scss */
+.pricing .card-price {
+  font-size: 3rem;
+}
+
+/* line 788, app/assets/stylesheets/application.scss */
+.pricing .card-price .period {
+  font-size: 0.9rem;
+}
+
+/* line 792, app/assets/stylesheets/application.scss */
 .pricing .text-muted {
   opacity: 0.7;
 }
 
-/* line 785, app/assets/stylesheets/application.scss */
-.pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-google:not(:first-child), .pricing .btn-group .btn-facebook:not(:first-child), .pricing .btn-group .btn-submit:not(:first-child), .pricing .btn-group input[type="submit"]:not(:first-child), .pricing .btn-group button[type="submit"]:not(:first-child) {
+/* line 796, app/assets/stylesheets/application.scss */
+.pricing .btn-choose-plan {
+  border-radius: 0;
+}
+
+/* line 803, app/assets/stylesheets/application.scss */
+.pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-google:not(:first-child), .pricing .btn-group .btn-facebook:not(:first-child), .pricing .btn-group .btn-submit:not(:first-child), .pricing .btn-group input[type="submit"]:not(:first-child), .pricing .btn-group button[type="submit"]:not(:first-child), .pricing .btn-group .btn-choose-plan:not(:first-child) {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-/* line 790, app/assets/stylesheets/application.scss */
-.pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-google:not(:last-child), .pricing .btn-group .btn-facebook:not(:last-child), .pricing .btn-group .btn-submit:not(:last-child), .pricing .btn-group input[type="submit"]:not(:last-child), .pricing .btn-group button[type="submit"]:not(:last-child) {
+/* line 808, app/assets/stylesheets/application.scss */
+.pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-google:not(:last-child), .pricing .btn-group .btn-facebook:not(:last-child), .pricing .btn-group .btn-submit:not(:last-child), .pricing .btn-group input[type="submit"]:not(:last-child), .pricing .btn-group button[type="submit"]:not(:last-child), .pricing .btn-group .btn-choose-plan:not(:last-child) {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-/* line 806, app/assets/stylesheets/application.scss */
+/* line 824, app/assets/stylesheets/application.scss */
 .pricing .tab-content > .active {
   display: flex;
 }
 
-@media (min-width: 992px) {
-  /* line 813, app/assets/stylesheets/application.scss */
-  .pricing .card:hover {
-    margin-top: -.25rem;
-    margin-bottom: .25rem;
-    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
-  }
-}
-
 @media (max-width: 399.98px) {
-  /* line 822, app/assets/stylesheets/application.scss */
+  /* line 830, app/assets/stylesheets/application.scss */
   .input-group input {
     padding-left: 10px;
     padding-right: 10px;
@@ -16765,7 +16831,18 @@ textarea {
   }
 }
 
-/* line 829, app/assets/stylesheets/application.scss */
+@media (max-width: 991.98px) {
+  /* line 838, app/assets/stylesheets/application.scss */
+  .plan-main, .pricing .single-plan:nth-child(3) {
+    order: 1;
+  }
+  /* line 842, app/assets/stylesheets/application.scss */
+  .single-plan {
+    order: 2;
+  }
+}
+
+/* line 848, app/assets/stylesheets/application.scss */
 #spinner {
   position: absolute;
   top: calc(50vh - 32px);
@@ -16773,12 +16850,12 @@ textarea {
   z-index: 9999;
 }
 
-/* line 842, app/assets/stylesheets/application.scss */
+/* line 861, app/assets/stylesheets/application.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 845, app/assets/stylesheets/application.scss */
+/* line 864, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -16786,12 +16863,12 @@ textarea {
   top: 10px;
 }
 
-/* line 851, app/assets/stylesheets/application.scss */
+/* line 870, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input {
   display: none !important;
 }
 
-/* line 854, app/assets/stylesheets/application.scss */
+/* line 873, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -16802,18 +16879,18 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 863, app/assets/stylesheets/application.scss */
+/* line 882, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 866, app/assets/stylesheets/application.scss */
+/* line 885, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #79589f;
 }
 
-/* line 874, app/assets/stylesheets/application.scss */
+/* line 893, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -16824,27 +16901,27 @@ textarea {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 883, app/assets/stylesheets/application.scss */
+/* line 902, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 892, app/assets/stylesheets/application.scss */
+/* line 911, app/assets/stylesheets/application.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
 @media (max-width: 767.98px) {
-  /* line 898, app/assets/stylesheets/application.scss */
+  /* line 917, app/assets/stylesheets/application.scss */
   .img-user {
     width: 100px;
     height: 100px;
   }
 }
 
-/* line 904, app/assets/stylesheets/application.scss */
+/* line 923, app/assets/stylesheets/application.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -16854,18 +16931,18 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
-  /* line 913, app/assets/stylesheets/application.scss */
+  /* line 932, app/assets/stylesheets/application.scss */
   .col-profile {
     background-image: none;
   }
 }
 
-/* line 926, app/assets/stylesheets/application.scss */
+/* line 945, app/assets/stylesheets/application.scss */
 .form-floating {
   position: relative;
 }
 
-/* line 930, app/assets/stylesheets/application.scss */
+/* line 949, app/assets/stylesheets/application.scss */
 .form-floating > label {
   color: #6c757d;
   font-size: 14px;
@@ -16881,25 +16958,25 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 945, app/assets/stylesheets/application.scss */
+  /* line 964, app/assets/stylesheets/application.scss */
   .form-floating > label {
     transition: none;
   }
 }
 
-/* line 950, app/assets/stylesheets/application.scss */
+/* line 969, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-webkit-input-placeholder, .form-floating > input[type="email"]::-webkit-input-placeholder, .form-floating > input[type="password"]::-webkit-input-placeholder, .form-floating > input[type="text"]::-webkit-input-placeholder, .form-floating > input[type="number"]::-webkit-input-placeholder, .form-floating > input[type="file"]::-webkit-input-placeholder, .form-floating > input[type="date"]::-webkit-input-placeholder, .form-floating > input[type="datetime-local"]::-webkit-input-placeholder, .form-floating > input[type="month"]::-webkit-input-placeholder, .form-floating > input[type="url"]::-webkit-input-placeholder, .form-floating > input[type="week"]::-webkit-input-placeholder, .form-floating > input[type="search"]::-webkit-input-placeholder, .form-floating > input[type="tel"]::-webkit-input-placeholder, .form-floating > input[type="time"]::-webkit-input-placeholder, .form-floating > select::-webkit-input-placeholder, .form-floating > textarea::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 955, app/assets/stylesheets/application.scss */
+/* line 974, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 960, app/assets/stylesheets/application.scss */
+/* line 979, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
@@ -16913,14 +16990,14 @@ textarea {
   opacity: 0;
 }
 
-/* line 967, app/assets/stylesheets/application.scss */
+/* line 986, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 973, app/assets/stylesheets/application.scss */
+/* line 992, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
@@ -16954,30 +17031,30 @@ textarea {
   font-weight: 500;
 }
 
-/* line 981, app/assets/stylesheets/application.scss */
+/* line 1000, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:-webkit-autofill ~ label, .form-floating > input[type="email"]:-webkit-autofill ~ label, .form-floating > input[type="password"]:-webkit-autofill ~ label, .form-floating > input[type="text"]:-webkit-autofill ~ label, .form-floating > input[type="number"]:-webkit-autofill ~ label, .form-floating > input[type="file"]:-webkit-autofill ~ label, .form-floating > input[type="date"]:-webkit-autofill ~ label, .form-floating > input[type="datetime-local"]:-webkit-autofill ~ label, .form-floating > input[type="month"]:-webkit-autofill ~ label, .form-floating > input[type="url"]:-webkit-autofill ~ label, .form-floating > input[type="week"]:-webkit-autofill ~ label, .form-floating > input[type="search"]:-webkit-autofill ~ label, .form-floating > input[type="tel"]:-webkit-autofill ~ label, .form-floating > input[type="time"]:-webkit-autofill ~ label, .form-floating > select:-webkit-autofill ~ label, .form-floating > textarea:-webkit-autofill ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 989, app/assets/stylesheets/application.scss */
+/* line 1008, app/assets/stylesheets/application.scss */
 .modal-header {
   align-items: center;
 }
 
-/* line 996, app/assets/stylesheets/application.scss */
+/* line 1015, app/assets/stylesheets/application.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 1000, app/assets/stylesheets/application.scss */
+/* line 1019, app/assets/stylesheets/application.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 1005, app/assets/stylesheets/application.scss */
+/* line 1024, app/assets/stylesheets/application.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
