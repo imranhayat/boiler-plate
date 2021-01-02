@@ -1,28 +1,38 @@
-<div class="col-xl-4 col-md-6">
-  <div class="card mb-4">
-    <div class="card-body">
-      <h5 class="card-title text-uppercase text-center"><%= plan.nickname %></h5>
-      <h6 class="card-price text-center"><%= number_to_currency(plan.amount_decimal, precision: 0, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %><span class="period">/<%= plan.interval %></span></h6>
-      <hr>
-      <ul class="fa-ul">
-        <li><span class="fa-li"><i class="fas fa-check"></i></span>Feature 1</li>
-        <li><span class="fa-li"><i class="fas fa-check"></i></span>Feature 2</li>
-        <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Feature 3</li>
+<div class="col-lg-3 col-sm-6 single-plan">
+  <div class="card mb-4 mb-lg-0">
+    <div class="card-header">
+      <div class="card-title text-uppercase"><%= plan.nickname %></div>
+      <div class="card-price"><%= number_to_currency(plan.interval == 'year' ? (plan.amount_decimal / 12) : plan.amount_decimal, strip_insignificant_zeros: true, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %><span class="period">/month</span></div>
+      <% if plan.interval == 'year' %>
+        <div><%= number_to_currency(plan.interval == 'year' ? plan.amount_decimal : plan.amount_decimal, strip_insignificant_zeros: true, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %>/year</div>
+        <div>Save $30/year</div>
+      <% end %>
+    </div>
+    <div class="card-body p-0">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Feature 1</li>
+        <li class="list-group-item">Feature 2</li>
+        <li class="list-group-item">Feature 3</li>
+        <li class="list-group-item">Feature 4</li>
+        <li class="list-group-item text-muted">Feature 5</li>
+        <li class="list-group-item text-muted">Feature 6</li>
       </ul>
       <% if current_user.has_role?(:normal) %>
-        <% if current_user.subscription.present? && current_user.subscription.active? %>
-          <% if @current_user_plan.id == plan.id %>
-            Your Current Plan
+        <div class="px-3 pb-3 pt-1">
+          <% if current_user.subscription.present? && current_user.subscription.active? %>
+            <% if @current_user_plan.id == plan.id %>
+              Your Current Plan
+            <% else %>
+              <%= link_to "CHANGE PLAN", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn-choose-plan"  %>
+            <% end %>
           <% else %>
-            <%= link_to "Change Plan", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn btn-block btn-primary btn-lg text-uppercase"  %>
+            <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
+              <%= link_to "CHOOSE PLAN", fetch_payment_details_path(plan: plan), remote: true, class:"btn-choose-plan" %>
+            <% else %>
+              <%= link_to "CHOOSE PLAN", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class:"btn-choose-plan"  %>
+            <% end %>
           <% end %>
-        <% else %>
-          <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
-            <%= link_to "Choose Plan", fetch_payment_details_path(plan: plan), remote: true, class:"btn btn-block btn-primary btn-lg text-uppercase" %>
-          <% else %>
-            <%= link_to "Choose Plan", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class:"btn btn-block btn-primary btn-lg text-uppercase"  %>
-          <% end %>
-        <% end %>
+        </div>
       <% end %>
     </div>
   </div>

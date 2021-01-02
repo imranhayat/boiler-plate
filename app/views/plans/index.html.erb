@@ -14,7 +14,7 @@
   </div>
 <% end %>
 <section class="pricing pt-4 pt-lg-5 pb-3 pb-lg-4">
-  <div class="container-lg">
+  <div class="container-xxl">
     <% if !current_user.has_role? :admin %>
       <h2 class="text-center mb-4">Pricing Plans</h2>
     <% end %>
@@ -22,12 +22,12 @@
       <div class="text-center pricing-tabs">
         <div class="btn-group rounded bg-white nav d-inline-flex" role="tablist" id="myTab" aria-label="Pricing Plans">
           <a class="btn active" id="month-tab" data-toggle="tab" href="#month" role="tab" aria-controls="month" aria-selected="true">Monthly Billing</a>
-          <a class="btn" id="year-tab" data-toggle="tab" href="#year" role="tab" aria-controls="year" aria-selected="false">Annually Billing</a>
+          <a class="btn" id="year-tab" data-toggle="tab" href="#year" role="tab" aria-controls="year" aria-selected="false">Annual Billing</a>
         </div>
       </div>
       <div class="tab-content mt-4" id="myTabContent">
         <% if @monthly_plans.present? %>
-          <div class="row justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
+          <div class="row no-gutters justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
             <% @monthly_plans.each do |plan| %>
               <%= render 'plan', plan: plan %>
             <% end %>
@@ -38,7 +38,7 @@
           </div>
         <% end %>
         <% if @yearly_plans.present? %>
-          <div class="row justify-content-center tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
+          <div class="row no-gutters justify-content-center tab-pane fade" id="year" role="tabpanel" aria-labelledby="year-tab">
             <% @yearly_plans.each do |plan| %>
               <%= render 'plan', plan: plan %>
             <% end %>
