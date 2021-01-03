@@ -9558,7 +9558,7 @@ button.bg-dark:focus {
 }
 
 /* line 7, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_borders.scss */
-.border {
+.border, .MyCardElement {
   border: 1px solid #d1d1d1 !important;
 }
 
@@ -9653,7 +9653,7 @@ button.bg-dark:focus {
 }
 
 /* line 33, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_borders.scss */
-.rounded-sm {
+.rounded-sm, .MyCardElement {
   border-radius: 5px !important;
 }
 
@@ -11589,7 +11589,7 @@ button.bg-dark:focus {
 }
 
 /* line 11, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-.p-3, .banner-header {
+.p-3, .MyCardElement, .banner-header {
   padding: 15px !important;
 }
 
@@ -16851,18 +16851,19 @@ textarea {
 
 /* line 854, app/assets/stylesheets/application.scss */
 #spinner {
+  display: none;
   position: absolute;
   top: calc(50vh - 32px);
   left: calc(50vw - 32px);
   z-index: 9999;
 }
 
-/* line 867, app/assets/stylesheets/application.scss */
+/* line 872, app/assets/stylesheets/application.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 870, app/assets/stylesheets/application.scss */
+/* line 875, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -16870,12 +16871,12 @@ textarea {
   top: 10px;
 }
 
-/* line 876, app/assets/stylesheets/application.scss */
+/* line 881, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input {
   display: none !important;
 }
 
-/* line 879, app/assets/stylesheets/application.scss */
+/* line 884, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -16886,18 +16887,18 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 888, app/assets/stylesheets/application.scss */
+/* line 893, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 891, app/assets/stylesheets/application.scss */
+/* line 896, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #79589f;
 }
 
-/* line 899, app/assets/stylesheets/application.scss */
+/* line 904, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -16908,27 +16909,27 @@ textarea {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 908, app/assets/stylesheets/application.scss */
+/* line 913, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 917, app/assets/stylesheets/application.scss */
+/* line 922, app/assets/stylesheets/application.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
 @media (max-width: 767.98px) {
-  /* line 923, app/assets/stylesheets/application.scss */
+  /* line 928, app/assets/stylesheets/application.scss */
   .img-user {
     width: 100px;
     height: 100px;
   }
 }
 
-/* line 929, app/assets/stylesheets/application.scss */
+/* line 934, app/assets/stylesheets/application.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -16938,18 +16939,18 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
-  /* line 938, app/assets/stylesheets/application.scss */
+  /* line 943, app/assets/stylesheets/application.scss */
   .col-profile {
     background-image: none;
   }
 }
 
-/* line 951, app/assets/stylesheets/application.scss */
+/* line 956, app/assets/stylesheets/application.scss */
 .form-floating {
   position: relative;
 }
 
-/* line 955, app/assets/stylesheets/application.scss */
+/* line 960, app/assets/stylesheets/application.scss */
 .form-floating > label {
   color: #6c757d;
   font-size: 14px;
@@ -16965,25 +16966,25 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 970, app/assets/stylesheets/application.scss */
+  /* line 975, app/assets/stylesheets/application.scss */
   .form-floating > label {
     transition: none;
   }
 }
 
-/* line 975, app/assets/stylesheets/application.scss */
+/* line 980, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-webkit-input-placeholder, .form-floating > input[type="email"]::-webkit-input-placeholder, .form-floating > input[type="password"]::-webkit-input-placeholder, .form-floating > input[type="text"]::-webkit-input-placeholder, .form-floating > input[type="number"]::-webkit-input-placeholder, .form-floating > input[type="file"]::-webkit-input-placeholder, .form-floating > input[type="date"]::-webkit-input-placeholder, .form-floating > input[type="datetime-local"]::-webkit-input-placeholder, .form-floating > input[type="month"]::-webkit-input-placeholder, .form-floating > input[type="url"]::-webkit-input-placeholder, .form-floating > input[type="week"]::-webkit-input-placeholder, .form-floating > input[type="search"]::-webkit-input-placeholder, .form-floating > input[type="tel"]::-webkit-input-placeholder, .form-floating > input[type="time"]::-webkit-input-placeholder, .form-floating > select::-webkit-input-placeholder, .form-floating > textarea::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 980, app/assets/stylesheets/application.scss */
+/* line 985, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 985, app/assets/stylesheets/application.scss */
+/* line 990, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
@@ -16997,14 +16998,14 @@ textarea {
   opacity: 0;
 }
 
-/* line 992, app/assets/stylesheets/application.scss */
+/* line 997, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 998, app/assets/stylesheets/application.scss */
+/* line 1003, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
@@ -17038,30 +17039,30 @@ textarea {
   font-weight: 500;
 }
 
-/* line 1006, app/assets/stylesheets/application.scss */
+/* line 1011, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:-webkit-autofill ~ label, .form-floating > input[type="email"]:-webkit-autofill ~ label, .form-floating > input[type="password"]:-webkit-autofill ~ label, .form-floating > input[type="text"]:-webkit-autofill ~ label, .form-floating > input[type="number"]:-webkit-autofill ~ label, .form-floating > input[type="file"]:-webkit-autofill ~ label, .form-floating > input[type="date"]:-webkit-autofill ~ label, .form-floating > input[type="datetime-local"]:-webkit-autofill ~ label, .form-floating > input[type="month"]:-webkit-autofill ~ label, .form-floating > input[type="url"]:-webkit-autofill ~ label, .form-floating > input[type="week"]:-webkit-autofill ~ label, .form-floating > input[type="search"]:-webkit-autofill ~ label, .form-floating > input[type="tel"]:-webkit-autofill ~ label, .form-floating > input[type="time"]:-webkit-autofill ~ label, .form-floating > select:-webkit-autofill ~ label, .form-floating > textarea:-webkit-autofill ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 1014, app/assets/stylesheets/application.scss */
+/* line 1019, app/assets/stylesheets/application.scss */
 .modal-header {
   align-items: center;
 }
 
-/* line 1021, app/assets/stylesheets/application.scss */
+/* line 1026, app/assets/stylesheets/application.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 1025, app/assets/stylesheets/application.scss */
+/* line 1030, app/assets/stylesheets/application.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 1030, app/assets/stylesheets/application.scss */
+/* line 1035, app/assets/stylesheets/application.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
