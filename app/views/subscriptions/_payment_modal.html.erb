@@ -40,12 +40,8 @@
   </div>
 </div>
 
-<div id="spinner"><img src="/spinner.gif"></div>
+<div id="spinner"><img src="/loading.svg" width="120px"></div>
 <script>
-  $('#spinner').hide();
-  $('.MyCardElement').addClass('card');
-  $('.MyCardElement').addClass('border');
-  $('.MyCardElement').addClass('p-3');
 
   var stripe_plan_id = document.getElementById('stripe_plan_id_<%= stripe_plan_id %>').value
   var app_plan_id = document.getElementById('app_plan_id_<%= app_plan_id %>').value

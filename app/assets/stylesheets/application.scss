@@ -852,10 +852,15 @@ input[type="submit"], button[type="submit"]{
 }
 
 #spinner {
+  display: none;
   position: absolute;
   top: calc(50vh - 32px);
   left: calc(50vw - 32px);
   z-index: 9999;
+}
+
+.MyCardElement{
+  @extend .border, .p-3, .rounded-sm;
 }
 // Pricing End
 

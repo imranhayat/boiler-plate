@@ -32,9 +32,8 @@
   </div>
 </div>
 
-<div id="spinner"><img src="/spinner.gif"></div>
+<div id="spinner"><img src="/loading.svg" width="120px"></div>
 <script>
-  $('#spinner').hide();
   $('#cardSubmit').on('click', function(){
     var coupon_id = document.getElementById('coupon').value;
     $('#confirmation_modal_for_<%= stripe_plan_id %>').modal('hide');
