@@ -76,9 +76,9 @@
 <% end %>
 
 <% if user_signed_in? and current_user.has_role? :admin %>
-<body class="nav-fixed h-100">
-  <%= render 'layouts/header-dashboard' %>
-  <%= render 'layouts/swal' %>
+  <body class="nav-fixed h-100">
+    <%= render 'layouts/header-dashboard' %>
+    <%= render 'layouts/swal' %>
     <div id="layoutSidenav">
       <%= render 'layouts/admin_sidebar' %>
       <div id="layoutSidenav_content">
@@ -97,8 +97,8 @@
       <%= yield %>
     </main>
     <%= render 'layouts/footer' %>
-    <%= render 'layouts/page_center_script' %>
   </body>
 <% end %>
+<%= render 'layouts/page_center_script' %>
 
 </html>
