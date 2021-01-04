@@ -16205,8 +16205,8 @@ div.dt-buttons {
 }
 
 /* line 198, app/assets/stylesheets/application.scss */
-table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > td.dtr-control:before,
-table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > th.dtr-control:before {
+table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > th.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > td.dtr-control:before {
   content: '\f055';
   font-family: "Font Awesome 5 Free";
   box-shadow: none;
@@ -16220,8 +16220,8 @@ table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > th.dtr-control:bef
 
 /* line 213, app/assets/stylesheets/application.scss */
 table.dataTable.dtr-inline.collapsed > tbody tr.parent > th.dtr-control:before,
-table.dataTable.dtr-inline.collapsed > tbody tr.parent > th.dtr-control:before {
-  content: '\f056';
+table.dataTable.dtr-inline.collapsed > tbody tr.parent > td.dtr-control:before {
+  content: '\f056' !important;
 }
 
 /* line 220, app/assets/stylesheets/application.scss */
