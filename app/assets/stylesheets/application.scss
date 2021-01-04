@@ -31,7 +31,7 @@ $navbar-light-active-color: $primary;
 $border-color: #d1d1d1;
 $hr-border-color: $border-color;
 $custom-control-indicator-border-color: $border-color;
-$card-border-color:  #fff;
+$card-border-color: #fff;
 $input-border-color: $border-color;
 $dropdown-link-hover-bg: #f2f2f2;
 $input-color: $body-color;
@@ -195,8 +195,8 @@ div.dt-buttons{
 // Datatable Responsive Plus Minus Icons
 table.dataTable.dtr-inline.collapsed>tbody{
   tr[role="row"]>{
-    td.dtr-control:before,
-    th.dtr-control:before{
+    th.dtr-control:before,
+    td.dtr-control:before{
       content: '\f055';
       font-family: $font-awesome;
       box-shadow: none;
@@ -211,8 +211,8 @@ table.dataTable.dtr-inline.collapsed>tbody{
 
   tr.parent>{
     th.dtr-control:before,
-    th.dtr-control:before{
-      content:'\f056'
+    td.dtr-control:before{
+      content:'\f056' !important;
     }
   }
 }
