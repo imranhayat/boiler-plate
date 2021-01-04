@@ -3850,7 +3850,7 @@ textarea.form-control {
 }
 
 /* line 217, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_forms.scss */
-.form-check, .radio, .checkbox {
+.form-check, .checkbox, .radio {
   position: relative;
   display: block;
   padding-left: 1.25rem;
@@ -3971,28 +3971,28 @@ textarea.form-control {
 }
 
 /* line 133, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label {
+.was-validated .custom-control-input:valid ~ .custom-control-label, .was-validated .checkbox input[type="checkbox"]:valid ~ .custom-control-label, .checkbox .was-validated input[type="checkbox"]:valid ~ .custom-control-label, .was-validated .checkbox input[type="radio"]:valid ~ .custom-control-label, .checkbox .was-validated input[type="radio"]:valid ~ .custom-control-label, .was-validated .radio input[type="checkbox"]:valid ~ .custom-control-label, .radio .was-validated input[type="checkbox"]:valid ~ .custom-control-label, .was-validated .radio input[type="radio"]:valid ~ .custom-control-label, .radio .was-validated input[type="radio"]:valid ~ .custom-control-label, .custom-control-input.is-valid ~ .custom-control-label, .checkbox input.is-valid[type="checkbox"] ~ .custom-control-label, .checkbox input.is-valid[type="radio"] ~ .custom-control-label, .radio input.is-valid[type="checkbox"] ~ .custom-control-label, .radio input.is-valid[type="radio"] ~ .custom-control-label {
   color: #28a745;
 }
 
 /* line 136, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:valid ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:valid ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:valid ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:valid ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:valid ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:valid ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:valid ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:valid ~ .custom-control-label::before, .custom-control-input.is-valid ~ .custom-control-label::before, .checkbox input.is-valid[type="checkbox"] ~ .custom-control-label::before, .checkbox input.is-valid[type="radio"] ~ .custom-control-label::before, .radio input.is-valid[type="checkbox"] ~ .custom-control-label::before, .radio input.is-valid[type="radio"] ~ .custom-control-label::before {
   border-color: #28a745;
 }
 
 /* line 142, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:checked ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:valid:checked ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:valid:checked ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:valid:checked ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:valid:checked ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:valid:checked ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:valid:checked ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:valid:checked ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:valid:checked ~ .custom-control-label::before, .custom-control-input.is-valid:checked ~ .custom-control-label::before, .checkbox input.is-valid[type="checkbox"]:checked ~ .custom-control-label::before, .checkbox input.is-valid[type="radio"]:checked ~ .custom-control-label::before, .radio input.is-valid[type="checkbox"]:checked ~ .custom-control-label::before, .radio input.is-valid[type="radio"]:checked ~ .custom-control-label::before {
   border-color: #34ce57;
   background-color: #34ce57;
 }
 
 /* line 149, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:focus ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:valid:focus ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:valid:focus ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:valid:focus ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:valid:focus ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:valid:focus ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:valid:focus ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:valid:focus ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:valid:focus ~ .custom-control-label::before, .custom-control-input.is-valid:focus ~ .custom-control-label::before, .checkbox input.is-valid[type="checkbox"]:focus ~ .custom-control-label::before, .checkbox input.is-valid[type="radio"]:focus ~ .custom-control-label::before, .radio input.is-valid[type="checkbox"]:focus ~ .custom-control-label::before, .radio input.is-valid[type="radio"]:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 /* line 153, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before {
+.was-validated .custom-control-input:valid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:valid:focus:not(:checked) ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:valid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:valid:focus:not(:checked) ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:valid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:valid:focus:not(:checked) ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:valid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:valid:focus:not(:checked) ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:valid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-valid:focus:not(:checked) ~ .custom-control-label::before, .checkbox input.is-valid[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .checkbox input.is-valid[type="radio"]:focus:not(:checked) ~ .custom-control-label::before, .radio input.is-valid[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .radio input.is-valid[type="radio"]:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #28a745;
 }
 
@@ -4089,28 +4089,28 @@ textarea.form-control {
 }
 
 /* line 133, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:invalid ~ .custom-control-label, .custom-control-input.is-invalid ~ .custom-control-label {
+.was-validated .custom-control-input:invalid ~ .custom-control-label, .was-validated .checkbox input[type="checkbox"]:invalid ~ .custom-control-label, .checkbox .was-validated input[type="checkbox"]:invalid ~ .custom-control-label, .was-validated .checkbox input[type="radio"]:invalid ~ .custom-control-label, .checkbox .was-validated input[type="radio"]:invalid ~ .custom-control-label, .was-validated .radio input[type="checkbox"]:invalid ~ .custom-control-label, .radio .was-validated input[type="checkbox"]:invalid ~ .custom-control-label, .was-validated .radio input[type="radio"]:invalid ~ .custom-control-label, .radio .was-validated input[type="radio"]:invalid ~ .custom-control-label, .custom-control-input.is-invalid ~ .custom-control-label, .checkbox input.is-invalid[type="checkbox"] ~ .custom-control-label, .checkbox input.is-invalid[type="radio"] ~ .custom-control-label, .radio input.is-invalid[type="checkbox"] ~ .custom-control-label, .radio input.is-invalid[type="radio"] ~ .custom-control-label {
   color: #dc3545;
 }
 
 /* line 136, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:invalid ~ .custom-control-label::before, .custom-control-input.is-invalid ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:invalid ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:invalid ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:invalid ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:invalid ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:invalid ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:invalid ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:invalid ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:invalid ~ .custom-control-label::before, .custom-control-input.is-invalid ~ .custom-control-label::before, .checkbox input.is-invalid[type="checkbox"] ~ .custom-control-label::before, .checkbox input.is-invalid[type="radio"] ~ .custom-control-label::before, .radio input.is-invalid[type="checkbox"] ~ .custom-control-label::before, .radio input.is-invalid[type="radio"] ~ .custom-control-label::before {
   border-color: #dc3545;
 }
 
 /* line 142, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before, .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:checked ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:invalid:checked ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:invalid:checked ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:invalid:checked ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:invalid:checked ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:invalid:checked ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:invalid:checked ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:invalid:checked ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:invalid:checked ~ .custom-control-label::before, .custom-control-input.is-invalid:checked ~ .custom-control-label::before, .checkbox input.is-invalid[type="checkbox"]:checked ~ .custom-control-label::before, .checkbox input.is-invalid[type="radio"]:checked ~ .custom-control-label::before, .radio input.is-invalid[type="checkbox"]:checked ~ .custom-control-label::before, .radio input.is-invalid[type="radio"]:checked ~ .custom-control-label::before {
   border-color: #e4606d;
   background-color: #e4606d;
 }
 
 /* line 149, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:focus ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:invalid:focus ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:invalid:focus ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:invalid:focus ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:invalid:focus ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:invalid:focus ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:invalid:focus ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:invalid:focus ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:invalid:focus ~ .custom-control-label::before, .custom-control-input.is-invalid:focus ~ .custom-control-label::before, .checkbox input.is-invalid[type="checkbox"]:focus ~ .custom-control-label::before, .checkbox input.is-invalid[type="radio"]:focus ~ .custom-control-label::before, .radio input.is-invalid[type="checkbox"]:focus ~ .custom-control-label::before, .radio input.is-invalid[type="radio"]:focus ~ .custom-control-label::before {
   box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 /* line 153, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/mixins/_forms.scss */
-.was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before {
+.was-validated .custom-control-input:invalid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .checkbox input[type="checkbox"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .checkbox .was-validated input[type="checkbox"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .checkbox input[type="radio"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .checkbox .was-validated input[type="radio"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .radio input[type="checkbox"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .radio .was-validated input[type="checkbox"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .was-validated .radio input[type="radio"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .radio .was-validated input[type="radio"]:invalid:focus:not(:checked) ~ .custom-control-label::before, .custom-control-input.is-invalid:focus:not(:checked) ~ .custom-control-label::before, .checkbox input.is-invalid[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .checkbox input.is-invalid[type="radio"]:focus:not(:checked) ~ .custom-control-label::before, .radio input.is-invalid[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .radio input.is-invalid[type="radio"]:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #dc3545;
 }
 
@@ -4133,7 +4133,7 @@ textarea.form-control {
 }
 
 /* line 283, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_forms.scss */
-.form-inline .form-check, .form-inline .radio, .form-inline .checkbox {
+.form-inline .form-check, .form-inline .checkbox, .form-inline .radio {
   width: 100%;
 }
 
@@ -4170,7 +4170,7 @@ textarea.form-control {
     width: auto;
   }
   /* line 324, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .form-check, .form-inline .radio, .form-inline .checkbox {
+  .form-inline .form-check, .form-inline .checkbox, .form-inline .radio {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -4186,7 +4186,7 @@ textarea.form-control {
     margin-left: 0;
   }
   /* line 339, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_forms.scss */
-  .form-inline .custom-control, .form-inline .radio, .form-inline .checkbox {
+  .form-inline .custom-control, .form-inline .checkbox, .form-inline .radio {
     align-items: center;
     justify-content: center;
   }
@@ -5954,7 +5954,7 @@ input.btn-block[type="button"],
 }
 
 /* line 10, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control, .radio, .checkbox {
+.custom-control, .checkbox, .radio {
   position: relative;
   z-index: 1;
   display: block;
@@ -5971,7 +5971,7 @@ input.btn-block[type="button"],
 }
 
 /* line 24, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input {
+.custom-control-input, .checkbox input[type="checkbox"], .checkbox input[type="radio"], .radio input[type="checkbox"], .radio input[type="radio"] {
   position: absolute;
   left: 0;
   z-index: -1;
@@ -5981,36 +5981,36 @@ input.btn-block[type="button"],
 }
 
 /* line 32, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input:checked ~ .custom-control-label::before {
+.custom-control-input:checked ~ .custom-control-label::before, .checkbox input[type="checkbox"]:checked ~ .custom-control-label::before, .checkbox input[type="radio"]:checked ~ .custom-control-label::before, .radio input[type="checkbox"]:checked ~ .custom-control-label::before, .radio input[type="radio"]:checked ~ .custom-control-label::before {
   color: #fff;
   border-color: #79589f;
   background-color: #79589f;
 }
 
 /* line 39, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input:focus ~ .custom-control-label::before {
+.custom-control-input:focus ~ .custom-control-label::before, .checkbox input[type="checkbox"]:focus ~ .custom-control-label::before, .checkbox input[type="radio"]:focus ~ .custom-control-label::before, .radio input[type="checkbox"]:focus ~ .custom-control-label::before, .radio input[type="radio"]:focus ~ .custom-control-label::before {
   box-shadow: none;
 }
 
 /* line 48, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+.custom-control-input:focus:not(:checked) ~ .custom-control-label::before, .checkbox input[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .checkbox input[type="radio"]:focus:not(:checked) ~ .custom-control-label::before, .radio input[type="checkbox"]:focus:not(:checked) ~ .custom-control-label::before, .radio input[type="radio"]:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #baa8cf;
 }
 
 /* line 52, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before {
   color: #fff;
   background-color: #d4c9e1;
   border-color: #d4c9e1;
 }
 
 /* line 62, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input[disabled] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label {
+.custom-control-input[disabled] ~ .custom-control-label, .checkbox input[disabled][type="checkbox"] ~ .custom-control-label, .checkbox input[disabled][type="radio"] ~ .custom-control-label, .radio input[disabled][type="checkbox"] ~ .custom-control-label, .radio input[disabled][type="radio"] ~ .custom-control-label, .custom-control-input:disabled ~ .custom-control-label, .checkbox input[type="checkbox"]:disabled ~ .custom-control-label, .checkbox input[type="radio"]:disabled ~ .custom-control-label, .radio input[type="checkbox"]:disabled ~ .custom-control-label, .radio input[type="radio"]:disabled ~ .custom-control-label {
   color: #6c757d;
 }
 
 /* line 65, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-control-input[disabled] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before {
+.custom-control-input[disabled] ~ .custom-control-label::before, .checkbox input[disabled][type="checkbox"] ~ .custom-control-label::before, .checkbox input[disabled][type="radio"] ~ .custom-control-label::before, .radio input[disabled][type="checkbox"] ~ .custom-control-label::before, .radio input[disabled][type="radio"] ~ .custom-control-label::before, .custom-control-input:disabled ~ .custom-control-label::before, .checkbox input[type="checkbox"]:disabled ~ .custom-control-label::before, .checkbox input[type="radio"]:disabled ~ .custom-control-label::before, .radio input[type="checkbox"]:disabled ~ .custom-control-label::before, .radio input[type="radio"]:disabled ~ .custom-control-label::before {
   background-color: #e9ecef;
 }
 
@@ -6053,28 +6053,28 @@ input.btn-block[type="button"],
 }
 
 /* line 122, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox .custom-control-input:checked ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox .custom-control-input:checked ~ .custom-control-label::after, .custom-checkbox .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .custom-checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-checkbox .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .custom-checkbox input[type="radio"]:checked ~ .custom-control-label::after, .custom-checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .custom-checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after, .radio .custom-checkbox input[type="radio"]:checked ~ .custom-control-label::after, .radio .checkbox input[type="radio"]:checked ~ .custom-control-label::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
 }
 
 /* line 128, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before, .checkbox .custom-control-input:indeterminate ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::before, .checkbox .custom-control-input:indeterminate ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .checkbox .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::before, .checkbox .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="radio"]:indeterminate ~ .custom-control-label::before, .custom-checkbox .radio input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .radio .custom-checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::before, .custom-checkbox .radio input[type="radio"]:indeterminate ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:indeterminate ~ .custom-control-label::before, .radio .custom-checkbox input[type="radio"]:indeterminate ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::before {
   border-color: #79589f;
   background-color: #79589f;
 }
 
 /* line 133, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after, .checkbox .custom-control-input:indeterminate ~ .custom-control-label::after {
+.custom-checkbox .custom-control-input:indeterminate ~ .custom-control-label::after, .checkbox .custom-control-input:indeterminate ~ .custom-control-label::after, .custom-checkbox .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .checkbox .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .checkbox .custom-checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .custom-checkbox .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::after, .checkbox .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::after, .checkbox .custom-checkbox input[type="radio"]:indeterminate ~ .custom-control-label::after, .custom-checkbox .radio input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .radio .custom-checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .radio .checkbox input[type="checkbox"]:indeterminate ~ .custom-control-label::after, .custom-checkbox .radio input[type="radio"]:indeterminate ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:indeterminate ~ .custom-control-label::after, .radio .custom-checkbox input[type="radio"]:indeterminate ~ .custom-control-label::after, .radio .checkbox input[type="radio"]:indeterminate ~ .custom-control-label::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e");
 }
 
 /* line 139, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before, .checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before, .checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .custom-checkbox .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .custom-checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-checkbox .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .custom-checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before {
   background-color: rgba(121, 88, 159, 0.5);
 }
 
 /* line 142, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before, .checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before, .checkbox .custom-control-input:disabled:indeterminate ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .checkbox input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .custom-checkbox .checkbox input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .checkbox input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .custom-checkbox input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .custom-checkbox .radio input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .radio .custom-checkbox input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:disabled:indeterminate ~ .custom-control-label::before, .custom-checkbox .radio input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .radio .custom-checkbox input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:disabled:indeterminate ~ .custom-control-label::before {
   background-color: rgba(121, 88, 159, 0.5);
 }
 
@@ -6084,12 +6084,12 @@ input.btn-block[type="button"],
 }
 
 /* line 159, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-radio .custom-control-input:checked ~ .custom-control-label::after, .radio .custom-control-input:checked ~ .custom-control-label::after {
+.custom-radio .custom-control-input:checked ~ .custom-control-label::after, .radio .custom-control-input:checked ~ .custom-control-label::after, .custom-radio .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .custom-radio input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-radio .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .radio .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .custom-radio input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after, .custom-radio .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .custom-radio input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-radio .radio input[type="radio"]:checked ~ .custom-control-label::after, .radio .radio input[type="radio"]:checked ~ .custom-control-label::after, .radio .custom-radio input[type="radio"]:checked ~ .custom-control-label::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 /* line 165, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before, .radio .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-radio .custom-control-input:disabled:checked ~ .custom-control-label::before, .radio .custom-control-input:disabled:checked ~ .custom-control-label::before, .custom-radio .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-radio .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .custom-radio .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .custom-radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-radio .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .custom-radio input[type="radio"]:disabled:checked ~ .custom-control-label::before {
   background-color: rgba(121, 88, 159, 0.5);
 }
 
@@ -6125,13 +6125,13 @@ input.btn-block[type="button"],
 }
 
 /* line 201, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after, .custom-switch .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .custom-switch input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-switch .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .custom-switch input[type="radio"]:checked ~ .custom-control-label::after, .custom-switch .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .radio .custom-switch input[type="checkbox"]:checked ~ .custom-control-label::after, .custom-switch .radio input[type="radio"]:checked ~ .custom-control-label::after, .radio .custom-switch input[type="radio"]:checked ~ .custom-control-label::after {
   background-color: #fff;
   transform: translateX(0.75rem);
 }
 
 /* line 208, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_custom-forms.scss */
-.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before {
+.custom-switch .custom-control-input:disabled:checked ~ .custom-control-label::before, .custom-switch .checkbox input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-switch input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-switch .checkbox input[type="radio"]:disabled:checked ~ .custom-control-label::before, .checkbox .custom-switch input[type="radio"]:disabled:checked ~ .custom-control-label::before, .custom-switch .radio input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .radio .custom-switch input[type="checkbox"]:disabled:checked ~ .custom-control-label::before, .custom-switch .radio input[type="radio"]:disabled:checked ~ .custom-control-label::before, .radio .custom-switch input[type="radio"]:disabled:checked ~ .custom-control-label::before {
   background-color: rgba(121, 88, 159, 0.5);
 }
 
@@ -9749,7 +9749,7 @@ button.bg-dark:focus {
 }
 
 /* line 12, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_display.scss */
-.d-flex, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .center-cards, .page-center {
+.d-flex, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .page-center, .center-cards {
   display: flex !important;
 }
 
@@ -10113,7 +10113,7 @@ button.bg-dark:focus {
 }
 
 /* line 27, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_flex.scss */
-.justify-content-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .center-cards, .page-center {
+.justify-content-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .page-center, .center-cards {
   justify-content: center !important;
 }
 
@@ -10138,7 +10138,7 @@ button.bg-dark:focus {
 }
 
 /* line 33, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_flex.scss */
-.align-items-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview, .page-center {
+.align-items-center, .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview {
   align-items: center !important;
 }
 
@@ -11168,7 +11168,7 @@ button.bg-dark:focus {
 }
 
 /* line 7, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_sizing.scss */
-.h-100, .page-center {
+.h-100 {
   height: 100% !important;
 }
 
@@ -11603,8 +11603,8 @@ button.bg-dark:focus {
 /* line 15, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
 .pr-3,
 .px-3,
-.center-cards .card-body,
-.page-center .card-body {
+.page-center .card-body,
+.center-cards .card-body {
   padding-right: 15px !important;
 }
 
@@ -11618,8 +11618,8 @@ button.bg-dark:focus {
 /* line 21, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
 .pl-3,
 .px-3,
-.center-cards .card-body,
-.page-center .card-body {
+.page-center .card-body,
+.center-cards .card-body {
   padding-left: 15px !important;
 }
 
@@ -11778,10 +11778,10 @@ button.bg-dark:focus {
 /* line 12, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
 .pt-30,
 .py-30,
-.center-cards .card-body,
-.center-cards,
 .page-center .card-body,
-.page-center {
+.center-cards .card-body,
+.page-center,
+.center-cards {
   padding-top: 30px !important;
 }
 
@@ -11794,10 +11794,10 @@ button.bg-dark:focus {
 /* line 18, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
 .pb-30,
 .py-30,
-.center-cards .card-body,
-.center-cards,
 .page-center .card-body,
-.page-center {
+.center-cards .card-body,
+.page-center,
+.center-cards {
   padding-bottom: 30px !important;
 }
 
@@ -13977,7 +13977,7 @@ button.bg-dark:focus {
     padding-left: 8px !important;
   }
   /* line 11, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-  .p-lg-50, .center-cards .card-body, .page-center .card-body {
+  .p-lg-50, .page-center .card-body, .center-cards .card-body {
     padding: 50px !important;
   }
   /* line 12, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
@@ -16126,71 +16126,71 @@ h3 {
 }
 
 @media (max-width: 991.98px) {
-  /* line 124, app/assets/stylesheets/application.scss */
+  /* line 125, app/assets/stylesheets/application.scss */
   body {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 575.98px) {
-  /* line 130, app/assets/stylesheets/application.scss */
+  /* line 131, app/assets/stylesheets/application.scss */
   body {
     font-size: 0.85rem;
   }
 }
 
-/* line 137, app/assets/stylesheets/application.scss */
+/* line 138, app/assets/stylesheets/application.scss */
 .table {
   margin-bottom: 0;
   background-color: #fff;
   width: 100% !important;
 }
 
-/* line 143, app/assets/stylesheets/application.scss */
+/* line 144, app/assets/stylesheets/application.scss */
 table.dataTable > tbody > tr.child ul.dtr-details > li {
   border-color: #d1d1d1;
 }
 
-/* line 147, app/assets/stylesheets/application.scss */
+/* line 148, app/assets/stylesheets/application.scss */
 .custom-select-sm {
   padding-right: 1rem;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.2rem center/8px 10px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 6'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.2rem center/8px 12px;
 }
 
-/* line 152, app/assets/stylesheets/application.scss */
+/* line 153, app/assets/stylesheets/application.scss */
 div.dataTables_wrapper div.dataTables_filter {
   display: inline-block;
 }
 
-/* line 155, app/assets/stylesheets/application.scss */
+/* line 156, app/assets/stylesheets/application.scss */
 div.dataTables_wrapper div.dataTables_filter label {
   margin-bottom: 0;
   position: relative;
 }
 
-/* line 161, app/assets/stylesheets/application.scss */
+/* line 164, app/assets/stylesheets/application.scss */
 div.dataTables_wrapper div.dataTables_info {
   padding-top: 0;
 }
 
-/* line 165, app/assets/stylesheets/application.scss */
-div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"] {
-  padding: 0;
-}
-
-/* line 169, app/assets/stylesheets/application.scss */
+/* line 168, app/assets/stylesheets/application.scss */
 div.dataTables_wrapper div.dataTables_length select {
   border-radius: 3px;
 }
 
 /* line 173, app/assets/stylesheets/application.scss */
+div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"] {
+  padding: 0;
+}
+
+/* line 177, app/assets/stylesheets/application.scss */
 div.dt-buttons {
   width: auto;
   margin-bottom: 0;
 }
 
 @media (max-width: 642.98px) {
-  /* line 179, app/assets/stylesheets/application.scss */
+  /* line 183, app/assets/stylesheets/application.scss */
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0;
     width: 100%;
@@ -16198,14 +16198,15 @@ div.dt-buttons {
 }
 
 @media (max-width: 681.98px) {
-  /* line 186, app/assets/stylesheets/application.scss */
+  /* line 190, app/assets/stylesheets/application.scss */
   div.dt-buttons {
     margin-bottom: 10px;
   }
 }
 
-/* line 191, app/assets/stylesheets/application.scss */
-table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > th.dtr-control:before {
+/* line 198, app/assets/stylesheets/application.scss */
+table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > td.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody tr[role="row"] > th.dtr-control:before {
   content: '\f055';
   font-family: "Font Awesome 5 Free";
   box-shadow: none;
@@ -16217,67 +16218,62 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td.dtr-control:b
   background-color: transparent;
 }
 
-/* line 203, app/assets/stylesheets/application.scss */
+/* line 213, app/assets/stylesheets/application.scss */
+table.dataTable.dtr-inline.collapsed > tbody tr.parent > th.dtr-control:before,
+table.dataTable.dtr-inline.collapsed > tbody tr.parent > th.dtr-control:before {
+  content: '\f056';
+}
+
+/* line 220, app/assets/stylesheets/application.scss */
 table.dataTable > tbody > tr.child ul.dtr-details {
   display: block;
 }
 
-/* line 207, app/assets/stylesheets/application.scss */
+/* line 224, app/assets/stylesheets/application.scss */
 .dtr-title:after {
   content: ":";
 }
 
 @media (max-width: 991.98px) {
-  /* line 212, app/assets/stylesheets/application.scss */
+  /* line 229, app/assets/stylesheets/application.scss */
   .dt-buttons .btn, .dt-buttons .pricing .btn-choose-plan, .pricing .dt-buttons .btn-choose-plan, .dt-buttons .btn-submit, .dt-buttons input[type="submit"], .dt-buttons button[type="submit"], .dt-buttons .btn-google, .dt-buttons .btn-facebook {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
 
-/* line 218, app/assets/stylesheets/application.scss */
-table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before, table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th.dtr-control:before {
-  content: '\f056';
-}
-
-/* line 222, app/assets/stylesheets/application.scss */
+/* line 235, app/assets/stylesheets/application.scss */
 .table-bordered thead th, .table-bordered thead td {
   border-bottom-width: 0px;
   border-top-width: 0px;
 }
 
-/* line 227, app/assets/stylesheets/application.scss */
-.sorting:before, .sorting:after, .sorting_asc:after, .sorting_desc:after, .sorting_asc:before, .sorting_desc:before {
+/* line 243, app/assets/stylesheets/application.scss */
+.sorting:after, .sorting:before, .sorting_asc:after, .sorting_asc:before, .sorting_desc:after, .sorting_desc:before {
   font-size: 15px;
   line-height: 18px;
   font-weight: 600;
   font-family: "Font Awesome 5 Free";
 }
 
-/* line 234, app/assets/stylesheets/application.scss */
+/* line 250, app/assets/stylesheets/application.scss */
 .sorting:after, .sorting_asc:after, .sorting_desc:after {
   right: 0.2em !important;
   content: '\f30c' !important;
 }
 
-/* line 239, app/assets/stylesheets/application.scss */
+/* line 255, app/assets/stylesheets/application.scss */
 .sorting:before, .sorting_asc:before, .sorting_desc:before {
   right: 0.8em !important;
   content: '\f309' !important;
 }
 
-/* line 244, app/assets/stylesheets/application.scss */
-.table th {
-  border-bottom-width: 1px;
+/* line 262, app/assets/stylesheets/application.scss */
+.table th, .table.dataTable > tbody > tr.child span.dtr-title {
   font-weight: 500;
 }
 
-/* line 249, app/assets/stylesheets/application.scss */
-.table.dataTable > tbody > tr.child span.dtr-title {
-  font-weight: 500;
-}
-
-/* line 253, app/assets/stylesheets/application.scss */
+/* line 266, app/assets/stylesheets/application.scss */
 .search-label {
   opacity: 0;
   z-index: -1;
@@ -16288,17 +16284,17 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before
   color: #6c757d;
 }
 
-/* line 266, app/assets/stylesheets/application.scss */
+/* line 279, app/assets/stylesheets/application.scss */
 .statistics .card {
   border: 1px solid #d1d1d1;
 }
 
-/* line 269, app/assets/stylesheets/application.scss */
+/* line 283, app/assets/stylesheets/application.scss */
 .statistics .card-body {
   padding: 30px 5px 25px 5px;
 }
 
-/* line 272, app/assets/stylesheets/application.scss */
+/* line 287, app/assets/stylesheets/application.scss */
 .statistics .number {
   font-size: 30px;
   font-weight: 500;
@@ -16306,63 +16302,62 @@ table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td.dtr-control:before
   margin-top: 5px;
 }
 
-/* line 284, app/assets/stylesheets/application.scss */
+/* line 299, app/assets/stylesheets/application.scss */
 .sweet-alert input {
   display: none;
 }
 
-/* line 288, app/assets/stylesheets/application.scss */
+/* line 303, app/assets/stylesheets/application.scss */
 .sweet-alert button {
   background-color: #79589f !important;
 }
 
-/* line 295, app/assets/stylesheets/application.scss */
+/* line 310, app/assets/stylesheets/application.scss */
 footer {
   font-size: 1rem;
 }
 
-/* line 305, app/assets/stylesheets/application.scss */
+/* line 320, app/assets/stylesheets/application.scss */
 input[type="email"], input[type="password"], input[type="text"], input[type="number"], input[type="file"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="url"], input[type="week"], input[type="search"], input[type="tel"], input[type="time"], select, textarea {
   box-shadow: none;
   filter: none;
 }
 
-/* line 315, app/assets/stylesheets/application.scss */
+/* line 330, app/assets/stylesheets/application.scss */
 textarea {
   border-radius: 5px;
   height: auto;
   min-height: 45px;
 }
 
-/* line 321, app/assets/stylesheets/application.scss */
-.form-control:-webkit-autofill, input[type="email"]:-webkit-autofill, input[type="password"]:-webkit-autofill, input[type="text"]:-webkit-autofill, input[type="number"]:-webkit-autofill, input[type="file"]:-webkit-autofill, input[type="date"]:-webkit-autofill, input[type="datetime-local"]:-webkit-autofill, input[type="month"]:-webkit-autofill, input[type="url"]:-webkit-autofill, input[type="week"]:-webkit-autofill, input[type="search"]:-webkit-autofill, input[type="tel"]:-webkit-autofill, input[type="time"]:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill,
-.form-control:-webkit-autofill:hover,
-.form-control:-webkit-autofill:focus {
+/* line 337, app/assets/stylesheets/application.scss */
+.form-control:-webkit-autofill, input[type="email"]:-webkit-autofill, input[type="password"]:-webkit-autofill, input[type="text"]:-webkit-autofill, input[type="number"]:-webkit-autofill, input[type="file"]:-webkit-autofill, input[type="date"]:-webkit-autofill, input[type="datetime-local"]:-webkit-autofill, input[type="month"]:-webkit-autofill, input[type="url"]:-webkit-autofill, input[type="week"]:-webkit-autofill, input[type="search"]:-webkit-autofill, input[type="tel"]:-webkit-autofill, input[type="time"]:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus {
   -webkit-text-fill-color: #1d2b3a;
   box-shadow: 0 0 0px 1000px #fff inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* line 330, app/assets/stylesheets/application.scss */
+/* line 344, app/assets/stylesheets/application.scss */
 .form-control:-webkit-autofill::first-line, input[type="email"]:-webkit-autofill::first-line, input[type="password"]:-webkit-autofill::first-line, input[type="text"]:-webkit-autofill::first-line, input[type="number"]:-webkit-autofill::first-line, input[type="file"]:-webkit-autofill::first-line, input[type="date"]:-webkit-autofill::first-line, input[type="datetime-local"]:-webkit-autofill::first-line, input[type="month"]:-webkit-autofill::first-line, input[type="url"]:-webkit-autofill::first-line, input[type="week"]:-webkit-autofill::first-line, input[type="search"]:-webkit-autofill::first-line, input[type="tel"]:-webkit-autofill::first-line, input[type="time"]:-webkit-autofill::first-line, select:-webkit-autofill::first-line, textarea:-webkit-autofill::first-line {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
-/* line 343, app/assets/stylesheets/application.scss */
-.custom-control-label {
-  line-height: 25px;
+/* line 361, app/assets/stylesheets/application.scss */
+.radio .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before {
+  background-color: #79589f;
+  border-color: #79589f;
 }
 
-/* line 348, app/assets/stylesheets/application.scss */
-.custom-checkbox .custom-control-label::before, .checkbox .custom-control-label::before {
+/* line 370, app/assets/stylesheets/application.scss */
+.checkbox .custom-control-label::before {
   border-radius: 2px;
   transition: none;
 }
 
-/* line 353, app/assets/stylesheets/application.scss */
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox .custom-control-input:checked ~ .custom-control-label::after {
+/* line 375, app/assets/stylesheets/application.scss */
+.checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after {
   content: "\f00c";
   font-weight: 900;
   top: -1.01px;
@@ -16373,149 +16368,144 @@ textarea {
   background-image: none;
 }
 
-/* line 365, app/assets/stylesheets/application.scss */
-.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
-  background-color: #79589f;
+/* line 386, app/assets/stylesheets/application.scss */
+.checkbox .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before {
+  background-color: #fff;
   border-color: #79589f;
 }
 
-/* line 372, app/assets/stylesheets/application.scss */
+/* line 392, app/assets/stylesheets/application.scss */
+.custom-control-label {
+  line-height: 25px;
+}
+
+/* line 398, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* line 376, app/assets/stylesheets/application.scss */
+/* line 402, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* line 380, app/assets/stylesheets/application.scss */
+/* line 406, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-thumb {
   background: transparent;
   background-color: #79589f;
   border-radius: 3px;
 }
 
-/* line 389, app/assets/stylesheets/application.scss */
+/* line 415, app/assets/stylesheets/application.scss */
 .nav-link {
   font-weight: 500;
   font-size: 16px;
 }
 
-/* line 394, app/assets/stylesheets/application.scss */
+/* line 420, app/assets/stylesheets/application.scss */
 .navbar {
   z-index: 1;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 399, app/assets/stylesheets/application.scss */
+/* line 425, app/assets/stylesheets/application.scss */
 .dropdown-item i {
   width: 22px;
 }
 
-/* line 403, app/assets/stylesheets/application.scss */
+/* line 429, app/assets/stylesheets/application.scss */
 .navbar-light .navbar-toggler {
   border-color: #d1d1d1;
   padding: 3px 5px;
 }
 
 @media (max-width: 991.98px) {
-  /* line 411, app/assets/stylesheets/application.scss */
+  /* line 437, app/assets/stylesheets/application.scss */
   .navbar .dropdown-toggle::after {
     display: none;
   }
-  /* line 415, app/assets/stylesheets/application.scss */
+  /* line 441, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu {
     display: block;
     padding: 0;
     border: 0;
   }
-  /* line 420, app/assets/stylesheets/application.scss */
+  /* line 446, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item {
     padding-left: 5px;
     padding-right: 5px;
   }
-  /* line 424, app/assets/stylesheets/application.scss */
+  /* line 450, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item i {
     display: none;
   }
 }
 
-/* line 434, app/assets/stylesheets/application.scss */
+/* line 460, app/assets/stylesheets/application.scss */
 .input-group-append .btn, .input-group-append .pricing .btn-choose-plan, .pricing .input-group-append .btn-choose-plan, .input-group-append .btn-submit, .input-group-append input[type="submit"], .input-group-append button[type="submit"], .input-group-append .btn-google, .input-group-append .btn-facebook {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-/* line 439, app/assets/stylesheets/application.scss */
-.btn:focus, .pricing .btn-choose-plan:focus, .btn:active:focus, .btn:active, .pricing .btn-choose-plan:active, .btn-submit:active, input[type="submit"]:active, button[type="submit"]:active, .btn-google:active, .btn-facebook:active, button:focus, :focus {
+/* line 465, app/assets/stylesheets/application.scss */
+:focus {
   box-shadow: none !important;
   outline: none;
 }
 
-/* line 444, app/assets/stylesheets/application.scss */
+/* line 470, app/assets/stylesheets/application.scss */
 .btn-link {
   padding: 0;
 }
 
-/* line 448, app/assets/stylesheets/application.scss */
+/* line 474, app/assets/stylesheets/application.scss */
 .btn-block, .pricing .btn-choose-plan, .btn-submit, input[type="submit"], button[type="submit"], .btn-google, .btn-facebook {
   border-radius: 50px;
 }
 
-/* line 458, app/assets/stylesheets/application.scss */
-.page-center > .card {
+/* line 484, app/assets/stylesheets/application.scss */
+.page-center > .card, .center-cards > .card {
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 462, app/assets/stylesheets/application.scss */
-.page-center .w-470 {
+/* line 488, app/assets/stylesheets/application.scss */
+.page-center .w-470, .center-cards .w-470 {
   width: 470px;
 }
 
-/* line 474, app/assets/stylesheets/application.scss */
-.center-cards > .card {
-  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
+/* line 497, app/assets/stylesheets/application.scss */
+.page-center {
+  height: 100%;
+  align-items: center;
 }
 
-/* line 478, app/assets/stylesheets/application.scss */
-.center-cards .w-470 {
-  width: 470px;
-}
-
-/* line 487, app/assets/stylesheets/application.scss */
-.btn-google, .btn-facebook {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-/* line 501, app/assets/stylesheets/application.scss */
+/* line 514, app/assets/stylesheets/application.scss */
 .btn-google {
   background-color: #DB4437;
 }
 
-/* line 504, app/assets/stylesheets/application.scss */
+/* line 517, app/assets/stylesheets/application.scss */
 .btn-google:hover {
   background-color: #ea4335;
 }
 
-/* line 509, app/assets/stylesheets/application.scss */
+/* line 522, app/assets/stylesheets/application.scss */
 .btn-facebook {
   background-color: #3b5998;
 }
 
-/* line 512, app/assets/stylesheets/application.scss */
+/* line 525, app/assets/stylesheets/application.scss */
 .btn-facebook:hover {
   background-color: #4267B2;
 }
 
-/* line 523, app/assets/stylesheets/application.scss */
+/* line 536, app/assets/stylesheets/application.scss */
 #layoutSidenav {
   display: flex;
 }
 
-/* line 526, app/assets/stylesheets/application.scss */
+/* line 539, app/assets/stylesheets/application.scss */
 #layoutSidenav #layoutSidenav_nav {
   flex-basis: 270px;
   flex-shrink: 0;
@@ -16524,9 +16514,8 @@ textarea {
   transform: translateX(-270px);
 }
 
-/* line 534, app/assets/stylesheets/application.scss */
+/* line 547, app/assets/stylesheets/application.scss */
 #layoutSidenav #layoutSidenav_content {
-  transition: 0.4s linear;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16537,12 +16526,12 @@ textarea {
   margin-left: -270px;
 }
 
-/* line 548, app/assets/stylesheets/application.scss */
+/* line 560, app/assets/stylesheets/application.scss */
 .sidenav-toggled #layoutSidenav #layoutSidenav_nav {
   transform: translateX(0);
 }
 
-/* line 552, app/assets/stylesheets/application.scss */
+/* line 564, app/assets/stylesheets/application.scss */
 .sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
   content: "";
   display: block;
@@ -16558,64 +16547,64 @@ textarea {
 }
 
 @media (min-width: 992px) {
-  /* line 571, app/assets/stylesheets/application.scss */
+  /* line 583, app/assets/stylesheets/application.scss */
   #layoutSidenav #layoutSidenav_nav {
     transform: translateX(0);
   }
-  /* line 575, app/assets/stylesheets/application.scss */
+  /* line 587, app/assets/stylesheets/application.scss */
   #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
   }
-  /* line 581, app/assets/stylesheets/application.scss */
+  /* line 593, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav .collapse {
     display: block;
   }
-  /* line 585, app/assets/stylesheets/application.scss */
+  /* line 597, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav {
     flex-basis: 100px;
     transform: translateX(0);
   }
-  /* line 589, app/assets/stylesheets/application.scss */
+  /* line 601, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
     flex-direction: column;
     padding: 10px 5px;
   }
-  /* line 594, app/assets/stylesheets/application.scss */
+  /* line 606, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link span {
     font-size: 12px;
   }
-  /* line 598, app/assets/stylesheets/application.scss */
+  /* line 610, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link .sidenav-collapse-arrow {
     display: none;
   }
-  /* line 602, app/assets/stylesheets/application.scss */
+  /* line 614, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
     justify-content: center;
   }
-  /* line 606, app/assets/stylesheets/application.scss */
+  /* line 618, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link-icon {
     margin-right: 0;
   }
-  /* line 610, app/assets/stylesheets/application.scss */
+  /* line 622, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .sidenav-menu-nested {
     margin-left: 0;
   }
-  /* line 615, app/assets/stylesheets/application.scss */
+  /* line 627, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
   }
-  /* line 618, app/assets/stylesheets/application.scss */
+  /* line 630, app/assets/stylesheets/application.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
     display: none;
   }
 }
 
-/* line 626, app/assets/stylesheets/application.scss */
+/* line 638, app/assets/stylesheets/application.scss */
 .nav-fixed .topnav {
   z-index: 1039;
 }
 
-/* line 630, app/assets/stylesheets/application.scss */
+/* line 642, app/assets/stylesheets/application.scss */
 .nav-fixed #layoutSidenav #layoutSidenav_nav {
   transition: 0.4s linear;
   width: 270px;
@@ -16624,48 +16613,47 @@ textarea {
   z-index: 1038;
 }
 
-/* line 637, app/assets/stylesheets/application.scss */
+/* line 649, app/assets/stylesheets/application.scss */
 .nav-fixed #layoutSidenav #layoutSidenav_nav .sidenav .sidenav-menu {
   overflow-y: auto;
 }
 
 @media (max-width: 767.98px) {
-  /* line 644, app/assets/stylesheets/application.scss */
+  /* line 656, app/assets/stylesheets/application.scss */
   .nav-fixed #layoutSidenav #layoutSidenav_nav {
     width: 200px;
     flex-basis: 200px;
   }
-  /* line 648, app/assets/stylesheets/application.scss */
+  /* line 661, app/assets/stylesheets/application.scss */
   #layoutSidenav #layoutSidenav_content {
     margin-left: -200px;
   }
 }
 
-/* line 653, app/assets/stylesheets/application.scss */
+/* line 666, app/assets/stylesheets/application.scss */
 .nav .nav-link .nav-link-icon,
 .sidenav-menu .nav-link .nav-link-icon {
   margin-right: 10px;
 }
 
-/* line 658, app/assets/stylesheets/application.scss */
+/* line 671, app/assets/stylesheets/application.scss */
 .topnav {
   height: 65px;
   z-index: 1039;
 }
 
-/* line 662, app/assets/stylesheets/application.scss */
-.topnav.navbar-brand {
+/* line 675, app/assets/stylesheets/application.scss */
+.topnav .navbar-brand {
   margin-right: 0;
+  margin-left: 1rem;
 }
 
-/* line 666, app/assets/stylesheets/application.scss */
+/* line 680, app/assets/stylesheets/application.scss */
 .topnav .navbar-brand img {
   width: 205px;
-  margin-left: 1rem;
-  margin-right: 0;
 }
 
-/* line 672, app/assets/stylesheets/application.scss */
+/* line 684, app/assets/stylesheets/application.scss */
 .topnav #sidebarToggle {
   padding: 2px 5px 0 5px;
   border: 1px solid #d1d1d1;
@@ -16673,7 +16661,7 @@ textarea {
   font-size: 19px;
 }
 
-/* line 680, app/assets/stylesheets/application.scss */
+/* line 692, app/assets/stylesheets/application.scss */
 .sidenav {
   display: flex;
   flex-direction: column;
@@ -16681,19 +16669,19 @@ textarea {
   flex-wrap: nowrap;
 }
 
-/* line 686, app/assets/stylesheets/application.scss */
+/* line 698, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu {
   flex-grow: 1;
 }
 
-/* line 689, app/assets/stylesheets/application.scss */
+/* line 701, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav {
   flex-direction: column;
   flex-wrap: nowrap;
   margin-top: 15px;
 }
 
-/* line 694, app/assets/stylesheets/application.scss */
+/* line 706, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .nav-link {
   display: flex;
   align-items: center;
@@ -16703,74 +16691,74 @@ textarea {
   position: relative;
 }
 
-/* line 702, app/assets/stylesheets/application.scss */
+/* line 714, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .nav-link span {
   transition: 0.4s linear;
 }
 
-/* line 706, app/assets/stylesheets/application.scss */
+/* line 718, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .nav-link .nav-link-icon {
   font-size: 0.9rem;
 }
 
-/* line 710, app/assets/stylesheets/application.scss */
+/* line 722, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .nav-link .sidenav-collapse-arrow {
   display: inline-block;
   margin-left: auto;
   transition: transform 0.15s ease;
 }
 
-/* line 716, app/assets/stylesheets/application.scss */
+/* line 728, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .nav-link.collapsed .sidenav-collapse-arrow {
   transform: rotate(-90deg);
 }
 
-/* line 721, app/assets/stylesheets/application.scss */
+/* line 733, app/assets/stylesheets/application.scss */
 .sidenav .sidenav-menu .nav .sidenav-menu-nested {
   margin-left: 15px;
   margin-top: 0;
   flex-direction: column;
 }
 
-/* line 730, app/assets/stylesheets/application.scss */
+/* line 742, app/assets/stylesheets/application.scss */
 .sidenav-light {
   background-color: #fff;
 }
 
-/* line 734, app/assets/stylesheets/application.scss */
+/* line 746, app/assets/stylesheets/application.scss */
 .sidenav-light .sidenav-menu .nav-link, .sidenav-light .sidenav-menu .nav-link .nav-link-icon, .sidenav-light .sidenav-menu .nav-link .sidenav-collapse-arrow {
   color: #1d2b3a;
 }
 
-/* line 738, app/assets/stylesheets/application.scss */
+/* line 750, app/assets/stylesheets/application.scss */
 .sidenav-light .sidenav-menu .nav-link:hover {
   background: #f2f2f2;
 }
 
-/* line 742, app/assets/stylesheets/application.scss */
+/* line 754, app/assets/stylesheets/application.scss */
 .sidenav-light .sidenav-menu .nav-link:hover, .sidenav-light .sidenav-menu .nav-link.active, .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .sidenav-collapse-arrow .fas, .sidenav-light .sidenav-menu .nav-link.active .sidenav-collapse-arrow .fas {
   color: #79589f;
 }
 
-/* line 751, app/assets/stylesheets/application.scss */
+/* line 763, app/assets/stylesheets/application.scss */
 .pricing .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 761, app/assets/stylesheets/application.scss */
+/* line 773, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card, .pricing .single-plan:nth-child(3) .card {
   border-color: #79589f;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 765, app/assets/stylesheets/application.scss */
+/* line 777, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card-header, .pricing .single-plan:nth-child(3) .card-header {
   background-color: #79589f;
   color: #fff;
 }
 
-/* line 771, app/assets/stylesheets/application.scss */
+/* line 783, app/assets/stylesheets/application.scss */
 .pricing .card-header {
   border-radius: 0;
   padding-top: 30px;
@@ -16779,58 +16767,58 @@ textarea {
   border-bottom: 1px solid #d1d1d1;
 }
 
-/* line 779, app/assets/stylesheets/application.scss */
+/* line 791, app/assets/stylesheets/application.scss */
 .pricing .card-title, .pricing .card-price {
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* line 784, app/assets/stylesheets/application.scss */
+/* line 796, app/assets/stylesheets/application.scss */
 .pricing .card-price {
   font-size: 3rem;
 }
 
-/* line 788, app/assets/stylesheets/application.scss */
+/* line 800, app/assets/stylesheets/application.scss */
 .pricing .card-price .period {
   font-size: 0.9rem;
 }
 
-/* line 792, app/assets/stylesheets/application.scss */
+/* line 804, app/assets/stylesheets/application.scss */
 .pricing .text-muted {
   opacity: 0.7;
 }
 
-/* line 796, app/assets/stylesheets/application.scss */
+/* line 808, app/assets/stylesheets/application.scss */
 .pricing .btn-choose-plan {
   border-radius: 0;
 }
 
-/* line 803, app/assets/stylesheets/application.scss */
+/* line 814, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-google:not(:first-child), .pricing .btn-group .btn-facebook:not(:first-child), .pricing .btn-group .btn-submit:not(:first-child), .pricing .btn-group input[type="submit"]:not(:first-child), .pricing .btn-group button[type="submit"]:not(:first-child), .pricing .btn-group .btn-choose-plan:not(:first-child) {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-/* line 808, app/assets/stylesheets/application.scss */
+/* line 819, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-google:not(:last-child), .pricing .btn-group .btn-facebook:not(:last-child), .pricing .btn-group .btn-submit:not(:last-child), .pricing .btn-group input[type="submit"]:not(:last-child), .pricing .btn-group button[type="submit"]:not(:last-child), .pricing .btn-group .btn-choose-plan:not(:last-child) {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-/* line 824, app/assets/stylesheets/application.scss */
+/* line 835, app/assets/stylesheets/application.scss */
 .pricing .tab-content > .active {
   display: flex;
 }
 
 @media (max-width: 1350px) {
-  /* line 830, app/assets/stylesheets/application.scss */
+  /* line 841, app/assets/stylesheets/application.scss */
   .pricing .card-price {
     font-size: 2.3rem;
   }
 }
 
 @media (max-width: 399.98px) {
-  /* line 836, app/assets/stylesheets/application.scss */
+  /* line 847, app/assets/stylesheets/application.scss */
   .input-group input {
     padding-left: 10px;
     padding-right: 10px;
@@ -16839,17 +16827,17 @@ textarea {
 }
 
 @media (max-width: 991.98px) {
-  /* line 844, app/assets/stylesheets/application.scss */
+  /* line 855, app/assets/stylesheets/application.scss */
   .plan-main, .pricing .single-plan:nth-child(3) {
     order: 1;
   }
-  /* line 848, app/assets/stylesheets/application.scss */
+  /* line 859, app/assets/stylesheets/application.scss */
   .single-plan {
     order: 2;
   }
 }
 
-/* line 854, app/assets/stylesheets/application.scss */
+/* line 865, app/assets/stylesheets/application.scss */
 #spinner {
   display: none;
   position: absolute;
@@ -16858,12 +16846,12 @@ textarea {
   z-index: 9999;
 }
 
-/* line 872, app/assets/stylesheets/application.scss */
+/* line 883, app/assets/stylesheets/application.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 875, app/assets/stylesheets/application.scss */
+/* line 886, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -16871,12 +16859,12 @@ textarea {
   top: 10px;
 }
 
-/* line 881, app/assets/stylesheets/application.scss */
+/* line 892, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input {
-  display: none !important;
+  display: none;
 }
 
-/* line 884, app/assets/stylesheets/application.scss */
+/* line 895, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -16887,18 +16875,18 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 893, app/assets/stylesheets/application.scss */
+/* line 904, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 896, app/assets/stylesheets/application.scss */
+/* line 907, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #79589f;
 }
 
-/* line 904, app/assets/stylesheets/application.scss */
+/* line 915, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -16909,27 +16897,27 @@ textarea {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 913, app/assets/stylesheets/application.scss */
+/* line 924, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 922, app/assets/stylesheets/application.scss */
+/* line 933, app/assets/stylesheets/application.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
 @media (max-width: 767.98px) {
-  /* line 928, app/assets/stylesheets/application.scss */
+  /* line 939, app/assets/stylesheets/application.scss */
   .img-user {
     width: 100px;
     height: 100px;
   }
 }
 
-/* line 934, app/assets/stylesheets/application.scss */
+/* line 945, app/assets/stylesheets/application.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -16939,18 +16927,18 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
-  /* line 943, app/assets/stylesheets/application.scss */
+  /* line 954, app/assets/stylesheets/application.scss */
   .col-profile {
     background-image: none;
   }
 }
 
-/* line 956, app/assets/stylesheets/application.scss */
+/* line 967, app/assets/stylesheets/application.scss */
 .form-floating {
   position: relative;
 }
 
-/* line 960, app/assets/stylesheets/application.scss */
+/* line 971, app/assets/stylesheets/application.scss */
 .form-floating > label {
   color: #6c757d;
   font-size: 14px;
@@ -16966,25 +16954,25 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 975, app/assets/stylesheets/application.scss */
+  /* line 986, app/assets/stylesheets/application.scss */
   .form-floating > label {
     transition: none;
   }
 }
 
-/* line 980, app/assets/stylesheets/application.scss */
+/* line 992, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-webkit-input-placeholder, .form-floating > input[type="email"]::-webkit-input-placeholder, .form-floating > input[type="password"]::-webkit-input-placeholder, .form-floating > input[type="text"]::-webkit-input-placeholder, .form-floating > input[type="number"]::-webkit-input-placeholder, .form-floating > input[type="file"]::-webkit-input-placeholder, .form-floating > input[type="date"]::-webkit-input-placeholder, .form-floating > input[type="datetime-local"]::-webkit-input-placeholder, .form-floating > input[type="month"]::-webkit-input-placeholder, .form-floating > input[type="url"]::-webkit-input-placeholder, .form-floating > input[type="week"]::-webkit-input-placeholder, .form-floating > input[type="search"]::-webkit-input-placeholder, .form-floating > input[type="tel"]::-webkit-input-placeholder, .form-floating > input[type="time"]::-webkit-input-placeholder, .form-floating > select::-webkit-input-placeholder, .form-floating > textarea::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 985, app/assets/stylesheets/application.scss */
+/* line 993, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 990, app/assets/stylesheets/application.scss */
+/* line 994, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
@@ -16998,14 +16986,21 @@ textarea {
   opacity: 0;
 }
 
-/* line 997, app/assets/stylesheets/application.scss */
+/* line 1005, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 1003, app/assets/stylesheets/application.scss */
+/* line 1006, app/assets/stylesheets/application.scss */
+.form-floating > .form-control:focus ~ label, .form-floating > input[type="email"]:focus ~ label, .form-floating > input[type="password"]:focus ~ label, .form-floating > input[type="text"]:focus ~ label, .form-floating > input[type="number"]:focus ~ label, .form-floating > input[type="file"]:focus ~ label, .form-floating > input[type="date"]:focus ~ label, .form-floating > input[type="datetime-local"]:focus ~ label, .form-floating > input[type="month"]:focus ~ label, .form-floating > input[type="url"]:focus ~ label, .form-floating > input[type="week"]:focus ~ label, .form-floating > input[type="search"]:focus ~ label, .form-floating > input[type="tel"]:focus ~ label, .form-floating > input[type="time"]:focus ~ label, .form-floating > select:focus ~ label, .form-floating > textarea:focus ~ label {
+  transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
+  color: #79589f;
+  font-weight: 500;
+}
+
+/* line 1007, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
@@ -17016,53 +17011,36 @@ textarea {
   color: #79589f;
   font-weight: 500;
 }
-.form-floating > .form-control:focus ~ label, .form-floating > input[type="email"]:focus ~ label, .form-floating > input[type="password"]:focus ~ label, .form-floating > input[type="text"]:focus ~ label, .form-floating > input[type="number"]:focus ~ label, .form-floating > input[type="file"]:focus ~ label, .form-floating > input[type="date"]:focus ~ label, .form-floating > input[type="datetime-local"]:focus ~ label, .form-floating > input[type="month"]:focus ~ label, .form-floating > input[type="url"]:focus ~ label, .form-floating > input[type="week"]:focus ~ label, .form-floating > input[type="search"]:focus ~ label, .form-floating > input[type="tel"]:focus ~ label, .form-floating > input[type="time"]:focus ~ label, .form-floating > select:focus ~ label, .form-floating > textarea:focus ~ label,
-.form-floating > .form-control:not(:placeholder-shown) ~ label,
-.form-floating > input[type="email"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="password"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="text"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="number"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="file"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="date"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="datetime-local"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="month"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="url"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="week"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="search"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="tel"]:not(:placeholder-shown) ~ label,
-.form-floating > input[type="time"]:not(:placeholder-shown) ~ label,
-.form-floating > select:not(:placeholder-shown) ~ label,
-.form-floating > textarea:not(:placeholder-shown) ~ label,
-.form-floating > .form-select ~ label {
+.form-floating > .form-control:not(:placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:placeholder-shown) ~ label, .form-floating > select:not(:placeholder-shown) ~ label, .form-floating > textarea:not(:placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 1011, app/assets/stylesheets/application.scss */
+/* line 1008, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:-webkit-autofill ~ label, .form-floating > input[type="email"]:-webkit-autofill ~ label, .form-floating > input[type="password"]:-webkit-autofill ~ label, .form-floating > input[type="text"]:-webkit-autofill ~ label, .form-floating > input[type="number"]:-webkit-autofill ~ label, .form-floating > input[type="file"]:-webkit-autofill ~ label, .form-floating > input[type="date"]:-webkit-autofill ~ label, .form-floating > input[type="datetime-local"]:-webkit-autofill ~ label, .form-floating > input[type="month"]:-webkit-autofill ~ label, .form-floating > input[type="url"]:-webkit-autofill ~ label, .form-floating > input[type="week"]:-webkit-autofill ~ label, .form-floating > input[type="search"]:-webkit-autofill ~ label, .form-floating > input[type="tel"]:-webkit-autofill ~ label, .form-floating > input[type="time"]:-webkit-autofill ~ label, .form-floating > select:-webkit-autofill ~ label, .form-floating > textarea:-webkit-autofill ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 1019, app/assets/stylesheets/application.scss */
+/* line 1023, app/assets/stylesheets/application.scss */
 .modal-header {
   align-items: center;
 }
 
-/* line 1026, app/assets/stylesheets/application.scss */
+/* line 1030, app/assets/stylesheets/application.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 1030, app/assets/stylesheets/application.scss */
+/* line 1034, app/assets/stylesheets/application.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 1035, app/assets/stylesheets/application.scss */
+/* line 1039, app/assets/stylesheets/application.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
