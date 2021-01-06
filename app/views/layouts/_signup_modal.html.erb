@@ -9,8 +9,20 @@
       </div>
       <div class="modal-body px-2 px-sm-4 pt-2">
         <%= form_for(:user, :url => registration_path(:user)) do |f| %>
-          <a href="<%= user_facebook_omniauth_authorize_path %>" class="btn-facebook"><i class="fab fa-facebook-f mr-2"></i> Join with Facebook</a>
-          <a href="<%= user_google_oauth2_omniauth_authorize_path %>" class="btn-google"><i class="fab fa-google mr-2"></i> Join with Google</a>
+          <div class="form-row mb-3">
+            <div class="col-sm mb-2 mb-sm-0">
+              <a href="<%= user_facebook_omniauth_authorize_path %>" class="btn-facebook">
+                <span class="devise-social-icons"><img src="/facebook-icon.png" alt="Facebook Icon"></span>
+                <span class="devise-social-text">Sign Up with Facebook</span>
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href="<%= user_google_oauth2_omniauth_authorize_path %>" class="btn-google">
+                <span class="devise-social-icons"><img src="/google-icon.png" alt="Google Icon"></span>
+                <span class="devise-social-text">Sign Up with Google</span>
+              </a>
+            </div>
+          </div>
           <div class="row align-items-center no-gutters my-2">
             <div class="col-5">
               <hr/>

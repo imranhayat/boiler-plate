@@ -91,12 +91,12 @@
   </body>
 <% else %>
   <body class="d-flex flex-column h-100">
-    <%= render 'layouts/header' %>
+    <%= render 'layouts/header' if user_signed_in? %>
     <%= render 'layouts/swal' %>
     <main role="main" class="flex-shrink-0">
       <%= yield %>
     </main>
-    <%= render 'layouts/footer' %>
+    <%= render 'layouts/footer' if user_signed_in? %>
   </body>
 <% end %>
 <%= render 'layouts/page_center_script' %>

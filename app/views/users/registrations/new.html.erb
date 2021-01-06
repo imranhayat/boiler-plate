@@ -1,54 +1,74 @@
 <div class="page-center">
-  <div class="card w-470">
-    <div class="card-body">
-      <h3 class="text-center">Join YourAppName</h3>
-      <hr/>
-      <a href="<%= user_facebook_omniauth_authorize_path %>" class="btn-facebook"><i class="fab fa-facebook-f mr-2"></i> Join with Facebook</a>
-      <a href="<%= user_google_oauth2_omniauth_authorize_path %>" class="btn-google"><i class="fab fa-google mr-2"></i> Join with Google</a>
-      <div class="row align-items-center no-gutters my-2">
-        <div class="col-5">
-          <hr/>
-        </div>
-        <div class="col-2 text-center">
-          OR
-        </div>
-        <div class="col-5">
-          <hr/>
+  <div class="container-fluid px-0 bg-white h-100">
+    <div class="row no-gutters h-100 align-items-center justify-content-center">
+      <div class="col-lg-6 px-3 px-sm-0">
+        <div class="w-470 mx-auto">
+          <a href="/" class="d-block text-center">
+            <img src="/logo.svg" alt="YourAppName Logo">
+          </a>
+          <h3 class="text-center my-4">Sign Up to YourAppName</h3>
+          <div class="form-row mb-3">
+            <div class="col-sm mb-2 mb-sm-0">
+              <a href="<%= user_facebook_omniauth_authorize_path %>" class="btn-facebook">
+                <span class="devise-social-icons"><img src="/facebook-icon.png" alt="Facebook Icon"></span>
+                <span class="devise-social-text">Sign Up with Facebook</span>
+              </a>
+            </div>
+            <div class="col-sm">
+              <a href="<%= user_google_oauth2_omniauth_authorize_path %>" class="btn-google">
+                <span class="devise-social-icons"><img src="/google-icon.png" alt="Google Icon"></span>
+                <span class="devise-social-text">Sign Up with Google</span>
+              </a>
+            </div>
+          </div>
+          <div class="row align-items-center no-gutters my-2">
+            <div class="col-5">
+              <hr/>
+            </div>
+            <div class="col-2 text-center">
+              OR
+            </div>
+            <div class="col-5">
+              <hr/>
+            </div>
+          </div>
+          <% if session['devise.facebook_data'].present? %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="form-group form-floating">
+                <%= f.email_field :email, autofocus: true, placeholder: "Enter Your Email" %>
+                <label for="user_email">Enter Your Email</label>
+              </div>
+              <%= f.submit "Sign up" %>
+            <% end %>
+          <% else %>
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="form-group form-floating">
+                <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Enter Your Name' %>
+                <label for="user_name">Enter Your Name</label>
+              </div>
+              <div class="form-group form-floating">
+                <%= f.email_field :email, placeholder: 'Enter Your Email', required: true %>
+                <label for="user_email">Enter Your Email</label>
+              </div>
+              <div class="form-group form-floating">
+                <%= f.password_field :password, required: true, placeholder: 'Enter Your Password', minlength: 6 %>
+                <label for="user_password">Enter Your Password</label>
+              </div>
+              <div class="form-group form-floating">
+                <%= f.password_field :password_confirmation, required: true, placeholder: 'Enter Your Password Again', minlength: 6 %>
+                <label for="user_password_confirmation">Enter Your Password Again</label>
+              </div>
+              <%= f.submit "Sign Up" %>
+            <% end %>
+          <% end %>
+          <div class="text-center mt-3">
+            <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>
+          </div>
         </div>
       </div>
-      <% if session['devise.facebook_data'].present? %>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-          <div class="form-group form-floating">
-            <%= f.email_field :email, autofocus: true, placeholder: "Enter Your Email" %>
-            <label for="user_email">Enter Your Email</label>
-          </div>
-          <%= f.submit "Sign up" %>
-        <% end %>
-      <% else %>
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-          <%= devise_error_messages! %>
-          <div class="form-group form-floating">
-            <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Enter Your Name' %>
-            <label for="user_name">Enter Your Name</label>
-          </div>
-          <div class="form-group form-floating">
-            <%= f.email_field :email, placeholder: 'Enter Your Email', required: true %>
-            <label for="user_email">Enter Your Email</label>
-          </div>
-          <div class="form-group form-floating">
-            <%= f.password_field :password, required: true, placeholder: 'Enter Your Password', minlength: 6 %>
-            <label for="user_password">Enter Your Password</label>
-          </div>
-          <div class="form-group form-floating">
-            <%= f.password_field :password_confirmation, required: true, placeholder: 'Enter Your Password Again', minlength: 6 %>
-            <label for="user_password_confirmation">Enter Your Password Again</label>
-          </div>
-          <%= f.submit "Sign Up" %>
-        <% end %>
-      <% end %>
-      <div class="text-center mt-3">
-        <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>
+      <div class="col-lg-6 d-none d-lg-block devise-bg">
       </div>
     </div>
   </div>

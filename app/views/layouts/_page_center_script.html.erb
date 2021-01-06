@@ -1,5 +1,9 @@
 <script>
-  var page_height = $('.page-center').outerHeight() + $('nav').outerHeight() + $('footer').outerHeight();
+  <% if user_signed_in? %>
+    var page_height = $('.page-center').outerHeight() + $('nav').outerHeight() + $('footer').outerHeight();
+  <% else %>
+    var page_height = $('.page-center').outerHeight();
+  <% end %>
   var window_height = $(window).height();
   if(page_height < window_height){
     $('.page-center').closest('main').removeClass('flex-shrink-0').addClass('h-100');

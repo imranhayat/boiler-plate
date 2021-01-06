@@ -16,6 +16,46 @@
 *= require_self
 */
 
+// Custom Fonts
+// @font-face {
+//   font-family: 'Mont';
+//   src: url('/fonts/Mont-SemiBold.eot');
+//   src: url('/fonts/Mont-SemiBold.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/Mont-SemiBold.woff2') format('woff2'),
+//       url('/fonts/Mont-SemiBold.woff') format('woff'),
+//       url('/fonts/Mont-SemiBold.ttf') format('truetype'),
+//       url('/fonts/Mont-SemiBold.svg#Mont-SemiBold') format('svg');
+//   font-weight: 600;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Mont';
+//   src: url('/fonts/Mont-Bold.eot');
+//   src: url('/fonts/Mont-Bold.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/Mont-Bold.woff2') format('woff2'),
+//       url('/fonts/Mont-Bold.woff') format('woff'),
+//       url('/fonts/Mont-Bold.ttf') format('truetype'),
+//       url('/fonts/Mont-Bold.svg#Mont-Bold') format('svg');
+//   font-weight: bold;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
+// @font-face {
+//   font-family: 'Mont';
+//   src: url('/fonts/Mont-Regular.eot');
+//   src: url('/fonts/Mont-Regular.eot?#iefix') format('embedded-opentype'),
+//       url('/fonts/Mont-Regular.woff2') format('woff2'),
+//       url('/fonts/Mont-Regular.woff') format('woff'),
+//       url('/fonts/Mont-Regular.ttf') format('truetype'),
+//       url('/fonts/Mont-Regular.svg#Mont-Regular') format('svg');
+//   font-weight: normal;
+//   font-style: normal;
+//   font-display: swap;
+// }
+
 // Bootstrap Variables
 
 // Colors
@@ -65,6 +105,7 @@ $input-padding-x: 1rem;
 $input-padding-y: 0.6878rem;
 $navbar-nav-link-padding-x: 20px;
 $navbar-padding-y: 12.5px;
+$navbar-padding-x: 20px;
 $hr-margin-y: 15px;
 $headings-margin-bottom: 0;
 $paragraph-margin-bottom: 0;
@@ -117,6 +158,8 @@ $filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.05));
 $sidebar-width: 270px;
 $sidebar-width-collapsed: 100px;
 $sidebar-width-mobile: 200px;
+$header-dashboard-height: 65px;
+$dashboard-height: calc(100vh - 65px);
 
 @import "bootstrap";
 
@@ -353,6 +396,10 @@ textarea{
   input[type="checkbox"], input[type="radio"]{
     @extend .custom-control-input;
   }
+
+  label{
+    @extend .custom-control-label;
+  }
 }
 
 .radio{
@@ -477,20 +524,27 @@ textarea{
 // Buttons End
 
 // Devise
-
 .page-center, .center-cards {
-  @extend .d-flex, .justify-content-center, .py-30;
+  @extend .d-flex, .justify-content-center;
 
-  &> .card{
+  .card{
+    @extend .d-flex, .my-30;
     filter: $filter;
   }
 
   .w-470 {
-    width: 470px;
+    max-width: 470px;
   }
 
   .card-body {
     @extend .p-lg-50, .py-30, .px-3;
+  }
+
+  .devise-bg{
+    height: 100%;
+    background-image: url('/devise-bg.jpg');
+    background-size: cover;
+    background-position: center center;
   }
 }
 
@@ -500,7 +554,64 @@ textarea{
 }
 
 .btn-google, .btn-facebook {
-  @extend .btn, .text-white, .btn-block, .mt-2, .btn-lg, .px-0;
+  @extend .d-flex, .align-items-center;
+  height: 45px;
+
+  .devise-social-icons{
+    display: inline-flex;
+    text-align: center;
+    height: 100%;
+    
+    img{
+      margin: auto;
+    }
+  }
+  .devise-social-text{
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-family: $font-family-poppins;
+  }
+}
+
+.btn-google{
+  border: 1px solid #4285f4;
+  background-color: #4285f4;
+  border-radius: 1px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+
+  &:hover {
+    border: 1px solid #3367d6;
+    background-color: #3367d6;
+  }
+
+  .devise-social-icons{
+    width: 45px;
+    background-color: #fff;
+
+    img{
+      width: 18px;
+    }
+  }
+}
+
+.btn-facebook {
+  border-radius: 4px;
+  background-color: #1877f2;
+
+  &:hover {
+    background-color: #4267B2;
+  }
+
+  .devise-social-icons img{
+    width: 24px;
+    margin-left: 9px;
+  }
+
+  .devise-social-text{
+   font-weight: 600;
+  }
 }
 
 .btn-submit {
@@ -509,22 +620,6 @@ textarea{
 
 input[type="submit"], button[type="submit"]{
   @extend .btn-submit;
-}
-
-.btn-google{
-  background-color: #DB4437;
-
-  &:hover {
-    background-color: #ea4335;
-  }
-}
-
-.btn-facebook {
-  background-color: #3b5998;
-
-  &:hover {
-    background-color: #4267B2;
-  }
 }
 // Devise End
 
@@ -551,7 +646,7 @@ input[type="submit"], button[type="submit"]{
     justify-content: space-between;
     min-width: 0;
     flex-grow: 1;
-    min-height: calc(100vh - 65px);
+    min-height: $dashboard-height;
     margin-left: -$sidebar-width;
   }
 }
@@ -604,7 +699,7 @@ input[type="submit"], button[type="submit"]{
       }
 
       .nav-link span{
-        font-size: 12px;
+        font-size: 11.7px;
       }
 
       .nav-link .sidenav-collapse-arrow{
@@ -669,7 +764,7 @@ input[type="submit"], button[type="submit"]{
 }
 
 .topnav {
-  height: 65px;
+  height: $header-dashboard-height;
   z-index: 1039;
 
   .navbar-brand{
@@ -692,7 +787,7 @@ input[type="submit"], button[type="submit"]{
 .sidenav {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 65px);
+  height: $dashboard-height;
   flex-wrap: nowrap;
 
   .sidenav-menu {

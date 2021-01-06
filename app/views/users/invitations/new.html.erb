@@ -20,7 +20,7 @@
           </div>
         <% end %>
         <div class="form-group form-floating">
-          <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name.humanize(), r.id] }), { prompt: 'Select Role' } %>
+          <%= f.select :role_ids, options_for_select(Role.all.map{ |r| [r.name.humanize(), r.id ] }), {prompt: 'Select Role' },{required: true} %>
           <label for="user_role_ids">Select Role</label>
         </div>
         <%= f.submit t("devise.invitations.new.submit_button") %>
