@@ -509,7 +509,7 @@ textarea{
   border-top-right-radius: $border-radius;
 }
 
-:focus{
+:focus, button:focus{
   box-shadow: none !important;
   outline: none;
 }

@@ -16361,7 +16361,7 @@ textarea {
 }
 
 /* line 512, app/assets/stylesheets/application.scss */
-:focus {
+:focus, button:focus {
   box-shadow: none !important;
   outline: none;
 }
