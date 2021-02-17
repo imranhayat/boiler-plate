@@ -106,4 +106,8 @@ class User < ApplicationRecord
     @user = User.find_by_stripe_customer_id(customer_id)
     { name: @user.name, email: @user.email }
   end
+
+  def name
+    "#{first_name} #{last_name}"    
+  end
 end
