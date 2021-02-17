@@ -108,6 +108,10 @@ class User < ApplicationRecord
   end
 
   def name
-    "#{first_name} #{last_name}"    
+    unless first_name.present? && last_name.present?
+      ''      
+    else
+      "#{first_name} #{last_name}"    
+    end
   end
 end
