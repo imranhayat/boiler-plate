@@ -5,59 +5,63 @@ console.log(JSON.parse('<%= raw @payment_attrs.to_json %>'));
   <% if @payment_attrs[:payment_intent_status].present? and @payment_attrs[:payment_intent_status] == "requires_action" %>
     stripe.handleCardPayment("<%= @payment_attrs[:payment_intent_client_secret] %>" ).then(function(result) {
       if (result.error) {
-        swal({
-            title: "Payment Failure",
-            text: result.error.message,
-            type: 'error',
-            html: true
+        Swal.fire({
+          title: 'Payment Failure',
+          text: result.error.message,
+          icon: 'error',
+          timer: 2000
         },function() {
           window.location.href = "<%= request.referer %>"
         });
       } else {
-        swal({
-            title: "Success",
-            text: "Subscription created!",
-            type: 'success',
-            html: true
+        Swal.fire({
+          title: 'Success',
+          text: "Subscription created!",
+          icon: 'success',
+          timer: 2000
         },function() {
           window.location.href = "<%= user_settings_url %>"
         });
       }
     });
   <% elsif @payment_attrs[:payment_intent_status].present? and @payment_attrs[:payment_intent_status] == "requires_payment_method" %>
-    swal({
-        title: "Payment Failure",
-        text: "We are unable to charge your card. Please try again with different payment method",
-        type: 'error',
-        html: true
+    $('#spinner').modal('hide');
+    Swal.fire({
+      title: 'Payment Failure',
+      text: "We are unable to charge your card. Please try again with different payment method",
+      icon: 'error',
+      timer: 2000
     },function() {
       window.location.href = "<%= request.referer %>"
     });
   <% elsif @payment_attrs[:stripe_subscription_status] == 'active' %>
-      swal({
-        title: "Success",
+    $('#spinner').modal('hide');
+      Swal.fire({
+        title: 'Success',
         text: "Subscription created!",
-        type: 'success',
-        html: true
+        icon: 'success',
+        timer: 2000
       },function() {
         window.location.href = "<%= user_settings_url %>"
       });
   <% else %>
-    swal({
-      title: "Failure",
+  $('#spinner').modal('hide');
+    Swal.fire({
+      title: 'Failure',
       text: "<%= @payment_attrs[:stripe_subscription_status] %>",
-      type: 'error',
-      html: true
+      icon: 'error',
+      timer: 2000
     },function() {
       window.location.href = "<%= plans_url %>"
     });
   <% end %>
 <% else %>
-  swal({
-    title: "Failure",
+$('#spinner').modal('hide');
+  Swal.fire({
+    title: 'Failure',
     text: "<%= raw @response.message.to_s %>",
-    type: 'error',
-    html: true
+    icon: 'error',
+    timer: 2000
   },function() {
     window.location.href = "<%= plans_url %>"
   });

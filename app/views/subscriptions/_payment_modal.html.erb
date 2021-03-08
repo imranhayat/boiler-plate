@@ -45,7 +45,7 @@
 
   var stripe_plan_id = document.getElementById('stripe_plan_id_<%= stripe_plan_id %>').value
   var app_plan_id = document.getElementById('app_plan_id_<%= app_plan_id %>').value
-  var stripe = Stripe('<%= ENV['PUBLISHABLE_KEY'] %>');
+  var stripe = Stripe("<%= ENV['PUBLISHABLE_KEY'] %>");
   var elements = stripe.elements();
   var cardElement = elements.create('card', { hidePostalCode: true });
   cardElement.mount('#card-element');
@@ -73,7 +73,14 @@
       $('#payment_modal_for_<%= stripe_plan_id %>').modal('hide');
       $('#spinner').modal('show');
       if (result.error){
-        console.log(result.error.message);
+        Swal.fire({
+          text: result.error.message,
+          position: 'top-end',
+          showConfirmButton: false,
+          showCloseButton: true,
+          timer: 3000
+        });
+        $('#spinner').modal('hide');
       } 
       else {
         createSubscription(result.paymentMethod, coupon_id)

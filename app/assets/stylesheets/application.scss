@@ -10,9 +10,12 @@
 * files in this directory. Styles in this file should be added after the last require_* statement.
 * It is generally better to create a new file per style scope.
 *
-*= require sweetalert
-*= require_tree .
-*= require toastr_rails
+
+*= require @fontsource/poppins/400
+*= require @fontsource/poppins/500
+*= require @fontsource/poppins/600
+*= require @fontsource/poppins/700
+*= require @fortawesome/fontawesome-free/css/all.min
 *= require_self
 */
 
@@ -56,110 +59,7 @@
 //   font-display: swap;
 // }
 
-// Bootstrap Variables
-
-// Colors
-$body-bg: #f2f2f2;
-$body-color: #1d2b3a;
-$primary: #79589f;
-$link-hover-color: darken($primary, 15%);
-$secondary: #6c757d;
-$hover-background: #000;
-$navbar-light-color: $body-color;
-$navbar-light-hover-color: $primary;
-$navbar-light-active-color: $primary;
-$border-color: #d1d1d1;
-$hr-border-color: $border-color;
-$custom-control-indicator-border-color: $border-color;
-$card-border-color: #fff;
-$input-border-color: $border-color;
-$dropdown-link-hover-bg: #f2f2f2;
-$input-color: $body-color;
-$pagination-border-color: $border-color;
-
-// Font
-$font-size-base: 1rem;
-$font-family-poppins: 'Poppins', sans-serif;
-$font-awesome: 'Font Awesome 5 Free';
-$font-family-base: $font-family-poppins;
-$font-weight-bold: 500;
-$btn-font-weight: 600;
-$input-btn-font-size-lg: 16px;
-$input-btn-font-size: 14px;
-$input-font-size: 14px;
-$h1-font-size: 28px;
-$h2-font-size: 26px;
-$h3-font-size: 20px;
-$h4-font-size: 18px;
-$h5-font-size: 16px;
-$h6-font-size: 14px;
-$dropdown-font-size: 14px;
-
-// Padding Margins
-$dropdown-item-padding-x: 0.8rem;
-$input-btn-padding-y-lg: 0.594rem;
-$input-btn-padding-x-lg: 1rem;
-$input-btn-padding-y: .3rem !default;
-$input-btn-padding-x: 1rem !default;
-$input-padding-x: 1rem;
-$input-padding-y: 0.6878rem;
-$navbar-nav-link-padding-x: 20px;
-$navbar-padding-y: 12.5px;
-$navbar-padding-x: 20px;
-$hr-margin-y: 15px;
-$headings-margin-bottom: 0;
-$paragraph-margin-bottom: 0;
-$label-margin-bottom: .2rem;
-
-// Border Radius
-$border-radius: 50px;
-$card-border-radius: 5px;
-$dropdown-border-radius: 5px;
-$btn-border-radius: 5px;
-$border-radius-sm: 5px;
-$input-group-btn-border-radius: $border-radius;
-
-// Other Bootstrap Variables
-$link-hover-decoration: none;
-$input-btn-focus-box-shadow: none;
-$custom-select-focus-box-shadow: none;
-$border-1: 1px solid $border-color;
-$hr-opacity: 1;
-$spacer: 20px;
-$spacers: (
-  3: $spacer - 5,
-  7: 7px,
-  8: 8px,
-  50: 50px,
-  30: 30px
-);
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-);
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-);
-
-// Responsive Font Size Variables
-$enable-responsive-font-sizes: true;
-$rfs-base-font-size: 1rem;
-
-// Other Variables
-$filter: drop-shadow(0px 2px 3px rgba(0,0,0,0.05));
-$sidebar-width: 270px;
-$sidebar-width-collapsed: 100px;
-$sidebar-width-mobile: 200px;
-$header-dashboard-height: 65px;
-$dashboard-height: calc(100vh - 65px);
+@import "variables.scss";
 
 @import "bootstrap";
 
@@ -176,146 +76,6 @@ $dashboard-height: calc(100vh - 65px);
   }
 }
 // Body Responsive Font Size End
-
-// Datatable
-.table{
-  margin-bottom: 0;
-  background-color: #fff;
-  width: 100% !important;
-}
-
-table.dataTable>tbody>tr.child ul.dtr-details>li{
-  border-color: $border-color;
-}
-
-.custom-select-sm{
-  padding-right: 1rem;
-  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 6'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.2rem center/8px 12px;
-}
-
-div.dataTables_wrapper div.dataTables_filter{
-  display: inline-block;
-
-  label{
-    margin-bottom: 0;
-    position: relative;
-  }
-} 
-
-div.dataTables_wrapper {
-
-  div.dataTables_info{
-    padding-top: 0;
-  }
-
-  div.dataTables_length select{
-    border-radius: 3px;
-  }
-}
-
-div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]{
-  padding: 0;
-}
-
-div.dt-buttons{
-  width: auto;
-  margin-bottom: 0;
-}
-
-@media(max-width: 642.98px){
-  div.dataTables_wrapper div.dataTables_filter input {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-@media(max-width: 681.98px){
-  div.dt-buttons{
-    margin-bottom: 10px;
-  }
-}
-
-// Datatable Responsive Plus Minus Icons
-table.dataTable.dtr-inline.collapsed>tbody{
-  tr[role="row"]>{
-    th.dtr-control:before,
-    td.dtr-control:before{
-      content: '\f055';
-      font-family: $font-awesome;
-      box-shadow: none;
-      color: $primary;
-      font-weight: 600;
-      top: calc(50% - 0.5em);
-      margin-top: 0;
-      border: 0;
-      background-color: transparent;
-    }
-  }
-
-  tr.parent>{
-    th.dtr-control:before,
-    td.dtr-control:before{
-      content:'\f056' !important;
-    }
-  }
-}
-
-table.dataTable>tbody>tr.child ul.dtr-details {
-  display: block;
-}
-
-.dtr-title:after {
-  content: ":";
-}
-
-@media(max-width: 991.98px){
-  .dt-buttons .btn{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-}
-
-.table-bordered thead th, .table-bordered thead td {
-  border-bottom-width: 0px;
-  border-top-width: 0px;
-}
-
-// Datatable Sorting Icons
-.sorting{
-  &, &_asc, &_desc{
-    &:after, &:before{
-      font-size: 15px;
-      line-height: 18px;
-      font-weight: 600;
-      font-family: $font-awesome;
-    }
-
-    &:after{
-      right: 0.2em !important;
-      content: '\f30c' !important;
-    }
-
-    &:before{
-      right: 0.8em !important;
-      content: '\f309' !important;
-    }
-  }
-}
-
-.table th, .table.dataTable>tbody>tr.child span.dtr-title{
-  font-weight: $font-weight-bold;
-}
-
-.search-label{
-  opacity: 0;
-  z-index: -1;
-  position: absolute;
-  left: 24px;
-  top: 12px;
-  font-size: 14px;
-  color: $input-placeholder-color;
-}
-// Datatable End
 
 // Admin Panel Index
 .statistics {
@@ -355,7 +115,11 @@ footer{
 }
 
 .footer{
-  @extend .mt-auto, .py-3, .px-7, .bg-white, .border-top, .text-center;
+  margin-top: auto;
+  padding: 15px 7px;
+  background-color: #fff;
+  border-top: $border-1;
+  text-align: center;
 }
 // Footer End
 
@@ -525,15 +289,13 @@ textarea{
 
 // Devise
 .page-center, .center-cards {
-  @extend .d-flex, .justify-content-center;
+  display: flex;
+  justify-content: center;
 
   .card{
-    @extend .d-flex, .my-30;
+    margin: 30px 0;
+    display: flex;
     filter: $filter;
-  }
-
-  .w-470 {
-    max-width: 470px;
   }
 
   .card-body {
@@ -554,7 +316,8 @@ textarea{
 }
 
 .btn-google, .btn-facebook {
-  @extend .d-flex, .align-items-center;
+  display: flex;
+  align-items: center;
   height: 45px;
 
   .devise-social-icons{
@@ -622,236 +385,6 @@ input[type="submit"], button[type="submit"]{
   @extend .btn-submit;
 }
 // Devise End
-
-// Dashboard
-.banner-header{
-  @extend .bg-white, .p-3, .border-bottom;
-}
-
-#layoutSidenav {
-  display: flex;
-
-  #layoutSidenav_nav {
-    flex-basis: $sidebar-width;
-    flex-shrink: 0;
-    transition: transform 0.15s ease-in-out;
-    z-index: 1038;
-    transform: translateX(-$sidebar-width);
-  }
-
-  #layoutSidenav_content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-width: 0;
-    flex-grow: 1;
-    min-height: $dashboard-height;
-    margin-left: -$sidebar-width;
-  }
-}
-
-.sidenav-toggled #layoutSidenav {
-  #layoutSidenav_nav {
-    transform: translateX(0);
-  }
-  
-  #layoutSidenav_content:before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: 1037;
-    opacity: 0.5;
-    transition: opacity 0.3s ease-in-out;
-  }
-}
-
-
-@media (min-width: 992px) {
-  #layoutSidenav {
-
-    #layoutSidenav_nav {
-      transform: translateX(0);
-    }
-
-    #layoutSidenav_content {
-      margin-left: 0;
-    }
-  }
-  
-  .sidenav-toggled #layoutSidenav {
-    .collapse{
-      display: block;
-    }
-
-    #layoutSidenav_nav {
-      flex-basis: $sidebar-width-collapsed;
-      transform: translateX(0);
-      
-      .nav-link{
-        flex-direction: column;
-        padding: 10px 5px;
-      }
-
-      .nav-link span{
-        font-size: 11.7px;
-      }
-
-      .nav-link .sidenav-collapse-arrow{
-        display: none;
-      }
-
-      .nav-link{
-        justify-content: center;
-      }
-
-      .nav-link-icon{
-        margin-right: 0;
-      }
-
-      .sidenav-menu-nested {
-        margin-left: 0;
-      }
-    }
-
-    #layoutSidenav_content {
-      margin-left: 0;
-
-      &:before {
-        display: none;
-      }
-    }
-  }
-}
-
-.nav-fixed {
-  .topnav {
-    z-index: 1039;
-  }
-  
-  #layoutSidenav #layoutSidenav_nav {
-    transition: 0.4s linear;
-    width: $sidebar-width;
-    background: #fff;
-    border-right: 1px solid #d1d1d1;
-    z-index: 1038;
-
-    .sidenav .sidenav-menu {
-      overflow-y: auto;
-    }
-  }
-}
-
-@media (max-width: 767.98px){
-  .nav-fixed #layoutSidenav #layoutSidenav_nav {
-    width: $sidebar-width-mobile;
-    flex-basis: $sidebar-width-mobile;
-  }
-
-  #layoutSidenav #layoutSidenav_content{
-    margin-left: -$sidebar-width-mobile;
-  }
-}
-
-.nav .nav-link .nav-link-icon,
-.sidenav-menu .nav-link .nav-link-icon {
-  margin-right: 10px;
-}
-
-.topnav {
-  height: $header-dashboard-height;
-  z-index: 1039;
-
-  .navbar-brand{
-    margin-right: 0;
-    margin-left: 1rem;
-  }
-
-  .navbar-brand img {
-    width: 205px;
-  }
-
-  #sidebarToggle{
-    padding: 2px 5px 0 5px;
-    border: $border-1;
-    border-radius: 2px;
-    font-size: 19px;
-  }
-}
-
-.sidenav {
-  display: flex;
-  flex-direction: column;
-  height: $dashboard-height;
-  flex-wrap: nowrap;
-
-  .sidenav-menu {
-    flex-grow: 1;
-
-    .nav {
-      flex-direction: column;
-      flex-wrap: nowrap;
-      margin-top: 15px;
-
-      .nav-link {
-        display: flex;
-        align-items: center;
-        font-weight: normal;
-        padding-top: 0.75rem;
-        padding-bottom: 0.75rem;
-        position: relative;
-
-        span{
-          transition: 0.4s linear;
-        }
-
-        .nav-link-icon {
-          font-size: 0.9rem;
-        }
-        
-        .sidenav-collapse-arrow {
-          display: inline-block;
-          margin-left: auto;
-          transition: transform 0.15s ease;
-        }
-        
-        &.collapsed .sidenav-collapse-arrow {
-          transform: rotate(-90deg);
-        }
-      }
-
-      .sidenav-menu-nested {
-        margin-left: 15px;
-        margin-top: 0;
-        flex-direction: column;
-      }
-    }
-  }
-}
-
-.sidenav-light {
-  background-color: #fff;
-
-  .sidenav-menu{
-    .nav-link, .nav-link .nav-link-icon, .nav-link .sidenav-collapse-arrow {
-      color: $body-color;
-    }
-
-    .nav-link:hover{
-      background: $dropdown-link-hover-bg;
-    }
-    
-    .nav-link:hover, .nav-link.active, .nav-link.active .nav-link-icon, .nav-link:hover .nav-link-icon, .nav-link:hover .sidenav-collapse-arrow .fas, .nav-link.active .sidenav-collapse-arrow .fas {
-      color: $primary;
-    }
-  }
-}
-// Dashboard End
 
 //  Pricing
 .pricing {
@@ -1135,4 +668,29 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
     background-color: #fff;
     border-top: $border-1;
   }
+}
+
+// Width Mixin
+
+@mixin width($width) {
+  @media(min-width: $width){
+    width: $width;
+  }
+  @media(max-width: $width){
+    width: 100%;
+  }
+}
+
+.w-470 { @include width(470px); }
+.w-920 { @include width(920px); }
+
+.body{
+  display: none;
+}
+
+.loading{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }

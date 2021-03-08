@@ -1,0 +1,18 @@
+/*
+*= require sweetalert2/dist/sweetalert2.min
+*/
+
+.swal2-top-end .swal2-popup {
+  padding: 15px 5px;
+  max-width: 370px !important;
+}
+
+.swal2-top-end .swal2-html-container{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.swal2-close{
+  font-size: 1.9rem !important;
+  color: #000 !important;
+}

@@ -21,7 +21,14 @@ var stripe = Stripe('<%= Rails.configuration.stripe[:publishable_key] %>');
       ).then(function(result) {
       if (result.error) {
       // Display error.message in your UI.
-        toastr.error(result.error.message)
+        Swal.fire({
+          text: result.error.message,
+          position: 'top-end',
+          showConfirmButton: false,
+          showCloseButton: true,
+          timer: 3000,
+          backdrop: false
+        });
       } else {
         // The payment has succeeded. Display a success message.
         $(".payment").html("<p>$<%= params[:amount] %> successfully added in your credit.</p>");

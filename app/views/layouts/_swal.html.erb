@@ -1,40 +1,30 @@
-<% if notice %>
-  <!--<div class="alert alert-info" role="alert">-->
-  <!--  <strong>Info!</strong> <%#= notice || alert %>-->
-  <!--</div>-->
-  <script>
-    swal({
-      title: 'Success',
-      text: "<%= notice.html_safe %>",
-      type: 'success',
-      timer: 3000
-    });
-  </script>
-<% end %>
-<% if alert.present? %>
-  <script>
-    swal({
-      title: 'Oops!',
-      text: "<%= alert.html_safe %>",
-      type: 'error'
-    });
-  </script>
-<% end %>
-<% if flash[:warning] %>
-  <script>
-    swal({
-      title: 'Oops!',
-      text: "<%= flash[:warning].html_safe %>",
-      type: 'warning'
-    });
-  </script>
-<% end %>
-<% if flash[:info].present? %>
-  <script>
-    swal({
-      title: 'Success',
-      text: "<%= flash[:info].html_safe %>",
-      type: 'success'
+<% if notice or  alert.present? or flash[:warning] or flash[:info].present? %>
+<script>
+  $(document).on('turbolinks:load',function(){
+      Swal.fire({
+        <% if notice %>
+          title: 'Success',
+          text: "<%= notice.html_safe %>",
+          icon: 'success',
+        <% end %>
+        <% if alert.present? %>
+          title: 'Oops!',
+          text: "<%= alert.html_safe %>",
+          icon: 'error'
+        <% end %>
+        <% if flash[:warning] %>
+          title: 'Oops!',
+          text: "<%= flash[:warning].html_safe %>",
+          icon: 'warning'
+        <% end %>
+        <% if flash[:info].present? %>
+          title: 'Success',
+          text: "<%= flash[:info].html_safe %>",
+          icon: 'success'
+        <% end %>
+        timer: 2000
+      });
+      setTimeout(function(){location.reload()}, 2000);
     });
   </script>
 <% end %>
