@@ -29,18 +29,18 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <% if params[:action] == 'users' or params[:action] == 'all_invoices' %>
-      <link rel="stylesheet" href="/assets/datatables.scss">
-      <script src="/assets/datatables.js" data-turbolinks-track="reload" defer></script>
+      <%= stylesheet_link_tag 'datatables', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'datatables', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
     <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' %>
-      <link rel="stylesheet" href="/assets/swal.scss">
-      <script src="/assets/swal.js" defer></script>
+      <%= stylesheet_link_tag 'swal', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'swal', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
     <% if user_signed_in? and current_user.has_role? :admin %>
-      <link rel="stylesheet" href="/assets/dashboard.scss">
-      <script src="/assets/dashboard.js" defer></script>
+      <%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
-    <script src="/assets/defer.js" data-turbolinks-track="reload" defer></script>
+    <%= javascript_include_tag 'defer', 'data-turbolinks-track': 'reload', defer: true %>
     <% if params[:controller] == 'subscriptions' or params[:controller] == 'user_panel'or params[:controller] == 'plans' or params[:controller] == 'products' or params[:controller] == 'admin_panel' %>
       <script src="https://js.stripe.com/v3/" defer></script>
     <% end %>
