@@ -2,7 +2,6 @@
   "name": "freelance",
   "private": true,
   "dependencies": {
-    "@fontsource/poppins": "^4.2.2",
     "@fortawesome/fontawesome-free": "^5.15.2",
     "datatables.net": "^1.10.23",
     "datatables.net-bs4": "^1.10.23",
