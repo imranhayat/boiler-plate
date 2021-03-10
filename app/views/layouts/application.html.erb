@@ -36,7 +36,7 @@
 
     <% if params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
       <%= stylesheet_link_tag 'datatables', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_include_tag 'datatables', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'datatables', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
 
     <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' or params[:controller] == 'plans' %>
