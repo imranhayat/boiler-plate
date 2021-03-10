@@ -2,7 +2,6 @@
   "name": "freelance",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.2",
     "datatables.net": "^1.10.23",
     "datatables.net-bs4": "^1.10.23",
     "datatables.net-buttons": "^1.6.5",
