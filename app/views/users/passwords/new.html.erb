@@ -13,7 +13,7 @@
               <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Enter Your Email', required: true %>
               <label for="user_email">Enter Your Email</label>
             </div>
-            <%= f.submit "Reset Password" %>
+            <%= f.submit "Reset Password", class:'btn-submit' %>
           <% end %>
           <div class="text-center mt-3">
             <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>

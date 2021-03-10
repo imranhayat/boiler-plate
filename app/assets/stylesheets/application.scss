@@ -376,9 +376,6 @@ textarea{
   @extend .btn, .btn-primary, .btn-lg, .btn-block;
 }
 
-input[type="submit"], button[type="submit"]{
-  @extend .btn-submit;
-}
 // Devise End
 
 //  Pricing
@@ -500,7 +497,9 @@ input[type="submit"], button[type="submit"]{
 
 // Image Preview
 .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview{
-  @extend .d-flex, .align-items-center, .justify-content-center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .avatar-upload {
@@ -582,7 +581,9 @@ input[type="submit"], button[type="submit"]{
 
 // Rails Errors Design
 #error_explanation ul{
-  @extend .pl-4, .mb-3, .text-danger;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  color: $danger;
 }
 // Rails Errors Design End
 
@@ -679,13 +680,12 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .w-470 { @include width(470px); }
 .w-920 { @include width(920px); }
 
-.body{
-  display: none;
-}
+.table{
+  margin-bottom: 0;
+  background-color: #fff;
+  width: 100% !important;
 
-.loading{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  th{
+    font-weight: $font-weight-bold;
+  }
 }

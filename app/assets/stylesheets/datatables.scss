@@ -9,12 +9,6 @@
 @import "variables.scss";
 
 // Datatable
-.table{
-  margin-bottom: 0;
-  background-color: #fff;
-  width: 100% !important;
-}
-
 table.dataTable>tbody>tr.child ul.dtr-details>li{
   border-color: $border-color;
 }
@@ -133,7 +127,7 @@ table.dataTable>tbody>tr.child ul.dtr-details {
   }
 }
 
-.table th, .table.dataTable>tbody>tr.child span.dtr-title{
+.table.dataTable>tbody>tr.child span.dtr-title{
   font-weight: $font-weight-bold;
 }
 

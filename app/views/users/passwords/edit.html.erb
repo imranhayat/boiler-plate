@@ -18,7 +18,7 @@
               <%= f.password_field :password_confirmation, placeholder: 'Enter New Password Again', required: true, minlength: 6 %>
               <label for="user_password_confirmation">Enter New Password Again</label>
             </div>
-            <%= f.submit "Change my password" %>
+            <%= f.submit "Change my password", class:'btn-submit' %>
           <% end %>
           <div class="text-center mt-3">
             <p>Already a member? <%= link_to "Login", new_session_path(resource_name) %></p>

@@ -31,7 +31,7 @@
             <label class="custom-control-label" for="user_remember_me">Remember me</label>
           </div>
         <% end -%>
-        <%= f.submit "Login" %>
+        <%= f.submit "Login", class:'btn-submit' %>
       <% end %>
       <div class="text-center mt-3">
         <%= link_to "Forgot your password?", new_password_path(resource_name) %>

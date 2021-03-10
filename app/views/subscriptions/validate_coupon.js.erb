@@ -22,7 +22,7 @@
 	});
 <% else %>
 	Swal.fire({
-		text: "<%= @response.message %>",
+		html: "<%= @response.message %>",
 		position: 'top-end',
 		showConfirmButton: false,
 		showCloseButton: true,

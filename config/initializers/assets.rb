@@ -13,4 +13,4 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( datatables.js datatables.scss defer.js swal.js swal.scss dashboard.js dashboard.scss )
+Rails.application.config.assets.precompile += %w( datatables.js datatables.scss script.js swal.js swal.scss dashboard.js dashboard.scss )

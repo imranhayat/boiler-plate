@@ -34,12 +34,12 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <% if params[:action] == 'users' or params[:action] == 'all_invoices' %>
+    <% if params[:action] == 'users' or 'all_invoices' or 'invoices' %>
       <%= stylesheet_link_tag 'datatables', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'datatables', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
 
-    <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' %>
+    <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or 'user_panel' or 'plans' %>
       <%= stylesheet_link_tag 'swal', media: 'all', 'data-turbolinks-track': 'reload' %>
       <%= javascript_include_tag 'swal', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
@@ -49,9 +49,9 @@
       <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
     
-    <%= javascript_include_tag 'defer', 'data-turbolinks-track': 'reload', defer: true %>
+    <%= javascript_include_tag 'script', 'data-turbolinks-track': 'reload', defer: true %>
 
-    <% if params[:controller] == 'subscriptions' or params[:controller] == 'user_panel'or params[:controller] == 'plans' or params[:controller] == 'products' or params[:controller] == 'admin_panel' %>
+    <% if params[:controller] == 'subscriptions' or 'user_panel'or 'plans' or 'products' or 'admin_panel' %>
       <script src="https://js.stripe.com/v3/" defer></script>
     <% end %>
     

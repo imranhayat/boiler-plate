@@ -84,32 +84,33 @@
   }
   /* line 88, app/assets/stylesheets/dashboard.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
+    text-align: center;
     justify-content: center;
   }
-  /* line 92, app/assets/stylesheets/dashboard.scss */
+  /* line 93, app/assets/stylesheets/dashboard.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link-icon {
     margin-right: 0;
   }
-  /* line 96, app/assets/stylesheets/dashboard.scss */
+  /* line 97, app/assets/stylesheets/dashboard.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_nav .sidenav-menu-nested {
     margin-left: 0;
   }
-  /* line 101, app/assets/stylesheets/dashboard.scss */
+  /* line 102, app/assets/stylesheets/dashboard.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_content {
     margin-left: 0;
   }
-  /* line 104, app/assets/stylesheets/dashboard.scss */
+  /* line 105, app/assets/stylesheets/dashboard.scss */
   .sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
     display: none;
   }
 }
 
-/* line 112, app/assets/stylesheets/dashboard.scss */
+/* line 113, app/assets/stylesheets/dashboard.scss */
 .nav-fixed .topnav {
   z-index: 1039;
 }
 
-/* line 116, app/assets/stylesheets/dashboard.scss */
+/* line 117, app/assets/stylesheets/dashboard.scss */
 .nav-fixed #layoutSidenav #layoutSidenav_nav {
   transition: 0.4s linear;
   width: 270px;
@@ -118,47 +119,47 @@
   z-index: 1038;
 }
 
-/* line 123, app/assets/stylesheets/dashboard.scss */
+/* line 124, app/assets/stylesheets/dashboard.scss */
 .nav-fixed #layoutSidenav #layoutSidenav_nav .sidenav .sidenav-menu {
   overflow-y: auto;
 }
 
 @media (max-width: 767.98px) {
-  /* line 130, app/assets/stylesheets/dashboard.scss */
+  /* line 131, app/assets/stylesheets/dashboard.scss */
   .nav-fixed #layoutSidenav #layoutSidenav_nav {
     width: 200px;
     flex-basis: 200px;
   }
-  /* line 135, app/assets/stylesheets/dashboard.scss */
+  /* line 136, app/assets/stylesheets/dashboard.scss */
   #layoutSidenav #layoutSidenav_content {
     margin-left: -200px;
   }
 }
 
-/* line 140, app/assets/stylesheets/dashboard.scss */
+/* line 141, app/assets/stylesheets/dashboard.scss */
 .nav .nav-link .nav-link-icon,
 .sidenav-menu .nav-link .nav-link-icon {
   margin-right: 10px;
 }
 
-/* line 145, app/assets/stylesheets/dashboard.scss */
+/* line 146, app/assets/stylesheets/dashboard.scss */
 .topnav {
   height: 65px;
   z-index: 1039;
 }
 
-/* line 149, app/assets/stylesheets/dashboard.scss */
+/* line 150, app/assets/stylesheets/dashboard.scss */
 .topnav .navbar-brand {
   margin-right: 0;
   margin-left: 1rem;
 }
 
-/* line 154, app/assets/stylesheets/dashboard.scss */
+/* line 155, app/assets/stylesheets/dashboard.scss */
 .topnav .navbar-brand img {
   width: 205px;
 }
 
-/* line 158, app/assets/stylesheets/dashboard.scss */
+/* line 159, app/assets/stylesheets/dashboard.scss */
 .topnav #sidebarToggle {
   padding: 2px 5px 0 5px;
   border: 1px solid #d1d1d1;
@@ -166,7 +167,7 @@
   font-size: 19px;
 }
 
-/* line 166, app/assets/stylesheets/dashboard.scss */
+/* line 167, app/assets/stylesheets/dashboard.scss */
 .sidenav {
   display: flex;
   flex-direction: column;
@@ -174,19 +175,19 @@
   flex-wrap: nowrap;
 }
 
-/* line 172, app/assets/stylesheets/dashboard.scss */
+/* line 173, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu {
   flex-grow: 1;
 }
 
-/* line 175, app/assets/stylesheets/dashboard.scss */
+/* line 176, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav {
   flex-direction: column;
   flex-wrap: nowrap;
   margin-top: 15px;
 }
 
-/* line 180, app/assets/stylesheets/dashboard.scss */
+/* line 181, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .nav-link {
   display: flex;
   align-items: center;
@@ -196,51 +197,51 @@
   position: relative;
 }
 
-/* line 188, app/assets/stylesheets/dashboard.scss */
+/* line 189, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .nav-link span {
   transition: 0.4s linear;
 }
 
-/* line 192, app/assets/stylesheets/dashboard.scss */
+/* line 193, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .nav-link .nav-link-icon {
   font-size: 0.9rem;
 }
 
-/* line 196, app/assets/stylesheets/dashboard.scss */
+/* line 197, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .nav-link .sidenav-collapse-arrow {
   display: inline-block;
   margin-left: auto;
   transition: transform 0.15s ease;
 }
 
-/* line 202, app/assets/stylesheets/dashboard.scss */
+/* line 203, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .nav-link.collapsed .sidenav-collapse-arrow {
   transform: rotate(-90deg);
 }
 
-/* line 207, app/assets/stylesheets/dashboard.scss */
+/* line 208, app/assets/stylesheets/dashboard.scss */
 .sidenav .sidenav-menu .nav .sidenav-menu-nested {
   margin-left: 15px;
   margin-top: 0;
   flex-direction: column;
 }
 
-/* line 216, app/assets/stylesheets/dashboard.scss */
+/* line 217, app/assets/stylesheets/dashboard.scss */
 .sidenav-light {
   background-color: #fff;
 }
 
-/* line 220, app/assets/stylesheets/dashboard.scss */
+/* line 221, app/assets/stylesheets/dashboard.scss */
 .sidenav-light .sidenav-menu .nav-link, .sidenav-light .sidenav-menu .nav-link .nav-link-icon, .sidenav-light .sidenav-menu .nav-link .sidenav-collapse-arrow {
   color: #1d2b3a;
 }
 
-/* line 224, app/assets/stylesheets/dashboard.scss */
+/* line 225, app/assets/stylesheets/dashboard.scss */
 .sidenav-light .sidenav-menu .nav-link:hover {
   background: #f2f2f2;
 }
 
-/* line 228, app/assets/stylesheets/dashboard.scss */
+/* line 229, app/assets/stylesheets/dashboard.scss */
 .sidenav-light .sidenav-menu .nav-link:hover, .sidenav-light .sidenav-menu .nav-link.active, .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .sidenav-collapse-arrow .fas, .sidenav-light .sidenav-menu .nav-link.active .sidenav-collapse-arrow .fas {
   color: #79589f;
 }

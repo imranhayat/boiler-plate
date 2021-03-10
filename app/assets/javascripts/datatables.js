@@ -41,6 +41,12 @@ $(document).on('turbolinks:load',function(){
     responsive: true,
     bSort: false
   });
+  document.addEventListener("turbolinks:before-cache", function() {
+    if (table !== null) {
+      table.destroy();
+      table = null;
+    }
+  });
 });
 
 pdfMake.fonts = {

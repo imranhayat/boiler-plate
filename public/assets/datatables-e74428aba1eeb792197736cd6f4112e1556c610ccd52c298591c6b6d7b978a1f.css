@@ -9,57 +9,50 @@ table.dataTable.dtr-inline.collapsed>tbody>tr>td.child,table.dataTable.dtr-inlin
 
 */
 /* line 13, app/assets/stylesheets/datatables.scss */
-.table {
-  margin-bottom: 0;
-  background-color: #fff;
-  width: 100% !important;
-}
-
-/* line 19, app/assets/stylesheets/datatables.scss */
 table.dataTable > tbody > tr.child ul.dtr-details > li {
   border-color: #d1d1d1;
 }
 
-/* line 23, app/assets/stylesheets/datatables.scss */
+/* line 17, app/assets/stylesheets/datatables.scss */
 .custom-select-sm {
   padding-right: 1rem;
   background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5' viewBox='0 0 4 6'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.2rem center/8px 12px;
 }
 
-/* line 28, app/assets/stylesheets/datatables.scss */
+/* line 22, app/assets/stylesheets/datatables.scss */
 div.dataTables_wrapper div.dataTables_filter {
   display: inline-block;
 }
 
-/* line 31, app/assets/stylesheets/datatables.scss */
+/* line 25, app/assets/stylesheets/datatables.scss */
 div.dataTables_wrapper div.dataTables_filter label {
   margin-bottom: 0;
   position: relative;
 }
 
-/* line 39, app/assets/stylesheets/datatables.scss */
+/* line 33, app/assets/stylesheets/datatables.scss */
 div.dataTables_wrapper div.dataTables_info {
   padding-top: 0;
 }
 
-/* line 43, app/assets/stylesheets/datatables.scss */
+/* line 37, app/assets/stylesheets/datatables.scss */
 div.dataTables_wrapper div.dataTables_length select {
   border-radius: 3px;
 }
 
-/* line 48, app/assets/stylesheets/datatables.scss */
+/* line 42, app/assets/stylesheets/datatables.scss */
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"] {
   padding: 0;
 }
 
-/* line 52, app/assets/stylesheets/datatables.scss */
+/* line 46, app/assets/stylesheets/datatables.scss */
 div.dt-buttons {
   width: auto;
   margin-bottom: 0;
 }
 
 @media (max-width: 642.98px) {
-  /* line 58, app/assets/stylesheets/datatables.scss */
+  /* line 52, app/assets/stylesheets/datatables.scss */
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0;
     width: 100%;
@@ -67,13 +60,13 @@ div.dt-buttons {
 }
 
 @media (max-width: 681.98px) {
-  /* line 65, app/assets/stylesheets/datatables.scss */
+  /* line 59, app/assets/stylesheets/datatables.scss */
   div.dt-buttons {
     margin-bottom: 10px;
   }
 }
 
-/* line 73, app/assets/stylesheets/datatables.scss */
+/* line 67, app/assets/stylesheets/datatables.scss */
 table.dataTable.dtr-inline.collapsed > tbody tr > th.dtr-control:before,
 table.dataTable.dtr-inline.collapsed > tbody tr > td.dtr-control:before {
   content: '\f055';
@@ -87,37 +80,37 @@ table.dataTable.dtr-inline.collapsed > tbody tr > td.dtr-control:before {
   background-color: transparent !important;
 }
 
-/* line 88, app/assets/stylesheets/datatables.scss */
+/* line 82, app/assets/stylesheets/datatables.scss */
 table.dataTable.dtr-inline.collapsed > tbody tr.parent > th.dtr-control:before,
 table.dataTable.dtr-inline.collapsed > tbody tr.parent > td.dtr-control:before {
   content: '\f056' !important;
 }
 
-/* line 95, app/assets/stylesheets/datatables.scss */
+/* line 89, app/assets/stylesheets/datatables.scss */
 table.dataTable > tbody > tr.child ul.dtr-details {
   display: block;
 }
 
-/* line 99, app/assets/stylesheets/datatables.scss */
+/* line 93, app/assets/stylesheets/datatables.scss */
 .dtr-title:after {
   content: ":";
 }
 
 @media (max-width: 991.98px) {
-  /* line 104, app/assets/stylesheets/datatables.scss */
+  /* line 98, app/assets/stylesheets/datatables.scss */
   .dt-buttons .btn {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
   }
 }
 
-/* line 110, app/assets/stylesheets/datatables.scss */
+/* line 104, app/assets/stylesheets/datatables.scss */
 .table-bordered thead th, .table-bordered thead td {
   border-bottom-width: 0px;
   border-top-width: 0px;
 }
 
-/* line 118, app/assets/stylesheets/datatables.scss */
+/* line 112, app/assets/stylesheets/datatables.scss */
 .sorting:after, .sorting:before, .sorting_asc:after, .sorting_asc:before, .sorting_desc:after, .sorting_desc:before {
   font-size: 15px;
   line-height: 18px;
@@ -125,24 +118,24 @@ table.dataTable > tbody > tr.child ul.dtr-details {
   font-family: "Font Awesome 5 Free";
 }
 
-/* line 125, app/assets/stylesheets/datatables.scss */
+/* line 119, app/assets/stylesheets/datatables.scss */
 .sorting:after, .sorting_asc:after, .sorting_desc:after {
   right: 0.2em !important;
   content: '\f30c' !important;
 }
 
-/* line 130, app/assets/stylesheets/datatables.scss */
+/* line 124, app/assets/stylesheets/datatables.scss */
 .sorting:before, .sorting_asc:before, .sorting_desc:before {
   right: 0.8em !important;
   content: '\f309' !important;
 }
 
-/* line 137, app/assets/stylesheets/datatables.scss */
-.table th, .table.dataTable > tbody > tr.child span.dtr-title {
+/* line 131, app/assets/stylesheets/datatables.scss */
+.table.dataTable > tbody > tr.child span.dtr-title {
   font-weight: 500;
 }
 
-/* line 141, app/assets/stylesheets/datatables.scss */
+/* line 135, app/assets/stylesheets/datatables.scss */
 .search-label {
   opacity: 0;
   z-index: -1;
