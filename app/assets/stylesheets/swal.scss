@@ -2,7 +2,7 @@
 *= require sweetalert2/dist/sweetalert2.min
 */
 
-@import "variables.scss";
+@import "_variables";
 
 .swal2-top-end .swal2-popup {
   padding: 15px 5px;

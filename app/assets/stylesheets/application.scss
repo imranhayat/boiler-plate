@@ -54,7 +54,7 @@
 //   font-display: swap;
 // }
 
-@import "variables.scss";
+@import "_variables";
 
 @import "bootstrap";
 
@@ -90,19 +90,6 @@
   }
 }
 // Admin Panel Index End
-
-
-// Sweet Alert
-.sweet-alert {
-  input{
-    display: none;
-  }
-
-  button{
-    background-color: $primary !important;
-  }
-}
-// Sweet Alert End
 
 //Footer
 footer{
@@ -294,7 +281,7 @@ textarea{
   }
 
   .card-body {
-    @extend .p-lg-50, .py-30, .px-3;
+    @extend .p-sm-50, .py-30, .px-3;
   }
 
   .devise-bg{
@@ -679,6 +666,11 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 
 .w-470 { @include width(470px); }
 .w-920 { @include width(920px); }
+
+.mw-470{
+  width: 470px;
+  max-width: 470px;
+}
 
 .table{
   margin-bottom: 0;

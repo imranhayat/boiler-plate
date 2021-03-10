@@ -2594,15 +2594,15 @@ pre code {
 
 /* line 43, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/_forms.scss */
 .form-control::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="file"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="time"]::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
-  color: #D2D2D2;
+  color: #d1d1d1;
   opacity: 1;
 }
 .form-control:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="file"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
-  color: #D2D2D2;
+  color: #d1d1d1;
   opacity: 1;
 }
 .form-control::placeholder, input[type="email"]::placeholder, input[type="password"]::placeholder, input[type="text"]::placeholder, input[type="number"]::placeholder, input[type="file"]::placeholder, input[type="date"]::placeholder, input[type="datetime-local"]::placeholder, input[type="month"]::placeholder, input[type="url"]::placeholder, input[type="week"]::placeholder, input[type="search"]::placeholder, input[type="tel"]::placeholder, input[type="time"]::placeholder, select::placeholder, textarea::placeholder {
-  color: #D2D2D2;
+  color: #d1d1d1;
   opacity: 1;
 }
 
@@ -12228,7 +12228,7 @@ button.bg-dark:focus {
     padding-left: 45px !important;
   }
   /* line 11, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-  .p-sm-50 {
+  .p-sm-50, .page-center .card-body, .center-cards .card-body {
     padding: 50px !important;
   }
   /* line 12, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
@@ -14682,7 +14682,7 @@ button.bg-dark:focus {
     padding-left: 45px !important;
   }
   /* line 11, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-  .p-lg-50, .page-center .card-body, .center-cards .card-body {
+  .p-lg-50 {
     padding: 50px !important;
   }
   /* line 12, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.5.3/assets/stylesheets/bootstrap/utilities/_spacing.scss */
@@ -18014,22 +18014,12 @@ h3 {
   margin-top: 5px;
 }
 
-/* line 97, app/assets/stylesheets/application.scss */
-.sweet-alert input {
-  display: none;
-}
-
-/* line 101, app/assets/stylesheets/application.scss */
-.sweet-alert button {
-  background-color: #79589f !important;
-}
-
-/* line 108, app/assets/stylesheets/application.scss */
+/* line 95, app/assets/stylesheets/application.scss */
 footer {
   font-size: 1rem;
 }
 
-/* line 112, app/assets/stylesheets/application.scss */
+/* line 99, app/assets/stylesheets/application.scss */
 .footer {
   margin-top: auto;
   padding: 15px 7px;
@@ -18038,20 +18028,20 @@ footer {
   text-align: center;
 }
 
-/* line 122, app/assets/stylesheets/application.scss */
+/* line 109, app/assets/stylesheets/application.scss */
 input[type="email"], input[type="password"], input[type="text"], input[type="number"], input[type="file"], input[type="date"], input[type="datetime-local"], input[type="month"], input[type="url"], input[type="week"], input[type="search"], input[type="tel"], input[type="time"], select, textarea {
   box-shadow: none;
   filter: none;
 }
 
-/* line 132, app/assets/stylesheets/application.scss */
+/* line 119, app/assets/stylesheets/application.scss */
 textarea {
   border-radius: 5px;
   height: auto;
   min-height: 45px;
 }
 
-/* line 139, app/assets/stylesheets/application.scss */
+/* line 126, app/assets/stylesheets/application.scss */
 .form-control:-webkit-autofill, input[type="email"]:-webkit-autofill, input[type="password"]:-webkit-autofill, input[type="text"]:-webkit-autofill, input[type="number"]:-webkit-autofill, input[type="file"]:-webkit-autofill, input[type="date"]:-webkit-autofill, input[type="datetime-local"]:-webkit-autofill, input[type="month"]:-webkit-autofill, input[type="url"]:-webkit-autofill, input[type="week"]:-webkit-autofill, input[type="search"]:-webkit-autofill, input[type="tel"]:-webkit-autofill, input[type="time"]:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus {
   -webkit-text-fill-color: #1d2b3a;
   box-shadow: 0 0 0px 1000px #fff inset;
@@ -18059,25 +18049,25 @@ textarea {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* line 146, app/assets/stylesheets/application.scss */
+/* line 133, app/assets/stylesheets/application.scss */
 .form-control:-webkit-autofill::first-line, input[type="email"]:-webkit-autofill::first-line, input[type="password"]:-webkit-autofill::first-line, input[type="text"]:-webkit-autofill::first-line, input[type="number"]:-webkit-autofill::first-line, input[type="file"]:-webkit-autofill::first-line, input[type="date"]:-webkit-autofill::first-line, input[type="datetime-local"]:-webkit-autofill::first-line, input[type="month"]:-webkit-autofill::first-line, input[type="url"]:-webkit-autofill::first-line, input[type="week"]:-webkit-autofill::first-line, input[type="search"]:-webkit-autofill::first-line, input[type="tel"]:-webkit-autofill::first-line, input[type="time"]:-webkit-autofill::first-line, select:-webkit-autofill::first-line, textarea:-webkit-autofill::first-line {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
-/* line 167, app/assets/stylesheets/application.scss */
+/* line 154, app/assets/stylesheets/application.scss */
 .radio .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox .custom-control-input:not(:disabled):active ~ label::before, .radio .checkbox input[type="checkbox"]:not(:disabled):active ~ label::before, .radio .checkbox input[type="radio"]:not(:disabled):active ~ label::before, .radio .custom-control-input:not(:disabled):active ~ label::before, .radio input[type="checkbox"]:not(:disabled):active ~ label::before, .radio input[type="radio"]:not(:disabled):active ~ label::before {
   background-color: #79589f;
   border-color: #79589f;
 }
 
-/* line 176, app/assets/stylesheets/application.scss */
+/* line 163, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-label::before, .checkbox label::before {
   border-radius: 2px;
   transition: none;
 }
 
-/* line 181, app/assets/stylesheets/application.scss */
+/* line 168, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .custom-control-input:checked ~ label::after, .checkbox input[type="checkbox"]:checked ~ label::after, .checkbox input[type="radio"]:checked ~ label::after, .checkbox .radio input[type="checkbox"]:checked ~ label::after, .checkbox .radio input[type="radio"]:checked ~ label::after, .checkbox .radio .custom-control-input:checked ~ label::after {
   content: "\f00c";
   font-weight: 900;
@@ -18089,116 +18079,116 @@ textarea {
   background-image: none;
 }
 
-/* line 192, app/assets/stylesheets/application.scss */
+/* line 179, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .custom-control-input:not(:disabled):active ~ label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ label::before, .checkbox input[type="radio"]:not(:disabled):active ~ label::before, .checkbox .radio input[type="checkbox"]:not(:disabled):active ~ label::before, .checkbox .radio input[type="radio"]:not(:disabled):active ~ label::before, .checkbox .radio .custom-control-input:not(:disabled):active ~ label::before {
   background-color: #fff;
   border-color: #79589f;
 }
 
-/* line 198, app/assets/stylesheets/application.scss */
+/* line 185, app/assets/stylesheets/application.scss */
 .custom-control-label, .checkbox label, .radio label {
   line-height: 25px;
 }
 
-/* line 204, app/assets/stylesheets/application.scss */
+/* line 191, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* line 208, app/assets/stylesheets/application.scss */
+/* line 195, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* line 212, app/assets/stylesheets/application.scss */
+/* line 199, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-thumb {
   background: transparent;
   background-color: #79589f;
   border-radius: 3px;
 }
 
-/* line 221, app/assets/stylesheets/application.scss */
+/* line 208, app/assets/stylesheets/application.scss */
 .nav-link {
   font-weight: 500;
   font-size: 16px;
 }
 
-/* line 226, app/assets/stylesheets/application.scss */
+/* line 213, app/assets/stylesheets/application.scss */
 .navbar {
   z-index: 1;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 231, app/assets/stylesheets/application.scss */
+/* line 218, app/assets/stylesheets/application.scss */
 .dropdown-item i {
   width: 22px;
 }
 
-/* line 235, app/assets/stylesheets/application.scss */
+/* line 222, app/assets/stylesheets/application.scss */
 .navbar-light .navbar-toggler {
   border-color: #d1d1d1;
   padding: 3px 5px;
 }
 
 @media (max-width: 991.98px) {
-  /* line 243, app/assets/stylesheets/application.scss */
+  /* line 230, app/assets/stylesheets/application.scss */
   .navbar .dropdown-toggle::after {
     display: none;
   }
-  /* line 247, app/assets/stylesheets/application.scss */
+  /* line 234, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu {
     display: block;
     padding: 0;
     border: 0;
   }
-  /* line 252, app/assets/stylesheets/application.scss */
+  /* line 239, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item {
     padding-left: 5px;
     padding-right: 5px;
   }
-  /* line 256, app/assets/stylesheets/application.scss */
+  /* line 243, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item i {
     display: none;
   }
 }
 
-/* line 266, app/assets/stylesheets/application.scss */
+/* line 253, app/assets/stylesheets/application.scss */
 .input-group-append .btn, .input-group-append .pricing .btn-choose-plan, .pricing .input-group-append .btn-choose-plan, .input-group-append .btn-submit {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-/* line 271, app/assets/stylesheets/application.scss */
+/* line 258, app/assets/stylesheets/application.scss */
 :focus, button:focus {
   box-shadow: none !important;
   outline: none;
 }
 
-/* line 276, app/assets/stylesheets/application.scss */
+/* line 263, app/assets/stylesheets/application.scss */
 .btn-link {
   padding: 0;
 }
 
-/* line 280, app/assets/stylesheets/application.scss */
+/* line 267, app/assets/stylesheets/application.scss */
 .btn-block, .pricing .btn-choose-plan, .btn-submit {
   border-radius: 50px;
 }
 
-/* line 286, app/assets/stylesheets/application.scss */
+/* line 273, app/assets/stylesheets/application.scss */
 .page-center, .center-cards {
   display: flex;
   justify-content: center;
 }
 
-/* line 290, app/assets/stylesheets/application.scss */
+/* line 277, app/assets/stylesheets/application.scss */
 .page-center .card, .center-cards .card {
   margin: 30px 0;
   display: flex;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 300, app/assets/stylesheets/application.scss */
+/* line 287, app/assets/stylesheets/application.scss */
 .page-center .devise-bg, .center-cards .devise-bg {
   height: 100%;
   background-image: url("/devise-bg.jpg");
@@ -18206,32 +18196,32 @@ textarea {
   background-position: center center;
 }
 
-/* line 308, app/assets/stylesheets/application.scss */
+/* line 295, app/assets/stylesheets/application.scss */
 .page-center {
   height: 100%;
   align-items: center;
 }
 
-/* line 313, app/assets/stylesheets/application.scss */
+/* line 300, app/assets/stylesheets/application.scss */
 .btn-google, .btn-facebook {
   display: flex;
   align-items: center;
   height: 45px;
 }
 
-/* line 318, app/assets/stylesheets/application.scss */
+/* line 305, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons, .btn-facebook .devise-social-icons {
   display: inline-flex;
   text-align: center;
   height: 100%;
 }
 
-/* line 323, app/assets/stylesheets/application.scss */
+/* line 310, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons img, .btn-facebook .devise-social-icons img {
   margin: auto;
 }
 
-/* line 327, app/assets/stylesheets/application.scss */
+/* line 314, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-text, .btn-facebook .devise-social-text {
   font-size: 16px;
   width: 100%;
@@ -18240,7 +18230,7 @@ textarea {
   font-family: "Poppins", sans-serif;
 }
 
-/* line 336, app/assets/stylesheets/application.scss */
+/* line 323, app/assets/stylesheets/application.scss */
 .btn-google {
   border: 1px solid #4285f4;
   background-color: #4285f4;
@@ -18248,64 +18238,64 @@ textarea {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 342, app/assets/stylesheets/application.scss */
+/* line 329, app/assets/stylesheets/application.scss */
 .btn-google:hover {
   border: 1px solid #3367d6;
   background-color: #3367d6;
 }
 
-/* line 347, app/assets/stylesheets/application.scss */
+/* line 334, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons {
   width: 45px;
   background-color: #fff;
 }
 
-/* line 351, app/assets/stylesheets/application.scss */
+/* line 338, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons img {
   width: 18px;
 }
 
-/* line 357, app/assets/stylesheets/application.scss */
+/* line 344, app/assets/stylesheets/application.scss */
 .btn-facebook {
   border-radius: 4px;
   background-color: #1877f2;
 }
 
-/* line 361, app/assets/stylesheets/application.scss */
+/* line 348, app/assets/stylesheets/application.scss */
 .btn-facebook:hover {
   background-color: #4267B2;
 }
 
-/* line 365, app/assets/stylesheets/application.scss */
+/* line 352, app/assets/stylesheets/application.scss */
 .btn-facebook .devise-social-icons img {
   width: 24px;
   margin-left: 9px;
 }
 
-/* line 370, app/assets/stylesheets/application.scss */
+/* line 357, app/assets/stylesheets/application.scss */
 .btn-facebook .devise-social-text {
   font-weight: 600;
 }
 
-/* line 383, app/assets/stylesheets/application.scss */
+/* line 370, app/assets/stylesheets/application.scss */
 .pricing .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 393, app/assets/stylesheets/application.scss */
+/* line 380, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card, .pricing .single-plan:nth-child(3) .card {
   border-color: #79589f;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 397, app/assets/stylesheets/application.scss */
+/* line 384, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card-header, .pricing .single-plan:nth-child(3) .card-header {
   background-color: #79589f;
   color: #fff;
 }
 
-/* line 403, app/assets/stylesheets/application.scss */
+/* line 390, app/assets/stylesheets/application.scss */
 .pricing .card-header {
   border-radius: 0;
   padding-top: 30px;
@@ -18314,58 +18304,58 @@ textarea {
   border-bottom: 1px solid #d1d1d1;
 }
 
-/* line 411, app/assets/stylesheets/application.scss */
+/* line 398, app/assets/stylesheets/application.scss */
 .pricing .card-title, .pricing .card-price {
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* line 416, app/assets/stylesheets/application.scss */
+/* line 403, app/assets/stylesheets/application.scss */
 .pricing .card-price {
   font-size: 3rem;
 }
 
-/* line 420, app/assets/stylesheets/application.scss */
+/* line 407, app/assets/stylesheets/application.scss */
 .pricing .card-price .period {
   font-size: 0.9rem;
 }
 
-/* line 424, app/assets/stylesheets/application.scss */
+/* line 411, app/assets/stylesheets/application.scss */
 .pricing .text-muted {
   opacity: 0.7;
 }
 
-/* line 428, app/assets/stylesheets/application.scss */
+/* line 415, app/assets/stylesheets/application.scss */
 .pricing .btn-choose-plan {
   border-radius: 0;
 }
 
-/* line 434, app/assets/stylesheets/application.scss */
+/* line 421, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-submit:not(:first-child), .pricing .btn-group .btn-choose-plan:not(:first-child) {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-/* line 439, app/assets/stylesheets/application.scss */
+/* line 426, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-submit:not(:last-child), .pricing .btn-group .btn-choose-plan:not(:last-child) {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-/* line 455, app/assets/stylesheets/application.scss */
+/* line 442, app/assets/stylesheets/application.scss */
 .pricing .tab-content > .active {
   display: flex;
 }
 
 @media (max-width: 1350px) {
-  /* line 461, app/assets/stylesheets/application.scss */
+  /* line 448, app/assets/stylesheets/application.scss */
   .pricing .card-price {
     font-size: 2.3rem;
   }
 }
 
 @media (max-width: 399.98px) {
-  /* line 467, app/assets/stylesheets/application.scss */
+  /* line 454, app/assets/stylesheets/application.scss */
   .input-group input {
     padding-left: 10px;
     padding-right: 10px;
@@ -18374,17 +18364,17 @@ textarea {
 }
 
 @media (max-width: 991.98px) {
-  /* line 475, app/assets/stylesheets/application.scss */
+  /* line 462, app/assets/stylesheets/application.scss */
   .plan-main, .pricing .single-plan:nth-child(3) {
     order: 1;
   }
-  /* line 479, app/assets/stylesheets/application.scss */
+  /* line 466, app/assets/stylesheets/application.scss */
   .single-plan {
     order: 2;
   }
 }
 
-/* line 485, app/assets/stylesheets/application.scss */
+/* line 472, app/assets/stylesheets/application.scss */
 #spinner {
   display: none;
   position: absolute;
@@ -18393,19 +18383,19 @@ textarea {
   z-index: 9999;
 }
 
-/* line 499, app/assets/stylesheets/application.scss */
+/* line 486, app/assets/stylesheets/application.scss */
 .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 505, app/assets/stylesheets/application.scss */
+/* line 492, app/assets/stylesheets/application.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 508, app/assets/stylesheets/application.scss */
+/* line 495, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -18413,12 +18403,12 @@ textarea {
   top: 10px;
 }
 
-/* line 514, app/assets/stylesheets/application.scss */
+/* line 501, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input {
   display: none;
 }
 
-/* line 517, app/assets/stylesheets/application.scss */
+/* line 504, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -18429,18 +18419,18 @@ textarea {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 526, app/assets/stylesheets/application.scss */
+/* line 513, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 529, app/assets/stylesheets/application.scss */
+/* line 516, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #79589f;
 }
 
-/* line 537, app/assets/stylesheets/application.scss */
+/* line 524, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -18451,27 +18441,27 @@ textarea {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 546, app/assets/stylesheets/application.scss */
+/* line 533, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 555, app/assets/stylesheets/application.scss */
+/* line 542, app/assets/stylesheets/application.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
 @media (max-width: 767.98px) {
-  /* line 561, app/assets/stylesheets/application.scss */
+  /* line 548, app/assets/stylesheets/application.scss */
   .img-user {
     width: 100px;
     height: 100px;
   }
 }
 
-/* line 567, app/assets/stylesheets/application.scss */
+/* line 554, app/assets/stylesheets/application.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -18481,27 +18471,27 @@ textarea {
 }
 
 @media (max-width: 575.98px) {
-  /* line 576, app/assets/stylesheets/application.scss */
+  /* line 563, app/assets/stylesheets/application.scss */
   .col-profile {
     background-image: none;
   }
 }
 
-/* line 583, app/assets/stylesheets/application.scss */
+/* line 570, app/assets/stylesheets/application.scss */
 #error_explanation ul {
   padding-left: 20px;
   margin-bottom: 15px;
   color: #ED1B24;
 }
 
-/* line 591, app/assets/stylesheets/application.scss */
+/* line 578, app/assets/stylesheets/application.scss */
 .form-floating {
   position: relative;
 }
 
-/* line 595, app/assets/stylesheets/application.scss */
+/* line 582, app/assets/stylesheets/application.scss */
 .form-floating > label {
-  color: #D2D2D2;
+  color: #d1d1d1;
   font-size: 14px;
   position: absolute;
   top: calc(22.5px - 10.5px);
@@ -18515,25 +18505,25 @@ textarea {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 610, app/assets/stylesheets/application.scss */
+  /* line 597, app/assets/stylesheets/application.scss */
   .form-floating > label {
     transition: none;
   }
 }
 
-/* line 616, app/assets/stylesheets/application.scss */
+/* line 603, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-webkit-input-placeholder, .form-floating > input[type="email"]::-webkit-input-placeholder, .form-floating > input[type="password"]::-webkit-input-placeholder, .form-floating > input[type="text"]::-webkit-input-placeholder, .form-floating > input[type="number"]::-webkit-input-placeholder, .form-floating > input[type="file"]::-webkit-input-placeholder, .form-floating > input[type="date"]::-webkit-input-placeholder, .form-floating > input[type="datetime-local"]::-webkit-input-placeholder, .form-floating > input[type="month"]::-webkit-input-placeholder, .form-floating > input[type="url"]::-webkit-input-placeholder, .form-floating > input[type="week"]::-webkit-input-placeholder, .form-floating > input[type="search"]::-webkit-input-placeholder, .form-floating > input[type="tel"]::-webkit-input-placeholder, .form-floating > input[type="time"]::-webkit-input-placeholder, .form-floating > select::-webkit-input-placeholder, .form-floating > textarea::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 617, app/assets/stylesheets/application.scss */
+/* line 604, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 618, app/assets/stylesheets/application.scss */
+/* line 605, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
@@ -18547,21 +18537,21 @@ textarea {
   opacity: 0;
 }
 
-/* line 629, app/assets/stylesheets/application.scss */
+/* line 616, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 630, app/assets/stylesheets/application.scss */
+/* line 617, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:focus ~ label, .form-floating > input[type="email"]:focus ~ label, .form-floating > input[type="password"]:focus ~ label, .form-floating > input[type="text"]:focus ~ label, .form-floating > input[type="number"]:focus ~ label, .form-floating > input[type="file"]:focus ~ label, .form-floating > input[type="date"]:focus ~ label, .form-floating > input[type="datetime-local"]:focus ~ label, .form-floating > input[type="month"]:focus ~ label, .form-floating > input[type="url"]:focus ~ label, .form-floating > input[type="week"]:focus ~ label, .form-floating > input[type="search"]:focus ~ label, .form-floating > input[type="tel"]:focus ~ label, .form-floating > input[type="time"]:focus ~ label, .form-floating > select:focus ~ label, .form-floating > textarea:focus ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 631, app/assets/stylesheets/application.scss */
+/* line 618, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
@@ -18578,71 +18568,77 @@ textarea {
   font-weight: 500;
 }
 
-/* line 632, app/assets/stylesheets/application.scss */
+/* line 619, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:-webkit-autofill ~ label, .form-floating > input[type="email"]:-webkit-autofill ~ label, .form-floating > input[type="password"]:-webkit-autofill ~ label, .form-floating > input[type="text"]:-webkit-autofill ~ label, .form-floating > input[type="number"]:-webkit-autofill ~ label, .form-floating > input[type="file"]:-webkit-autofill ~ label, .form-floating > input[type="date"]:-webkit-autofill ~ label, .form-floating > input[type="datetime-local"]:-webkit-autofill ~ label, .form-floating > input[type="month"]:-webkit-autofill ~ label, .form-floating > input[type="url"]:-webkit-autofill ~ label, .form-floating > input[type="week"]:-webkit-autofill ~ label, .form-floating > input[type="search"]:-webkit-autofill ~ label, .form-floating > input[type="tel"]:-webkit-autofill ~ label, .form-floating > input[type="time"]:-webkit-autofill ~ label, .form-floating > select:-webkit-autofill ~ label, .form-floating > textarea:-webkit-autofill ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 647, app/assets/stylesheets/application.scss */
+/* line 634, app/assets/stylesheets/application.scss */
 .modal-header {
   align-items: center;
 }
 
-/* line 654, app/assets/stylesheets/application.scss */
+/* line 641, app/assets/stylesheets/application.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 658, app/assets/stylesheets/application.scss */
+/* line 645, app/assets/stylesheets/application.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 663, app/assets/stylesheets/application.scss */
+/* line 650, app/assets/stylesheets/application.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
 }
 
 @media (min-width: 470px) {
-  /* line 680, app/assets/stylesheets/application.scss */
+  /* line 667, app/assets/stylesheets/application.scss */
   .w-470 {
     width: 470px;
   }
 }
 
 @media (max-width: 470px) {
-  /* line 680, app/assets/stylesheets/application.scss */
+  /* line 667, app/assets/stylesheets/application.scss */
   .w-470 {
     width: 100%;
   }
 }
 
 @media (min-width: 920px) {
-  /* line 681, app/assets/stylesheets/application.scss */
+  /* line 668, app/assets/stylesheets/application.scss */
   .w-920 {
     width: 920px;
   }
 }
 
 @media (max-width: 920px) {
-  /* line 681, app/assets/stylesheets/application.scss */
+  /* line 668, app/assets/stylesheets/application.scss */
   .w-920 {
     width: 100%;
   }
 }
 
-/* line 683, app/assets/stylesheets/application.scss */
+/* line 670, app/assets/stylesheets/application.scss */
+.mw-470 {
+  width: 470px;
+  max-width: 470px;
+}
+
+/* line 675, app/assets/stylesheets/application.scss */
 .table {
   margin-bottom: 0;
   background-color: #fff;
   width: 100% !important;
 }
 
-/* line 688, app/assets/stylesheets/application.scss */
+/* line 680, app/assets/stylesheets/application.scss */
 .table th {
   font-weight: 500;
 }
