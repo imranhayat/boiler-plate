@@ -7,6 +7,8 @@ Rails.application.configure do
   config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.assets.js_compressor = :uglifier
   config.assets.compile = false
+  config.assets.compress = true
+  config.assets.css_compressor = :sass
   config.log_level = :debug
   config.log_tags = [ :request_id ]
   config.action_mailer.perform_caching = false
