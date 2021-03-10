@@ -22,9 +22,11 @@
           text: "<%= flash[:info].html_safe %>",
           icon: 'success'
         <% end %>
-        timer: 2000
+        // timer: 2000
       });
-      setTimeout(function(){location.reload()}, 2000);
+      if(window.matchMedia("(min-width: 992px)").matches){
+        setTimeout(function(){location.reload()}, 2000);
+      }
     });
   </script>
 <% end %>
