@@ -35,7 +35,8 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       # t.datetime :locked_at
 
       ## Custom Fields
-      t.string :name
+      t.string :first_name
+      t.string :last_name
       t.string :gender
       t.string :phone_number
       t.date :date_of_birth

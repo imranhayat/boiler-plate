@@ -126,7 +126,7 @@ class Users::InvitationsController < Devise::InvitationsController
     end
 
     def update_permitted_parameters
-      devise_parameter_sanitizer.permit(:accept_invitation, keys: [:name])
+      devise_parameter_sanitizer.permit(:accept_invitation, keys: [:first_name, :last_name])
     end
 
 end

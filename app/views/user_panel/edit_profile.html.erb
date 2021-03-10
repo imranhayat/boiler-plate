@@ -16,8 +16,12 @@
           </div>
         </div>
         <div class="form-group form-floating">
-          <%= f.text_field :name, autofocus: true, required: true, placeholder: 'Enter Your Name' %>
-          <label for="user_name">Enter Your Name</label>
+          <%= f.text_field :first_name, autofocus: true, required: true, placeholder: 'Enter Your First Name' %>
+          <label for="user_name">Enter Your First Name</label>
+        </div>
+        <div class="form-group form-floating">
+          <%= f.text_field :last_name, autofocus: true, required: true, placeholder: 'Enter Your Last Name' %>
+          <label for="user_name">Enter Your Last Name</label>
         </div>
         <div class="form-group form-floating">
           <%= f.number_field :phone_number, placeholder: 'Enter Your Phone Number', required: true %>

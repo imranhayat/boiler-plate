@@ -106,4 +106,12 @@ class User < ApplicationRecord
     @user = User.find_by_stripe_customer_id(customer_id)
     { name: @user.name, email: @user.email }
   end
+
+  def name
+    unless first_name.present? && last_name.present?
+      ''      
+    else
+      "#{first_name} #{last_name}"    
+    end
+  end
 end
