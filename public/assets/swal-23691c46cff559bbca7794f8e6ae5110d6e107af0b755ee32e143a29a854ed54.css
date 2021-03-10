@@ -2,20 +2,25 @@
 /*
 
 */
-/* line 6, app/assets/stylesheets/swal.scss */
+/* line 8, app/assets/stylesheets/swal.scss */
 .swal2-top-end .swal2-popup {
   padding: 15px 5px;
   max-width: 370px !important;
 }
 
-/* line 11, app/assets/stylesheets/swal.scss */
+/* line 13, app/assets/stylesheets/swal.scss */
 .swal2-top-end .swal2-html-container {
   font-size: 16px;
   font-weight: 500;
 }
 
-/* line 16, app/assets/stylesheets/swal.scss */
+/* line 18, app/assets/stylesheets/swal.scss */
 .swal2-close {
   font-size: 1.9rem !important;
   color: #000 !important;
+}
+
+/* line 23, app/assets/stylesheets/swal.scss */
+.swal2-confirm {
+  background-color: #79589f !important;
 }
