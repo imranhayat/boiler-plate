@@ -28,11 +28,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
     <% if params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
       <!-- Datatable CSS Files -->
@@ -64,8 +66,9 @@
     <% end %>
 
     <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' or params[:controller] == 'plans' %>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css" integrity="sha256-5uZsN51mZNPiwsxlFtZveRchbCHcHkPoIjG7N2Y4rIU=" crossorigin="anonymous">
       <%= stylesheet_link_tag 'swal', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <%= javascript_include_tag 'swal', 'data-turbolinks-track': 'reload', defer: true %>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js" integrity="sha256-RRb75FFB4bqHpBTVaEua+QNVpKSI5m4HBvQKgY1E8S4=" crossorigin="anonymous"></script>
     <% end %>
 
     <% if user_signed_in? and current_user.has_role? :admin %>
@@ -73,8 +76,6 @@
       <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
     <% end %>
     
-    <%= javascript_include_tag 'script', 'data-turbolinks-track': 'reload', defer: true %>
-
     <% if params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' or params[:controller] == 'plans' or params[:controller] == 'products' or params[:controller] == 'admin_panel' %>
       <script src="https://js.stripe.com/v3/" defer crossorigin="anonymous"></script>
     <% end %>
