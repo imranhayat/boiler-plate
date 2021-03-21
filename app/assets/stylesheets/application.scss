@@ -116,10 +116,25 @@ select{
   @extend .custom-select;
 }
 
-textarea{
-  border-radius: 5px;
+textarea.form-control{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: $border-radius-sm;
   height: auto;
   min-height: 45px;
+}
+
+input[type="file"]{
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+select[multiple], .nav-tabs .nav-link, .nav-pills .nav-link, .alert, .badge, .list-group, .img-thumbnail{
+  border-radius: $border-radius-sm;
+}
+
+input[type="checkbox"], input[type="radio"]{
+  filter: hue-rotate(45deg);
 }
 
 .form-control:-webkit-autofill{
@@ -155,6 +170,10 @@ textarea{
     background-color: $primary;
     border-color: $primary;
   }
+}
+
+.custom-file-label{
+  @extend .text-truncate;
 }
 
 .checkbox{
@@ -213,6 +232,15 @@ textarea{
 .navbar{
   z-index: 1;
   filter: $filter;
+}
+
+.navbar.bg-primary{
+  .nav-link{
+    color: #fff;
+  }
+  .navbar-brand{
+    color: #fff;
+  }
 }
 
 .dropdown-item i{
@@ -680,4 +708,12 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   th{
     font-weight: $font-weight-bold;
   }
+}
+
+.btn .badge{
+  padding: 0.38em 0.3rem 0.1rem 0.4em !important;
+}
+
+.bs-docs-section h2, .bs-docs-section h1, .bs-docs-section p, .bs-component{
+  margin-bottom: 10px;
 }

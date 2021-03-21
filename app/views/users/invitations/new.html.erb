@@ -15,7 +15,7 @@
         <%= render "devise/shared/error_messages", resource: resource %>
         <% resource.class.invite_key_fields.each do |field| -%>
           <div class="form-group form-floating">
-            <%= f.email_field field, autofocus: true, placeholder: 'Enter Your Email', required: true %>
+            <%= f.email_field field, placeholder: 'Enter Your Email', required: true %>
             <label for="user_email">Enter Your Email</label>
           </div>
         <% end %>

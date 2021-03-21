@@ -1,5 +1,5 @@
 $(document).on('turbolinks:load',function(){
-  var table = $('.datatable table').DataTable({
+  var table1 = $('.datatable table').DataTable({
     language: {
       search: `<span class="search-label">Search</span>`,
       searchPlaceholder: "Search"
@@ -19,10 +19,10 @@ $(document).on('turbolinks:load',function(){
       }
   });
 
-  table.buttons().container()
+  table1.buttons().container()
       .prependTo( '.dataTables_wrapper .col-xl-9:eq(0)' );
 
-  $('.no-datatable table').DataTable({
+  var table2 = $('.no-datatable table').DataTable({
     dom:
     "<'row'<'col-12'><'col-12'>>" +
     "<'row'<'col-12'tr>>" +
@@ -31,9 +31,13 @@ $(document).on('turbolinks:load',function(){
     bSort: false
   });
   document.addEventListener("turbolinks:before-cache", function() {
-    if (table !== null) {
-      table.destroy();
-      table = null;
+    if (table1 !== null) {
+      table1.destroy();
+      table1 = null;
+    }
+    if (table2 !== null) {
+      table2.destroy();
+      table2 = null;
     }
   });
 });

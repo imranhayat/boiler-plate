@@ -12,12 +12,15 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require bootstrap
 //= require popper
+//= require bootstrap
 //= require_self
 
 $(document).on('turbolinks:load',function(){
   "use strict";
+
+  // Bootstrap Custom File Input
+  bsCustomFileInput.init();
   
   // Add active state to sidbar nav links
   var path = window.location.href; // because the 'href' property of the DOM element is the absolute path

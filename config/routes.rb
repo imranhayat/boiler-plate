@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   
   get '/error404', to: 'home#error404'
   get '/error500', to: 'home#error500'
+  get '/index', to: 'home#index'
+  get '/new', to: 'home#new'
+  get '/show', to: 'home#show'
+  get '/edit', to: 'home#edit'
+  get '/atoms_molecules', to: 'home#atoms_molecules'
   get '/change_access', to: 'admin_panel#change_access', as: :change_access
   get '/dashboard', to: 'user_panel#index', as: :user_panel
   get 'profile', to: 'user_panel#profile', as: :profile

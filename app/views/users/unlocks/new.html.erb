@@ -10,7 +10,7 @@
           <%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
             <%= devise_error_messages! %>
             <div class="form-group form-floating">
-              <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder:"Enter Your Email", required: true %>
+              <%= f.email_field :email, autocomplete: "email", placeholder:"Enter Your Email", required: true %>
               <label for="user_email">Enter Your Email</label>
             </div>
             <%= f.submit "Resend unlock instructions", class:'btn-submit' %>

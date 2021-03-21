@@ -34,9 +34,11 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js" crossorigin="anonymous" defer></script>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
-    <% if params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
+    <% if  params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
       <!-- Datatable CSS Files -->
       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.23/css/dataTables.bootstrap4.min.css" crossorigin="anonymous"/>
       <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.5/css/buttons.bootstrap4.min.css" crossorigin="anonymous"/>
@@ -68,7 +70,7 @@
     <% if notice or  alert.present? or flash[:warning] or flash[:info].present? or params[:controller] == 'subscriptions' or params[:controller] == 'user_panel' or params[:controller] == 'plans' %>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.css" integrity="sha256-5uZsN51mZNPiwsxlFtZveRchbCHcHkPoIjG7N2Y4rIU=" crossorigin="anonymous">
       <%= stylesheet_link_tag 'swal', media: 'all', 'data-turbolinks-track': 'reload' %>
-      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js" integrity="sha256-RRb75FFB4bqHpBTVaEua+QNVpKSI5m4HBvQKgY1E8S4=" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.all.min.js" integrity="sha256-RRb75FFB4bqHpBTVaEua+QNVpKSI5m4HBvQKgY1E8S4=" crossorigin="anonymous" defer></script>
     <% end %>
 
     <% if user_signed_in? and current_user.has_role? :admin %>
