@@ -717,3 +717,30 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .bs-docs-section h2, .bs-docs-section h1, .bs-docs-section p, .bs-component{
   margin-bottom: 10px;
 }
+
+@mixin fontSize($size){
+  font-size: $size;
+  @media(max-width: 992px){
+    font-size: $size - 2px;
+  }
+  @media(max-width: 767px){
+    font-size: $size - 3.5px;
+  }
+}
+
+.fs-20 { @include fontSize(20px); }
+.fs-30 { @include fontSize(30px); }
+
+@mixin fw($weight){
+  font-weight: $weight;
+}
+
+.fw-100 { @include fw(100); }
+.fw-200 { @include fw(200); }
+.fw-300 { @include fw(300); }
+.fw-400 { @include fw(400); }
+.fw-500 { @include fw(500); }
+.fw-600 { @include fw(600); }
+.fw-700 { @include fw(700); }
+.fw-800 { @include fw(800); }
+.fw-900 { @include fw(900); }
