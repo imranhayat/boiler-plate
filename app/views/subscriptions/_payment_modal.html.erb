@@ -19,7 +19,7 @@
           <%= form_tag validate_coupon_path ,remote: true do %>
             <%= hidden_field_tag 'stripe_plan_id', stripe_plan_id %>
             <div class="input-group mb-3">
-              <%= text_field_tag 'coupon', '' , placeholder: 'Enter Coupon code', :aria => {:label => 'Enter Coupon code', :describedby => 'couponSubmit'} %>
+              <%= text_field_tag 'coupon', '' , placeholder: 'Enter Coupon code', required: true, :aria => {:label => 'Enter Coupon code', :describedby => 'couponSubmit'} %>
               <div class="input-group-append">
                 <%= submit_tag 'Apply Coupon', class: 'btn btn-primary', id: 'couponSubmit', data: { 'disable-with': 'Checking...' } %>
               </div>
