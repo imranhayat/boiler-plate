@@ -21,7 +21,7 @@
         <div class="px-3 pb-3 pt-1">
           <% if current_user.subscription.present? && current_user.subscription.active? %>
             <% if @current_user_plan.id == plan.id %>
-              Your Current Plan
+              <button type="button" class="btn-choose-plan" disabled>Your Current Plan</button>
             <% else %>
               <%= link_to "CHANGE PLAN", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn-choose-plan"  %>
             <% end %>

@@ -38,6 +38,8 @@
 
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
+    <script src="https://cdn.jsdelivr.net/npm/data-confirm-modal@1.6.2/vendor/assets/javascripts/data-confirm-modal.min.js" defer crossorigin="anonymous"></script>
+
     <% if  params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
       <!-- Datatable CSS Files -->
       <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css" crossorigin="anonymous"/>

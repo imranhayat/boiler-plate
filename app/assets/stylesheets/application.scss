@@ -248,8 +248,12 @@ input[type="checkbox"], input[type="radio"]{
 }
 
 .navbar-light .navbar-toggler {
-  border-color: $border-color;
-  padding: 3px 5px;
+  border: 0;
+  padding: 0;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%2379589f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 @media(max-width: 991.98px){
@@ -508,6 +512,38 @@ input[type="checkbox"], input[type="radio"]{
 .MyCardElement{
   @extend .border, .p-3, .rounded-sm;
 }
+
+.payment-method{
+  position: relative;
+  border-radius: 3px;
+  border: $border-1;
+}
+
+.payment-col:not(:last-child) .payment-method{
+  margin-bottom: 10px;
+}
+
+.card-icon{
+  width: 10px;
+  opacity: 0.7;
+  -webkit-text-stroke: 0.9px;
+  -webkit-text-stroke-color: #fff;
+}
+
+.options-dropdown .dropdown-toggle{
+  cursor: pointer;
+}
+
+.options-dropdown .dropdown-toggle::after{
+  display: none;
+}
+
+@media(max-width: 991.98px){
+  .card-image{
+    width: 204px;
+  }
+}
+
 // Pricing End
 
 // Image Preview

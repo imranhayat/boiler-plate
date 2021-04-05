@@ -46,6 +46,107 @@
       </div>
     </div>
 
+    <div class="card">
+      <div class="card-body">
+        <div class="d-flex align-items-center">
+          <div class="flex-grow-1">
+            <h3 class="card-title">Payment Methods</h3>
+            <%# if @payment_methods.present? %>
+              <div class="form-row">
+                <%# @payment_methods.each do |pm| %>
+                  <div class="payment-col col-xl-11 col-xxl-10">
+
+                    <!-- Single Card -->
+                    <div class="form-row align-items-start align-items-sm-center payment-method p-2 p-sm-3">
+                      <div class="col-11 col-sm-7 col-md-8 col-lg-7 mb-1 mb-sm-0 align-items-start align-items-sm-center order-1 order-sm-1 d-inline-flex position-relative">
+                        <img src="<%#= pm.brand %>Visa.png" alt="<%#= pm.brand %>Visa" width="40" class="pr-8">
+                        <div class="lh-1">
+                          <%#= pm.brand.humanize %>Visa <span class="d-inline-block">**** <%#= pm.last4 %>4242</span>
+                        </div>
+
+                        <!-- Default Badge -->
+                        <%# if pm.default %>
+                        <span class="badge badge-primary badge-default pt-s4 ml-2">Default</span>
+                        <%# end %>
+
+                      </div>
+                      <div class="col-sm-4 col-md-3 col-lg-4 ml-45 ml-sm-0 order-3 order-sm-2 lh-1 px-0">Expires <%#= pm.exp_month %>03/<%#= pm.exp_year %>23</div>
+                      <div class="col-1 text-right order-2 order-sm-3 lh-9">
+
+                        <!-- Delete Icon -->
+                        <%# if pm.default %>
+                          <a data-method="DELETE" href="<%#= payment_method_path(pm)%>" class="text-reset" title="Delete" data-confirm="Are you sure?" data-commit="Yes, delete this!" data-cancel="Cancel">
+                            <i class="fas fa-times card-icon"></i>
+                          </a>
+                        <%# else %>
+                          
+                        <%# end %>
+
+                      </div>
+                    </div>
+                    <!-- Single Card End -->
+
+                  </div>
+                <%# end %>
+                <div class="payment-col col-xl-11 col-xxl-10">
+
+                  <!-- Single Card -->
+                  <div class="form-row align-items-start align-items-sm-center payment-method p-2 p-sm-3">
+                    <div class="col-11 col-sm-7 col-md-8 col-lg-7 mb-1 mb-sm-0 align-items-start align-items-sm-center order-1 order-sm-1 d-inline-flex position-relative">
+                      <img src="<%#= pm.brand %>Visa.png" alt="<%#= pm.brand %>Visa" width="40" class="pr-8">
+                      <div class="lh-1">
+                        <%#= pm.brand.humanize %>Visa <span class="d-inline-block">**** <%#= pm.last4 %>4242</span>
+                      </div>
+
+                      <!-- Default Badge -->
+                      <%# if pm.default %>
+                      <%# <span class="badge badge-primary badge-default pt-s4 ml-2">Default</span> %>
+                      <%# end %>
+
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-4 ml-45 ml-sm-0 order-3 order-sm-2 lh-1 px-0">Expires <%#= pm.exp_month %>03/<%#= pm.exp_year %>23</div>
+                    <div class="col-1 text-right order-2 order-sm-3 lh-9">
+
+                      <!-- Delete Icon -->
+                      <%# if pm.default %>
+                        
+                      <%# else %>
+                        <div class="options-dropdown dropdown">
+                        <a class="text-reset dropdown-toggle" id="actions1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <i class="fas fa-ellipsis-v card-icon lh-9"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="actions1">
+                          <a data-method="PUT" href="<%#= payment_method_make_default_path(pm) %>" class="dropdown-item">Make Default</a>
+                          <%#= link_to 'Delete', pm, method: :delete, class: 'dropdown-item', data: {confirm: 'Are you sure?', commit: 'Yes, delete this!', cancel: 'Cancel'} %>
+                          <a data-method="DELETE" href="<%#= payment_method_path(pm)%>" class="dropdown-item" title="Delete" data-confirm="Are you sure?" data-commit="Yes, delete this!" data-cancel="Cancel">
+                            Delete
+                          </a>
+                        </div>
+                      </div>
+                      <%# end %>
+
+                    </div>
+                  </div>
+                  <!-- Single Card End -->
+
+                </div>
+              </div>
+            <%# else %>
+              <%# <p class="card-text">No Payment Method currently added.</p> %>
+            <%# end %>
+          </div>
+          <div class="d-none d-md-block d-lg-none d-xl-block flex-shrink-0 pl-2">
+            <img src="/card.png" class="img-fluid card-image" alt="Card Details">
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <%#= link_to 'Add Payment Method', new_payment_method_path, remote: true %>
+        <a href="#" data-toggle="modal" data-target="#paymentMethod">Add Payment Method</a>
+      </div>
+    </div>
+
     <!-- Card Details -->
     <div class="card">
       <div class="card-body">
@@ -142,3 +243,32 @@
 
   </div>
 </section>
+
+
+<!-- Modal -->
+<div class="modal fade" id="paymentMethod" tabindex="-1" aria-labelledby="paymentMethodLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentMethodLabel">Add New Payment Method</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="card">Card Information</label>
+          <input type="text" id="card" placeholder="Card Information">
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" id="default">
+          <label for="default">Make Default</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
