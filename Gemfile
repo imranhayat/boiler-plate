@@ -6,14 +6,14 @@ source 'https://rubygems.org'
 ruby '2.6.3'
 
 # Major Gems
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
 gem 'rails', '~> 5.2', '>= 5.2.3'
 gem 'sass-rails', '~> 6.0.0'
-gem 'turbolinks', '~> 5'
+gem 'turbolinks', '~> 5.2.1'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
-gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 4.2.0'
 
 git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
@@ -45,7 +45,7 @@ gem 'devise_invitable', '~> 2.0.0'
 gem 'figaro'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'interactor'
-gem 'bootstrap', '~> 4.5.3'
+gem 'bootstrap', '~> 4.6.0'
 gem 'jquery-rails', '~> 4.4.0'
 gem 'money-rails', '~>1.12'
 gem 'omniauth-facebook'
