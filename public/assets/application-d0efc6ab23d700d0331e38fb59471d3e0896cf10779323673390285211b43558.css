@@ -18766,90 +18766,96 @@ input[type="checkbox"], input[type="radio"] {
   padding: 0.38em 0.3rem 0.1rem 0.4em !important;
 }
 
-/* line 753, app/assets/stylesheets/application.scss */
-.bs-docs-section h2, .bs-docs-section h1, .bs-docs-section p, .bs-component {
-  margin-bottom: 10px;
-}
-
-/* line 767, app/assets/stylesheets/application.scss */
+/* line 763, app/assets/stylesheets/application.scss */
 .fs-20 {
   font-size: 20px;
 }
 
 @media (max-width: 992px) {
-  /* line 767, app/assets/stylesheets/application.scss */
+  /* line 763, app/assets/stylesheets/application.scss */
   .fs-20 {
     font-size: 18px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 767, app/assets/stylesheets/application.scss */
+  /* line 763, app/assets/stylesheets/application.scss */
   .fs-20 {
     font-size: 16.5px;
   }
 }
 
-/* line 768, app/assets/stylesheets/application.scss */
+/* line 764, app/assets/stylesheets/application.scss */
 .fs-30 {
   font-size: 30px;
 }
 
 @media (max-width: 992px) {
-  /* line 768, app/assets/stylesheets/application.scss */
+  /* line 764, app/assets/stylesheets/application.scss */
   .fs-30 {
     font-size: 28px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 768, app/assets/stylesheets/application.scss */
+  /* line 764, app/assets/stylesheets/application.scss */
   .fs-30 {
     font-size: 26.5px;
   }
 }
 
-/* line 774, app/assets/stylesheets/application.scss */
+/* line 770, app/assets/stylesheets/application.scss */
 .fw-100 {
   font-weight: 100;
 }
 
-/* line 775, app/assets/stylesheets/application.scss */
+/* line 771, app/assets/stylesheets/application.scss */
 .fw-200 {
   font-weight: 200;
 }
 
-/* line 776, app/assets/stylesheets/application.scss */
+/* line 772, app/assets/stylesheets/application.scss */
 .fw-300 {
   font-weight: 300;
 }
 
-/* line 777, app/assets/stylesheets/application.scss */
+/* line 773, app/assets/stylesheets/application.scss */
 .fw-400 {
   font-weight: 400;
 }
 
-/* line 778, app/assets/stylesheets/application.scss */
+/* line 774, app/assets/stylesheets/application.scss */
 .fw-500 {
   font-weight: 500;
 }
 
-/* line 779, app/assets/stylesheets/application.scss */
+/* line 775, app/assets/stylesheets/application.scss */
 .fw-600 {
   font-weight: 600;
 }
 
-/* line 780, app/assets/stylesheets/application.scss */
+/* line 776, app/assets/stylesheets/application.scss */
 .fw-700 {
   font-weight: 700;
 }
 
-/* line 781, app/assets/stylesheets/application.scss */
+/* line 777, app/assets/stylesheets/application.scss */
 .fw-800 {
   font-weight: 800;
 }
 
-/* line 782, app/assets/stylesheets/application.scss */
+/* line 778, app/assets/stylesheets/application.scss */
 .fw-900 {
   font-weight: 900;
+}
+
+/* line 781, app/assets/stylesheets/application.scss */
+.password_show .fas {
+  position: absolute;
+  line-height: 16px;
+  right: 22px;
+  top: calc(50% - 8px);
+  cursor: pointer;
+  font-size: 16px;
+  color: #79589f;
 }

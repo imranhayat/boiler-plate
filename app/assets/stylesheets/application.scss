@@ -750,10 +750,6 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   padding: 0.38em 0.3rem 0.1rem 0.4em !important;
 }
 
-.bs-docs-section h2, .bs-docs-section h1, .bs-docs-section p, .bs-component{
-  margin-bottom: 10px;
-}
-
 @mixin fontSize($size){
   font-size: $size;
   @media(max-width: 992px){
@@ -780,3 +776,14 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .fw-700 { @include fw(700); }
 .fw-800 { @include fw(800); }
 .fw-900 { @include fw(900); }
+
+
+.password_show .fas{
+  position: absolute;
+  line-height: 16px;
+  right: 22px;
+  top: calc(50% - 8px);
+  cursor: pointer;
+  font-size: 16px;
+  color: $primary;
+}

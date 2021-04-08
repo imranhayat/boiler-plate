@@ -5207,7 +5207,22 @@ $(document).on('turbolinks:load',function(){
       i_count.removeClass("d-none");
     }
   })
+
+  $('[type="password"]').closest('.form-group').addClass('password_show');
+  $('.password_show').append('<i class="fas fa-eye"></i>');
 })
+
+$(document).on('click','.password_show .fas', function(){
+  var password_field =  $(this).closest('.password_show').find('input');
+  if($(this).hasClass('fa-eye')){
+    password_field.attr('type','text');
+    $(this).removeClass('fa-eye').addClass('fa-eye-slash');
+  }
+  else{
+    password_field.attr('type','password');
+    $(this).removeClass('fa-eye-slash').addClass('fa-eye');
+  }
+});
 
 function readURL(input) {
   if (input.files && input.files[0]) {

@@ -4,7 +4,7 @@
 
 > Ruby version  (2.6.3)
 > Rails version (5.2.3)
-> Bootstrap version (4.0)
+> Bootstrap version (4.6.0)
 > Database (PostgreSQL)
 
 #### Gem Friendly_ID Settings
