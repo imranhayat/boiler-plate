@@ -73,3 +73,70 @@ function readURL(input) {
 $(document).on('change','#imageUpload',function() {
   readURL(this);
 });
+
+
+// MultiStep Form Script
+$(document).on('click','.next', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  $('.needs-validation').addClass('was-validated');
+  if($('form')[0].checkValidity() == true){
+    $(this).closest('.c-step').hide();
+    $(this).closest('.c-step').next('.c-step').show();
+    $(this).closest('.c-step').next('.c-step').find('.required').prop('required', true);
+    // $(this).closest('.c-step').next('.c-step').find('[type="tel"]').attr('maxlength', '14');
+    // $(this).closest('.c-step').next('.c-step').find('[type="tel"]').attr('pattern', '\\(\\d{3}\\)[ ]?\\d{3}[-]?\\d{4}');
+    $(this).closest('.c-step').next('.c-step').find('.form-control').focus();
+    $('.needs-validation').removeClass('was-validated');
+  }
+});
+
+$(document).on('click','.back', function(e) {
+  $(this).closest('.c-step').hide();
+  $(this).closest('.c-step').prev('.c-step').show();
+  $(this).closest('.c-step').find('.form-control').prop('required', false);
+  $(this).closest('.c-step').prev('.c-step').find('.form-control').focus();
+});
+
+$(document).on('click','.finish', function(e) {
+  $('.needs-validation').addClass('was-validated');
+  if($('form')[0].checkValidity() == true){
+    $('.needs-validation').removeClass('was-validated');
+  }
+  else{
+    e.preventDefault();
+    e.stopPropagation();
+  }
+});
+
+// Telephone Field Validation
+$(document).on('change keydown keyup paste','input[type="tel"]', function (e) {
+  var output,
+    $this = $(this),
+    input = $this.val();
+  if(input != ''){
+    if(e.keyCode != 8) {
+      input = input.replace(/[^0-9]/g, '');
+      var area = input.substr(0, 3);
+      var pre = input.substr(3, 3);
+      var tel = input.substr(6, 4);
+      if (area.length < 3) {
+        output = "(" + area;
+      } else if (area.length == 3 && pre.length < 3) {
+        output = "(" + area + ")" + " " + pre;
+      } else if (area.length == 3 && pre.length == 3) {
+        output = "(" + area + ")" + " " + pre + "-" + tel;
+      }
+      $this.val(output);
+    }
+  }
+});
+
+// URL Validation
+$(document).on('blur','input[type="url"]', function (){
+  var string = $(this).val();
+  if (!~string.indexOf("http")) {
+    string = "http://" + string;
+  }
+  $(this).val(string);
+});

@@ -129,6 +129,20 @@ input[type="file"]{
   padding-bottom: 0.5rem;
 }
 
+.password_show .fas{
+  position: absolute;
+  line-height: 16px;
+  right: 22px;
+  top: calc(50% - 8px);
+  cursor: pointer;
+  font-size: 16px;
+  color: $primary;
+}
+
+.needs-validation .password_show .fas{
+  display: none;
+}
+
 select[multiple], .nav-tabs .nav-link, .nav-pills .nav-link, .alert, .badge, .list-group, .img-thumbnail{
   border-radius: $border-radius-sm;
 }
@@ -736,6 +750,11 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   max-width: 470px;
 }
 
+.mw-1000{
+  width: 1000px;
+  max-width: 1000px;
+}
+
 .table{
   margin-bottom: 0;
   background-color: #fff;
@@ -777,13 +796,100 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .fw-800 { @include fw(800); }
 .fw-900 { @include fw(900); }
 
+.card-header{
+  background-color: #fff;
+  border-bottom: $border-1;
+}
 
-.password_show .fas{
+// MultiStep Forms
+
+.h-step{
+  @extend .col-md-auto, .col-sm-6, .mb-2, .mb-xl-0;
+}
+
+.h-step{
+  position: relative;
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+.h-step.active, .h-step.completed{
+  opacity: 1;
+}
+
+.h-step:after{
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 12px;
   position: absolute;
-  line-height: 16px;
-  right: 22px;
-  top: calc(50% - 8px);
-  cursor: pointer;
-  font-size: 16px;
-  color: $primary;
+  right: -6px;
+  top: 5px;
+  font-weight: 900;
+}
+
+.btn[disabled]{
+  cursor: default;
+}
+
+@media(max-width: 767.98px){
+  .h-step:after{
+    right: 8%;
+  }
+}
+
+.h-step:last-child:after{
+  content: '';
+}
+
+.multistep_icon{
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 7px;
+  background: #232f39;
+}
+
+.multistep_icon i, .active .multistep_count, .completed .multistep_count{
+  display: none;
+}
+
+.active .multistep_icon i, .completed .multistep_icon i{
+  display: inline;
+  font-size: 12px;
+  color: #fff;
+}
+
+.completed .multistep_icon i:before{
+  content: '\f00c';
+}
+
+.active .multistep_icon i:before, .completed.active .multistep_icon i:before{
+  content: '\f124';
+}
+
+.multistep_count{
+  color: #fff;
+}
+
+.active .multistep_icon, .completed .multistep_icon{
+  background: $primary;
+}
+
+.completed .text{
+  opacity: 1;
+}
+
+.completed.active .text{
+  opacity: 1;
+}
+
+.hidden, .c-step-1 .back{
+  display: none;
+}
+
+.c-step-1 .form-buttons{
+  justify-content: flex-end !important;
 }

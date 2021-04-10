@@ -13,6 +13,12 @@ Rails.application.routes.draw do
   
   get '/error404', to: 'home#error404'
   get '/error500', to: 'home#error500'
+  get '/multisubmit_multistep_step_1', to: 'home#multisubmit_multistep_step_1'
+  get '/multisubmit_multistep_step_2', to: 'home#multisubmit_multistep_step_2'
+  get '/multisubmit_multistep_step_3', to: 'home#multisubmit_multistep_step_3'
+  get '/multisubmit_multistep_step_4', to: 'home#multisubmit_multistep_step_4'
+  get '/multisubmit_multistep_step_5', to: 'home#multisubmit_multistep_step_5'
+  get '/single_submit_multistep', to: 'home#single_submit_multistep'
   get '/index', to: 'home#index'
   get '/new', to: 'home#new'
   get '/show', to: 'home#show'

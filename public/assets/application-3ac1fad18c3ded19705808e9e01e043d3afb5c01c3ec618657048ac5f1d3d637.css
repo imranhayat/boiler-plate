@@ -800,7 +800,8 @@ pre code {
 .col-xxl-auto, .col-xxl-12, .col-xxl-11, .col-xxl-10, .col-xxl-9, .col-xxl-8, .col-xxl-7, .col-xxl-6, .col-xxl-5, .col-xxl-4, .col-xxl-3, .col-xxl-2, .col-xxl-1, .col-xl,
 .col-xl-auto, .col-xl-12, .col-xl-11, .col-xl-10, .col-xl-9, .col-xl-8, .col-xl-7, .col-xl-6, .col-xl-5, .col-xl-4, .col-xl-3, .col-xl-2, .col-xl-1, .col-lg,
 .col-lg-auto, .col-lg-12, .col-lg-11, .col-lg-10, .col-lg-9, .col-lg-8, .col-lg-7, .col-lg-6, .col-lg-5, .col-lg-4, .col-lg-3, .col-lg-2, .col-lg-1, .col-md,
-.col-md-auto, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
+.col-md-auto,
+.h-step, .col-md-12, .col-md-11, .col-md-10, .col-md-9, .col-md-8, .col-md-7, .col-md-6, .col-md-5, .col-md-4, .col-md-3, .col-md-2, .col-md-1, .col-sm,
 .col-sm-auto, .col-sm-12, .col-sm-11, .col-sm-10, .col-sm-9, .col-sm-8, .col-sm-7, .col-sm-6, .col-sm-5, .col-sm-4, .col-sm-3, .col-sm-2, .col-sm-1, .col,
 .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
@@ -1130,7 +1131,7 @@ pre code {
     max-width: 41.6666666667%;
   }
   /* line 53, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.6.0/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-sm-6 {
+  .col-sm-6, .h-step {
     flex: 0 0 50%;
     max-width: 50%;
   }
@@ -1312,7 +1313,7 @@ pre code {
     max-width: 16.6666666667%;
   }
   /* line 47, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.6.0/assets/stylesheets/bootstrap/mixins/_grid-framework.scss */
-  .col-md-auto {
+  .col-md-auto, .h-step {
     flex: 0 0 auto;
     width: auto;
     max-width: 100%;
@@ -10071,7 +10072,7 @@ button.bg-dark:focus {
 }
 
 /* line 18, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.6.0/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-.mb-2,
+.mb-2, .h-step,
 .my-2 {
   margin-bottom: 10px !important;
 }
@@ -15179,7 +15180,7 @@ button.bg-dark:focus {
     margin-right: 0 !important;
   }
   /* line 18, ../../.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/bootstrap-4.6.0/assets/stylesheets/bootstrap/utilities/_spacing.scss */
-  .mb-xl-0,
+  .mb-xl-0, .h-step,
 .my-xl-0 {
     margin-bottom: 0 !important;
   }
@@ -18098,16 +18099,32 @@ input[type="file"] {
 }
 
 /* line 132, app/assets/stylesheets/application.scss */
+.password_show .fas {
+  position: absolute;
+  line-height: 16px;
+  right: 22px;
+  top: calc(50% - 8px);
+  cursor: pointer;
+  font-size: 16px;
+  color: #79589f;
+}
+
+/* line 142, app/assets/stylesheets/application.scss */
+.needs-validation .password_show .fas {
+  display: none;
+}
+
+/* line 146, app/assets/stylesheets/application.scss */
 select[multiple], .nav-tabs .nav-link, .nav-pills .nav-link, .alert, .badge, .list-group, .img-thumbnail {
   border-radius: 5px;
 }
 
-/* line 136, app/assets/stylesheets/application.scss */
+/* line 150, app/assets/stylesheets/application.scss */
 input[type="checkbox"], input[type="radio"] {
   filter: hue-rotate(45deg);
 }
 
-/* line 141, app/assets/stylesheets/application.scss */
+/* line 155, app/assets/stylesheets/application.scss */
 .form-control:-webkit-autofill, input[type="email"]:-webkit-autofill, input[type="password"]:-webkit-autofill, input[type="text"]:-webkit-autofill, input[type="number"]:-webkit-autofill, input[type="file"]:-webkit-autofill, input[type="date"]:-webkit-autofill, input[type="datetime-local"]:-webkit-autofill, input[type="month"]:-webkit-autofill, input[type="url"]:-webkit-autofill, input[type="week"]:-webkit-autofill, input[type="search"]:-webkit-autofill, input[type="tel"]:-webkit-autofill, input[type="time"]:-webkit-autofill, select:-webkit-autofill, textarea:-webkit-autofill, .form-control:-webkit-autofill:hover, .form-control:-webkit-autofill:focus {
   -webkit-text-fill-color: #1d2b3a;
   box-shadow: 0 0 0px 1000px #fff inset;
@@ -18115,25 +18132,25 @@ input[type="checkbox"], input[type="radio"] {
   transition: background-color 5000s ease-in-out 0s;
 }
 
-/* line 148, app/assets/stylesheets/application.scss */
+/* line 162, app/assets/stylesheets/application.scss */
 .form-control:-webkit-autofill::first-line, input[type="email"]:-webkit-autofill::first-line, input[type="password"]:-webkit-autofill::first-line, input[type="text"]:-webkit-autofill::first-line, input[type="number"]:-webkit-autofill::first-line, input[type="file"]:-webkit-autofill::first-line, input[type="date"]:-webkit-autofill::first-line, input[type="datetime-local"]:-webkit-autofill::first-line, input[type="month"]:-webkit-autofill::first-line, input[type="url"]:-webkit-autofill::first-line, input[type="week"]:-webkit-autofill::first-line, input[type="search"]:-webkit-autofill::first-line, input[type="tel"]:-webkit-autofill::first-line, input[type="time"]:-webkit-autofill::first-line, select:-webkit-autofill::first-line, textarea:-webkit-autofill::first-line {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
 }
 
-/* line 169, app/assets/stylesheets/application.scss */
+/* line 183, app/assets/stylesheets/application.scss */
 .radio .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .radio .checkbox .custom-control-input:not(:disabled):active ~ label::before, .radio .checkbox input[type="checkbox"]:not(:disabled):active ~ label::before, .radio .checkbox input[type="radio"]:not(:disabled):active ~ label::before, .radio .custom-control-input:not(:disabled):active ~ label::before, .radio input[type="checkbox"]:not(:disabled):active ~ label::before, .radio input[type="radio"]:not(:disabled):active ~ label::before {
   background-color: #79589f;
   border-color: #79589f;
 }
 
-/* line 182, app/assets/stylesheets/application.scss */
+/* line 196, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-label::before, .checkbox label::before {
   border-radius: 2px;
   transition: none;
 }
 
-/* line 187, app/assets/stylesheets/application.scss */
+/* line 201, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-input:checked ~ .custom-control-label::after, .checkbox input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="checkbox"]:checked ~ .custom-control-label::after, .checkbox .radio input[type="radio"]:checked ~ .custom-control-label::after, .checkbox .custom-control-input:checked ~ label::after, .checkbox input[type="checkbox"]:checked ~ label::after, .checkbox input[type="radio"]:checked ~ label::after, .checkbox .radio input[type="checkbox"]:checked ~ label::after, .checkbox .radio input[type="radio"]:checked ~ label::after, .checkbox .radio .custom-control-input:checked ~ label::after {
   content: "\f00c";
   font-weight: 900;
@@ -18145,131 +18162,131 @@ input[type="checkbox"], input[type="radio"] {
   background-image: none;
 }
 
-/* line 198, app/assets/stylesheets/application.scss */
+/* line 212, app/assets/stylesheets/application.scss */
 .checkbox .custom-control-input:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="checkbox"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .radio input[type="radio"]:not(:disabled):active ~ .custom-control-label::before, .checkbox .custom-control-input:not(:disabled):active ~ label::before, .checkbox input[type="checkbox"]:not(:disabled):active ~ label::before, .checkbox input[type="radio"]:not(:disabled):active ~ label::before, .checkbox .radio input[type="checkbox"]:not(:disabled):active ~ label::before, .checkbox .radio input[type="radio"]:not(:disabled):active ~ label::before, .checkbox .radio .custom-control-input:not(:disabled):active ~ label::before {
   background-color: #fff;
   border-color: #79589f;
 }
 
-/* line 204, app/assets/stylesheets/application.scss */
+/* line 218, app/assets/stylesheets/application.scss */
 .custom-control-label, .checkbox label, .radio label {
   line-height: 25px;
 }
 
-/* line 210, app/assets/stylesheets/application.scss */
+/* line 224, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
-/* line 214, app/assets/stylesheets/application.scss */
+/* line 228, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 
-/* line 218, app/assets/stylesheets/application.scss */
+/* line 232, app/assets/stylesheets/application.scss */
 ::-webkit-scrollbar-thumb {
   background: transparent;
   background-color: #79589f;
   border-radius: 3px;
 }
 
-/* line 227, app/assets/stylesheets/application.scss */
+/* line 241, app/assets/stylesheets/application.scss */
 .nav-link {
   font-weight: 500;
   font-size: 16px;
 }
 
-/* line 232, app/assets/stylesheets/application.scss */
+/* line 246, app/assets/stylesheets/application.scss */
 .navbar {
   z-index: 1;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 238, app/assets/stylesheets/application.scss */
+/* line 252, app/assets/stylesheets/application.scss */
 .navbar.bg-primary .nav-link {
   color: #fff;
 }
 
-/* line 241, app/assets/stylesheets/application.scss */
+/* line 255, app/assets/stylesheets/application.scss */
 .navbar.bg-primary .navbar-brand {
   color: #fff;
 }
 
-/* line 246, app/assets/stylesheets/application.scss */
+/* line 260, app/assets/stylesheets/application.scss */
 .dropdown-item i {
   width: 22px;
 }
 
-/* line 250, app/assets/stylesheets/application.scss */
+/* line 264, app/assets/stylesheets/application.scss */
 .navbar-light .navbar-toggler {
   border: 0;
   padding: 0;
 }
 
-/* line 255, app/assets/stylesheets/application.scss */
+/* line 269, app/assets/stylesheets/application.scss */
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%2379589f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 @media (max-width: 991.98px) {
-  /* line 262, app/assets/stylesheets/application.scss */
+  /* line 276, app/assets/stylesheets/application.scss */
   .navbar .dropdown-toggle::after {
     display: none;
   }
-  /* line 266, app/assets/stylesheets/application.scss */
+  /* line 280, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu {
     display: block;
     padding: 0;
     border: 0;
   }
-  /* line 271, app/assets/stylesheets/application.scss */
+  /* line 285, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item {
     padding-left: 5px;
     padding-right: 5px;
   }
-  /* line 275, app/assets/stylesheets/application.scss */
+  /* line 289, app/assets/stylesheets/application.scss */
   .navbar .dropdown-menu .dropdown-item i {
     display: none;
   }
 }
 
-/* line 285, app/assets/stylesheets/application.scss */
+/* line 299, app/assets/stylesheets/application.scss */
 .input-group-append .btn, .input-group-append .pricing .btn-choose-plan, .pricing .input-group-append .btn-choose-plan, .input-group-append .btn-submit {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
 }
 
-/* line 290, app/assets/stylesheets/application.scss */
+/* line 304, app/assets/stylesheets/application.scss */
 :focus, button:focus {
   box-shadow: none !important;
   outline: none;
 }
 
-/* line 295, app/assets/stylesheets/application.scss */
+/* line 309, app/assets/stylesheets/application.scss */
 .btn-link {
   padding: 0;
 }
 
-/* line 299, app/assets/stylesheets/application.scss */
+/* line 313, app/assets/stylesheets/application.scss */
 .btn-block, .pricing .btn-choose-plan, .btn-submit {
   border-radius: 50px;
 }
 
-/* line 305, app/assets/stylesheets/application.scss */
+/* line 319, app/assets/stylesheets/application.scss */
 .page-center, .center-cards {
   display: flex;
   justify-content: center;
 }
 
-/* line 309, app/assets/stylesheets/application.scss */
+/* line 323, app/assets/stylesheets/application.scss */
 .page-center .card, .center-cards .card {
   margin: 30px 0;
   display: flex;
   filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.05));
 }
 
-/* line 319, app/assets/stylesheets/application.scss */
+/* line 333, app/assets/stylesheets/application.scss */
 .page-center .devise-bg, .center-cards .devise-bg {
   height: 100%;
   background-image: url("/devise-bg.jpg");
@@ -18277,32 +18294,32 @@ input[type="checkbox"], input[type="radio"] {
   background-position: center center;
 }
 
-/* line 327, app/assets/stylesheets/application.scss */
+/* line 341, app/assets/stylesheets/application.scss */
 .page-center {
   height: 100%;
   align-items: center;
 }
 
-/* line 332, app/assets/stylesheets/application.scss */
+/* line 346, app/assets/stylesheets/application.scss */
 .btn-google, .btn-facebook {
   display: flex;
   align-items: center;
   height: 45px;
 }
 
-/* line 337, app/assets/stylesheets/application.scss */
+/* line 351, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons, .btn-facebook .devise-social-icons {
   display: inline-flex;
   text-align: center;
   height: 100%;
 }
 
-/* line 342, app/assets/stylesheets/application.scss */
+/* line 356, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons img, .btn-facebook .devise-social-icons img {
   margin: auto;
 }
 
-/* line 346, app/assets/stylesheets/application.scss */
+/* line 360, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-text, .btn-facebook .devise-social-text {
   font-size: 16px;
   width: 100%;
@@ -18311,7 +18328,7 @@ input[type="checkbox"], input[type="radio"] {
   font-family: "Poppins", sans-serif;
 }
 
-/* line 355, app/assets/stylesheets/application.scss */
+/* line 369, app/assets/stylesheets/application.scss */
 .btn-google {
   border: 1px solid #4285f4;
   background-color: #4285f4;
@@ -18319,64 +18336,64 @@ input[type="checkbox"], input[type="radio"] {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* line 361, app/assets/stylesheets/application.scss */
+/* line 375, app/assets/stylesheets/application.scss */
 .btn-google:hover {
   border: 1px solid #3367d6;
   background-color: #3367d6;
 }
 
-/* line 366, app/assets/stylesheets/application.scss */
+/* line 380, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons {
   width: 45px;
   background-color: #fff;
 }
 
-/* line 370, app/assets/stylesheets/application.scss */
+/* line 384, app/assets/stylesheets/application.scss */
 .btn-google .devise-social-icons img {
   width: 18px;
 }
 
-/* line 376, app/assets/stylesheets/application.scss */
+/* line 390, app/assets/stylesheets/application.scss */
 .btn-facebook {
   border-radius: 4px;
   background-color: #1877f2;
 }
 
-/* line 380, app/assets/stylesheets/application.scss */
+/* line 394, app/assets/stylesheets/application.scss */
 .btn-facebook:hover {
   background-color: #4267B2;
 }
 
-/* line 384, app/assets/stylesheets/application.scss */
+/* line 398, app/assets/stylesheets/application.scss */
 .btn-facebook .devise-social-icons img {
   width: 24px;
   margin-left: 9px;
 }
 
-/* line 389, app/assets/stylesheets/application.scss */
+/* line 403, app/assets/stylesheets/application.scss */
 .btn-facebook .devise-social-text {
   font-weight: 600;
 }
 
-/* line 402, app/assets/stylesheets/application.scss */
+/* line 416, app/assets/stylesheets/application.scss */
 .pricing .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 412, app/assets/stylesheets/application.scss */
+/* line 426, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card, .pricing .single-plan:nth-child(3) .card {
   border-color: #79589f;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 416, app/assets/stylesheets/application.scss */
+/* line 430, app/assets/stylesheets/application.scss */
 .pricing .plan-main .card-header, .pricing .single-plan:nth-child(3) .card-header {
   background-color: #79589f;
   color: #fff;
 }
 
-/* line 422, app/assets/stylesheets/application.scss */
+/* line 436, app/assets/stylesheets/application.scss */
 .pricing .card-header {
   border-radius: 0;
   padding-top: 30px;
@@ -18385,58 +18402,58 @@ input[type="checkbox"], input[type="radio"] {
   border-bottom: 1px solid #d1d1d1;
 }
 
-/* line 430, app/assets/stylesheets/application.scss */
+/* line 444, app/assets/stylesheets/application.scss */
 .pricing .card-title, .pricing .card-price {
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* line 435, app/assets/stylesheets/application.scss */
+/* line 449, app/assets/stylesheets/application.scss */
 .pricing .card-price {
   font-size: 3rem;
 }
 
-/* line 439, app/assets/stylesheets/application.scss */
+/* line 453, app/assets/stylesheets/application.scss */
 .pricing .card-price .period {
   font-size: 0.9rem;
 }
 
-/* line 443, app/assets/stylesheets/application.scss */
+/* line 457, app/assets/stylesheets/application.scss */
 .pricing .text-muted {
   opacity: 0.7;
 }
 
-/* line 447, app/assets/stylesheets/application.scss */
+/* line 461, app/assets/stylesheets/application.scss */
 .pricing .btn-choose-plan {
   border-radius: 0;
 }
 
-/* line 453, app/assets/stylesheets/application.scss */
+/* line 467, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-submit:not(:first-child), .pricing .btn-group .btn-choose-plan:not(:first-child) {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-/* line 458, app/assets/stylesheets/application.scss */
+/* line 472, app/assets/stylesheets/application.scss */
 .pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-submit:not(:last-child), .pricing .btn-group .btn-choose-plan:not(:last-child) {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-/* line 474, app/assets/stylesheets/application.scss */
+/* line 488, app/assets/stylesheets/application.scss */
 .pricing .tab-content > .active {
   display: flex;
 }
 
 @media (max-width: 1350px) {
-  /* line 480, app/assets/stylesheets/application.scss */
+  /* line 494, app/assets/stylesheets/application.scss */
   .pricing .card-price {
     font-size: 2.3rem;
   }
 }
 
 @media (max-width: 399.98px) {
-  /* line 486, app/assets/stylesheets/application.scss */
+  /* line 500, app/assets/stylesheets/application.scss */
   .input-group input {
     padding-left: 10px;
     padding-right: 10px;
@@ -18445,17 +18462,17 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 @media (max-width: 991.98px) {
-  /* line 494, app/assets/stylesheets/application.scss */
+  /* line 508, app/assets/stylesheets/application.scss */
   .plan-main, .pricing .single-plan:nth-child(3) {
     order: 1;
   }
-  /* line 498, app/assets/stylesheets/application.scss */
+  /* line 512, app/assets/stylesheets/application.scss */
   .single-plan {
     order: 2;
   }
 }
 
-/* line 504, app/assets/stylesheets/application.scss */
+/* line 518, app/assets/stylesheets/application.scss */
 #spinner {
   display: none;
   position: absolute;
@@ -18464,19 +18481,19 @@ input[type="checkbox"], input[type="radio"] {
   z-index: 9999;
 }
 
-/* line 516, app/assets/stylesheets/application.scss */
+/* line 530, app/assets/stylesheets/application.scss */
 .payment-method {
   position: relative;
   border-radius: 3px;
   border: 1px solid #d1d1d1;
 }
 
-/* line 522, app/assets/stylesheets/application.scss */
+/* line 536, app/assets/stylesheets/application.scss */
 .payment-col:not(:last-child) .payment-method {
   margin-bottom: 10px;
 }
 
-/* line 526, app/assets/stylesheets/application.scss */
+/* line 540, app/assets/stylesheets/application.scss */
 .card-icon {
   width: 10px;
   opacity: 0.7;
@@ -18484,36 +18501,36 @@ input[type="checkbox"], input[type="radio"] {
   -webkit-text-stroke-color: #fff;
 }
 
-/* line 533, app/assets/stylesheets/application.scss */
+/* line 547, app/assets/stylesheets/application.scss */
 .options-dropdown .dropdown-toggle {
   cursor: pointer;
 }
 
-/* line 537, app/assets/stylesheets/application.scss */
+/* line 551, app/assets/stylesheets/application.scss */
 .options-dropdown .dropdown-toggle::after {
   display: none;
 }
 
 @media (max-width: 991.98px) {
-  /* line 542, app/assets/stylesheets/application.scss */
+  /* line 556, app/assets/stylesheets/application.scss */
   .card-image {
     width: 204px;
   }
 }
 
-/* line 550, app/assets/stylesheets/application.scss */
+/* line 564, app/assets/stylesheets/application.scss */
 .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 556, app/assets/stylesheets/application.scss */
+/* line 570, app/assets/stylesheets/application.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 559, app/assets/stylesheets/application.scss */
+/* line 573, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -18521,12 +18538,12 @@ input[type="checkbox"], input[type="radio"] {
   top: 10px;
 }
 
-/* line 565, app/assets/stylesheets/application.scss */
+/* line 579, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input {
   display: none;
 }
 
-/* line 568, app/assets/stylesheets/application.scss */
+/* line 582, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -18537,18 +18554,18 @@ input[type="checkbox"], input[type="radio"] {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 577, app/assets/stylesheets/application.scss */
+/* line 591, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 580, app/assets/stylesheets/application.scss */
+/* line 594, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #79589f;
 }
 
-/* line 588, app/assets/stylesheets/application.scss */
+/* line 602, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -18559,27 +18576,27 @@ input[type="checkbox"], input[type="radio"] {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 597, app/assets/stylesheets/application.scss */
+/* line 611, app/assets/stylesheets/application.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 606, app/assets/stylesheets/application.scss */
+/* line 620, app/assets/stylesheets/application.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
 @media (max-width: 767.98px) {
-  /* line 612, app/assets/stylesheets/application.scss */
+  /* line 626, app/assets/stylesheets/application.scss */
   .img-user {
     width: 100px;
     height: 100px;
   }
 }
 
-/* line 618, app/assets/stylesheets/application.scss */
+/* line 632, app/assets/stylesheets/application.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -18589,25 +18606,25 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 @media (max-width: 575.98px) {
-  /* line 627, app/assets/stylesheets/application.scss */
+  /* line 641, app/assets/stylesheets/application.scss */
   .col-profile {
     background-image: none;
   }
 }
 
-/* line 634, app/assets/stylesheets/application.scss */
+/* line 648, app/assets/stylesheets/application.scss */
 #error_explanation ul {
   padding-left: 20px;
   margin-bottom: 15px;
   color: #ED1B24;
 }
 
-/* line 642, app/assets/stylesheets/application.scss */
+/* line 656, app/assets/stylesheets/application.scss */
 .form-floating {
   position: relative;
 }
 
-/* line 646, app/assets/stylesheets/application.scss */
+/* line 660, app/assets/stylesheets/application.scss */
 .form-floating > label {
   color: #d1d1d1;
   font-size: 14px;
@@ -18623,25 +18640,25 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  /* line 661, app/assets/stylesheets/application.scss */
+  /* line 675, app/assets/stylesheets/application.scss */
   .form-floating > label {
     transition: none;
   }
 }
 
-/* line 667, app/assets/stylesheets/application.scss */
+/* line 681, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-webkit-input-placeholder, .form-floating > input[type="email"]::-webkit-input-placeholder, .form-floating > input[type="password"]::-webkit-input-placeholder, .form-floating > input[type="text"]::-webkit-input-placeholder, .form-floating > input[type="number"]::-webkit-input-placeholder, .form-floating > input[type="file"]::-webkit-input-placeholder, .form-floating > input[type="date"]::-webkit-input-placeholder, .form-floating > input[type="datetime-local"]::-webkit-input-placeholder, .form-floating > input[type="month"]::-webkit-input-placeholder, .form-floating > input[type="url"]::-webkit-input-placeholder, .form-floating > input[type="week"]::-webkit-input-placeholder, .form-floating > input[type="search"]::-webkit-input-placeholder, .form-floating > input[type="tel"]::-webkit-input-placeholder, .form-floating > input[type="time"]::-webkit-input-placeholder, .form-floating > select::-webkit-input-placeholder, .form-floating > textarea::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 668, app/assets/stylesheets/application.scss */
+/* line 682, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
 }
 
-/* line 669, app/assets/stylesheets/application.scss */
+/* line 683, app/assets/stylesheets/application.scss */
 .form-floating > .form-control::-moz-placeholder, .form-floating > input[type="email"]::-moz-placeholder, .form-floating > input[type="password"]::-moz-placeholder, .form-floating > input[type="text"]::-moz-placeholder, .form-floating > input[type="number"]::-moz-placeholder, .form-floating > input[type="file"]::-moz-placeholder, .form-floating > input[type="date"]::-moz-placeholder, .form-floating > input[type="datetime-local"]::-moz-placeholder, .form-floating > input[type="month"]::-moz-placeholder, .form-floating > input[type="url"]::-moz-placeholder, .form-floating > input[type="week"]::-moz-placeholder, .form-floating > input[type="search"]::-moz-placeholder, .form-floating > input[type="tel"]::-moz-placeholder, .form-floating > input[type="time"]::-moz-placeholder, .form-floating > select::-moz-placeholder, .form-floating > textarea::-moz-placeholder {
   color: transparent;
   opacity: 0;
@@ -18655,21 +18672,21 @@ input[type="checkbox"], input[type="radio"] {
   opacity: 0;
 }
 
-/* line 680, app/assets/stylesheets/application.scss */
+/* line 694, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 681, app/assets/stylesheets/application.scss */
+/* line 695, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:focus ~ label, .form-floating > input[type="email"]:focus ~ label, .form-floating > input[type="password"]:focus ~ label, .form-floating > input[type="text"]:focus ~ label, .form-floating > input[type="number"]:focus ~ label, .form-floating > input[type="file"]:focus ~ label, .form-floating > input[type="date"]:focus ~ label, .form-floating > input[type="datetime-local"]:focus ~ label, .form-floating > input[type="month"]:focus ~ label, .form-floating > input[type="url"]:focus ~ label, .form-floating > input[type="week"]:focus ~ label, .form-floating > input[type="search"]:focus ~ label, .form-floating > input[type="tel"]:focus ~ label, .form-floating > input[type="time"]:focus ~ label, .form-floating > select:focus ~ label, .form-floating > textarea:focus ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 682, app/assets/stylesheets/application.scss */
+/* line 696, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="email"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="password"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="text"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="number"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="file"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="date"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="datetime-local"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="month"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="url"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="week"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="search"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="tel"]:not(:-moz-placeholder-shown) ~ label, .form-floating > input[type="time"]:not(:-moz-placeholder-shown) ~ label, .form-floating > select:not(:-moz-placeholder-shown) ~ label, .form-floating > textarea:not(:-moz-placeholder-shown) ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
@@ -18686,176 +18703,281 @@ input[type="checkbox"], input[type="radio"] {
   font-weight: 500;
 }
 
-/* line 683, app/assets/stylesheets/application.scss */
+/* line 697, app/assets/stylesheets/application.scss */
 .form-floating > .form-control:-webkit-autofill ~ label, .form-floating > input[type="email"]:-webkit-autofill ~ label, .form-floating > input[type="password"]:-webkit-autofill ~ label, .form-floating > input[type="text"]:-webkit-autofill ~ label, .form-floating > input[type="number"]:-webkit-autofill ~ label, .form-floating > input[type="file"]:-webkit-autofill ~ label, .form-floating > input[type="date"]:-webkit-autofill ~ label, .form-floating > input[type="datetime-local"]:-webkit-autofill ~ label, .form-floating > input[type="month"]:-webkit-autofill ~ label, .form-floating > input[type="url"]:-webkit-autofill ~ label, .form-floating > input[type="week"]:-webkit-autofill ~ label, .form-floating > input[type="search"]:-webkit-autofill ~ label, .form-floating > input[type="tel"]:-webkit-autofill ~ label, .form-floating > input[type="time"]:-webkit-autofill ~ label, .form-floating > select:-webkit-autofill ~ label, .form-floating > textarea:-webkit-autofill ~ label {
   transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
   color: #79589f;
   font-weight: 500;
 }
 
-/* line 698, app/assets/stylesheets/application.scss */
+/* line 712, app/assets/stylesheets/application.scss */
 .modal-header {
   align-items: center;
 }
 
-/* line 705, app/assets/stylesheets/application.scss */
+/* line 719, app/assets/stylesheets/application.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 709, app/assets/stylesheets/application.scss */
+/* line 723, app/assets/stylesheets/application.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 714, app/assets/stylesheets/application.scss */
+/* line 728, app/assets/stylesheets/application.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
 }
 
 @media (min-width: 470px) {
-  /* line 731, app/assets/stylesheets/application.scss */
+  /* line 745, app/assets/stylesheets/application.scss */
   .w-470 {
     width: 470px;
   }
 }
 
 @media (max-width: 470px) {
-  /* line 731, app/assets/stylesheets/application.scss */
+  /* line 745, app/assets/stylesheets/application.scss */
   .w-470 {
     width: 100%;
   }
 }
 
 @media (min-width: 920px) {
-  /* line 732, app/assets/stylesheets/application.scss */
+  /* line 746, app/assets/stylesheets/application.scss */
   .w-920 {
     width: 920px;
   }
 }
 
 @media (max-width: 920px) {
-  /* line 732, app/assets/stylesheets/application.scss */
+  /* line 746, app/assets/stylesheets/application.scss */
   .w-920 {
     width: 100%;
   }
 }
 
-/* line 734, app/assets/stylesheets/application.scss */
+/* line 748, app/assets/stylesheets/application.scss */
 .mw-470 {
   width: 470px;
   max-width: 470px;
 }
 
-/* line 739, app/assets/stylesheets/application.scss */
+/* line 753, app/assets/stylesheets/application.scss */
+.mw-1000 {
+  width: 1000px;
+  max-width: 1000px;
+}
+
+/* line 758, app/assets/stylesheets/application.scss */
 .table {
   margin-bottom: 0;
   background-color: #fff;
   width: 100% !important;
 }
 
-/* line 744, app/assets/stylesheets/application.scss */
+/* line 763, app/assets/stylesheets/application.scss */
 .table th {
   font-weight: 500;
 }
 
-/* line 749, app/assets/stylesheets/application.scss */
+/* line 768, app/assets/stylesheets/application.scss */
 .btn .badge, .btn-submit .badge, .pricing .btn-choose-plan .badge {
   padding: 0.38em 0.3rem 0.1rem 0.4em !important;
 }
 
-/* line 763, app/assets/stylesheets/application.scss */
+/* line 782, app/assets/stylesheets/application.scss */
 .fs-20 {
   font-size: 20px;
 }
 
 @media (max-width: 992px) {
-  /* line 763, app/assets/stylesheets/application.scss */
+  /* line 782, app/assets/stylesheets/application.scss */
   .fs-20 {
     font-size: 18px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 763, app/assets/stylesheets/application.scss */
+  /* line 782, app/assets/stylesheets/application.scss */
   .fs-20 {
     font-size: 16.5px;
   }
 }
 
-/* line 764, app/assets/stylesheets/application.scss */
+/* line 783, app/assets/stylesheets/application.scss */
 .fs-30 {
   font-size: 30px;
 }
 
 @media (max-width: 992px) {
-  /* line 764, app/assets/stylesheets/application.scss */
+  /* line 783, app/assets/stylesheets/application.scss */
   .fs-30 {
     font-size: 28px;
   }
 }
 
 @media (max-width: 767px) {
-  /* line 764, app/assets/stylesheets/application.scss */
+  /* line 783, app/assets/stylesheets/application.scss */
   .fs-30 {
     font-size: 26.5px;
   }
 }
 
-/* line 770, app/assets/stylesheets/application.scss */
+/* line 789, app/assets/stylesheets/application.scss */
 .fw-100 {
   font-weight: 100;
 }
 
-/* line 771, app/assets/stylesheets/application.scss */
+/* line 790, app/assets/stylesheets/application.scss */
 .fw-200 {
   font-weight: 200;
 }
 
-/* line 772, app/assets/stylesheets/application.scss */
+/* line 791, app/assets/stylesheets/application.scss */
 .fw-300 {
   font-weight: 300;
 }
 
-/* line 773, app/assets/stylesheets/application.scss */
+/* line 792, app/assets/stylesheets/application.scss */
 .fw-400 {
   font-weight: 400;
 }
 
-/* line 774, app/assets/stylesheets/application.scss */
+/* line 793, app/assets/stylesheets/application.scss */
 .fw-500 {
   font-weight: 500;
 }
 
-/* line 775, app/assets/stylesheets/application.scss */
+/* line 794, app/assets/stylesheets/application.scss */
 .fw-600 {
   font-weight: 600;
 }
 
-/* line 776, app/assets/stylesheets/application.scss */
+/* line 795, app/assets/stylesheets/application.scss */
 .fw-700 {
   font-weight: 700;
 }
 
-/* line 777, app/assets/stylesheets/application.scss */
+/* line 796, app/assets/stylesheets/application.scss */
 .fw-800 {
   font-weight: 800;
 }
 
-/* line 778, app/assets/stylesheets/application.scss */
+/* line 797, app/assets/stylesheets/application.scss */
 .fw-900 {
   font-weight: 900;
 }
 
-/* line 781, app/assets/stylesheets/application.scss */
-.password_show .fas {
+/* line 799, app/assets/stylesheets/application.scss */
+.card-header {
+  background-color: #fff;
+  border-bottom: 1px solid #d1d1d1;
+}
+
+/* line 810, app/assets/stylesheets/application.scss */
+.h-step {
+  position: relative;
+  font-weight: 500;
+  opacity: 0.3;
+}
+
+/* line 816, app/assets/stylesheets/application.scss */
+.h-step.active, .h-step.completed {
+  opacity: 1;
+}
+
+/* line 820, app/assets/stylesheets/application.scss */
+.h-step:after {
+  content: '\f054';
+  font-family: 'Font Awesome 5 Free';
+  font-size: 12px;
   position: absolute;
-  line-height: 16px;
-  right: 22px;
-  top: calc(50% - 8px);
-  cursor: pointer;
-  font-size: 16px;
-  color: #79589f;
+  right: -6px;
+  top: 5px;
+  font-weight: 900;
+}
+
+/* line 830, app/assets/stylesheets/application.scss */
+.btn[disabled], .btn-submit[disabled], .pricing .btn-choose-plan[disabled] {
+  cursor: default;
+}
+
+@media (max-width: 767.98px) {
+  /* line 835, app/assets/stylesheets/application.scss */
+  .h-step:after {
+    right: 8%;
+  }
+}
+
+/* line 840, app/assets/stylesheets/application.scss */
+.h-step:last-child:after {
+  content: '';
+}
+
+/* line 844, app/assets/stylesheets/application.scss */
+.multistep_icon {
+  width: 30px;
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 7px;
+  background: #232f39;
+}
+
+/* line 855, app/assets/stylesheets/application.scss */
+.multistep_icon i, .active .multistep_count, .completed .multistep_count {
+  display: none;
+}
+
+/* line 859, app/assets/stylesheets/application.scss */
+.active .multistep_icon i, .completed .multistep_icon i {
+  display: inline;
+  font-size: 12px;
+  color: #fff;
+}
+
+/* line 865, app/assets/stylesheets/application.scss */
+.completed .multistep_icon i:before {
+  content: '\f00c';
+}
+
+/* line 869, app/assets/stylesheets/application.scss */
+.active .multistep_icon i:before, .completed.active .multistep_icon i:before {
+  content: '\f124';
+}
+
+/* line 873, app/assets/stylesheets/application.scss */
+.multistep_count {
+  color: #fff;
+}
+
+/* line 877, app/assets/stylesheets/application.scss */
+.active .multistep_icon, .completed .multistep_icon {
+  background: #79589f;
+}
+
+/* line 881, app/assets/stylesheets/application.scss */
+.completed .text {
+  opacity: 1;
+}
+
+/* line 885, app/assets/stylesheets/application.scss */
+.completed.active .text {
+  opacity: 1;
+}
+
+/* line 889, app/assets/stylesheets/application.scss */
+.hidden, .c-step-1 .back {
+  display: none;
+}
+
+/* line 893, app/assets/stylesheets/application.scss */
+.c-step-1 .form-buttons {
+  justify-content: flex-end !important;
 }
