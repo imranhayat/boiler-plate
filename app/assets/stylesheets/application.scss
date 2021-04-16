@@ -267,7 +267,7 @@ input[type="checkbox"], input[type="radio"]{
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%2379589f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%237D26CD' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 
 @media(max-width: 991.98px){
@@ -371,11 +371,17 @@ input[type="checkbox"], input[type="radio"]{
   background-color: #4285f4;
   border-radius: 1px;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.25);
+  -webkit-transition: background-color .218s,border-color .218s,box-shadow .218s;
+  transition: background-color .218s,border-color .218s,box-shadow .218s;
 
   &:hover {
-    border: 1px solid #3367d6;
-    background-color: #3367d6;
+    -webkit-box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
+    box-shadow: 0 0 3px 3px rgba(66, 133, 244, 0.3);
   }
+
+  .devise-social-text{
+    font-weight: 600;
+   }
 
   .devise-social-icons{
     width: 45px;
@@ -392,7 +398,7 @@ input[type="checkbox"], input[type="radio"]{
   background-color: #1877f2;
 
   &:hover {
-    background-color: #4267B2;
+    background-color: #166fe5;
   }
 
   .devise-social-icons img{
@@ -796,6 +802,10 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .fw-800 { @include fw(800); }
 .fw-900 { @include fw(900); }
 
+.card{
+  border-color: $border-color;
+}
+
 .card-header{
   background-color: #fff;
   border-bottom: $border-1;
@@ -893,3 +903,5 @@ $floating-transform: scale(0.85) translateY(-1.5rem) translateX(0rem);
 .c-step-1 .form-buttons{
   justify-content: flex-end !important;
 }
+
+// MultiStep Forms End

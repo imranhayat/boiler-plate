@@ -233,7 +233,7 @@
 
 /* line 221, app/assets/stylesheets/dashboard.scss */
 .sidenav-light .sidenav-menu .nav-link, .sidenav-light .sidenav-menu .nav-link .nav-link-icon, .sidenav-light .sidenav-menu .nav-link .sidenav-collapse-arrow {
-  color: #1d2b3a;
+  color: #202020;
 }
 
 /* line 225, app/assets/stylesheets/dashboard.scss */
@@ -243,5 +243,5 @@
 
 /* line 229, app/assets/stylesheets/dashboard.scss */
 .sidenav-light .sidenav-menu .nav-link:hover, .sidenav-light .sidenav-menu .nav-link.active, .sidenav-light .sidenav-menu .nav-link.active .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .nav-link-icon, .sidenav-light .sidenav-menu .nav-link:hover .sidenav-collapse-arrow .fas, .sidenav-light .sidenav-menu .nav-link.active .sidenav-collapse-arrow .fas {
-  color: #79589f;
+  color: #7D26CD;
 }

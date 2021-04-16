@@ -25,9 +25,17 @@ div.dataTables_wrapper {
     padding-top: 0;
   }
 
-  div.dataTables_length select{
-    border-radius: 3px;
-  }
+  div.dataTables_length{
+    label{
+      margin-bottom: 0;
+    }
+    select{
+      border-radius: 3px;
+      padding: 4px 15px 5px 6px !important;
+      border-radius: 3px;
+      height: 30px;
+    }
+  } 
 }
 
 div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]{
@@ -35,18 +43,21 @@ div.table-responsive > div.dataTables_wrapper > div.row > div[class^="col-"]{
 }
 
 div.dt-buttons{
+  padding-right: 10px;
   width: auto;
   margin-bottom: 0;
 }
 
-@media(max-width: 642.98px){
+div.dataTables_wrapper div.dataTables_filter input{
+  margin-left: 0;
+}
+
+@media(max-width: 634.98px){
   div.dataTables_wrapper div.dataTables_filter input {
     margin-left: 0;
     width: 100%;
   }
-}
 
-@media(max-width: 681.98px){
   div.dt-buttons{
     margin-bottom: 10px;
   }

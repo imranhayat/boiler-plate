@@ -10,7 +10,7 @@ development:
   database: boiler_development
   host: localhost
   port: 5432
-  username: rails_dev
+  username: postgres
   password: password
 
 test:
@@ -18,7 +18,7 @@ test:
   database: boiler_test
   host: localhost
   port: 5432
-  username: rails_dev
+  username: postgres
   password: password
 
 production:

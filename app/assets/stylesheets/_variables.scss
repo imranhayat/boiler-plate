@@ -1,12 +1,12 @@
 // Bootstrap Variables
 
 // Colors
-$body-bg: #f2f2f2;
-$body-color: #1d2b3a;
-$primary: #79589f;
+$body-bg: #f5f5f5;
+$body-color: #202020;
+$primary: #7D26CD;
 $link-hover-color: darken($primary, 15%);
-$secondary: #6c757d;
-$danger: #ED1B24;
+$secondary: #283747;
+$danger: #de354c;
 $hover-background: #000;
 $navbar-light-color: $body-color;
 $navbar-light-hover-color: $primary;
@@ -21,7 +21,7 @@ $input-color: $body-color;
 $pagination-border-color: $border-color;
 $input-group-addon-color: #888888;
 $input-group-addon-bg: #f8fbff;
-$input-placeholder-color: #d1d1d1;
+$input-placeholder-color: #90949c;
 
 // Font
 $font-size-base: 1rem;
@@ -83,6 +83,7 @@ $spacers: (
   3: $spacer - 5,
   7: 7px,
   8: 8px,
+  20: 20px,
   25: 25px,
   30: 30px,
   35: 35px,
