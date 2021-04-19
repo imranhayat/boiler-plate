@@ -5239,41 +5239,6 @@ $(document).on('change','#imageUpload',function() {
   readURL(this);
 });
 
-
-// MultiStep Form Script
-$(document).on('click','.next', function(e) {
-  e.preventDefault();
-  e.stopPropagation();
-  $('.needs-validation').addClass('was-validated');
-  if($('form')[0].checkValidity() == true){
-    $(this).closest('.c-step').hide();
-    $(this).closest('.c-step').next('.c-step').show();
-    $(this).closest('.c-step').next('.c-step').find('.required').prop('required', true);
-    // $(this).closest('.c-step').next('.c-step').find('[type="tel"]').attr('maxlength', '14');
-    // $(this).closest('.c-step').next('.c-step').find('[type="tel"]').attr('pattern', '\\(\\d{3}\\)[ ]?\\d{3}[-]?\\d{4}');
-    $(this).closest('.c-step').next('.c-step').find('.form-control').focus();
-    $('.needs-validation').removeClass('was-validated');
-  }
-});
-
-$(document).on('click','.back', function(e) {
-  $(this).closest('.c-step').hide();
-  $(this).closest('.c-step').prev('.c-step').show();
-  $(this).closest('.c-step').find('.form-control').prop('required', false);
-  $(this).closest('.c-step').prev('.c-step').find('.form-control').focus();
-});
-
-$(document).on('click','.finish', function(e) {
-  $('.needs-validation').addClass('was-validated');
-  if($('form')[0].checkValidity() == true){
-    $('.needs-validation').removeClass('was-validated');
-  }
-  else{
-    e.preventDefault();
-    e.stopPropagation();
-  }
-});
-
 // Telephone Field Validation
 $(document).on('change keydown keyup paste','input[type="tel"]', function (e) {
   var output,
