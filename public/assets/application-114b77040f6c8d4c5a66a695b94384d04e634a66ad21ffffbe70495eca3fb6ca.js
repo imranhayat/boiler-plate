@@ -5187,7 +5187,7 @@ $(document).on('turbolinks:load',function(){
   // Bootstrap Custom File Input
   bsCustomFileInput.init();
   
-  // Add active state to sidbar nav links
+  // Add active class to Header links
   var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
   $("a.nav-link").each(function() {
     if (this.href === path) {
@@ -5197,6 +5197,7 @@ $(document).on('turbolinks:load',function(){
     }
   });
 
+  // Stripe
   $('[name="plan[interval]"]').on('change',function(){
     var t = $(this);
     var i_count = $('.i_count')
@@ -5208,10 +5209,15 @@ $(document).on('turbolinks:load',function(){
     }
   })
 
+  $('.btn-choose-plan.choose').on('click', function(){
+    $('#spinner').modal('show');
+  })
+
   $('[type="password"]').closest('.form-group').addClass('password_show');
   $('.password_show').append('<i class="fas fa-eye"></i>');
 })
 
+// Password Show/Hide
 $(document).on('click','.password_show .fas', function(){
   var password_field =  $(this).closest('.password_show').find('input');
   if($(this).hasClass('fa-eye')){
@@ -5224,12 +5230,14 @@ $(document).on('click','.password_show .fas', function(){
   }
 });
 
+// Image Preview
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
     reader.onload = function(e) {
       $('#imagePreview').prop('src', e.target.result);
-      $('#imagePreview').hide();
+      $('#imagePreview').show();
+      $('.first-letter.edit-profile').hide();
       $('#imagePreview').fadeIn(650);
     }
     reader.readAsDataURL(input.files[0]);

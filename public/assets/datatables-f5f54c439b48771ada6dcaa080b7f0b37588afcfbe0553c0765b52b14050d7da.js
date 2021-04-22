@@ -8,12 +8,16 @@ $(document).on('turbolinks:load',function(){
 		"<'row align-items-center mb-2'<'col-12 col-xl-3 text-center text-xl-left mb-2 mb-xl-0'l><'col-12 col-xl-9 text-center text-xl-right'f>>" +
 		"<'row'<'col-12'tr>>" +
 		"<'row align-items-center mt-2'<'col-12 col-md-7'i><'col-12 col-md-5'p>>",
-    responsive: true,
+    responsive: {
+      details: {
+        display: $.fn.dataTable.Responsive.display.childRowImmediate
+      }
+    },
       buttons: {
         buttons: [ 'copy', 'csv', 'excel', 'pdf', 'print' ],
         dom: {
           button: {
-               className: 'btn btn-outline-primary'
+            className: 'btn btn-outline-primary'
           }
         }
       }
@@ -27,7 +31,11 @@ $(document).on('turbolinks:load',function(){
     "<'row'<'col-12'><'col-12'>>" +
     "<'row'<'col-12'tr>>" +
     "<'row'<'col-12'><'col-12'>>",
-    responsive: true,
+    responsive: {
+      details: {
+        display: $.fn.dataTable.Responsive.display.childRowImmediate
+      }
+    },
     bSort: false
   });
   document.addEventListener("turbolinks:before-cache", function() {
