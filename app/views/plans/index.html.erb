@@ -25,7 +25,7 @@
           <a class="btn" id="year-tab" data-toggle="tab" href="#year" role="tab" aria-controls="year" aria-selected="false">Annual Billing</a>
         </div>
       </div>
-      <div class="tab-content mt-4" id="myTabContent">
+      <div class="tab-content mt-3" id="myTabContent">
         <% if @monthly_plans.present? %>
           <div class="row no-gutters justify-content-center tab-pane fade show active" id="month" role="tabpanel" aria-labelledby="month-tab">
             <% @monthly_plans.each do |plan| %>
