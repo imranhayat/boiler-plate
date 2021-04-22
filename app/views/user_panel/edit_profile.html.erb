@@ -11,7 +11,18 @@
               <label for="imageUpload"><i class="fas fa-pencil-alt"></i></label>
             </div>
             <div class="avatar-preview">
-              <img id="imagePreview" src="<%= current_user.profile_pic %>" alt="Profile Picture">
+              <% if current_user.profile_pic.present? %>
+                <img id="imagePreview" src="<%= current_user.profile_pic %>" alt="Profile Pic">
+              <% else %>
+                <div class="first-letter edit-profile">
+                  <% if current_user.name.present? %>
+                    <%= current_user.name.first %>
+                  <% else %>
+                    <%= current_user.email.first %>
+                  <% end %>
+                </div>
+              <% end %>
+              <img id="imagePreview" src="<%= current_user.profile_pic %>" alt="Profile Picture" class="hidden">
             </div>
           </div>
         </div>
@@ -24,7 +35,7 @@
           <label for="user_name">Enter Your Last Name</label>
         </div>
         <div class="form-group form-floating">
-          <%= f.number_field :phone_number, placeholder: 'Enter Your Phone Number', required: true %>
+          <%= f.telephone_field :phone_number, placeholder: 'Enter Your Phone Number', required: true, maxlength: 14, pattern:'\(\d{3}\)[ ]?\d{3}[-]?\d{4}', title:'(123) 456-7890' %>
           <label for="user_phone_number">Enter Your Phone Number</label>
         </div>
         <div class="form-group form-floating">

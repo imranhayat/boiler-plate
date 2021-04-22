@@ -64,7 +64,8 @@ function readURL(input) {
     var reader = new FileReader();
     reader.onload = function(e) {
       $('#imagePreview').prop('src', e.target.result);
-      $('#imagePreview').hide();
+      $('#imagePreview').show();
+      $('.first-letter.edit-profile').hide();
       $('#imagePreview').fadeIn(650);
     }
     reader.readAsDataURL(input.files[0]);

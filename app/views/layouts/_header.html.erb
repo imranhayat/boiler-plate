@@ -22,6 +22,17 @@
         <% else %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <% if current_user.profile_pic.present? %>
+                <img src="<%= current_user.profile_pic %>" class="header-avatar" alt="Profile Picture">
+              <% else %>
+                <div class="first-letter header">
+                  <% if current_user.name.present? %>
+                    <%= current_user.name.first %>
+                  <% else %>
+                    <%= current_user.email.first %>
+                  <% end %>
+                </div>
+              <% end %>
               <% if current_user.name.present? %>
                 <%= current_user.name %>
               <% else %>
