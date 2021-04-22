@@ -5,7 +5,7 @@
       <div class="card-price"><%= number_to_currency(plan.interval == 'year' ? (plan.amount_decimal / 12) : plan.amount_decimal, strip_insignificant_zeros: true, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %><span class="period">/month</span></div>
       <% if plan.interval == 'year' %>
         <div><%= number_to_currency(plan.interval == 'year' ? plan.amount_decimal : plan.amount_decimal, strip_insignificant_zeros: true, unit: "#{plan.currency == 'USD' ? '$' : '£'}") %>/year</div>
-        <div>Save <%= plan.currency == 'USD' ? '$' : '£' %><%= (plan.amount_decimal / 12) * 2 %>/year</div>
+        <div>Save <%= plan.currency == 'USD' ? '$' : '£' %><%= '%.2f' % ((plan.amount_decimal / 12) * 2) %>/year</div>
       <% end %>
     </div>
     <div class="card-body p-0">
