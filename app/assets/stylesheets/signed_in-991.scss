@@ -21,12 +21,16 @@
   }
 }
 
-.plan-main {
-  order: 1;
-}
-
 .single-plan{
   order: 2;
+}
+
+.single-plan:nth-child(3) {
+  @extend .plan-main;
+}
+
+.plan-main{
+  order: 1;
 }
 
 .card-image{

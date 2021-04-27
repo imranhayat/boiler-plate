@@ -90,6 +90,7 @@
 
 <!-- If User Signed In -->
 <% if user_signed_in? %>
+
   <%= stylesheet_link_tag 'signed_in', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <%= stylesheet_link_tag 'signed_in-992', media: '(min-width: 992px)', 'data-turbolinks-track': 'reload' %>
@@ -103,6 +104,9 @@
   <%= stylesheet_link_tag 'signed_in-576', media: '(min-width: 576px)', 'data-turbolinks-track': 'reload' %>
 
   <%= stylesheet_link_tag 'signed_in-575', media: '(max-width: 575.98px)', 'data-turbolinks-track': 'reload' %>
+
+  <%= javascript_include_tag 'signed_in', 'data-turbolinks-track': 'reload', defer: true %>
+
 <% end %>
 
 <!-- Dashboard -->
@@ -111,7 +115,8 @@
   <%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
 
   <%= stylesheet_link_tag 'dashboard-992', media: '(min-width: 992px)', 'data-turbolinks-track': 'reload' %>
-<%= stylesheet_link_tag 'dashboard-767', media: '(max-width: 767.98px)', 'data-turbolinks-track': 'reload' %>
+
+  <%= stylesheet_link_tag 'dashboard-767', media: '(max-width: 767.98px)', 'data-turbolinks-track': 'reload' %>
 
   <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
 
