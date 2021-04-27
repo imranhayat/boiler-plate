@@ -1,0 +1,5 @@
+/* line 4, app/assets/stylesheets/application-992.scss */
+.navbar .navbar-nav {
+  display: flex;
+  align-items: center;
+}
