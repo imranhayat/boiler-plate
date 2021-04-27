@@ -21,15 +21,15 @@
         <div class="px-3 pb-3 pt-1">
           <% if current_user.subscription.present? && current_user.subscription.active? %>
             <% if @current_user_plan.id == plan.id %>
-              <button type="button" class="btn-choose-plan" disabled>CURRENT PLAN</button>
+              <button type="button" class="btn-choose-plan btn btn-block btn-outline-primary btn-lg" disabled>CURRENT PLAN</button>
             <% else %>
-              <%= link_to "CHANGE PLAN", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn-choose-plan"  %>
+              <%= link_to "CHANGE PLAN", upgrade_or_downgrade_stripe_plan_path(plan: plan), :data => {:confirm => "Are you sure you want to change your plan from #{@current_user_plan.nickname} (#{number_to_currency(@current_user_plan.amount_decimal, unit: @current_user_plan.currency == 'USD' ? '$ ' : ' £ ')}) to #{plan.nickname} (#{number_to_currency(plan.amount_decimal, unit: plan.currency == 'USD' ? '$ ' : ' £ ')}) this will generate new invoice and the payment will be managed accordingly."}, method: :put, class:"btn-choose-plan btn btn-block btn-outline-primary btn-lg"  %>
             <% end %>
           <% else %>
             <% if current_user.stripe_customer_id.present? && current_user.stripe_payment_method_id.present? %>
-              <%= link_to "CHOOSE PLAN", fetch_payment_details_path(plan: plan), remote: true, class:"btn-choose-plan choose" %>
+              <%= link_to "CHOOSE PLAN", fetch_payment_details_path(plan: plan), remote: true, class:"btn-choose-plan btn btn-block btn-outline-primary btn-lg choose" %>
             <% else %>
-              <%= link_to "CHOOSE PLAN", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class:"btn-choose-plan choose"  %>
+              <%= link_to "CHOOSE PLAN", collect_payment_details_path(plan: plan, stripe_plan_id: plan.stripe_id, app_plan_id:  plan.id), remote: true, class:"btn-choose-plan btn btn-block btn-outline-primary btn-lg choose"  %>
             <% end %>
           <% end %>
         </div>

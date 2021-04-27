@@ -286,6 +286,22 @@ input[type="checkbox"], input[type="radio"]{
 }
 // Header End
 
+// Pricing
+.pricing-tabs{
+  .btn.active{
+    @extend .btn-primary;
+  }
+  
+  .btn{
+    @extend .btn-outline-primary
+  }
+} 
+
+.MyCardElement{
+  @extend .border, .p-3, .rounded-sm;
+}
+// Pricing End
+
 // Buttons
 .input-group-append .btn{
   border-bottom-right-radius: $border-radius;

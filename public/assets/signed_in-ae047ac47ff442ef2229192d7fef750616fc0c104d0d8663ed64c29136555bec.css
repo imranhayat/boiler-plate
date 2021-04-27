@@ -1,22 +1,22 @@
-/* line 9, app/assets/stylesheets/signed_in.scss */
+/* line 5, app/assets/stylesheets/signed_in.scss */
 .pricing .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 19, app/assets/stylesheets/signed_in.scss */
+/* line 15, app/assets/stylesheets/signed_in.scss */
 .pricing .plan-main .card, .pricing .single-plan:nth-child(3) .card {
   border-color: #7D26CD;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
-/* line 23, app/assets/stylesheets/signed_in.scss */
+/* line 19, app/assets/stylesheets/signed_in.scss */
 .pricing .plan-main .card-header, .pricing .single-plan:nth-child(3) .card-header {
   background-color: #7D26CD;
   color: #fff;
 }
 
-/* line 29, app/assets/stylesheets/signed_in.scss */
+/* line 25, app/assets/stylesheets/signed_in.scss */
 .pricing .card-header {
   border-radius: 0;
   padding-top: 30px;
@@ -25,57 +25,57 @@
   border-bottom: 1px solid #d1d1d1;
 }
 
-/* line 37, app/assets/stylesheets/signed_in.scss */
+/* line 33, app/assets/stylesheets/signed_in.scss */
 .pricing .card-title, .pricing .card-price {
   font-weight: 500;
   line-height: 1.3;
 }
 
-/* line 42, app/assets/stylesheets/signed_in.scss */
+/* line 38, app/assets/stylesheets/signed_in.scss */
 .pricing .card-price {
   font-size: 3rem;
 }
 
-/* line 46, app/assets/stylesheets/signed_in.scss */
+/* line 42, app/assets/stylesheets/signed_in.scss */
 .pricing .card-price .period {
   font-size: 0.9rem;
 }
 
-/* line 50, app/assets/stylesheets/signed_in.scss */
+/* line 46, app/assets/stylesheets/signed_in.scss */
 .pricing .text-muted {
   opacity: 0.7;
 }
 
-/* line 54, app/assets/stylesheets/signed_in.scss */
-.pricing .btn-choose-plan {
-  border-radius: 0;
-}
-
-/* line 60, app/assets/stylesheets/signed_in.scss */
-.pricing .btn-group .btn:not(:first-child), .pricing .btn-group .btn-choose-plan:not(:first-child) {
+/* line 52, app/assets/stylesheets/signed_in.scss */
+.pricing .btn-group .btn:not(:first-child) {
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
 }
 
-/* line 65, app/assets/stylesheets/signed_in.scss */
-.pricing .btn-group .btn:not(:last-child), .pricing .btn-group .btn-choose-plan:not(:last-child) {
+/* line 57, app/assets/stylesheets/signed_in.scss */
+.pricing .btn-group .btn:not(:last-child) {
   border-top-left-radius: 50px;
   border-bottom-left-radius: 50px;
 }
 
-/* line 81, app/assets/stylesheets/signed_in.scss */
+/* line 63, app/assets/stylesheets/signed_in.scss */
 .pricing .tab-content > .active {
   display: flex;
 }
 
+/* line 67, app/assets/stylesheets/signed_in.scss */
+.pricing .btn-choose-plan {
+  border-radius: 0;
+}
+
 @media (max-width: 1350px) {
-  /* line 87, app/assets/stylesheets/signed_in.scss */
+  /* line 74, app/assets/stylesheets/signed_in.scss */
   .pricing .card-price {
     font-size: 2.3rem;
   }
 }
 
-/* line 92, app/assets/stylesheets/signed_in.scss */
+/* line 79, app/assets/stylesheets/signed_in.scss */
 #spinner {
   display: none;
   position: absolute;
@@ -84,19 +84,19 @@
   z-index: 9999;
 }
 
-/* line 104, app/assets/stylesheets/signed_in.scss */
+/* line 88, app/assets/stylesheets/signed_in.scss */
 .payment-method {
   position: relative;
   border-radius: 3px;
   border: 1px solid #d1d1d1;
 }
 
-/* line 110, app/assets/stylesheets/signed_in.scss */
+/* line 94, app/assets/stylesheets/signed_in.scss */
 .payment-col:not(:last-child) .payment-method {
   margin-bottom: 10px;
 }
 
-/* line 114, app/assets/stylesheets/signed_in.scss */
+/* line 98, app/assets/stylesheets/signed_in.scss */
 .card-icon {
   width: 10px;
   opacity: 0.7;
@@ -104,29 +104,29 @@
   -webkit-text-stroke-color: #fff;
 }
 
-/* line 121, app/assets/stylesheets/signed_in.scss */
+/* line 105, app/assets/stylesheets/signed_in.scss */
 .options-dropdown .dropdown-toggle {
   cursor: pointer;
 }
 
-/* line 125, app/assets/stylesheets/signed_in.scss */
+/* line 109, app/assets/stylesheets/signed_in.scss */
 .options-dropdown .dropdown-toggle::after {
   display: none;
 }
 
-/* line 132, app/assets/stylesheets/signed_in.scss */
+/* line 116, app/assets/stylesheets/signed_in.scss */
 .avatar-group, .avatar-upload .avatar-edit input + label, .avatar-upload .avatar-preview {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* line 138, app/assets/stylesheets/signed_in.scss */
+/* line 122, app/assets/stylesheets/signed_in.scss */
 .avatar-upload {
   position: relative;
 }
 
-/* line 141, app/assets/stylesheets/signed_in.scss */
+/* line 125, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-edit {
   position: absolute;
   right: 20px;
@@ -134,12 +134,12 @@
   top: 10px;
 }
 
-/* line 147, app/assets/stylesheets/signed_in.scss */
+/* line 131, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-edit input {
   display: none;
 }
 
-/* line 150, app/assets/stylesheets/signed_in.scss */
+/* line 134, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-edit input + label {
   background: #fff;
   width: 34px;
@@ -150,18 +150,18 @@
   transition: all 0.2s ease-in-out;
 }
 
-/* line 159, app/assets/stylesheets/signed_in.scss */
+/* line 143, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-edit input + label:hover {
   background: #ededed;
 }
 
-/* line 162, app/assets/stylesheets/signed_in.scss */
+/* line 146, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-edit input + label i {
   font-size: 20px;
   color: #7D26CD;
 }
 
-/* line 170, app/assets/stylesheets/signed_in.scss */
+/* line 154, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-preview {
   width: 192px;
   height: 192px;
@@ -172,13 +172,13 @@
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
-/* line 179, app/assets/stylesheets/signed_in.scss */
+/* line 163, app/assets/stylesheets/signed_in.scss */
 .avatar-upload .avatar-preview img {
   max-width: 100%;
   max-height: 100%;
 }
 
-/* line 188, app/assets/stylesheets/signed_in.scss */
+/* line 172, app/assets/stylesheets/signed_in.scss */
 .first-letter {
   display: inline-flex;
   align-items: center;
@@ -187,21 +187,21 @@
   color: #fff;
 }
 
-/* line 195, app/assets/stylesheets/signed_in.scss */
+/* line 179, app/assets/stylesheets/signed_in.scss */
 .first-letter.profile {
   width: 150px;
   height: 150px;
   font-size: 100px;
 }
 
-/* line 201, app/assets/stylesheets/signed_in.scss */
+/* line 185, app/assets/stylesheets/signed_in.scss */
 .first-letter.edit-profile {
   width: 180px;
   height: 180px;
   font-size: 100px;
 }
 
-/* line 207, app/assets/stylesheets/signed_in.scss */
+/* line 191, app/assets/stylesheets/signed_in.scss */
 .first-letter.header {
   width: 45px;
   height: 45px;
@@ -210,13 +210,13 @@
   border-radius: 50%;
 }
 
-/* line 216, app/assets/stylesheets/signed_in.scss */
+/* line 200, app/assets/stylesheets/signed_in.scss */
 .img-user {
   width: 150px;
   height: 150px;
 }
 
-/* line 221, app/assets/stylesheets/signed_in.scss */
+/* line 205, app/assets/stylesheets/signed_in.scss */
 .col-profile {
   background: url("/user_background.png") right/cover no-repeat #f9f9f9;
   place-items: flex-start;
@@ -225,18 +225,18 @@
   flex-direction: column;
 }
 
-/* line 232, app/assets/stylesheets/signed_in.scss */
+/* line 216, app/assets/stylesheets/signed_in.scss */
 .payment .card {
   border: 1px solid #d1d1d1;
   border-radius: 0;
 }
 
-/* line 236, app/assets/stylesheets/signed_in.scss */
+/* line 220, app/assets/stylesheets/signed_in.scss */
 .payment .card:not(:last-child) {
   margin-bottom: 20px;
 }
 
-/* line 241, app/assets/stylesheets/signed_in.scss */
+/* line 225, app/assets/stylesheets/signed_in.scss */
 .payment .card-footer {
   background-color: #fff;
   border-top: 1px solid #d1d1d1;
