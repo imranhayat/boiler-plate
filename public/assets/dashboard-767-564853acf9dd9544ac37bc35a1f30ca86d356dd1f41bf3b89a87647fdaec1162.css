@@ -1,0 +1,11 @@
+@media (max-width: 767.98px) {
+  /* line 4, app/assets/stylesheets/dashboard-767.scss */
+  .nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 200px;
+    flex-basis: 200px;
+  }
+  /* line 9, app/assets/stylesheets/dashboard-767.scss */
+  #layoutSidenav #layoutSidenav_content {
+    margin-left: -200px;
+  }
+}
