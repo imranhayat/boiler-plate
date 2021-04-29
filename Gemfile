@@ -6,6 +6,7 @@ source 'https://rubygems.org'
 ruby '2.6.3'
 
 # Major Gems
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem 'coffee-rails', '~> 5.0.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.12'
