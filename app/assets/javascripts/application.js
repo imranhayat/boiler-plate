@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require popper
-//= require bootstrap
+//= require bootstrap-sprockets
 //= require_self
 
 $(document).on('turbolinks:load',function(){
