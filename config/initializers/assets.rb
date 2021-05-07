@@ -15,7 +15,7 @@ Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts
 # folder are already added.
 Rails.application.config.assets.precompile += %w(
 
-  signed_in-576.scss signed_in.js
+  signed_in.scss signed_in.js
 
   dashboard.scss dashboard.js
 
