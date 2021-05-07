@@ -197,3 +197,69 @@
   line-height: 35px;
   margin-top: 5px;
 }
+
+@media (min-width: 992px) {
+  /* line 188, app/assets/stylesheets/dashboard.scss */
+  #layoutSidenav #layoutSidenav_nav {
+    transform: translateX(0);
+  }
+  /* line 192, app/assets/stylesheets/dashboard.scss */
+  #layoutSidenav #layoutSidenav_content {
+    margin-left: 0;
+  }
+  /* line 198, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav .collapse {
+    display: block;
+  }
+  /* line 202, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav {
+    flex-basis: 100px;
+    transform: translateX(0);
+  }
+  /* line 206, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
+    flex-direction: column;
+    padding: 10px 5px;
+  }
+  /* line 211, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link span {
+    font-size: 11.7px;
+  }
+  /* line 215, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link .sidenav-collapse-arrow {
+    display: none;
+  }
+  /* line 219, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link {
+    text-align: center;
+    justify-content: center;
+  }
+  /* line 224, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .nav-link-icon {
+    margin-right: 0;
+  }
+  /* line 228, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_nav .sidenav-menu-nested {
+    margin-left: 0;
+  }
+  /* line 233, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_content {
+    margin-left: 0;
+  }
+  /* line 236, app/assets/stylesheets/dashboard.scss */
+  .sidenav-toggled #layoutSidenav #layoutSidenav_content:before {
+    display: none;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* line 244, app/assets/stylesheets/dashboard.scss */
+  .nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: 200px;
+    flex-basis: 200px;
+  }
+  /* line 249, app/assets/stylesheets/dashboard.scss */
+  #layoutSidenav #layoutSidenav_content {
+    margin-left: -200px;
+  }
+}

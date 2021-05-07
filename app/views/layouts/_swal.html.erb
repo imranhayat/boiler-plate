@@ -1,5 +1,5 @@
 <% if notice or  alert.present? or flash[:warning] or flash[:info].present? %>
-<script class="swal-notice">
+<script defer>
   $(document).on('turbolinks:load',function(){
       Swal.fire({
         <% if notice %>

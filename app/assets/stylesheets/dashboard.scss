@@ -181,3 +181,72 @@
   }
 }
 // Admin Panel Index End
+
+@media (min-width: 992px) {
+  #layoutSidenav {
+
+    #layoutSidenav_nav {
+      transform: translateX(0);
+    }
+  
+    #layoutSidenav_content {
+      margin-left: 0;
+    }
+  }
+  
+  .sidenav-toggled #layoutSidenav {
+    .collapse{
+      display: block;
+    }
+  
+    #layoutSidenav_nav {
+      flex-basis: $sidebar-width-collapsed;
+      transform: translateX(0);
+      
+      .nav-link{
+        flex-direction: column;
+        padding: 10px 5px;
+      }
+  
+      .nav-link span{
+        font-size: 11.7px;
+      }
+  
+      .nav-link .sidenav-collapse-arrow{
+        display: none;
+      }
+  
+      .nav-link{
+        text-align: center;
+        justify-content: center;
+      }
+  
+      .nav-link-icon{
+        margin-right: 0;
+      }
+  
+      .sidenav-menu-nested {
+        margin-left: 0;
+      }
+    }
+  
+    #layoutSidenav_content {
+      margin-left: 0;
+  
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px){
+  .nav-fixed #layoutSidenav #layoutSidenav_nav {
+    width: $sidebar-width-mobile;
+    flex-basis: $sidebar-width-mobile;
+  }
+  
+  #layoutSidenav #layoutSidenav_content{
+    margin-left: -$sidebar-width-mobile;
+  }
+}
