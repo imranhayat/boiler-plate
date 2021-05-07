@@ -1,6 +1,10 @@
 <!-- Fonts -->
-<link rel="preconnect dns-prefetch" href="https://fonts.gstatic.com" crossorigin="anonymous">
-<link rel="preconnect dns-prefetch" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" crossorigin="anonymous">
 <link rel="preload" as="image" href="/devise-bg.jpg" />
 
 <!-- Application.scss -->
@@ -21,7 +25,8 @@
 <!-- Datatables -->
 <% if  params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
 
-  <link rel="preconnect dns-prefetch" href="https://cdn.datatables.net" crossorigin="anonymous">
+  <link rel="dns-prefetch" href="https://cdn.datatables.net" crossorigin="anonymous">
+  <link rel="preconnect" href="https://cdn.datatables.net" crossorigin="anonymous">
 
   <%= stylesheet_link_tag 'datatables', media: 'all', 'data-turbolinks-track': 'reload' %>
 
