@@ -1,15 +1,16 @@
 Rails.application.configure do
   config.cache_classes = true
   config.eager_load = true
-  config.public_file_server.headers = {
-    'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
-  }
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
   config.read_encrypted_secrets = true
-  config.public_file_server.enabled = true
+  config.public_file_server.enabled = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.public_file_server.headers = {
+    'Cache-Control' => 'public, s-maxage=31536000, max-age=15552000',
+    'Expires' => 1.year.from_now.to_formatted_s(:rfc822)
+  }
   config.assets.js_compressor = :uglifier
-  config.assets.compile = true
+  config.assets.compile = false
   config.assets.compress = true
   config.assets.css_compressor = :sass
   config.log_level = :debug
