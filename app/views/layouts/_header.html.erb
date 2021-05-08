@@ -22,8 +22,8 @@
         <% else %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <% if current_user.profile_pic.present? %>
-                <img src="<%= current_user.profile_pic %>" class="header-avatar" alt="Profile Picture">
+              <% if current_user.profile_pic.attached? %>
+                <%= image_tag(current_user.profile_pic, class: 'header-avatar', alt: 'Profile Picture') %>
               <% else %>
                 <div class="first-letter header">
                   <% if current_user.name.present? %>
