@@ -1,0 +1,28 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  template: template0
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+
+development:
+  <<: *default
+  database: boiler_development
+  host: localhost
+  port: 5432
+  username: rails_dev
+  password: password
+
+test:
+  <<: *default
+  database: boiler_test
+  host: localhost
+  port: 5432
+  username: rails_dev
+  password: password
+
+production:
+  <<: *default
+  database: boiler_production
+  username: boiler
+  password: <%= ENV['FREELANCE_DATABASE_PASSWORD'] %>
