@@ -5689,6 +5689,10 @@ Copyright © 2018 Basecamp, LLC
 $(document).on('turbolinks:load',function(){
   "use strict";
 
+  if(window.matchMedia("(max-width: 991.98px)").matches){
+    $('.devise-bg').remove();
+  }
+
   // Bootstrap Custom File Input
   bsCustomFileInput.init();
   
