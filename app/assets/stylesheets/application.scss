@@ -98,6 +98,22 @@ html{
 .fw-900 { @include fw(900); }
 // Font Weight Mixin End
 
+// Background Color Mixin
+@mixin bg($bg){
+  background-color: $bg;
+}
+
+.bg-fafafa { @include bg(#fafafa); }
+// Background Color Mixin End
+
+// Color Mixin
+@mixin color($color){
+  color: $color;
+}
+// Color Mixin End
+
+.color-fafafa { @include color(#fafafa); }
+
 //Footer
 footer{
   font-size: $font-size-base;
@@ -282,7 +298,7 @@ input[type="checkbox"], input[type="radio"]{
 }
 
 .navbar-light .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%237D26CD' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='3 2 24 25'%3e%3cpath stroke='%2379589f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
 }
 // Header End
 
@@ -338,10 +354,11 @@ input[type="checkbox"], input[type="radio"]{
   }
 
   .devise-bg{
+    background: $primary url('/pattern.png');
     height: 100%;
-    background-image: url('/devise-bg.jpg');
-    background-size: cover;
-    background-position: center center;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 
