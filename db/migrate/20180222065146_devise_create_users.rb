@@ -41,7 +41,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[5.1]
       t.string :phone_number
       t.date :date_of_birth
       t.boolean :revoke_access, default: false
-      t.attachment :profile_pic
 
       t.timestamps null: false
     end

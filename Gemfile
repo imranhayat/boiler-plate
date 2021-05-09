@@ -53,7 +53,6 @@ gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 gem 'omniauth-linkedin-oauth2'
 gem 'omniauth-twitter'
-gem 'paperclip'
 gem 'rolify'
 gem 'rubocop', require: false
 gem 'stripe'

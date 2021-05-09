@@ -3,8 +3,8 @@
     <div class="shadow-sm bg-white">
       <div class="row no-gutters border">
         <div class="col-auto">
-          <% if current_user.profile_pic.present? %>
-            <img src="<%= current_user.profile_pic %>" class="img-fluid img-user" alt="Profile Pic">
+          <% if current_user.profile_pic.attached? %>
+            <%= image_tag(current_user.profile_pic, class: 'img-fluid img-user', alt: 'Profile Pic') %>
           <% else %>
             <div class="first-letter profile">
               <% if current_user.name.present? %>

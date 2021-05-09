@@ -144,4 +144,3 @@ end
 *	gem 'omniauth-google-oauth2'
 *	gem 'omniauth-linkedin-oauth2'
 *	gem 'omniauth-twitter'
-*	gem 'paperclip'
