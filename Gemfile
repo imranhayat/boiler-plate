@@ -57,4 +57,3 @@ gem 'rolify'
 gem 'rubocop', require: false
 gem 'stripe'
 gem 'ultrahook'
-gem 'mini_racer'
