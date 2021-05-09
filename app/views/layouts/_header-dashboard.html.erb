@@ -6,8 +6,8 @@
   <ul class="navbar-nav ml-auto d-none d-lg-block">
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <% if current_user.profile_pic.present? %>
-          <img src="<%= current_user.profile_pic %>" class="header-avatar" alt="Profile Picture">
+        <% if current_user.profile_pic.attached? %>
+          <%= image_tag(current_user.profile_pic, class: 'header-avatar', alt: 'Profile Pic') %>
         <% else %>
           <div class="first-letter header">
             <% if current_user.name.present? %>
