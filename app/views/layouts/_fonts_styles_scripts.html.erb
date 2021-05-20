@@ -14,7 +14,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" media="all" />
 
 <!-- Application.scss -->
-<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload', media: 'all' %>
 
 <!-- Jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
@@ -23,10 +23,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bs-custom-file-input/1.3.4/bs-custom-file-input.min.js" integrity="sha512-91BoXI7UENvgjyH31ug0ga7o1Ov41tOzbMM3+RPqFVohn1UbVcjL/f5sl6YSOFfaJp+rF+/IEbOOEwtBONMz+w==" crossorigin="anonymous" defer></script>
 
 <!-- Application.js -->
-<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
 
 <!-- Data-Confirm Modal -->
-<script src="https://cdn.jsdelivr.net/npm/data-confirm-modal@1.6.2/vendor/assets/javascripts/data-confirm-modal.min.js" defer crossorigin="anonymous"></script>
+<%# <script src="https://cdn.jsdelivr.net/npm/data-confirm-modal@1.6.2/vendor/assets/javascripts/data-confirm-modal.min.js" defer crossorigin="anonymous"></script> %>
 
 <!-- Datatables -->
 <% if  params[:action] == 'users' or params[:action] == 'all_invoices' or params[:action] == 'invoices' %>
@@ -41,12 +41,12 @@
   <link rel="dns-prefetch" href="https://cdn.datatables.net" crossorigin="anonymous">
   <link rel="preconnect" href="https://cdn.datatables.net" crossorigin="anonymous">
 
-  <%= stylesheet_link_tag 'datatables', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'datatables', 'data-turbolinks-track': 'reload', media: 'all' %>
 
   <!-- PDF Make -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.70/pdfmake.min.js" defer crossorigin="anonymous"></script>
 
-  <%= javascript_include_tag 'datatables', 'data-turbolinks-track': 'reload', defer: true %>
+  <%= javascript_pack_tag 'datatables', 'data-turbolinks-track': 'reload', defer: true %>
 
   <!-- DataTable JS -->
   <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js" defer crossorigin="anonymous"></script>
@@ -81,27 +81,26 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.15.7/sweetalert2.min.css" integrity="sha512-qZl4JQ3EiQuvTo3ccVPELbEdBQToJs6T40BSBYHBHGJUpf2f7J4DuOIRzREH9v8OguLY3SgFHULfF+Kf4wGRxw==" crossorigin="anonymous" media="all" />
 
-  <%= stylesheet_link_tag 'swal', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_pack_tag 'swal', 'data-turbolinks-track': 'reload', media: 'all' %>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/10.15.7/sweetalert2.min.js" integrity="sha512-IHQXMp2ha/aGMPumvzKLQEs9OrPhIOaEXxQGV5vnysMtEmNNcmUqk82ywqw7IbbvrzP5R3Hormh60UVDBB98yg==" crossorigin="anonymous" defer></script>
+  <%= javascript_pack_tag 'swal', 'data-turbolinks-track': 'reload', defer: true %>
+  
 
 <% end %>
 
 <!-- If User Signed In -->
 <% if user_signed_in? %>
-
-  <%= stylesheet_link_tag 'signed_in', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-  <%= javascript_include_tag 'signed_in', 'data-turbolinks-track': 'reload', defer: true %>
+  <%= stylesheet_pack_tag 'signed_in', 'data-turbolinks-track': 'reload', media: 'all' %>
+  <%= javascript_pack_tag 'signed_in', 'data-turbolinks-track': 'reload', defer: true %>
 
 <% end %>
 
 <!-- Dashboard -->
 <% if user_signed_in? and current_user.has_role? :admin %>
 
-  <%= stylesheet_link_tag 'dashboard', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-  <%= javascript_include_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
+  <%= stylesheet_pack_tag 'dashboard', 'data-turbolinks-track': 'reload', media: 'all' %>
+  <%= javascript_pack_tag 'dashboard', 'data-turbolinks-track': 'reload', defer: true %>
 
 <% end %>
 

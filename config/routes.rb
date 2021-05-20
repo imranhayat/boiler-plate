@@ -1,11 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   authenticated :user, ->(user) { user.has_role? :admin } do
-    root 'admin_panel#index'
+    # root 'admin_panel#index'
   end
   authenticated :user, ->(user) { user.has_role? :normal } do
-    root 'user_panel#index'
+    # root 'user_panel#index'
   end
   devise_scope :user do
     root to: 'users/sessions#new'

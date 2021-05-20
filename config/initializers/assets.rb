@@ -8,16 +8,9 @@ Rails.application.config.assets.version = '1.0'
 # Add Yarn node_modules folder to the asset load path.
 Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
-Rails.application.config.assets.paths << Rails.root.join("app", "assets", "fonts")
-
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
 Rails.application.config.assets.precompile += %w(
-
-  signed_in.scss signed_in.js
-
-  dashboard.scss dashboard.js
-
-  datatables.scss datatables.js swal.scss swal.js 
+  signed_in.js dashboard.js datatables.js swal.js
 )

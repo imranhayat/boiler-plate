@@ -1,3 +1,5 @@
+import "../packs/stylesheets/dashboard";
+
 $(document).on('turbolinks:load',function(){
   "use strict";
   

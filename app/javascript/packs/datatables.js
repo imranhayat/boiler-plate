@@ -1,3 +1,5 @@
+import "../packs/stylesheets/datatables";
+
 $(document).on('turbolinks:load',function(){
   var table1 = $('.datatable table').DataTable({
     language: {
